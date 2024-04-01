@@ -9,6 +9,10 @@ const ProjectsAlt = () => {
     const previewRef = useRef();
     const previewImgRef = useRef();
 
+    const projectsUXRef = useRef();
+    const previewUXRef = useRef();
+    const previewUXImgRef = useRef();
+
     const navigation = useNavigate()
 
     const { contextSafe } = useGSAP(() => {
@@ -24,69 +28,77 @@ const ProjectsAlt = () => {
         p3: "0 66.6%",
         p4: "0 99.9%",
     }
-    //manage the scaling
-    // const moveStuff = (e) => {
-    //     const mouseInside = isMouseInsideContainer(e);
 
-    //     if (mouseInside !== isInside) {
-    //         isInside = mouseInside;
-    //         if (isInside) {
-    //             gsap.to(previewRef.current, {
-    //                 scale: 1,
-    //                 duration: 0.3
-    //             });
-    //         } else {
-    //             gsap.to(previewRef.current, {
-    //                 scale: 0,
-    //                 duration: 0.3
-    //             });
-    //         }
-
-    //     }
-
-    // }
+    const bgUXPositions = {
+        pu1:"0 0",
+        pu2:"0 100%"
+    }
 
     const moveProject = (e) => {
-
         const previewRect = previewRef.current.getBoundingClientRect();
         const offsetX = previewRect.width / 2;
         const offsetY = previewRect.height / 2;
-        // const offsetY = previewRect.height;
-        // console.log("im moving stuff to"+ offsetX +  " x and" + offsetY + "y");
 
         previewRef.current.style.left = e.pageX - offsetX + "px";
         previewRef.current.style.top = e.pageY - offsetY + "px";
-
     }
 
     const moveProjectImg = (project) => {
-        // console.log("i-m being executed too!");
-        // console.log(project)
         const projectId = project.id;
         gsap.to(previewImgRef.current, {
             duration: 0.4,
             backgroundPosition: bgPositions[projectId] || "0 0",
         });
-
     }
 
-    // const isMouseInsideContainer = (e) => {
-    //     const containerRect = projectsRef.current.getBoundingClientRect();
-    //     return (
-    //         e.pageX >= containerRect.left &&
-    //         e.pageX >= containerRect.right &&
-    //         e.pageY >= containerRect.top &&
-    //         e.pageY >= containerRect.bottom
-    //     );
-    // }
+    const moveUXProject = (e) => {
+        const previewRect = previewUXRef.current.getBoundingClientRect();
+        const offsetX = previewRect.width / 2;
+        const offsetY = previewRect.height / 2;
 
+        previewUXRef.current.style.left = e.pageX - offsetX + "px";
+        previewUXRef.current.style.top = e.pageY - offsetY + "px";
+    }
+
+    const moveUXProjectImg = (project) => {
+        const projectId = project.id;
+        gsap.to(previewUXImgRef.current, {
+            duration: 0.4,
+            backgroundPosition: bgUXPositions[projectId] || "0 0",
+        });
+    }
+
+    const handleUXMouseMove = contextSafe(() => {
+        gsap.to(previewUXRef.current, {
+            scale: 1,
+            duration: 0.3
+        });
+    });
+
+    const handleUXMouseEnter = contextSafe(() => {
+        gsap.to(previewUXRef.current, {
+            scale: 1,
+            duration: 0.3
+        });
+    });
+
+    const handleUXMouseMoveRow = (e) => {
+        moveUXProject(e);
+        moveUXProjectImg(e.currentTarget)
+    }
+
+    const handleUXMouseLeave = contextSafe(() => {
+        gsap.to(previewUXRef.current, {
+            scale: 0,
+            duration: 0.3
+        });
+    });
 
     const handleMouseMove = contextSafe(() => {
         gsap.to(previewRef.current, {
             scale: 1,
             duration: 0.3
         });
-
     });
 
     const handleMouseEnter = contextSafe(() => {
@@ -94,12 +106,9 @@ const ProjectsAlt = () => {
             scale: 1,
             duration: 0.3
         });
-
     });
 
     const handleMouseMoveRow = (e) => {
-        // console.log("this is the event")
-        // console.log(e.currentTarget.id);
         moveProject(e);
         moveProjectImg(e.currentTarget)
     }
@@ -110,19 +119,9 @@ const ProjectsAlt = () => {
             duration: 0.3
         });
     });
-    //    Array.from(projectsRef.current.children).forEach((project) => {
-    //     console.log(project)
-    //    })
-
 
     return (
-        <div>
-            <div className="preview" ref={previewRef}>
-                <div className="preview-img" ref={previewImgRef}>
-
-                </div>
-            </div>
-
+        <div id="real-work-container">
             <section id="work-container">
                 <div id="top-row">
                     <div id="work-text">
@@ -138,34 +137,33 @@ const ProjectsAlt = () => {
                 </div>
                 <div id="bottom-row">
                     <div id="work-title">
-                        <h1>Work</h1>
+                        <h1 id="work-h1">Work</h1>
 
                     </div>
 
                     <div id="table-container">
-                        <div className='projects'>
-                            <p className='p2 bolden letter-s1'>UX PROJECTS</p>
+                        <div className='projects' ref={projectsUXRef} onMouseLeave={handleUXMouseLeave} onMouseEnter={handleUXMouseEnter} onMouseMove={handleUXMouseMove}>
+                            <p  className='p2 bolden letter-s1 project-type'>UX PROJECTS</p>
                             <div className='space-12'></div>
-                            <div className='project-row' onMouseMove={handleMouseMoveRow} id="p3">
+                            <div className='project-row' id="pu1" onClick={() => { navigation("/case-study") }} onMouseMove={handleUXMouseMoveRow}>
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*X0.1</p>
                                     <p className='p2'>O-lab</p>
-                                    
+
 
                                 </div>
                                 <div>
-                                    <img src={require("../../assets/play-icon.svg").default} alt="" />
-                                </div>
+                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
                             </div>
 
-                            <div className='project-row' onMouseMove={handleMouseMoveRow} id="p3">
+                            <div className='project-row' onMouseMove={handleUXMouseMoveRow} id="pu2" >
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*X0.2</p>
                                     <p className='p2'>Vitacan</p>
 
                                 </div>
                                 <div>
-                                    <img src={require("../../assets/play-icon.svg").default} alt="" />
+                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />
                                 </div>
                             </div>
 
@@ -173,29 +171,27 @@ const ProjectsAlt = () => {
                         <div className='space-32'></div>
                         <div className="projects" ref={projectsRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
 
-                            <p className='p2 bolden letter-s1'>UI PROJECTS</p>
+                            <p className='p2 bolden letter-s1 project-type'>UI PROJECTS</p>
                             <div className='space-12'></div>
-                            <div className='project-row' onClick={() => { navigation("/case-study") }} onMouseMove={handleMouseMoveRow} id="p1">
+                            <div className='project-row' onMouseMove={handleMouseMoveRow} id="p1">
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*I0.1</p>
                                     <p className='p2'>Rae Klein</p>
                                 </div>
                                 <div>
-                                    <img src={require("../../assets/play-icon.svg").default} alt="" />
-                                </div>
+                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
 
                             </div>
-                            
 
-                            <div className='project-row' onClick={() => { navigation("/case-study2") }} onMouseMove={handleMouseMoveRow} id="p2">
+
+                            <div className='project-row' onMouseMove={handleMouseMoveRow} id="p2">
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*I0.2</p>
                                     <p className='p2'>Evan Fay</p>
 
                                 </div>
                                 <div className='number-title'>
-                                    <img src={require("../../assets/play-icon.svg").default} alt="" />
-                                </div>
+                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
                             </div>
 
                             <div className='project-row' onMouseMove={handleMouseMoveRow} id="p3">
@@ -205,8 +201,7 @@ const ProjectsAlt = () => {
 
                                 </div>
                                 <div>
-                                    <img src={require("../../assets/play-icon.svg").default} alt="" />
-                                </div>
+                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
                             </div>
                             <div className='project-row' onMouseMove={handleMouseMoveRow} id="p4">
                                 <div className='number-title'>
@@ -215,8 +210,7 @@ const ProjectsAlt = () => {
 
                                 </div>
                                 <div>
-                                    <img src={require("../../assets/play-icon.svg").default} alt="" />
-
+                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -229,6 +223,17 @@ const ProjectsAlt = () => {
 
 
             </section>
+            <div className="preview" ref={previewRef}>
+                <div className="preview-img" ref={previewImgRef}>
+
+                </div>
+            </div>
+
+            <div className="preview-ux" ref={previewUXRef}>
+                <div className="preview-ux-img" ref={previewUXImgRef}>
+
+                </div>
+            </div>
         </div>
 
 

@@ -20,10 +20,25 @@ button{
 
 .btn-main{
   border-bottom: 4px var(--off-black-800) solid;
+  color: var(--off-black-800);
+  background-color: var(--off-white-100);
+  padding-top: 8px;
+  padding-bottom: 8px;
 
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Century Gothic";
 }
 
 .btn-sec{
+  color: var(--off-black-800);
+  background-color: var(--off-white-100);
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Century Gothic";
   border-bottom: 4px var(--off-white-100) solid;
 
   
@@ -31,11 +46,16 @@ button{
 
 
 #hero{
+  padding-top: 68px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  min-height: 800px;
+  min-height: 926px;
+
   min-width: 428px;
 
   scroll-snap-align: start;
@@ -44,10 +64,6 @@ button{
 #hero-helper{
   display: flex;
   justify-content: space-between;
-  height: 100%;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom:60px;
 }
 
 #hero-left{
@@ -84,6 +100,12 @@ button{
 
 #small-p{
   font-size: 16px;
+}
+
+#number-container{
+  display: flex;
+  margin-top:32px;
+  justify-content: flex-end;
 }
 
 .cta-copy-container{
@@ -126,7 +148,7 @@ button{
   .p1{
     font-size: 18px;
   }
-  #hero-helper{
+  #hero{
     padding-left: 22px;
     padding-right: 22px;
   }

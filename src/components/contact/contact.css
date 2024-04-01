@@ -7,6 +7,8 @@
     padding-top:128px;
     padding-left: 60px;
     padding-right: 60px;
+    min-height: 926px;
+
 
     scroll-snap-align: start;
 }
@@ -53,4 +55,59 @@
     margin-right: 60px;
     margin-bottom: 60px;
     gap: 24px; */
+}
+
+.link-icon{
+    display: flex;
+    gap:12px;
+}
+
+#connect-copy{
+    text-align: right;
+}
+
+@media (max-width:1000px) {
+
+    
+#connect-container{
+    padding-left: 22px;
+    padding-right: 22px;
+    min-width: 428px;
+}
+
+    #title-cta{
+        flex-direction: column;
+    }
+    #top-socials{
+        flex-direction: column;
+        gap: 32px;
+        width:auto;
+    }
+
+    #back-top{
+        justify-content: flex-start;
+    }
+
+    .social-row{
+        width: auto;
+    }
+
+}
+
+
+@media (max-width:600px) {
+
+    .social-row{
+        flex-direction: column;
+        /* min-width: 428px; */
+    }
+
+    .social-icon{
+        display: none;
+    }
+
+    #title-cta{
+        gap:32px;
+    }
+
 }

@@ -19,7 +19,8 @@ const Home = () => {
     const ctatext = useRef();
 
     const [t, i18next] = useTranslation();
-    console.log(t('ayo'));
+
+    console.log(i18next.language);
 
 
     // const locoRef = useRef(null);
@@ -98,40 +99,59 @@ const Home = () => {
     //     }, 1.1)
     // });
 
+    function Resume() {
+        if (i18next.language == 'en') {
+            return <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a>;
+
+        } else {
+            return <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a>
+
+        }
+
+    }
+
     return (
         <div>
             <section id="hero">
-                <div id="hero-helper">
-                    <div id="hero-left">
-
-                        <div id="felipe-title">
-                            <div id='mask-fa' ref={felipetext}>
-                                <h1 id="felipe-h1">Felipe Andrade</h1>
-                            </div>
-                        </div>
-                        <div id="designer-title">
-                            <div id="mask-dt" ref={designertext}>
-                                <h1 id="ux-h1">{t('designerTitle')}</h1>
-                            </div>
-                        </div>
-                        <div className='space-12'></div>
-                        <div className='mask-cta cta-copy-container' ref={ctatext}>
-                            <p id="cta-copy" className='p1'>
-                                {t("heroCopy")}
-                            </p>
-                        </div>
-                    </div>
-                    <div id="hero-right">
-                        <div id="button-cta" className='mask-cta' ref={buttonscta}>
-                            <button className='btn-main'>Download CV</button>
-                            <button className='btn-sec'>Connect</button>
-                        </div>
-
+                    <div id="number-container">
+                        <p className='p2'>[ 01 ]</p>
                     </div>
 
+                    <div  id="hero-helper">
+                        <div id="hero-left">
 
 
-                </div>
+
+
+
+                            <div id="felipe-title">
+                                <div id='mask-fa' ref={felipetext}>
+                                    <h1 id="felipe-h1">Felipe Andrade</h1>
+                                </div>
+                            </div>
+                            <div id="designer-title">
+                                <div id="mask-dt" ref={designertext}>
+                                    <h1 id="ux-h1">{t('designerTitle')}</h1>
+                                </div>
+                            </div>
+                            <div className='space-12'></div>
+                            <div className='mask-cta cta-copy-container' ref={ctatext}>
+                                <p id="cta-copy" className='p1'>
+                                    {t("heroCopy")}
+                                </p>
+                            </div>
+                        </div>
+                        <div id="hero-right">
+                            <div id="button-cta" className='mask-cta' ref={buttonscta}>
+
+                                <Resume />
+                                <a className='btn-sec' href="#connect-container">Connect</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
 
             </section>
             {/* <Projects /> */}
