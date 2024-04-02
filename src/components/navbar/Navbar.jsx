@@ -11,7 +11,7 @@ const Navbar = () => {
         <div>               
             <nav>
             <div id="nav-left" onClick={() => { navigation("/") }}>
-                <img src={require("../../assets/logo.svg").default} alt="" />
+                <img id="logo" src={require("../../assets/logo.svg").default} alt="" />
 
 
             </div>

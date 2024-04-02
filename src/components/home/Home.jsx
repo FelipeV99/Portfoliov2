@@ -6,7 +6,7 @@ import { CustomEase } from "gsap/CustomEase";
 import ProjectsAlt from '../projectsAlt/ProjectsAlt';
 import Contact from '../contact/Contact';
 import { useTranslation } from 'react-i18next';
-
+import { useEffect } from 'react';
 const Home = () => {
     gsap.registerPlugin(useGSAP);
 
@@ -99,16 +99,19 @@ const Home = () => {
     //     }, 1.1)
     // });
 
-    function Resume() {
-        if (i18next.language == 'en') {
-            return <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a>;
+    
 
-        } else if((i18next.language == 'es')){
-            return <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a>
+    // function Resume() {
+    //     (i18next.language == 'en') ? console.log("this is en") : console.log("this is not en");
+    //     if (i18next.language == 'en') {
+    //         return <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a>;
 
-        }
+    //     } else if((i18next.language == 'es')){
+    //         return <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a>
 
-    }
+    //     }
+
+    // }
 
     return (
         <div>
@@ -143,8 +146,10 @@ const Home = () => {
                         </div>
                         <div id="hero-right">
                             <div id="button-cta" className='mask-cta' ref={buttonscta}>
+                                {(i18next.language == 'en') ? <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a> : console.log("this is not en")}
+                                {(i18next.language == 'es') ? <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a> : console.log("this is not en")}
 
-                                <Resume />
+                                {/* <Resume /> */}
                                 <a className='btn-sec' href="#connect-container">Connect</a>
                             </div>
 
