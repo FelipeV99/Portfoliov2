@@ -8,6 +8,9 @@ import Contact from '../contact/Contact';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 const Home = () => {
+
+
+
     gsap.registerPlugin(useGSAP);
 
 
@@ -20,7 +23,22 @@ const Home = () => {
 
     const [t, i18next] = useTranslation();
 
-    console.log(i18next.language);
+    const cvRef = useRef();
+
+        
+    useEffect(()=> {
+        console.log("checking stuff");
+        if (i18next.language == 'en') {
+            cvRef.current.href = require("../../assets/Felipe Andrade CV.pdf");
+
+
+        } else if((i18next.language == 'es')){
+            cvRef.current.href = require("../../assets/Felipe Andrade HV.pdf");
+
+        }else{
+            console.log("all fake")
+        }
+    }, [i18next.language]);
 
 
     // const locoRef = useRef(null);
@@ -102,7 +120,6 @@ const Home = () => {
     
 
     // function Resume() {
-    //     (i18next.language == 'en') ? console.log("this is en") : console.log("this is not en");
     //     if (i18next.language == 'en') {
     //         return <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a>;
 
@@ -112,6 +129,7 @@ const Home = () => {
     //     }
 
     // }
+
 
     return (
         <div>
@@ -146,11 +164,10 @@ const Home = () => {
                         </div>
                         <div id="hero-right">
                             <div id="button-cta" className='mask-cta' ref={buttonscta}>
-                                {(i18next.language == 'en') ? <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a> : console.log("this is not en")}
-                                {(i18next.language == 'es') ? <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a> : console.log("this is not en")}
-
-                                {/* <Resume /> */}
-                                <a className='btn-sec' href="#connect-container">Connect</a>
+                                {/* {(i18next.language == 'en') ? <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a> : console.log("this is not en")}
+                                {(i18next.language == 'es') ? <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a> : console.log("this is not en")} */}
+                                <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank" ref={cvRef}>{t("cvDownload")}</a>
+                                <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
                             </div>
 
                         </div>
