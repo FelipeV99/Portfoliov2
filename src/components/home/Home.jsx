@@ -25,18 +25,21 @@ const Home = () => {
 
     const cvRef = useRef();
 
+    // console.log(i18next.language);
+    // console.log("ciut it " + i18next.language.slice(0, 2));
+
         
     useEffect(()=> {
         console.log("checking stuff");
-        if (i18next.language == 'en') {
+        if (i18next.language.slice(0,2) == 'en') {
+            // console.log("ok im in english");
             cvRef.current.href = require("../../assets/Felipe Andrade CV.pdf");
 
 
-        } else if((i18next.language == 'es')){
+        } else if((i18next.language.slice(0,2) == 'es')){
+            // console.log("bueno estoy en español");
             cvRef.current.href = require("../../assets/Felipe Andrade HV.pdf");
 
-        }else{
-            console.log("all fake")
         }
     }, [i18next.language]);
 
@@ -166,7 +169,7 @@ const Home = () => {
                             <div id="button-cta" className='mask-cta' ref={buttonscta}>
                                 {/* {(i18next.language == 'en') ? <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a> : console.log("this is not en")}
                                 {(i18next.language == 'es') ? <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a> : console.log("this is not en")} */}
-                                <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank" ref={cvRef}>{t("cvDownload")}</a>
+                                <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
                                 <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
                             </div>
 
