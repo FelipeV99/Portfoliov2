@@ -53,17 +53,28 @@ button{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   height: 100vh;
-  min-height: 926px;
+  min-height: 680px;
 
-  min-width: 428px;
+  min-width: 360px;
+  max-width: 1900px;
+  max-height: 1200px;
+
 
   scroll-snap-align: start;
+}
+#page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 360px;
 }
 
 #hero-helper{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 
 #hero-left{
@@ -111,7 +122,7 @@ button{
 .cta-copy-container{
   display: flex;
   max-width: 780px;
-  min-width: 384px;
+  min-width: 320px;
 }
 
 /* #mask-dt{
@@ -153,4 +164,13 @@ button{
     padding-right: 22px;
   }
   
+}
+
+@media (max-width:600px) {
+  h1{
+    font-size: 64px;
+  }
+  #hero{
+    padding-bottom: 32px;
+  }
 }

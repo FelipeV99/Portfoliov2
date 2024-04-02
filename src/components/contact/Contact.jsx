@@ -4,8 +4,9 @@ import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
     const [t, i18next] = useTranslation();
+
     return (
-        <div>
+        
             <section id="connect-container">
                 <div id="title-cta">
                     <div>
@@ -31,27 +32,24 @@ const Contact = () => {
                         <div className='social-row'>
                             <p className='bolden p2'>mail</p>
                             <div className='link-icon'>
-
                                 <p className='p2'>afelipea99@gmail.com</p>
-                                <img className="social-icon" src={require("../../assets/copy-icon.svg").default} alt="" />
-
+                                <a href="mailto:afelipea99@gmail.com">
+                                <img className="social-icon" src={require("../../assets/external-arrow.svg").default} alt="" />
+                                </a>
                             </div>
                         </div>
-                        <div className='social-row'>
+                        <div className='social-row' >
                             <p className='bolden p2'>behance</p>
                             <div className='link-icon'>
                                 <p className='p2'>www.behance.net/felipeandrade27</p>
-                                <img className="social-icon" src={require("../../assets/external-arrow.svg").default} alt="" />
-
-
-
+                                <img className="social-icon" src={require("../../assets/external-arrow.svg").default} onClick={()=>{window.open("https://www.behance.net/felipeandrade27")}} alt="" />
                             </div>
                         </div>
-                        <div className='social-row '>
+                        <div className='social-row'>
                             <p className='bolden p2'>linkedin</p>
                             <div className='link-icon'>
                                 <p className='p2'>www.linkedin.com/in/felipe-a-411294138/</p>
-                                <img className="social-icon" src={require("../../assets/external-arrow.svg").default} alt="" />
+                                <img className="social-icon" src={require("../../assets/external-arrow.svg").default} alt=""  onClick={()=>{window.open("https://www.linkedin.com/in/felipe-a-411294138/")}} />
 
 
                             </div>
@@ -67,7 +65,7 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        
     )
 }
 

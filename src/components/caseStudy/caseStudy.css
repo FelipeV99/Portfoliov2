@@ -33,8 +33,9 @@ li {
 #hero-case {
     display: flex;
     gap: 64px;
-    height: 100vh;
+    height: calc(100vh - 68px);
     padding-top: 32px;
+    padding-bottom: 32px;
     padding-left: 60px;
     padding-right: 60px;
 
@@ -298,12 +299,15 @@ li {
 
 @media (max-width:1000px) {
     #hero-case {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
 
     .case-slide {
         flex-direction: column-reverse;
         gap: 32px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 
     .reverse-flex-col {
@@ -337,6 +341,17 @@ li {
 
     .solution-slide{
         flex-direction: column;
+        gap: 32px;
+    }
+
+    #case-slide-flows{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .solution-container{
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 
 

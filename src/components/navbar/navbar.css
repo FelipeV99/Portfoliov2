@@ -8,18 +8,20 @@ nav {
   position: fixed;
   width: 100%;
   background-color: var(--off-white-100);
-  min-width: 428px;
+  min-width: 360px;
   z-index: 12;
 }
 
-#logo{
-  /* display: flex; */
-  /* align-self: center; */
+#logo-nav{
+  height: 28px;
+  width: auto;
 }
 
 #nav-left {
   height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   /* flex-direction: column;
   justify-content: center;
   align-items: center; */
@@ -83,5 +85,26 @@ nav {
     visibility: hidden;
     width: 0;
     padding-left: 0;
+  }
+
+  .space-btwn {
+    min-width: 24px;
+  }
+
+  .nav-optn {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  nav{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  
+
+  #nav-right{
+    width: 100%;
+    justify-content: space-between;
   }
 }

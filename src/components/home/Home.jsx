@@ -129,7 +129,7 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div id="page-container">
             <section id="hero">
                     <div id="number-container">
                         <p className='p2'>[ 01 ]</p>
@@ -153,6 +153,7 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
+                        <div id="hero-space"></div>
                         <div id="hero-right">
                             <div id="button-cta" className='mask-cta' ref={buttonscta}>
                                 <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>

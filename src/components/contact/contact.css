@@ -4,10 +4,14 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    width: 100%;
     padding-top:128px;
     padding-left: 60px;
     padding-right: 60px;
-    min-height: 926px;
+    min-height: 720px;
+    max-width: 1900px;
+    max-height: 1200px;
+    
 
 
     scroll-snap-align: start;
@@ -23,6 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    align-self: flex-end;
 }
 .social-row{
     display: flex;
@@ -66,13 +71,17 @@
     text-align: right;
 }
 
+.social-icon{
+    cursor: pointer;
+}
+
 @media (max-width:1000px) {
 
     
 #connect-container{
     padding-left: 22px;
     padding-right: 22px;
-    min-width: 428px;
+    min-width: 360px;
 }
 
     #title-cta{
@@ -114,4 +123,7 @@
         padding-bottom: 32px;
     }
 
+    #text-container{
+        max-width: 312px;
+    }
 }
