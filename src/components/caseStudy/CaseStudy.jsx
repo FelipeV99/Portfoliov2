@@ -12,7 +12,7 @@ const CaseStudy = () => {
         if (i18next.language == 'en') {
             return <img className="case-img" src={require("../../assets/courseMetricsEN.png")} />
 
-        } else {
+        } else  if((i18next.language == 'es')){
             return <img className="case-img" src={require("../../assets/courseMetricsES.png")} />
 
         }
@@ -23,7 +23,7 @@ const CaseStudy = () => {
         if (i18next.language == 'en') {
             return <img className="case-img" src={require("../../assets/createUserMetricsEN.png")} />
 
-        } else {
+        } else  if((i18next.language == 'es')){
             return <img className="case-img" src={require("../../assets/createUserMetricsES.png")} />
 
         }
@@ -35,7 +35,7 @@ const CaseStudy = () => {
         if (i18next.language == 'en') {
             return <img className="case-img" src={require("../../assets/reportsMetricsEN.png")} />
 
-        } else {
+        } else if((i18next.language == 'es')){
             return <img className="case-img" src={require("../../assets/reportsMetricsES.png")} />
 
         }

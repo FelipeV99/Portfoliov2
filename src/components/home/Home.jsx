@@ -103,7 +103,7 @@ const Home = () => {
         if (i18next.language == 'en') {
             return <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a>;
 
-        } else {
+        } else if((i18next.language == 'es')){
             return <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a>
 
         }
