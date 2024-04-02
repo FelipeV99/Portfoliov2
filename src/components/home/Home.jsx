@@ -30,17 +30,19 @@ const Home = () => {
 
         
     useEffect(()=> {
-        console.log("checking stuff");
-        if (i18next.language.slice(0,2) == 'en') {
+        if(i18next.language != null){
+        const language = i18next.language.slice(0,2);
+
+        if (language == 'en') {
             // console.log("ok im in english");
             cvRef.current.href = require("../../assets/Felipe Andrade CV.pdf");
 
 
-        } else if((i18next.language.slice(0,2) == 'es')){
+        } else if(language == 'es'){
             // console.log("bueno estoy en español");
             cvRef.current.href = require("../../assets/Felipe Andrade HV.pdf");
-
         }
+    }
     }, [i18next.language]);
 
 
