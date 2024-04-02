@@ -9,10 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 const Home = () => {
 
-
-
     gsap.registerPlugin(useGSAP);
-
 
     const uxtext = useRef();
     const designertext = useRef();
@@ -20,26 +17,21 @@ const Home = () => {
     const andradetext = useRef();
     const buttonscta = useRef();
     const ctatext = useRef();
+    const cvRef = useRef();
 
     const [t, i18next] = useTranslation();
 
-    const cvRef = useRef();
-
-    // console.log(i18next.language);
-    // console.log("ciut it " + i18next.language.slice(0, 2));
-
+    
         
     useEffect(()=> {
         if(i18next.language != null){
         const language = i18next.language.slice(0,2);
 
         if (language == 'en') {
-            // console.log("ok im in english");
             cvRef.current.href = require("../../assets/Felipe Andrade CV.pdf");
 
 
         } else if(language == 'es'){
-            // console.log("bueno estoy en español");
             cvRef.current.href = require("../../assets/Felipe Andrade HV.pdf");
         }
     }
@@ -142,14 +134,8 @@ const Home = () => {
                     <div id="number-container">
                         <p className='p2'>[ 01 ]</p>
                     </div>
-
                     <div  id="hero-helper">
                         <div id="hero-left">
-
-
-
-
-
                             <div id="felipe-title">
                                 <div id='mask-fa' ref={felipetext}>
                                     <h1 id="felipe-h1">Felipe Andrade</h1>
@@ -169,17 +155,12 @@ const Home = () => {
                         </div>
                         <div id="hero-right">
                             <div id="button-cta" className='mask-cta' ref={buttonscta}>
-                                {/* {(i18next.language == 'en') ? <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a> : console.log("this is not en")}
-                                {(i18next.language == 'es') ? <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a> : console.log("this is not en")} */}
                                 <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
                                 <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
                             </div>
 
                         </div>
                     </div>
-
-
-
             </section>
             {/* <Projects /> */}
             <ProjectsAlt />

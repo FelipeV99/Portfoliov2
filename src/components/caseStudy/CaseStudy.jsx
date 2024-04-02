@@ -2,45 +2,31 @@ import React from 'react'
 import './caseStudy.css'
 import Contact from '../contact/Contact'
 import { useTranslation } from 'react-i18next'
+import { useRef, useEffect } from 'react'
 
 const CaseStudy = () => {
 
     const [t, i18next] = useTranslation();
 
-    function CourseMetrics() {
-        console.log("in here");
-        if (i18next.language == 'en') {
-            return <img className="case-img" src={require("../../assets/courseMetricsEN.png")} />
+    const metric1Ref = useRef();
+    const metric2Ref = useRef();
+    const metric3Ref = useRef();
 
-        } else  if((i18next.language == 'es')){
-            return <img className="case-img" src={require("../../assets/courseMetricsES.png")} />
+    useEffect(()=> {
+        if(i18next.language != null){
+        const language = i18next.language.slice(0,2);
 
+        if (language == 'en') {
+            metric1Ref.current.src = require("../../assets/courseMetricsEN.png");
+            metric2Ref.current.src = require("../../assets/createUserMetricsEN.png");
+            metric3Ref.current.src = require("../../assets/reportsMetricsEN.png");
+        } else if(language == 'es'){
+            metric1Ref.current.src = require("../../assets/courseMetricsES.png");
+            metric2Ref.current.src = require("../../assets/createUserMetricsES.png");
+            metric3Ref.current.src = require("../../assets/reportsMetricsES.png");
         }
-
     }
-
-    function CreateUserMetrics() {
-        if (i18next.language == 'en') {
-            return <img className="case-img" src={require("../../assets/createUserMetricsEN.png")} />
-
-        } else  if((i18next.language == 'es')){
-            return <img className="case-img" src={require("../../assets/createUserMetricsES.png")} />
-
-        }
-
-    }
-
-
-    function ReportsMetrics() {
-        if (i18next.language == 'en') {
-            return <img className="case-img" src={require("../../assets/reportsMetricsEN.png")} />
-
-        } else if((i18next.language == 'es')){
-            return <img className="case-img" src={require("../../assets/reportsMetricsES.png")} />
-
-        }
-
-    }
+    }, [i18next.language]);
 
     return (
         <div id="case-study-container">
@@ -570,7 +556,7 @@ const CaseStudy = () => {
                     <p>{t("OCV1p")}</p>
                 </div>
                 <div className='img-side'>
-                    <CourseMetrics />
+                    <img className="case-img" src={require("../../assets/courseMetricsEN.png")} ref={metric1Ref} />
                 </div>
 
             </div>
@@ -582,7 +568,7 @@ const CaseStudy = () => {
                     <p>{t("OCV2p")}</p>
                 </div>
                 <div className='img-side'>
-                    <CreateUserMetrics />
+                <img className="case-img" src={require("../../assets/createUserMetricsES.png")} ref={metric2Ref} />
 
                 </div>
 
@@ -596,7 +582,7 @@ const CaseStudy = () => {
 
                 </div>
                 <div className='img-side'>
-                    <ReportsMetrics />
+                    <img className="case-img" src={require("../../assets/reportsMetricsEN.png")} ref={metric3Ref}  />
                 </div>
 
             </div>
