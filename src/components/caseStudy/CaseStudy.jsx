@@ -12,20 +12,20 @@ const CaseStudy = () => {
     const metric2Ref = useRef();
     const metric3Ref = useRef();
 
-    useEffect(()=> {
-        if(i18next.language != null){
-        const language = i18next.language.slice(0,2);
+    useEffect(() => {
+        if (i18next.language != null) {
+            const language = i18next.language.slice(0, 2);
 
-        if (language == 'en') {
-            metric1Ref.current.src = require("../../assets/courseMetricsEN.png");
-            metric2Ref.current.src = require("../../assets/createUserMetricsEN.png");
-            metric3Ref.current.src = require("../../assets/reportsMetricsEN.png");
-        } else if(language == 'es'){
-            metric1Ref.current.src = require("../../assets/courseMetricsES.png");
-            metric2Ref.current.src = require("../../assets/createUserMetricsES.png");
-            metric3Ref.current.src = require("../../assets/reportsMetricsES.png");
+            if (language == 'en') {
+                metric1Ref.current.src = require("../../assets/courseMetricsEN.png");
+                metric2Ref.current.src = require("../../assets/createUserMetricsEN.png");
+                metric3Ref.current.src = require("../../assets/reportsMetricsEN.png");
+            } else if (language == 'es') {
+                metric1Ref.current.src = require("../../assets/courseMetricsES.png");
+                metric2Ref.current.src = require("../../assets/createUserMetricsES.png");
+                metric3Ref.current.src = require("../../assets/reportsMetricsES.png");
+            }
         }
-    }
     }, [i18next.language]);
 
     return (
@@ -222,44 +222,51 @@ const CaseStudy = () => {
                     <img id="graph-img" className="case-img" src={require("../../assets/usabilityTest.png")} alt="Página de login de la CMS (diseño original previo)" />
                 </div>
             </div>
-            <div id="opinions-container">
-                <div className='opinion-card'>
-                    <div>
-                        <img src={require("../../assets/quote-icon.svg").default} alt="" />
+
+            <div id="opinions-big-container">
+                <h2>{t("OCRO")}</h2>
+                <div id="opinions-container">
+
+                    <div className='opinion-card'>
+                        <div>
+                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        </div>
+                        <p>{t("OCRO1")}</p>
                     </div>
-                    <p>{t("OCRO1")}</p>
-                </div>
-                <div className='opinion-card'>
-                    <div>
-                        <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                    <div className='opinion-card'>
+                        <div>
+                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        </div>
+                        <p>{t("OCRO2")}</p>
                     </div>
-                    <p>{t("OCRO2")}</p>
-                </div>
-                <div className='opinion-card'>
-                    <div>
-                        <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                    <div className='opinion-card'>
+                        <div>
+                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        </div>
+                        <p>{t("OCRO3")}</p>
                     </div>
-                    <p>{t("OCRO3")}</p>
-                </div>
-                <div className='opinion-card'>
-                    <div>
-                        <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                    <div className='opinion-card'>
+                        <div>
+                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        </div>
+                        <p>{t("OCRO4")}</p>
                     </div>
-                    <p>{t("OCRO4")}</p>
-                </div>
-                <div className='opinion-card'>
-                    <div>
-                        <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                    <div className='opinion-card'>
+                        <div>
+                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        </div>
+                        <p>{t("OCRO5")}</p>
                     </div>
-                    <p>{t("OCRO5")}</p>
-                </div>
-                <div className='opinion-card'>
-                    <div>
-                        <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                    <div className='opinion-card'>
+                        <div>
+                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        </div>
+                        <p>{t("OCRO6")}</p>
                     </div>
-                    <p>{t("OCRO6")}</p>
                 </div>
+
             </div>
+
             <div className='case-slide'>
                 <div className='text-side'>
                     <h2>{t("OCRBS")}</h2>
@@ -390,8 +397,8 @@ const CaseStudy = () => {
 
                 </div>
                 <div id="flow-img-pr-container">
-                <figure>
-                <img id="flow-img-pr" src={require("../../assets/flowProblem.png")} alt="Página de login de la CMS (diseño original previo)" />
+                    <figure>
+                        <img id="flow-img-pr" src={require("../../assets/flowProblem.png")} alt="Página de login de la CMS (diseño original previo)" />
                         <figcaption>{t('OCC3Caption')}</figcaption>
 
                     </figure>
@@ -568,7 +575,7 @@ const CaseStudy = () => {
                     <p>{t("OCV2p")}</p>
                 </div>
                 <div className='img-side'>
-                <img className="case-img" src={require("../../assets/createUserMetricsES.png")} ref={metric2Ref} />
+                    <img className="case-img" src={require("../../assets/createUserMetricsES.png")} ref={metric2Ref} />
 
                 </div>
 
@@ -582,7 +589,7 @@ const CaseStudy = () => {
 
                 </div>
                 <div className='img-side'>
-                    <img className="case-img" src={require("../../assets/reportsMetricsEN.png")} ref={metric3Ref}  />
+                    <img className="case-img" src={require("../../assets/reportsMetricsEN.png")} ref={metric3Ref} />
                 </div>
 
             </div>

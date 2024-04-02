@@ -209,16 +209,25 @@ li {
     font-weight: 400;
 }
 
+#opinions-big-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 1236px;
+    width: 100%;
+
+}
+
 #opinions-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
-    /* grid-template-columns: repeat(3, 1fr); */
     row-gap: 32px;
     width: 100%;
     max-width: 1236px;
-    padding-left: 60px;
-    padding-right: 60px;
     column-gap: 32px;
+
 
 }
 

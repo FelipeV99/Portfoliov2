@@ -26,7 +26,7 @@ const Contact = () => {
                 <div id="top-socials">
                     <div id="socials-text">
                         <div className='pill'>
-                            <p className='p2 letter-s1'>SOCIALS</p>
+                            <p className='p2 letter-s1'>{t("socials")}</p>
                         </div>
                         <div className='social-row'>
                             <p className='bolden p2'>mail</p>
@@ -60,7 +60,7 @@ const Contact = () => {
                     <div id="back-top">
                         <a href="#hero">
                             <div id="back-top-inception">
-                                <p className='p2'>Back to top</p>
+                                <p className='p2'>{t("backTop")}</p>
                                 <img src={require("../../assets/arrow-up.svg").default} alt="" />
                             </div>
                         </a>

@@ -1,11 +1,13 @@
 import React from 'react'
 import './navbar.css'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 
 const Navbar = () => {
     const navigation = useNavigate()
 
+    const [t, i18next] = useTranslation();
 
     return (
         <div>               
@@ -18,18 +20,18 @@ const Navbar = () => {
             <div id="nav-right">
 
                 <a className='nav-optn' onClick={() => { navigation("/") }}>
-                    <p className='small-p'>Home</p>
+                    <p className='small-p'>{t("navHome")}</p>
                     <div className='space-btwn'></div>
                     <img src={require("../../assets/nav-dot.svg").default} alt="" />
                 </a>
                 <a className='nav-optn' href="#work-container">
-                    <p className='small-p'>Work</p>
+                    <p className='small-p'>{t("navWork")}</p>
                     <div className='space-btwn'></div>
 
                     <img src={require("../../assets/nav-dot.svg").default} alt="" />
                 </a>
                 <a className='nav-optn' href="#connect-container">
-                    <p className='small-p'>Contact</p>
+                    <p className='small-p'>{t("navContact")}</p>
                     <div className='space-btwn'></div>
 
                     <img src={require("../../assets/nav-dot.svg").default} alt="" />

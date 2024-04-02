@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 const ProjectsAlt = () => {
     const projectsRef = useRef();
     const previewRef = useRef();
@@ -12,6 +13,8 @@ const ProjectsAlt = () => {
     const projectsUXRef = useRef();
     const previewUXRef = useRef();
     const previewUXImgRef = useRef();
+
+    const [t, i18next] = useTranslation();
 
     const navigation = useNavigate()
 
@@ -126,9 +129,9 @@ const ProjectsAlt = () => {
                 <div id="top-row">
                     <div id="work-text">
                         <div className='pill'>
-                            <p className='p2 letter-s1'>SELECTED WORK</p>
+                            <p className='p2 letter-s1'>{t("selectedWork")}</p>
                         </div>
-                        <p className='p2'>Comprised of work in the industry and conceptual projects</p>
+                        <p className='p2'>{t("SWp")}</p>
                     </div>
                     <div>
                         <p className='p2'>[ 02 ]</p>
@@ -137,13 +140,13 @@ const ProjectsAlt = () => {
                 </div>
                 <div id="bottom-row">
                     <div id="work-title">
-                        <h1 id="work-h1">Work</h1>
+                        <h1 id="work-h1">{t("work")}</h1>
 
                     </div>
 
                     <div id="table-container">
                         <div className='projects' ref={projectsUXRef} onMouseLeave={handleUXMouseLeave} onMouseEnter={handleUXMouseEnter} onMouseMove={handleUXMouseMove}>
-                            <p  className='p2 bolden letter-s1 project-type'>UX PROJECTS</p>
+                            <p  className='p2 bolden letter-s1 project-type'>{t("ux-projects")}</p>
                             <div className='space-12'></div>
                             <div className='project-row' id="pu1" onClick={() => { navigation("/case-study") }} onMouseMove={handleUXMouseMoveRow}>
                                 <div className='number-title'>
@@ -156,7 +159,7 @@ const ProjectsAlt = () => {
                                     <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
                             </div>
 
-                            <div className='project-row' onMouseMove={handleUXMouseMoveRow} id="pu2" >
+                            <div className='project-row' onClick={() => {window.open("https://www.behance.net/gallery/143997259/UXUI-Case-Study-Vitacan") }} onMouseMove={handleUXMouseMoveRow} id="pu2" >
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*X0.2</p>
                                     <p className='p2'>Vitacan</p>
@@ -171,7 +174,7 @@ const ProjectsAlt = () => {
                         <div className='space-32'></div>
                         <div className="projects" ref={projectsRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
 
-                            <p className='p2 bolden letter-s1 project-type'>UI PROJECTS</p>
+                            <p className='p2 bolden letter-s1 project-type'>{t("ui-projects")}</p>
                             <div className='space-12'></div>
                             <div className='project-row' onMouseMove={handleMouseMoveRow} id="p1">
                                 <div className='number-title'>
