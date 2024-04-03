@@ -53,7 +53,7 @@ const Home = () => {
             duration: 1,
             // repeat:5,
             ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-        }, 0.55);
+        }, 0.5);
 
         tl.to(felipetext.current, {
             clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
@@ -61,39 +61,34 @@ const Home = () => {
             duration: 1,
             // repeat:5,
             ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-        }, 0.5)
+        }, 0.5);
 
-        // tl.to(andradetext.current, {
-        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //     y: -60,
-        //     duration: 1,
-        //     // repeat:5,
-        //     ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-        // }, 0.5)
+        tl.to(ctatext.current,{
+            x:0,
+            ease: "power3.out",
+            duration:1,
 
-        // tl.to(andradetext.current, {
-        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //     y: -60,
-        //     duration: 1,
-        //     // repeat:5,
-        //     ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-        // }, 0.5)
+        }, 1.3);
 
-        // tl.to(ctatext.current, {
-        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //     y: 60,
-        //     duration: 1,
-        //     // repeat:5,
-        //     ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-        // }, 1.1)
+        tl.to(buttonscta.current, {
+            x:0,
+            ease: "power3.out",
+            duration:1,
+        }, 1.5);
+        //for opacity
 
-        // tl.to(buttonscta.current, {
-        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //     y: 60,
-        //     duration: 1,
-        //     // repeat:5,
-        //     ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-        // }, 1.1)
+        tl.to(ctatext.current,{
+            opacity:1,
+            ease: "power3.out",
+            duration:2,
+
+        }, 1.3);
+
+        tl.to(buttonscta.current, {
+            opacity:1,
+            ease: "power3.out",
+            duration:2,
+        }, 1.5);
     });
 
 

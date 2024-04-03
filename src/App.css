@@ -92,6 +92,8 @@ button{
 #button-cta{
   display: flex;
   gap:32px;
+  transform: translateX(32px);
+  opacity: 0;
 }
 
 #designer-title{
@@ -125,6 +127,8 @@ button{
   display: flex;
   max-width: 780px;
   min-width: 320px;
+  opacity: 0;
+  transform: translateX(-32px);
 }
 
 #mask-dt{

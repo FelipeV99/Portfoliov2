@@ -217,7 +217,6 @@ nav {
     #work-container {
         padding-left: 22px;
         padding-right: 22px;
-
     }
 
     .preview {
@@ -225,6 +224,10 @@ nav {
         height: 180px;
     }
 
+    .preview-ux {
+        width: 288px;
+        height: 180px;
+    }
 
 
 }
