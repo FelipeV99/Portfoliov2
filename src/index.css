@@ -28,14 +28,14 @@ html{
 
 @font-face {
   font-family: "IDGSemi";
-  src: url("./assets/IDGrotesk-Semibold.ttf");
-  font-weight: normal;
+  src: url("./assets/IDGrotesk-Semibold.ttf") format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "IDGrotesk Book";
-  src: url("./assets/IDGrotesk-Book.ttf");
+  src: url("./assets/IDGrotesk-Book.ttf") format('truetype');
 }
 
 
