@@ -1,16 +1,19 @@
 import React from 'react'
 import "./video.css"
 import { useTranslation } from 'react-i18next'
+import veryBadVideo from "../../assets/LSVideo.mp4"
 
 const Video = () => {
     const [t, i18next] = useTranslation();
     return (
-        <div>
-            <h1>this is my video</h1>
-            <video autoplay loop width="100%" height="100%">
-                <source src="../../assets/badvideo.mp4" type="video/mp4" />
-                    Sorry, this browser cannot play mp4 files.
-            </video>
+        <div id="master-container">
+            <div id="video-container">
+                <video autoPlay muted loop src={veryBadVideo}>
+
+                </video>
+
+            </div>
+
 
         </div>
     )

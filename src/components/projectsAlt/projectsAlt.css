@@ -25,6 +25,15 @@
     max-width: 1200px;
 }
 
+#nowrap-project-text{
+    white-space: nowrap;
+}
+
+.text-w-star{
+    display: flex;
+    gap: 8px;
+}
+
 .projects {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,12 @@
+#master-container{
+    padding-top: 68px;
+}
+
+#video-container{
+    width:100%;
+    display: flex;
+}
+
+video{
+    width:100%;
+}

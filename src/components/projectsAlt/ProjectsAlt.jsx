@@ -32,8 +32,8 @@ const ProjectsAlt = () => {
     }
 
     const bgUXPositions = {
-        pu1:"0 0",
-        pu2:"0 100%"
+        pu1: "0 0",
+        pu2: "0 100%"
     }
 
     const moveProject = (e) => {
@@ -145,12 +145,15 @@ const ProjectsAlt = () => {
 
                     <div id="table-container">
                         <div className='projects' ref={projectsUXRef} onMouseLeave={handleUXMouseLeave} onMouseEnter={handleUXMouseEnter} onMouseMove={handleUXMouseMove}>
-                            <p  className='p2 bolden letter-s1 project-type'>{t("ux-projects")}</p>
+                            <p className='p2 bolden letter-s1 project-type'>{t("ux-projects")}</p>
                             <div className='space-12'></div>
                             <div className='project-row' id="pu1" onClick={() => { navigation("/case-study") }} onMouseMove={handleUXMouseMoveRow}>
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*X0.1</p>
-                                    <p className='p2'>O-lab</p>
+                                    <div className='text-w-star'>
+                                        <p id="nowrap-project-text" className='p2'>O-lab</p>
+                                        <img src={require("../../assets/Star.svg").default} alt="" />
+                                    </div>
 
 
                                 </div>
@@ -158,7 +161,7 @@ const ProjectsAlt = () => {
                                     <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
                             </div>
 
-                            <div className='project-row' onClick={() => {window.open("https://www.behance.net/gallery/143997259/UXUI-Case-Study-Vitacan") }} onMouseMove={handleUXMouseMoveRow} id="pu2" >
+                            <div className='project-row' onClick={() => { window.open("https://www.behance.net/gallery/143997259/UXUI-Case-Study-Vitacan") }} onMouseMove={handleUXMouseMoveRow} id="pu2" >
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*X0.2</p>
                                     <p className='p2'>Vitacan</p>
@@ -175,7 +178,7 @@ const ProjectsAlt = () => {
 
                             <p className='p2 bolden letter-s1 project-type'>{t("ui-projects")}</p>
                             <div className='space-12'></div>
-                            <div className='project-row' onClick={() => {window.open("https://www.behance.net/gallery/194544839/Lawless-Seating-UI") }} onMouseMove={handleMouseMoveRow} id="p1">
+                            <div className='project-row' onClick={() => { window.open("https://www.behance.net/gallery/194544839/Lawless-Seating-UI") }} onMouseMove={handleMouseMoveRow} id="p1">
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*I0.1</p>
                                     <p className='p2'>Lawless Seating</p>
@@ -186,7 +189,7 @@ const ProjectsAlt = () => {
                             </div>
 
 
-                            <div className='project-row' onClick={() => {window.open("https://www.behance.net/gallery/192123843/Conceptual-UI-Design-Sitra-Fashion-App") }}  onMouseMove={handleMouseMoveRow} id="p2">
+                            <div className='project-row' onClick={() => { window.open("https://www.behance.net/gallery/192123843/Conceptual-UI-Design-Sitra-Fashion-App") }} onMouseMove={handleMouseMoveRow} id="p2">
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*I0.2</p>
                                     <p className='p2'>Sitra Fashion</p>
@@ -196,7 +199,7 @@ const ProjectsAlt = () => {
                                     <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
                             </div>
 
-                            <div className='project-row' onClick={() => {window.open("https://www.behance.net/gallery/194545131/The-Making-of-Cabbage-Chair") }}  onMouseMove={handleMouseMoveRow} id="p3">
+                            <div className='project-row' onClick={() => { window.open("https://www.behance.net/gallery/194545131/The-Making-of-Cabbage-Chair") }} onMouseMove={handleMouseMoveRow} id="p3">
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*I0.3</p>
                                     <p className='p2'>Cabbage Chair</p>

@@ -97,11 +97,13 @@ button{
 #designer-title{
   display: flex;
   flex-direction: column;
+  transform: translateY(-60px);
 }
 
 #felipe-title{
   display: flex;
   flex-direction: column;
+  transform: translateY(-60px);
 }
 
 /* #cta-copy{
@@ -125,15 +127,16 @@ button{
   min-width: 320px;
 }
 
-/* #mask-dt{
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+#mask-dt{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
 
 #mask-fa{
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+
 }
 
-.mask-cta{
+/* .mask-cta{
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 } */
 

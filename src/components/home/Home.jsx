@@ -11,30 +11,28 @@ const Home = () => {
 
     gsap.registerPlugin(useGSAP);
 
-    const uxtext = useRef();
     const designertext = useRef();
     const felipetext = useRef();
-    const andradetext = useRef();
     const buttonscta = useRef();
     const ctatext = useRef();
     const cvRef = useRef();
 
     const [t, i18next] = useTranslation();
 
-    
-        
-    useEffect(()=> {
-        if(i18next.language != null){
-        const language = i18next.language.slice(0,2);
-
-        if (language == 'en') {
-            cvRef.current.href = require("../../assets/Felipe Andrade CV.pdf");
 
 
-        } else if(language == 'es'){
-            cvRef.current.href = require("../../assets/Felipe Andrade HV.pdf");
+    useEffect(() => {
+        if (i18next.language != null) {
+            const language = i18next.language.slice(0, 2);
+
+            if (language == 'en') {
+                cvRef.current.href = require("../../assets/Felipe Andrade CV.pdf");
+
+
+            } else if (language == 'es') {
+                cvRef.current.href = require("../../assets/Felipe Andrade HV.pdf");
+            }
         }
-    }
     }, [i18next.language]);
 
 
@@ -44,124 +42,96 @@ const Home = () => {
     //   smooth: true,
     // }
 
-    // useGSAP(() => {
-    //     gsap.registerPlugin(CustomEase);
-    //     // gsap code here...
-    //     const tl = gsap.timeline();
-    //     tl.to(uxtext.current, {
-    //         y: -60,
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 0.5)
-    //     tl.to(designertext.current, {
-    //         y: -60,
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 0.55)
-    //     tl.to(uxtext.current, {
-    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 0.5);
-    //     tl.to(designertext.current, {
-    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 0.55);
+    useGSAP(() => {
+        gsap.registerPlugin(CustomEase);
+        // gsap code here...
+        const tl = gsap.timeline();
 
-    //     tl.to(felipetext.current, {
-    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-    //         y: -60,
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 0.5)
+        tl.to(designertext.current, {
+            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+            y: 60,
+            duration: 1,
+            // repeat:5,
+            ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
+        }, 0.55);
 
-    //     tl.to(andradetext.current, {
-    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-    //         y: -60,
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 0.5)
+        tl.to(felipetext.current, {
+            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+            y: 60,
+            duration: 1,
+            // repeat:5,
+            ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
+        }, 0.5)
 
-    //     tl.to(andradetext.current, {
-    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-    //         y: -60,
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 0.5)
+        // tl.to(andradetext.current, {
+        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //     y: -60,
+        //     duration: 1,
+        //     // repeat:5,
+        //     ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
+        // }, 0.5)
 
-    //     tl.to(ctatext.current, {
-    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-    //         y: 60,
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 1.1)
+        // tl.to(andradetext.current, {
+        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //     y: -60,
+        //     duration: 1,
+        //     // repeat:5,
+        //     ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
+        // }, 0.5)
 
-    //     tl.to(buttonscta.current, {
-    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-    //         y: 60,
-    //         duration: 1,
-    //         // repeat:5,
-    //         ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-    //     }, 1.1)
-    // });
+        // tl.to(ctatext.current, {
+        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //     y: 60,
+        //     duration: 1,
+        //     // repeat:5,
+        //     ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
+        // }, 1.1)
 
-    
+        // tl.to(buttonscta.current, {
+        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //     y: 60,
+        //     duration: 1,
+        //     // repeat:5,
+        //     ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
+        // }, 1.1)
+    });
 
-    // function Resume() {
-    //     if (i18next.language == 'en') {
-    //         return <a className='btn-main' href={require("../../assets/Felipe Andrade CV.pdf")} target="_blank">Download CV</a>;
-
-    //     } else if((i18next.language == 'es')){
-    //         return <a className='btn-main' href={require("../../assets/Felipe Andrade HV.pdf")} target="_blank">Descargar CV</a>
-
-    //     }
-
-    // }
 
 
     return (
         <div id="page-container">
             <section id="hero">
-                    <div id="number-container">
-                        <p className='p2'>[ 01 ]</p>
-                    </div>
-                    <div  id="hero-helper">
-                        <div id="hero-left">
-                            <div id="felipe-title">
-                                <div id='mask-fa' ref={felipetext}>
-                                    <h1 id="felipe-h1">Felipe Andrade</h1>
-                                </div>
-                            </div>
-                            <div id="designer-title">
-                                <div id="mask-dt" ref={designertext}>
-                                    <h1 id="ux-h1">{t('designerTitle')}</h1>
-                                </div>
-                            </div>
-                            <div className='space-12'></div>
-                            <div className='mask-cta cta-copy-container' ref={ctatext}>
-                                <p id="cta-copy" className='p1'>
-                                    {t("heroCopy")}
-                                </p>
+                <div id="number-container">
+                    <p className='p2'>[ 01 ]</p>
+                </div>
+                <div id="hero-helper">
+                    <div id="hero-left">
+                        <div id="felipe-title">
+                            <div id='mask-fa' ref={felipetext}>
+                                <h1 id="felipe-h1">Felipe Andrade</h1>
                             </div>
                         </div>
-                        <div id="hero-space"></div>
-                        <div id="hero-right">
-                            <div id="button-cta" className='mask-cta' ref={buttonscta}>
-                                <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
-                                <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
+                        <div id="designer-title">
+                            <div id="mask-dt" ref={designertext}>
+                                <h1 id="ux-h1">{t('designerTitle')}</h1>
                             </div>
+                        </div>
+                        <div className='space-12'></div>
+                        <div className='mask-cta cta-copy-container' ref={ctatext}>
+                            <p id="cta-copy" className='p1'>
+                                {t("heroCopy")}
+                            </p>
+                        </div>
+                    </div>
+                    <div id="hero-space"></div>
+                    <div id="hero-right">
+                        <div id="button-cta" className='mask-cta' ref={buttonscta}>
+                            <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
+                            <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
+                        </div>
 
-                        </div>
                     </div>
+                </div>
             </section>
             {/* <Projects /> */}
             <ProjectsAlt />
