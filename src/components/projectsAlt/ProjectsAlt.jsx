@@ -19,9 +19,7 @@ const ProjectsAlt = () => {
     const navigation = useNavigate()
 
     const { contextSafe } = useGSAP(() => {
-
-
-    }, 1);
+    });
 
     //this tracks wheter mouse is hovering over a project or not
     // let isInside = false;

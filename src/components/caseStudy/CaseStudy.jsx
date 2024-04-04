@@ -3,10 +3,13 @@ import './caseStudy.css'
 import Contact from '../contact/Contact'
 import { useTranslation } from 'react-i18next'
 import { useRef, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const CaseStudy = () => {
 
     const [t, i18next] = useTranslation();
+
+    const navigation = useNavigate();
 
     const metric1Ref = useRef();
     const metric2Ref = useRef();
@@ -799,7 +802,15 @@ const CaseStudy = () => {
                 </div>
 
             </div>
-            <Contact />
+
+            <div id="cta-finish-case">
+                <button onClick={() => { 
+                    navigation("/", { state: { targetId: "work-container" } });
+                    }}>Back to list of work</button>
+                <button onClick={() => { 
+                    navigation("/", { state: { targetId: "connect-container" } });
+                    }}>Contact</button>
+            </div>
         </div>
     )
 }

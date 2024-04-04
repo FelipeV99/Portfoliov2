@@ -19,17 +19,11 @@ const Home = () => {
     const cvRef = useRef();
 
     const prOverlayRef = useRef();
-    const prBarRef = useRef();
-
-    const prCounterRef = useRef();
     const [prCounter, setPrCounter] = useState(0);
 
     const [t, i18next] = useTranslation();
 
-    const { contextSafe } = useGSAP(() => {
-
-
-    }, 1);
+    const { contextSafe } = useGSAP(() => {});
 
     const homeAnimated = localStorage.getItem("homeAnimated");
     const counterStorage = localStorage.getItem("counterStorage");
@@ -45,8 +39,6 @@ const Home = () => {
     const { state } = useLocation();
     const { targetId } = state || {};
 
-    console.log("target id is " + targetId);
-
     useEffect(() => {
         const el = document.getElementById(targetId);
         if (el) {
@@ -56,6 +48,7 @@ const Home = () => {
 
     //I could add a counter to the local storage and set it to 100 once the state gets to 100
     useEffect(() => {
+
         if (prCounter == 100 || counterStorage == 100) {
             return;
         } else {
@@ -77,9 +70,6 @@ const Home = () => {
     const startMovingBars = contextSafe(() => {
         const tl = gsap.timeline();
         if (homeAnimated == null) {
-
-
-
             tl.to(prOverlayRef.current, {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
                 duration: 0.6
@@ -91,18 +81,13 @@ const Home = () => {
                 duration: 0
             }, 0);
         }
-
-
     });
-
-
 
     if (prCounter == 100 || counterStorage == 100) {
         startMovingBars();
         document.body.style.overflow = "scroll";
 
     }
-
 
     useEffect(() => {
         if (i18next.language != null) {
@@ -117,9 +102,6 @@ const Home = () => {
             }
         }
     }, [i18next.language]);
-
-
-
 
     // const locoRef = useRef(null);
 
@@ -141,14 +123,14 @@ const Home = () => {
                 duration: 1,
                 // repeat:5,
                 ease: "power3.inOut"
-            }, 1);
+            }, 1.4);
 
             tl.to(designertext.current, {
                 y: 100,
                 duration: 1.2,
                 // repeat:5,
                 ease: "power3.inOut"
-            }, 1);
+            }, 1.4);
 
             tl.to(felipetext.current, {
                 clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
@@ -156,27 +138,27 @@ const Home = () => {
                 // repeat:5,
                 ease: "power3.inOut"
 
-            }, 1);
+            }, 1.4);
 
             tl.to(felipetext.current, {
                 y: 100,
                 duration: 1.2,
                 // repeat:5,
                 ease: "power3.inOut"
-            }, 1);
+            }, 1.4);
 
             tl.to(ctatext.current, {
                 x: 0,
                 ease: "power3.out",
                 duration: 1,
 
-            }, 1.7);
+            }, 2.1);
 
             tl.to(buttonscta.current, {
                 x: 0,
                 ease: "power3.out",
                 duration: 1,
-            }, 1.9);
+            }, 2.3);
             //for opacity
 
             tl.to(ctatext.current, {
@@ -184,13 +166,13 @@ const Home = () => {
                 ease: "power3.out",
                 duration: 2,
 
-            }, 1.7);
+            }, 2.1);
 
             tl.to(buttonscta.current, {
                 opacity: 1,
                 ease: "power3.out",
                 duration: 2,
-            }, 1.9);
+            }, 2.3);
         } else {
 
             tl.to(designertext.current, {
@@ -236,15 +218,12 @@ const Home = () => {
 
         }
     });
-    console.log(homeAnimated);
-
-
 
     return (
         <div id="page-container">
             {counterStorage != 100 ?
                 <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
-                    <h1 className="pr-counter" ref={prCounterRef}>{prCounter}</h1>
+                    <h1 className="pr-counter">{prCounter}</h1>
                     <div className='pr-bar'></div>
                     <div className='pr-bar'></div>
                     <div className='pr-bar'></div>
