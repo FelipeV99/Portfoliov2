@@ -7,6 +7,7 @@ import ProjectsAlt from '../projectsAlt/ProjectsAlt';
 import Contact from '../contact/Contact';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 const Home = () => {
 
     gsap.registerPlugin(useGSAP);
@@ -32,7 +33,7 @@ const Home = () => {
 
     const homeAnimated = localStorage.getItem("homeAnimated");
     const counterStorage = localStorage.getItem("counterStorage");
-    
+
 
     document.body.style.overflow = "hidden";
 
@@ -40,6 +41,18 @@ const Home = () => {
     // if (animated === false) {
     //     localStorage.setItem("animated", true);
     // }
+
+    const { state } = useLocation();
+    const { targetId } = state || {};
+
+    console.log("target id is " + targetId);
+
+    useEffect(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView();
+        }
+      }, [targetId]);
 
     //I could add a counter to the local storage and set it to 100 once the state gets to 100
     useEffect(() => {
@@ -54,7 +67,7 @@ const Home = () => {
             } else {
                 setTimeout(() => {
                     setPrCounter(prCounter + Math.floor(Math.random() * 3) + 1);
-                    
+
                 }, 10);
             }
 
@@ -229,24 +242,24 @@ const Home = () => {
 
     return (
         <div id="page-container">
-            {/* {homeAnimated ? <div>animated</div> : <div>not animated</div> } */}
-            {counterStorage != 100 ? 
-                        <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
-                        <h1 className="pr-counter" ref={prCounterRef}>{prCounter}</h1>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-                        <div className='pr-bar'></div>
-        
-                    </div>
-                    :
-                    <div></div> }
+            {counterStorage != 100 ?
+                <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
+                    <h1 className="pr-counter" ref={prCounterRef}>{prCounter}</h1>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                    <div className='pr-bar'></div>
+                </div>
+                :
+                <div>
+                </div>
+            }
 
             <section id="hero">
                 <div id="number-container">
