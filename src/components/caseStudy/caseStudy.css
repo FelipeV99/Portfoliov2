@@ -23,6 +23,12 @@ li {
     min-width: 380px;
 }
 
+.li-div{
+    display: flex;
+    gap: 12px;
+    
+}
+
 #hero-case-img {
     width: 100%;
     height: auto;
@@ -312,6 +318,10 @@ li {
     #hero-case {
         flex-direction: column-reverse;
         justify-content: center;
+    }
+
+    #hero-case-img {
+        max-width: 560px;
     }
 
     .case-slide {

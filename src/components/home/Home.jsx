@@ -141,14 +141,14 @@ const Home = () => {
                 duration: 1,
                 // repeat:5,
                 ease: "power3.inOut"
-            }, 2);
+            }, 1);
 
             tl.to(designertext.current, {
                 y: 100,
                 duration: 1.2,
                 // repeat:5,
                 ease: "power3.inOut"
-            }, 2);
+            }, 1);
 
             tl.to(felipetext.current, {
                 clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
@@ -156,27 +156,27 @@ const Home = () => {
                 // repeat:5,
                 ease: "power3.inOut"
 
-            }, 2);
+            }, 1);
 
             tl.to(felipetext.current, {
                 y: 100,
                 duration: 1.2,
                 // repeat:5,
                 ease: "power3.inOut"
-            }, 2);
+            }, 1);
 
             tl.to(ctatext.current, {
                 x: 0,
                 ease: "power3.out",
                 duration: 1,
 
-            }, 2.7);
+            }, 1.7);
 
             tl.to(buttonscta.current, {
                 x: 0,
                 ease: "power3.out",
                 duration: 1,
-            }, 2.9);
+            }, 1.9);
             //for opacity
 
             tl.to(ctatext.current, {
@@ -184,13 +184,13 @@ const Home = () => {
                 ease: "power3.out",
                 duration: 2,
 
-            }, 2.7);
+            }, 1.7);
 
             tl.to(buttonscta.current, {
                 opacity: 1,
                 ease: "power3.out",
                 duration: 2,
-            }, 2.9);
+            }, 1.9);
         } else {
 
             tl.to(designertext.current, {

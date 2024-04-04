@@ -32,7 +32,7 @@ const Navbar = () => {
                 y: 0,
                 // repeat:5,
                 ease: "power3",
-            }, 2.8);
+            }, 2.2);
 
         }else{
             tl.to(navRef.current, {

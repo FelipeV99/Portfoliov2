@@ -68,9 +68,24 @@ const CaseStudy = () => {
                     <h2>{t("oCBusiness")}</h2>
                     <div className='space-6'></div>
                     <ul id="bullet-objectives">
-                        <li>{t("OCB1")}</li>
-                        <li>{t("OCB2")}</li>
-                        <li>{t("OCB3")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCB1")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCB2")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCB3")}</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
@@ -181,16 +196,46 @@ const CaseStudy = () => {
                     <p className='bolden p2'>{t("OCRGoals")}</p>
                     <div className='space-6'></div>
                     <ul>
-                        <li>{t("OCRG1")}</li>
-                        <li>{t("OCRG2")}</li>
-                        <li>{t("OCRG3")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRG1")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRG2")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRG3")}</p>
+                            </div>
+                        </li>
                     </ul>
                     <p className='bolden p2'>{t("OCRM")}</p>
                     <div className='space-6'></div>
                     <ul>
-                        <li>{t("OCRM1")}</li>
-                        <li>{t("OCRM2")}</li>
-                        <li>{t("OCRM3")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRM1")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRM2")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRM3")}</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div className='img-side'>
@@ -212,10 +257,30 @@ const CaseStudy = () => {
                     <p className='bolden p2'>{t("OCRUT")}</p>
                     <div className='space-6'></div>
                     <ul>
-                        <li>{t("OCRUT1")}</li>
-                        <li>{t("OCRUT2")}</li>
-                        <li>{t("OCRUT3")}</li>
-                        <li>{t("OCRUT4")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRUT1")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRUT2")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRUT3")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRUT4")}</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div className='img-side'>
@@ -278,11 +343,36 @@ const CaseStudy = () => {
                     <p className='bolden p2'>{t("OCRBSO")}</p>
                     <div className='space-6'></div>
                     <ul>
-                        <li>{t("OCRBSO1")}</li>
-                        <li>{t("OCRBSO2")}</li>
-                        <li>{t("OCRBSO3")}</li>
-                        <li>{t("OCRBSO4")}</li>
-                        <li>{t("OCRBSO5")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRBSO1")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRBSO2")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRBSO3")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRBSO4")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCRBSO5")}</p>
+                            </div>
+                        </li>
                     </ul>
 
                 </div>
@@ -303,19 +393,59 @@ const CaseStudy = () => {
                     <p className='bolden p2'>{t("OCBRStake")}</p>
                     <div className='space-6'></div>
                     <ul>
-                        <li>{t("OCBRStake1")}</li>
-                        <li>{t("OCBRStake2")}</li>
-                        <li>{t("OCBRStake3")}</li>
-                        <li>{t("OCBRStake4")}</li>
-                        <li>{t("OCBRStake5")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRStake1")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRStake2")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRStake3")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRStake4")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRStake5")}</p>
+                            </div>
+                        </li>
                     </ul>
                     <div className='space-12'></div>
                     <p className='bolden p2'>{t("OCBRSD")}</p>
                     <div className='space-6'></div>
                     <ul>
-                        <li>{t("OCBRSD1")}</li>
-                        <li>{t("OCBRSD2")}</li>
-                        <li>{t("OCBRSD3")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRSD1")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRSD2")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRSD3")}</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -328,11 +458,36 @@ const CaseStudy = () => {
                     <p className='bolden p2'>{t("OCBRCAD")}</p>
                     <div className='space-6'></div>
                     <ul>
-                        <li>{t("OCBRCAD1")}</li>
-                        <li>{t("OCBRCAD2")}</li>
-                        <li>{t("OCBRCAD3")}</li>
-                        <li>{t("OCBRCAD4")}</li>
-                        <li>{t("OCBRCAD5")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRCAD1")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRCAD2")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRCAD3")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRCAD4")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCBRCAD5")}</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div className='img-side'>
@@ -606,9 +761,24 @@ const CaseStudy = () => {
                     <div className='space-8'></div>
 
                     <ul>
-                        <li>{t("OCV41")}</li>
-                        <li>{t("OCV42")}</li>
-                        <li>{t("OCV43")}</li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCV41")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCV42")}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='li-div'>
+                                <img src={require("../../assets/li-dot.svg").default} alt="" />
+                                <p>{t("OCV43")}</p>
+                            </div>
+                        </li>
                     </ul>
 
                 </div>
