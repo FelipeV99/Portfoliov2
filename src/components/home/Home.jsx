@@ -30,20 +30,31 @@ const Home = () => {
 
     }, 1);
 
-    document.body.style.overflow ="hidden";
+    const homeAnimated = localStorage.getItem("homeAnimated");
+    const counterStorage = localStorage.getItem("counterStorage");
+    
 
+    document.body.style.overflow = "hidden";
 
+    // const animated = localStorage.getItem("animated");
+    // if (animated === false) {
+    //     localStorage.setItem("animated", true);
+    // }
+
+    //I could add a counter to the local storage and set it to 100 once the state gets to 100
     useEffect(() => {
-        if (prCounter == 100) {
+        if (prCounter == 100 || counterStorage == 100) {
             return;
         } else {
 
             if (prCounter > 100) {
-                setPrCounter(100)
-            }else{
+                setPrCounter(100);
+                localStorage.setItem("counterStorage", 100);
+
+            } else {
                 setTimeout(() => {
                     setPrCounter(prCounter + Math.floor(Math.random() * 3) + 1);
-    
+                    
                 }, 10);
             }
 
@@ -52,19 +63,30 @@ const Home = () => {
 
     const startMovingBars = contextSafe(() => {
         const tl = gsap.timeline();
+        if (homeAnimated == null) {
 
 
-        tl.to(prOverlayRef.current, {
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            duration: 0.6
-        },0.2);
-        
-        
+
+            tl.to(prOverlayRef.current, {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                duration: 0.6
+            }, 0.2);
+        } else {
+
+            tl.to(prOverlayRef.current, {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                duration: 0
+            }, 0);
+        }
+
+
     });
 
-    if(prCounter == 100){
+
+
+    if (prCounter == 100 || counterStorage == 100) {
         startMovingBars();
-        document.body.style.overflow ="scroll";
+        document.body.style.overflow = "scroll";
 
     }
 
@@ -97,82 +119,135 @@ const Home = () => {
         // gsap code here...
         const tl = gsap.timeline();
 
-        tl.to(designertext.current, {
-            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-            duration: 1,
-            // repeat:5,
-            ease: "power3.inOut"
-        }, 2);
+        if (homeAnimated == null) {
+            localStorage.setItem("homeAnimated", true);
 
-        tl.to(designertext.current, {
-            y: 100,
-            duration: 1.2,
-            // repeat:5,
-            ease: "power3.inOut"
-        }, 2);
 
-        tl.to(felipetext.current, {
-            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-            duration: 1,
-            // repeat:5,
-            ease: "power3.inOut"
+            tl.to(designertext.current, {
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 1,
+                // repeat:5,
+                ease: "power3.inOut"
+            }, 2);
 
-        }, 2);
+            tl.to(designertext.current, {
+                y: 100,
+                duration: 1.2,
+                // repeat:5,
+                ease: "power3.inOut"
+            }, 2);
 
-        tl.to(felipetext.current, {
-            y: 100,
-            duration: 1.2,
-            // repeat:5,
-            ease: "power3.inOut"
-        }, 2);
+            tl.to(felipetext.current, {
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 1,
+                // repeat:5,
+                ease: "power3.inOut"
 
-        tl.to(ctatext.current, {
-            x: 0,
-            ease: "power3.out",
-            duration: 1,
+            }, 2);
 
-        }, 2.7);
+            tl.to(felipetext.current, {
+                y: 100,
+                duration: 1.2,
+                // repeat:5,
+                ease: "power3.inOut"
+            }, 2);
 
-        tl.to(buttonscta.current, {
-            x: 0,
-            ease: "power3.out",
-            duration: 1,
-        }, 2.9);
-        //for opacity
+            tl.to(ctatext.current, {
+                x: 0,
+                ease: "power3.out",
+                duration: 1,
 
-        tl.to(ctatext.current, {
-            opacity: 1,
-            ease: "power3.out",
-            duration: 2,
+            }, 2.7);
 
-        }, 2.7);
+            tl.to(buttonscta.current, {
+                x: 0,
+                ease: "power3.out",
+                duration: 1,
+            }, 2.9);
+            //for opacity
 
-        tl.to(buttonscta.current, {
-            opacity: 1,
-            ease: "power3.out",
-            duration: 2,
-        }, 2.9);
+            tl.to(ctatext.current, {
+                opacity: 1,
+                ease: "power3.out",
+                duration: 2,
+
+            }, 2.7);
+
+            tl.to(buttonscta.current, {
+                opacity: 1,
+                ease: "power3.out",
+                duration: 2,
+            }, 2.9);
+        } else {
+
+            tl.to(designertext.current, {
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 0,
+            }, 0);
+
+            tl.to(designertext.current, {
+                y: 100,
+                duration: 0,
+            }, 0);
+
+            tl.to(felipetext.current, {
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 0,
+            }, 0);
+
+            tl.to(felipetext.current, {
+                y: 100,
+                duration: 0,
+            }, 0);
+
+            tl.to(ctatext.current, {
+                x: 0,
+                duration: 0,
+            }, 0);
+
+            tl.to(buttonscta.current, {
+                x: 0,
+                duration: 0,
+            }, 0);
+            //for opacity
+
+            tl.to(ctatext.current, {
+                opacity: 1,
+                duration: 0,
+            }, 0);
+
+            tl.to(buttonscta.current, {
+                opacity: 1,
+                duration: 0,
+            }, 0);
+
+        }
     });
+    console.log(homeAnimated);
 
 
 
     return (
         <div id="page-container">
+            {/* {homeAnimated ? <div>animated</div> : <div>not animated</div> } */}
+            {counterStorage != 100 ? 
+                        <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
+                        <h1 className="pr-counter" ref={prCounterRef}>{prCounter}</h1>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+                        <div className='pr-bar'></div>
+        
+                    </div>
+                    :
+                    <div></div> }
 
-            <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
-                <h1 className="pr-counter" ref={prCounterRef}>{prCounter}</h1>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-
-            </div>
             <section id="hero">
                 <div id="number-container">
                     <p className='p2'>[ 01 ]</p>

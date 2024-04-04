@@ -1,12 +1,29 @@
 #real-work-container{
-    min-width: 360px;
-    min-height: 724px;
     width: 100%;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+
     height: 100vh;
-    max-width: 1900px;
+    min-height: 724px;
     max-height: 1200px;
-    
 }
+
+#work-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: var(--padding-128);
+    padding-bottom: var(--padding-60);
+    padding-left: var(--padding-60);
+    padding-right: var(--padding-60);
+
+    scroll-snap-align: start;
+}
+
 
 .project-row {
     display: flex;
@@ -54,22 +71,6 @@ hr {
     padding: 0;
 }
 
-#work-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 128px;
-    padding-bottom: 60px;
-    padding-left: 60px;
-    padding-right: 60px;
-    height: 100vh;
-    width: 100%;
-    min-height: 724px;
-    max-width: 1900px;
-    max-height: 1200px;
-
-    scroll-snap-align: start;
-}
 
 #top-row {
     display: flex;

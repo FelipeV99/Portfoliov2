@@ -224,44 +224,46 @@ const CaseStudy = () => {
             </div>
 
             <div id="opinions-big-container">
-                <h2>{t("OCRO")}</h2>
-                <div id="opinions-container">
+                <div id="opinions-inner-container">
+                    <h2>{t("OCRO")}</h2>
+                    <div id="opinions-container">
 
-                    <div className='opinion-card'>
-                        <div>
-                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        <div className='opinion-card'>
+                            <div>
+                                <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                            </div>
+                            <p>{t("OCRO1")}</p>
                         </div>
-                        <p>{t("OCRO1")}</p>
-                    </div>
-                    <div className='opinion-card'>
-                        <div>
-                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        <div className='opinion-card'>
+                            <div>
+                                <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                            </div>
+                            <p>{t("OCRO2")}</p>
                         </div>
-                        <p>{t("OCRO2")}</p>
-                    </div>
-                    <div className='opinion-card'>
-                        <div>
-                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        <div className='opinion-card'>
+                            <div>
+                                <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                            </div>
+                            <p>{t("OCRO3")}</p>
                         </div>
-                        <p>{t("OCRO3")}</p>
-                    </div>
-                    <div className='opinion-card'>
-                        <div>
-                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        <div className='opinion-card'>
+                            <div>
+                                <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                            </div>
+                            <p>{t("OCRO4")}</p>
                         </div>
-                        <p>{t("OCRO4")}</p>
-                    </div>
-                    <div className='opinion-card'>
-                        <div>
-                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        <div className='opinion-card'>
+                            <div>
+                                <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                            </div>
+                            <p>{t("OCRO5")}</p>
                         </div>
-                        <p>{t("OCRO5")}</p>
-                    </div>
-                    <div className='opinion-card'>
-                        <div>
-                            <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                        <div className='opinion-card'>
+                            <div>
+                                <img src={require("../../assets/quote-icon.svg").default} alt="" />
+                            </div>
+                            <p>{t("OCRO6")}</p>
                         </div>
-                        <p>{t("OCRO6")}</p>
                     </div>
                 </div>
 

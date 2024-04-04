@@ -26,7 +26,7 @@ li {
 #hero-case-img {
     width: 100%;
     height: auto;
-    max-width: 1024px;
+    max-width: 880px;
 
 }
 
@@ -34,10 +34,13 @@ li {
     display: flex;
     gap: 64px;
     height: calc(100vh - 68px);
+    max-height: var(--max-height);
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 60px;
     padding-right: 60px;
+
+    min-width: var(--min-width);
 
     /* justify-content: center;
     align-items: center; */
@@ -91,7 +94,7 @@ li {
 #case-study-container {
     display: flex;
     flex-direction: column;
-    min-width: 428px;
+    min-width: var(--min-width);
     align-items: center;
     padding-top: 68px;
 }
@@ -143,7 +146,7 @@ li {
     flex-direction: column;
     background-color: var(--off-white-300);
     max-width: 560px;
-    min-width: 360px;
+    min-width: var(--min-width-no-padding);
     padding: 22px;
     gap: 12px;
 }
@@ -173,9 +176,12 @@ li {
     background-color: var(--off-black-800);
     width: 100%;
     height: 100vh;
+    max-height: var(--max-height);
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 22px;
+    padding-right: 22px;
 }
 
 .foreground {
@@ -213,12 +219,17 @@ li {
 #opinions-big-container{
     display: flex;
     flex-direction: column;
-    gap: 12px;
     padding-left: 60px;
     padding-right: 60px;
     max-width: 1236px;
     width: 100%;
 
+}
+
+#opinions-inner-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 #opinions-container {
@@ -353,6 +364,10 @@ li {
         padding-top: 32px;
         padding-bottom: 32px;
     }
+    .opinion-card{
+        width: 100%;
+    }
+
 
 
 }
@@ -366,7 +381,8 @@ li {
     }
 
     .text-side {
-        max-width: none;
+        min-width:var(--min-width-no-padding);
+
     }
 
     #case-slide-flows {
@@ -379,7 +395,69 @@ li {
         padding-left: 22px;
         padding-right: 22px;
     }
-    
+    .img-side{
+        min-width: var(--min-width-no-padding);
+    }
+    .case-img {
 
+        min-width: var(--min-width-no-padding);
+    }
+    #hero-case{
+        gap:12px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    #hero-img-container{
+        max-width: 316px;
+    }
+    
+    #hero-text{
+        min-width: 0;
+        max-width: 316px;
+
+    }
+
+    #process-container{
+        min-width: var(--min-width);
+    }
+
+    #opinions-big-container{
+        padding-left: 22px;
+        padding-right: 22px;
+        width: 100%;
+    }
+
+    #opinions-container{
+        grid-template-columns: repeat(auto-fit, minmax(var(--min-width-no-padding), 1fr));
+    }
+
+    .opinion-card{
+        width: 100%;
+        min-width: var(--min-width-no-padding);
+    }
+
+    /* .flow-img{
+        min-width: var(--min-width-no-padding);
+    } */
+
+    #solution-slide-vertical{
+        min-width: var(--min-width-no-padding);
+    }
+
+    #case-slide-flows{
+        width: 100%;
+        min-width: var(--min-width-no-padding);
+    }
+
+    .foreground{
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        align-items: flex-start;
+    }
+
+    .step-text{
+        width: 100%;
+        min-width: var(--min-width-no-padding);
+    }
 
 }

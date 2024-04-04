@@ -19,6 +19,16 @@
 
   --orange-800: #FF5C00;
   --orange-700: #FA7428;
+
+  --min-width-no-padding: 316px;
+  --min-width:360px;
+  --max-width:1900px;
+
+  --max-height: 1200px;
+
+  --padding-128:128px;
+  --padding-60:60px;
+  --padding-22:22px;
 }
 
 html {
