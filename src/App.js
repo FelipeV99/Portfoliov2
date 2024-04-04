@@ -6,6 +6,7 @@ import CaseStudy from './components/caseStudy/CaseStudy';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import Video from './components/video/Video';
+import Preloader from './components/preloader/Preloader';
 
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
       <Router>
         <Navbar />
         <ScrollToTop />
-
         <Routes>
+          <Route path="/preloader" element={<Preloader />} />
           <Route path="/" element={<Home />} />
           <Route path="/case-study" element={<CaseStudy />} />
           <Route path="/video" element={<Video />} />

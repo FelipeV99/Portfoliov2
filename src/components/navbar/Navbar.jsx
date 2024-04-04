@@ -27,7 +27,7 @@ const Navbar = () => {
             y:0,
             // repeat:5,
             ease: "power3",
-        }, 1.5);
+        }, 2.8);
     });
 
     return (

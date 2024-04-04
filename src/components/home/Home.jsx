@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRef } from 'react';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
@@ -17,8 +17,56 @@ const Home = () => {
     const ctatext = useRef();
     const cvRef = useRef();
 
+    const prOverlayRef = useRef();
+    const prBarRef = useRef();
+
+    const prCounterRef = useRef();
+    const [prCounter, setPrCounter] = useState(0);
+
     const [t, i18next] = useTranslation();
 
+    const { contextSafe } = useGSAP(() => {
+
+
+    }, 1);
+
+    document.body.style.overflow ="hidden";
+
+
+    useEffect(() => {
+        if (prCounter == 100) {
+            return;
+        } else {
+
+            if (prCounter > 100) {
+                setPrCounter(100)
+            }else{
+                setTimeout(() => {
+                    setPrCounter(prCounter + Math.floor(Math.random() * 3) + 1);
+    
+                }, 10);
+            }
+
+        }
+    }, [prCounter]);
+
+    const startMovingBars = contextSafe(() => {
+        const tl = gsap.timeline();
+
+
+        tl.to(prOverlayRef.current, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            duration: 0.6
+        },0.2);
+        
+        
+    });
+
+    if(prCounter == 100){
+        startMovingBars();
+        document.body.style.overflow ="scroll";
+
+    }
 
 
     useEffect(() => {
@@ -36,6 +84,8 @@ const Home = () => {
     }, [i18next.language]);
 
 
+
+
     // const locoRef = useRef(null);
 
     // const options = {
@@ -49,52 +99,80 @@ const Home = () => {
 
         tl.to(designertext.current, {
             clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-            y: 60,
             duration: 1,
             // repeat:5,
-            ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-        }, 0.5);
+            ease: "power3.inOut"
+        }, 2);
+
+        tl.to(designertext.current, {
+            y: 100,
+            duration: 1.2,
+            // repeat:5,
+            ease: "power3.inOut"
+        }, 2);
 
         tl.to(felipetext.current, {
             clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-            y: 60,
             duration: 1,
             // repeat:5,
-            ease: CustomEase.create("custom", "M0,0 C0.728,-0.057 0.352,1.073 1,1 "),
-        }, 0.5);
+            ease: "power3.inOut"
 
-        tl.to(ctatext.current,{
-            x:0,
+        }, 2);
+
+        tl.to(felipetext.current, {
+            y: 100,
+            duration: 1.2,
+            // repeat:5,
+            ease: "power3.inOut"
+        }, 2);
+
+        tl.to(ctatext.current, {
+            x: 0,
             ease: "power3.out",
-            duration:1,
+            duration: 1,
 
-        }, 1.3);
+        }, 2.7);
 
         tl.to(buttonscta.current, {
-            x:0,
+            x: 0,
             ease: "power3.out",
-            duration:1,
-        }, 1.5);
+            duration: 1,
+        }, 2.9);
         //for opacity
 
-        tl.to(ctatext.current,{
-            opacity:1,
+        tl.to(ctatext.current, {
+            opacity: 1,
             ease: "power3.out",
-            duration:2,
+            duration: 2,
 
-        }, 1.3);
+        }, 2.7);
 
         tl.to(buttonscta.current, {
-            opacity:1,
+            opacity: 1,
             ease: "power3.out",
-            duration:2,
-        }, 1.5);
+            duration: 2,
+        }, 2.9);
     });
 
 
 
     return (
         <div id="page-container">
+
+            <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
+                <h1 className="pr-counter" ref={prCounterRef}>{prCounter}</h1>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+
+            </div>
             <section id="hero">
                 <div id="number-container">
                     <p className='p2'>[ 01 ]</p>
