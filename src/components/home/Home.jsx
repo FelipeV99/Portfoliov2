@@ -17,24 +17,17 @@ const Home = () => {
     const buttonscta = useRef();
     const ctatext = useRef();
     const cvRef = useRef();
+    const heroRef = useRef();
 
     const prOverlayRef = useRef();
-    const [prCounter, setPrCounter] = useState(0);
+    // const [prCounter, setPrCounter] = useState(0);
 
     const [t, i18next] = useTranslation();
 
-    const { contextSafe } = useGSAP(() => {});
+    const { contextSafe } = useGSAP();
 
     const homeAnimated = localStorage.getItem("homeAnimated");
-    const counterStorage = localStorage.getItem("counterStorage");
-
-
-    document.body.style.overflow = "hidden";
-
-    // const animated = localStorage.getItem("animated");
-    // if (animated === false) {
-    //     localStorage.setItem("animated", true);
-    // }
+    // const counterStorage = localStorage.getItem("counterStorage");
 
     const { state } = useLocation();
     const { targetId } = state || {};
@@ -42,52 +35,79 @@ const Home = () => {
     useEffect(() => {
         const el = document.getElementById(targetId);
         if (el) {
-          el.scrollIntoView();
+            el.scrollIntoView();
         }
-      }, [targetId]);
+    }, [targetId]);
+
+    //next following lines are all related to preloader, until the useGsap()
+
+    // document.body.style.overflow = "hidden";
 
     //I could add a counter to the local storage and set it to 100 once the state gets to 100
-    useEffect(() => {
+    // useEffect(() => {
+    //     if (prCounter == 100 || counterStorage == 100) {
+    //         localStorage.setItem("counterStorage", 100);
+    //         console.log("enter here one time");
+    //         document.body.style.overflow = "scroll";
 
-        if (prCounter == 100 || counterStorage == 100) {
-            return;
-        } else {
+    //         startMovingPreloader();
+    //         return;
+    //     } else {
 
-            if (prCounter > 100) {
-                setPrCounter(100);
-                localStorage.setItem("counterStorage", 100);
+    //         if (prCounter >= 100) {
+    //             setPrCounter(100);
+    //             localStorage.setItem("counterStorage", 100);
+    //         } else {
+    //             setTimeout(() => {
+    //                 setPrCounter(prCounter + Math.floor(Math.random() * 3) + 1);
 
-            } else {
-                setTimeout(() => {
-                    setPrCounter(prCounter + Math.floor(Math.random() * 3) + 1);
+    //             }, 10);
+    //         }
 
-                }, 10);
-            }
+    //     }
+    // }, [prCounter]);
 
-        }
-    }, [prCounter]);
+    // const startMovingPreloader = contextSafe(() => {
+    //     const tl = gsap.timeline();
+    //     // if (homeAnimated == null) {
+    //     //     console.log("gonna run animated");
+    //     //     tl.to(prOverlayRef.current, {
+    //     //         opacity: 0.5,
+    //     //         // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //     //         duration: 1,
 
-    const startMovingBars = contextSafe(() => {
-        const tl = gsap.timeline();
-        if (homeAnimated == null) {
-            tl.to(prOverlayRef.current, {
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                duration: 0.6
-            }, 0.2);
-        } else {
+    //     //     }, 0.2);
+    //     // }
+    //     // else {
+    //     //     console.log("gonna run asap");
+    //     //     tl.to(prOverlayRef.current, {
+    //     //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //     //         duration: 0,
+    //     //     }, 0);
+    //     // }
+    //     if (homeAnimated == null) {
+    //         tl.fromTo(prOverlayRef.current,
+    //             {
+    //                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    //                 opacity: 1
+    //             },
+    //             {
+    //                 clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //                 opacity: 0,
+    //                 duration: 1,
+    //                 ease: "power1.in"
+    //             },
+    //             0);
+    //     }
+    // });
+    // console.log(counterStorage);
 
-            tl.to(prOverlayRef.current, {
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                duration: 0
-            }, 0);
-        }
-    });
-
-    if (prCounter == 100 || counterStorage == 100) {
-        startMovingBars();
-        document.body.style.overflow = "scroll";
-
-    }
+    // if (counterStorage==100) {
+    //     console.log("execute it now")
+    //     startMovingPreloader();
+    //     //i could run this on complete of the prOverlayref animation
+    //     document.body.style.overflow = "scroll";
+    // }
 
     useEffect(() => {
         if (i18next.language != null) {
@@ -102,162 +122,106 @@ const Home = () => {
             }
         }
     }, [i18next.language]);
+    
 
-    // const locoRef = useRef(null);
-
-    // const options = {
-    //   smooth: true,
-    // }
 
     useGSAP(() => {
-        gsap.registerPlugin(CustomEase);
-        // gsap code here...
         const tl = gsap.timeline();
 
         if (homeAnimated == null) {
-            localStorage.setItem("homeAnimated", true);
 
+            tl.fromTo(designertext.current,
+                {
+                    y: -100,
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                },
+                {
+                    y: 0,
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    ease: "power2.inOut"
+                },
+                0);
 
-            tl.to(designertext.current, {
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 1,
-                // repeat:5,
-                ease: "power3.inOut"
-            }, 1.4);
+            tl.fromTo(felipetext.current,
+                {
+                    y: -100,
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                },
+                {
+                    y: 0,
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    ease: "power2.inOut"
+                },
+                0);
+            tl.fromTo(ctatext.current,
+                {
+                    y: -30,
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                },
+                {
+                    y: 0,
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    ease: "power2.inOut"
+                },
+                0);
 
-            tl.to(designertext.current, {
-                y: 100,
-                duration: 1.2,
-                // repeat:5,
-                ease: "power3.inOut"
-            }, 1.4);
-
-            tl.to(felipetext.current, {
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 1,
-                // repeat:5,
-                ease: "power3.inOut"
-
-            }, 1.4);
-
-            tl.to(felipetext.current, {
-                y: 100,
-                duration: 1.2,
-                // repeat:5,
-                ease: "power3.inOut"
-            }, 1.4);
-
-            tl.to(ctatext.current, {
-                x: 0,
-                ease: "power3.out",
-                duration: 1,
-
-            }, 2.1);
-
-            tl.to(buttonscta.current, {
-                x: 0,
-                ease: "power3.out",
-                duration: 1,
-            }, 2.3);
-            //for opacity
-
-            tl.to(ctatext.current, {
-                opacity: 1,
-                ease: "power3.out",
-                duration: 2,
-
-            }, 2.1);
-
-            tl.to(buttonscta.current, {
-                opacity: 1,
-                ease: "power3.out",
-                duration: 2,
-            }, 2.3);
-        } else {
-
-            tl.to(designertext.current, {
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 0,
-            }, 0);
-
-            tl.to(designertext.current, {
-                y: 100,
-                duration: 0,
-            }, 0);
-
-            tl.to(felipetext.current, {
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 0,
-            }, 0);
-
-            tl.to(felipetext.current, {
-                y: 100,
-                duration: 0,
-            }, 0);
-
-            tl.to(ctatext.current, {
-                x: 0,
-                duration: 0,
-            }, 0);
-
-            tl.to(buttonscta.current, {
-                x: 0,
-                duration: 0,
-            }, 0);
-            //for opacity
-
-            tl.to(ctatext.current, {
-                opacity: 1,
-                duration: 0,
-            }, 0);
-
-            tl.to(buttonscta.current, {
-                opacity: 1,
-                duration: 0,
-            }, 0);
-
+            tl.fromTo(buttonscta.current,
+                {
+                    y: -30,
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                },
+                {
+                    y: 0,
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    ease: "power2.inOut",
+                    onComplete: () => { localStorage.setItem("homeAnimated", true); }
+                },
+                0);
         }
     });
 
+    
+    // console.log(prCounter);
+    // console.log(counterStorage);
     return (
         <div id="page-container">
-            {counterStorage != 100 ?
-                <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
-                    <h1 className="pr-counter">{prCounter}</h1>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                    <div className='pr-bar'></div>
-                </div>
-                :
-                <div>
-                </div>
-            }
+            {/* <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
+                <h1 className="pr-counter">{prCounter}</h1>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+                <div className='pr-bar'></div>
+            </div> */}
 
-            <section id="hero">
+
+            <section id="hero" ref={heroRef}>
                 <div id="number-container">
                     <p className='p2'>[ 01 ]</p>
                 </div>
                 <div id="hero-helper">
                     <div id="hero-left">
                         <div id="felipe-title">
-                            <div id='mask-fa' ref={felipetext}>
+                            <div ref={felipetext}>
                                 <h1 id="felipe-h1">Felipe Andrade</h1>
                             </div>
                         </div>
                         <div id="designer-title">
-                            <div id="mask-dt" ref={designertext}>
+                            <div ref={designertext}>
                                 <h1 id="ux-h1">{t('designerTitle')}</h1>
                             </div>
                         </div>
                         <div className='space-12'></div>
-                        <div className='mask-cta cta-copy-container' ref={ctatext}>
+                        <div className='cta-copy-container' ref={ctatext}>
                             <p id="cta-copy" className='p1'>
                                 {t("heroCopy")}
                             </p>
@@ -265,7 +229,7 @@ const Home = () => {
                     </div>
                     <div id="hero-space"></div>
                     <div id="hero-right">
-                        <div id="button-cta" className='mask-cta' ref={buttonscta}>
+                        <div id="button-cta" ref={buttonscta}>
                             <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
                             <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
                         </div>

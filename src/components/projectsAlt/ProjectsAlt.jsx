@@ -1,10 +1,11 @@
-import React from 'react'
-import './projectsAlt.css'
-import { useRef } from 'react'
+import React from 'react';
+import './projectsAlt.css';
+import { useRef, useState } from 'react';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
+import ProjectOverlay from './ProjectOverlay';
 const ProjectsAlt = () => {
     const projectsRef = useRef();
     const previewRef = useRef();
@@ -15,6 +16,9 @@ const ProjectsAlt = () => {
     const previewUXImgRef = useRef();
 
     const [t, i18next] = useTranslation();
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [openProject, setOpenProject] = useState("");
 
     const navigation = useNavigate()
 
@@ -122,6 +126,16 @@ const ProjectsAlt = () => {
 
     return (
         <div id="real-work-container">
+            <ProjectOverlay
+                open={isOpen}
+                whichProject={openProject}
+                close={() => {
+                    setIsOpen(false);
+                    document.body.style.overflow = "scroll";
+                    setOpenProject("");
+                }}
+            />
+
             <section id="work-container">
                 <div id="top-row">
                     <div id="work-text">
@@ -176,35 +190,55 @@ const ProjectsAlt = () => {
 
                             <p className='p2 bolden letter-s1 project-type'>{t("ui-projects")}</p>
                             <div className='space-12'></div>
-                            <div className='project-row' onClick={() => { window.open("https://www.behance.net/gallery/194544839/Lawless-Seating-UI") }} onMouseMove={handleMouseMoveRow} id="p1">
+                            <div id="p1" className='project-row'
+                                onClick={() => {
+                                    setIsOpen(true);
+                                    setOpenProject("Lawless Seating");
+                                }}
+                                onMouseMove={handleMouseMoveRow}
+                            >
+
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*I0.1</p>
                                     <p className='p2'>Lawless Seating</p>
                                 </div>
                                 <div>
-                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
+                                    <img src={require("../../assets/play-icon.svg").default} alt="" />                                </div>
 
                             </div>
 
 
-                            <div className='project-row' onClick={() => { window.open("https://www.behance.net/gallery/192123843/Conceptual-UI-Design-Sitra-Fashion-App") }} onMouseMove={handleMouseMoveRow} id="p2">
+                            <div className='project-row' id="p2"
+                                onClick={() => {
+                                    setIsOpen(true);
+                                    setOpenProject("Sitra");
+                                }}
+                                onMouseMove={handleMouseMoveRow}
+                            >
+
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*I0.2</p>
                                     <p className='p2'>Sitra Fashion</p>
 
                                 </div>
                                 <div className='number-title'>
-                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
+                                    <img src={require("../../assets/play-icon.svg").default} alt="" />                                </div>
                             </div>
 
-                            <div className='project-row' onClick={() => { window.open("https://www.behance.net/gallery/194545131/The-Making-of-Cabbage-Chair") }} onMouseMove={handleMouseMoveRow} id="p3">
+                            <div className='project-row' id="p3"
+                                onClick={() => {
+                                    setIsOpen(true);
+                                    setOpenProject("Cabbage");
+                                }}
+                                onMouseMove={handleMouseMoveRow}
+                            >
                                 <div className='number-title'>
                                     <p className='p2 bolden table-number'>*I0.3</p>
                                     <p className='p2'>Cabbage Chair</p>
 
                                 </div>
                                 <div>
-                                    <img src={require("../../assets/external-arrow.svg").default} alt="" />                                </div>
+                                    <img src={require("../../assets/play-icon.svg").default} alt="" />                                </div>
                             </div>
                         </div>
 

@@ -41,8 +41,6 @@ button{
   font-size: 18px;
   font-family: "Century Gothic";
   border-bottom: 4px var(--off-white-100) solid;
-
-  
 }
 
 
@@ -95,26 +93,22 @@ button{
 #button-cta{
   display: flex;
   gap:32px;
-  transform: translateX(32px);
-  opacity: 0;
+  /* transform: translateX(32px);
+  opacity: 0; */
 }
 
 #designer-title{
   display: flex;
   flex-direction: column;
-  transform: translateY(-100px);
+  /* transform: translateY(-100px); */
 }
 
 #felipe-title{
   display: flex;
   flex-direction: column;
-  transform: translateY(-100px);
+  /* transform: translateY(-100px); */
 }
 
-/* #cta-copy{
-  max-width: 780px;
-  min-width: 480px;
-} */
 
 #small-p{
   font-size: 16px;
@@ -130,22 +124,7 @@ button{
   display: flex;
   max-width: 780px;
   min-width: var(--min-width-no-padding);
-  opacity: 0;
-  transform: translateX(-32px);
 }
-
-#mask-dt{
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-}
-
-#mask-fa{
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-
-}
-
-/* .mask-cta{
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-} */
 
 .pr-overlay{
   position: absolute;
@@ -155,12 +134,11 @@ button{
   display: flex;
   left: 0;
   top:0;
-
 }
 
-#overlay-mask{
+/* #overlay-mask{
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
+} */
 
 .pr-bar{
   width: 10vw;

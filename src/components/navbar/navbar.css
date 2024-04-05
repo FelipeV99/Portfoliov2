@@ -10,12 +10,9 @@ nav {
   background-color: var(--off-white-100);
   min-width: 360px;
   z-index: 12;
-  transform: translateY(-68px);
+  /* transform: translateY(-68px); */
 }
 
-/* #nav-mask{
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-} */
 
 #logo-nav{
   height: 28px;

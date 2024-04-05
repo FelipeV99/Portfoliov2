@@ -26,24 +26,50 @@ const Navbar = () => {
 
             localStorage.setItem("navAnimated", true);
 
-            tl.to(navRef.current, {
+            tl.fromTo(navRef.current, {
+                
+                // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                y: -60,
+                // repeat:5,
+                
+            },
+            {
+                y:0,
                 duration: 1,
-                // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                y: 0,
-                // repeat:5,
-                ease: "power3",
-            }, 2.2);
+                ease: "power2.inOut",
 
-        }else{
-            tl.to(navRef.current, {
-                duration: 0,
-                // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                y: 0,
-                // repeat:5,
-                ease: "power3",
-            }, 0);
+            }, 
+            0);
+
         }
     });
+
+    // useGSAP(() => {
+    //     gsap.registerPlugin(CustomEase);
+    //     // gsap code here...
+    //     const tl = gsap.timeline();
+    //     if (navAnimated == null) {
+
+    //         localStorage.setItem("navAnimated", true);
+
+    //         tl.to(navRef.current, {
+    //             duration: 1,
+    //             // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+    //             y: 0,
+    //             // repeat:5,
+    //             ease: "power3",
+    //         }, 2.2);
+
+    //     }else{
+    //         tl.to(navRef.current, {
+    //             duration: 0,
+    //             // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+    //             y: 0,
+    //             // repeat:5,
+    //             ease: "power3",
+    //         }, 0);
+    //     }
+    // });
 
 
 
