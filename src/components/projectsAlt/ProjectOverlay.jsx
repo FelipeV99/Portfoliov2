@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import LSVideo from "../../assets/LSVideo.mp4"
 import CabbageVideo from "../../assets/CabbageVideo.mp4"
@@ -6,6 +6,25 @@ import LogoAnimation from "../../assets/Logo Animation"
 import Lottie from 'react-lottie'
 import ReactDom from 'react-dom'
 import './projectsAlt.css'
+import sitra from "../../assets/Sitra.png";
+import sitraPlaceholder from "../../assets/SitraSmall.png";
+
+const ProgressiveImage = (props) => {
+    const [imgSrc, setImgSrc] = useState(props.placeholderSrc || props.src);
+
+    useEffect(()=>{
+        const img = new Image();
+        img.src = props.src;
+        img.onload = () => {
+            setImgSrc(props.src);
+        };
+
+    }, [props.src]);
+    return(
+        <img className="prog-img" src={imgSrc} />
+    )
+
+};
 
 
 const ProjectOverlay = (props) => {
@@ -53,8 +72,9 @@ const ProjectOverlay = (props) => {
                                 <h2>Sitra Fashion</h2>
                                 <p className='p2'>Conceptual project</p>
                             </div>
+                            <ProgressiveImage src={sitra} placeholderSrc={sitraPlaceholder} />
 
-                            <img className='img-ui' src={require("../../assets/Sitra.png")} />
+                            {/* <img className='img-ui' src={require("../../assets/Sitra.png")} /> */}
                         </div>
                         :
                         <div></div>
