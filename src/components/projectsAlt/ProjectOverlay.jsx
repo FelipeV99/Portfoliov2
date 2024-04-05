@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import LSVideo from "../../assets/LSVideo.mp4"
 import CabbageVideo from "../../assets/CabbageVideo.mp4"
 import LogoAnimation from "../../assets/Logo Animation"
-import Lottie from 'react-lottie'
+// import Lottie from 'react-lottie'
 import ReactDom from 'react-dom'
 import './projectsAlt.css'
 import sitra from "../../assets/Sitra.png";

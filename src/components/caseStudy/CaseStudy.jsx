@@ -1,6 +1,5 @@
 import React from 'react'
 import './caseStudy.css'
-import Contact from '../contact/Contact'
 import { useTranslation } from 'react-i18next'
 import { useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
