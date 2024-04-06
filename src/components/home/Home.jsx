@@ -27,6 +27,7 @@ const Home = () => {
     const felipetext = useRef();
     const buttonscta = useRef();
     const ctatext = useRef();
+    const numeratorRef = useRef();
     const cvRef = useRef();
     const heroRef = useRef();
 
@@ -189,9 +190,23 @@ const Home = () => {
                 clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
                 duration: 1,
                 ease: "power2.inOut",
-                onComplete: () => { localStorage.setItem("homeAnimated", true); }
+                // onComplete: () => { localStorage.setItem("homeAnimated", true); }
             },
             0);
+        tl.fromTo(numeratorRef.current,
+            {
+                y:-30,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            },
+            {
+                y:0,
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 1,
+                ease: "power2.inOut"
+            },
+            0
+
+        );
         // }
     });
 
@@ -199,7 +214,7 @@ const Home = () => {
     // console.log(prCounter);
     // console.log(counterStorage);
     return (
-        <div id="page-container">
+        <div id="page-container" data-scroll-section>
             {/* <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
                 <h1 className="pr-counter">{prCounter}</h1>
                 <div className='pr-bar'></div>
@@ -217,7 +232,7 @@ const Home = () => {
 
             <section id="hero" ref={heroRef}>
                 <div id="number-container">
-                    <p className='p2'>[ 01 ]</p>
+                    <p className='p2' ref={numeratorRef}>[ 01 ]</p>
                 </div>
                 <div id="hero-helper">
                     <div id="hero-left">

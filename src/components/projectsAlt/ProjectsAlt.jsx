@@ -123,7 +123,9 @@ const ProjectsAlt = () => {
         //     });
         gsap.to(previewRef.current, {
             clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-            duration: 0.4
+            duration: 0.3,
+            ease: "power1.out"
+
         });
     });
 
@@ -143,7 +145,9 @@ const ProjectsAlt = () => {
     const handleMouseLeave = contextSafe(() => {
         gsap.to(previewRef.current, {
             clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)",
-            duration: 0.4
+            duration: 0.3,
+            ease: "power1.out"
+
         });
         // gsap.to(previewRef.current, {
         //     scale: 0,
@@ -152,7 +156,7 @@ const ProjectsAlt = () => {
     });
 
     return (
-        <div id="real-work-container">
+        <div id="real-work-container" data-scroll-section>
             <ProjectOverlay
                 open={isOpen}
                 whichProject={openProject}

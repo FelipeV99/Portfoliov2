@@ -76,7 +76,7 @@ const ProjectOverlay = (props) => {
         <>
             <div className='overlay-style'>
                 <div className="div-close-overlay" onClick={props.close} ><img src={require("../../assets/Close.svg").default} alt="" /></div>
-                <div className="modal-style">
+                <div className="modal-style" data-scroll-section>
                     {props.whichProject === "Lawless Seating" ?
                         <div>
                             <div className='text-overlay'>
