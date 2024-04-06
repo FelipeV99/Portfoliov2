@@ -214,7 +214,7 @@ const Home = () => {
     // console.log(prCounter);
     // console.log(counterStorage);
     return (
-        <div id="page-container" data-scroll-section>
+        <div id="page-container" >
             {/* <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
                 <h1 className="pr-counter">{prCounter}</h1>
                 <div className='pr-bar'></div>
@@ -230,7 +230,7 @@ const Home = () => {
             </div> */}
 
 
-            <section id="hero" ref={heroRef}>
+            <section id="hero" ref={heroRef} data-scroll-section>
                 <div id="number-container">
                     <p className='p2' ref={numeratorRef}>[ 01 ]</p>
                 </div>
