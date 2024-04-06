@@ -246,8 +246,10 @@ nav {
     height: 360px;
     pointer-events: none;
     transform-origin: center;
-    transform: scale(0);
+    /* transform: scale(0); */
     z-index: 2;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); */
+    clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%);
 }
 
 .preview-ux {
@@ -259,6 +261,7 @@ nav {
     transform-origin: center;
     transform: scale(0);
     z-index: 2;
+    
 }
 
 .preview-ux-img {

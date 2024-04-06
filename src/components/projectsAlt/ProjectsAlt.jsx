@@ -112,18 +112,27 @@ const ProjectsAlt = () => {
     });
 
     const handleMouseMove = contextSafe(() => {
+        // gsap.fromTo(previewRef.current,
+        //     {
+        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        //     },
+        //     {
+        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //         duration: 0.3,
+        //         ease: "power2.inOut"
+        //     });
         gsap.to(previewRef.current, {
-            scale: 1,
-            duration: 0.3
+            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+            duration: 0.4
         });
     });
 
     const handleMouseEnter = contextSafe((e) => {
         handleMouseMoveRow(e);
-        gsap.to(previewRef.current, {
-            scale: 1,
-            duration: 0.3
-        });
+        // gsap.to(previewRef.current, {
+        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //     duration: 0.4
+        // });
     });
 
     const handleMouseMoveRow = (e) => {
@@ -133,9 +142,13 @@ const ProjectsAlt = () => {
 
     const handleMouseLeave = contextSafe(() => {
         gsap.to(previewRef.current, {
-            scale: 0,
-            duration: 0.3
+            clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)",
+            duration: 0.4
         });
+        // gsap.to(previewRef.current, {
+        //     scale: 0,
+        //     duration: 0.3
+        // });
     });
 
     return (
