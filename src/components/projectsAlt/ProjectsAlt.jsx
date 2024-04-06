@@ -168,7 +168,11 @@ const ProjectsAlt = () => {
             />
 
             <section id="work-container">
-                <div id="top-row">
+                <div id="top-row"             className="op-class"
+            data-scroll
+            data-scroll-class="fadeIn"
+            data-scroll-repeat="true"
+            data-scroll-speed="2">
                     <div id="work-text">
                         <div className='pill'>
                             <p className='p2 letter-s1'>{t("selectedWork")}</p>

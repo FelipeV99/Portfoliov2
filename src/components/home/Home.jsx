@@ -235,10 +235,10 @@ const Home = () => {
                     <p className='p2' ref={numeratorRef}>[ 01 ]</p>
                 </div>
                 <div id="hero-helper">
-                    <div id="hero-left">
+                    <div id="hero-left" >
                         <div id="felipe-title">
                             <div ref={felipetext}>
-                                <h1 id="felipe-h1">Felipe Andrade</h1>
+                                <h1 id="felipe-h1" >Felipe Andrade</h1>
                             </div>
                         </div>
                         <div id="designer-title">

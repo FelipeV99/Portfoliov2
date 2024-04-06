@@ -1,3 +1,13 @@
+.op-class{
+    
+    opacity: 0;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 4s ;
+}
+
 .overlay-style{
     position: fixed;
     top: 0;
