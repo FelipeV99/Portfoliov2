@@ -39,9 +39,13 @@ const ProjectsAlt = () => {
     }
 
     const moveProject = (e) => {
-        const previewRect = previewRef.current.getBoundingClientRect();
-        const offsetX = previewRect.width / 2;
-        const offsetY = previewRect.height / 2;
+
+        // const previewRect = previewRef.current.getBoundingClientRect();
+        // const offsetX = previewRect.width / 2;
+        // const offsetY = previewRect.height / 2;
+       
+        const offsetX = previewRef.current.clientWidth / 2;
+        const offsetY = previewRef.current.clientHeight / 2;
 
         previewRef.current.style.left = e.pageX - offsetX + "px";
         previewRef.current.style.top = e.pageY - offsetY + "px";
@@ -56,9 +60,14 @@ const ProjectsAlt = () => {
     }
 
     const moveUXProject = (e) => {
-        const previewRect = previewUXRef.current.getBoundingClientRect();
-        const offsetX = previewRect.width / 2;
-        const offsetY = previewRect.height / 2;
+        
+        // const previewRect = previewUXRef.current.getBoundingClientRect();
+
+        // const offsetX = previewRect.width / 2;
+        // const offsetY = previewRect.height / 2;
+
+        const offsetX = previewUXRef.current.clientWidth / 2;
+        const offsetY = previewUXRef.current.clientHeight / 2;
 
         previewUXRef.current.style.left = e.pageX - offsetX + "px";
         previewUXRef.current.style.top = e.pageY - offsetY + "px";
@@ -79,16 +88,20 @@ const ProjectsAlt = () => {
         });
     });
 
-    const handleUXMouseEnter = contextSafe(() => {
+    const handleUXMouseEnter = contextSafe((e) => {
+        handleUXMouseMoveRow(e);
         gsap.to(previewUXRef.current, {
             scale: 1,
             duration: 0.3
         });
+        
+
     });
 
     const handleUXMouseMoveRow = (e) => {
+        // console.log(e);
         moveUXProject(e);
-        moveUXProjectImg(e.currentTarget)
+        moveUXProjectImg(e.currentTarget);
     }
 
     const handleUXMouseLeave = contextSafe(() => {
@@ -105,7 +118,8 @@ const ProjectsAlt = () => {
         });
     });
 
-    const handleMouseEnter = contextSafe(() => {
+    const handleMouseEnter = contextSafe((e) => {
+        handleMouseMoveRow(e);
         gsap.to(previewRef.current, {
             scale: 1,
             duration: 0.3

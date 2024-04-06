@@ -8,9 +8,20 @@ import Contact from '../contact/Contact';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+// import { useFontFaceObserver } from 'use-font-face-observer';
+
+
 const Home = () => {
 
     gsap.registerPlugin(useGSAP);
+
+    // const isFontLoaded = useFontFaceObserver([
+    //     { family: 'IDGSemi' }, // Same name you have in your CSS
+    // ]);
+
+    // useEffect(() => {
+    //     console.log("Is font loaded?", isFontLoaded);
+    //   }, [isFontLoaded]);
 
     const designertext = useRef();
     const felipetext = useRef();
