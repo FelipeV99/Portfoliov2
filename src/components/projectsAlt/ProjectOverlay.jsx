@@ -7,7 +7,8 @@ import Lottie from 'react-lottie'
 import ReactDom from 'react-dom'
 import './projectsAlt.css'
 import sitra from "../../assets/Sitra.png";
-import sitraPlaceholder from "../../assets/SitraSmall.png";
+// import sitraPlaceholder from "../../assets/SitraSmall.png";
+import SitraPlacholderBigger from "../../assets/SitraSmallBiggie.png"
 
 const ProgressiveImage = (props) => {
     const [imgSrc, setImgSrc] = useState(props.placeholderSrc);
@@ -52,15 +53,14 @@ const ProgressiveVideo = (props) => {
 
 const ProjectOverlay = (props) => {
     const [t, i18next] = useTranslation();
-    const [videoHasLoaded, setVideoHasLoaded] = useState(false);
+
     const videoContainerRef = useRef();
     const placeholderVideoRef = useRef();
 
     if (props.open === false) return null;
     // console.log(placeholderVideoRef.current.className);
 
-    const handleOnCanPlayThrough = (e)=>{
-        setVideoHasLoaded(true);
+    const handleOnCanPlayThrough = ()=>{
         placeholderVideoRef.current.className = "placeholder-for-video-hidden";
     }
 
@@ -111,7 +111,7 @@ const ProjectOverlay = (props) => {
                                 <h2>Sitra Fashion</h2>
                                 <p className='p2'>Conceptual project</p>
                             </div>
-                            <ProgressiveImage src={sitra} placeholderSrc={sitraPlaceholder} />
+                            <ProgressiveImage src={sitra} placeholderSrc={SitraPlacholderBigger} />
 
                             {/* <img className='img-ui' src={require("../../assets/Sitra.png")} /> */}
                         </div>
@@ -124,10 +124,14 @@ const ProjectOverlay = (props) => {
                                 <h2>The Making of Cabbage Chair</h2>
                                 <p className='p2'>Conceptual project</p>
                             </div>
+                            <div className='placeholder-for-video' ref={placeholderVideoRef} style={{"height" : placeholderHeight }}>
+                            <Lottie options={defaultOptions} height={80} width={80} />
+
+                            </div>
 
                             <div className="master-container">
                                 <div className="video-container">
-                                    <video autoPlay muted loop src={CabbageVideo}>
+                                    <video autoPlay muted loop src={CabbageVideo} onCanPlayThrough={handleOnCanPlayThrough}>
 
                                     </video>
 

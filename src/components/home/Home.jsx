@@ -24,9 +24,9 @@ const Home = () => {
 
     const [t, i18next] = useTranslation();
 
-    const { contextSafe } = useGSAP();
+    // const { contextSafe } = useGSAP();
 
-    const homeAnimated = localStorage.getItem("homeAnimated");
+    // const homeAnimated = localStorage.getItem("homeAnimated");
     // const counterStorage = localStorage.getItem("counterStorage");
 
     const { state } = useLocation();
@@ -122,69 +122,69 @@ const Home = () => {
             }
         }
     }, [i18next.language]);
-    
+
 
 
     useGSAP(() => {
         const tl = gsap.timeline();
 
-        if (homeAnimated == null) {
+        // if (homeAnimated == null) {
 
-            tl.fromTo(designertext.current,
-                {
-                    y: -100,
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                },
-                {
-                    y: 0,
-                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                    duration: 1,
-                    ease: "power2.inOut"
-                },
-                0);
+        tl.fromTo(designertext.current,
+            {
+                y: -100,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            },
+            {
+                y: 0,
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 1,
+                ease: "power2.inOut"
+            },
+            0);
 
-            tl.fromTo(felipetext.current,
-                {
-                    y: -100,
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                },
-                {
-                    y: 0,
-                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                    duration: 1,
-                    ease: "power2.inOut"
-                },
-                0);
-            tl.fromTo(ctatext.current,
-                {
-                    y: -30,
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                },
-                {
-                    y: 0,
-                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                    duration: 1,
-                    ease: "power2.inOut"
-                },
-                0);
+        tl.fromTo(felipetext.current,
+            {
+                y: -100,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            },
+            {
+                y: 0,
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 1,
+                ease: "power2.inOut"
+            },
+            0);
+        tl.fromTo(ctatext.current,
+            {
+                y: -30,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            },
+            {
+                y: 0,
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 1,
+                ease: "power2.inOut"
+            },
+            0);
 
-            tl.fromTo(buttonscta.current,
-                {
-                    y: -30,
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                },
-                {
-                    y: 0,
-                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                    duration: 1,
-                    ease: "power2.inOut",
-                    onComplete: () => { localStorage.setItem("homeAnimated", true); }
-                },
-                0);
-        }
+        tl.fromTo(buttonscta.current,
+            {
+                y: -30,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            },
+            {
+                y: 0,
+                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                duration: 1,
+                ease: "power2.inOut",
+                onComplete: () => { localStorage.setItem("homeAnimated", true); }
+            },
+            0);
+        // }
     });
 
-    
+
     // console.log(prCounter);
     // console.log(counterStorage);
     return (
