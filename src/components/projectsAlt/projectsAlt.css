@@ -58,14 +58,15 @@ video{
     padding-bottom: 64px;
 }
 
-.placeholdedr-for-video{
+.placeholder-for-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background-color: blue;
-    height: 900px;
 }
 
 .placeholder-for-video-hidden{
-    display: hidden;
+    display: none;
 }
 
 

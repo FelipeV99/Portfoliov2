@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import LSVideo from "../../assets/LSVideo.mp4"
 import CabbageVideo from "../../assets/CabbageVideo.mp4"
 import LogoAnimation from "../../assets/Logo Animation"
-// import Lottie from 'react-lottie'
+import Lottie from 'react-lottie'
 import ReactDom from 'react-dom'
 import './projectsAlt.css'
 import sitra from "../../assets/Sitra.png";
@@ -57,18 +57,14 @@ const ProjectOverlay = (props) => {
     const placeholderVideoRef = useRef();
 
     if (props.open === false) return null;
+    // console.log(placeholderVideoRef.current.className);
 
-
-    console.log(videoHasLoaded);
-
-    const handleOnCanPlayThrough = ()=>{
+    const handleOnCanPlayThrough = (e)=>{
         setVideoHasLoaded(true);
         placeholderVideoRef.current.className = "placeholder-for-video-hidden";
-
-        
     }
 
-    // videoRef.current.
+    const placeholderHeight = (Math.floor(window.innerWidth/1.777777777777778)).toString()+"px";
 
     const defaultOptions = {
         loop:true,
@@ -86,11 +82,14 @@ const ProjectOverlay = (props) => {
                             <div className='text-overlay'>
                                 <h2>Lawless Seating</h2>
                                 <p className='p2'>Conceptual project</p>
-                                {/* <Lottie options={defaultOptions} height={400} width={400} /> */}
                             </div>
+                            <div className='placeholder-for-video' ref={placeholderVideoRef} style={{"height" : placeholderHeight }}>
+                            <Lottie options={defaultOptions} height={80} width={80} />
+
+                            </div>
+
                             <div className="master-container">
                                 <div className="video-container" ref={videoContainerRef}>
-                                    <div className='placeholder-for-video' ref={placeholderVideoRef}></div>
                                     <video autoPlay muted loop src={LSVideo} onCanPlayThrough={handleOnCanPlayThrough}>
 
                                     </video>
