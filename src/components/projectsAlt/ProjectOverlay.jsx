@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import LSVideo from "../../assets/LSVideo.mp4"
 import CabbageVideo from "../../assets/CabbageVideo.mp4"
@@ -10,26 +10,65 @@ import sitra from "../../assets/Sitra.png";
 import sitraPlaceholder from "../../assets/SitraSmall.png";
 
 const ProgressiveImage = (props) => {
-    const [imgSrc, setImgSrc] = useState(props.placeholderSrc || props.src);
+    const [imgSrc, setImgSrc] = useState(props.placeholderSrc);
 
     useEffect(()=>{
         const img = new Image();
         img.src = props.src;
         img.onload = () => {
             setImgSrc(props.src);
+            // console.log("image has loaded");
         };
 
     }, [props.src]);
+    console.log(imgSrc);
+
     return(
         <img className="prog-img" src={imgSrc} />
     )
 
 };
 
+const ProgressiveVideo = (props) => {
+    const [videoSrc, setVideoSrc] = useState(props.placeholderSrc);
+
+    // useEffect(()=>{
+    //     const img = new Image();
+    //     img.src = props.src;
+    //     img.onload = () => {
+    //         setImgSrc(props.src);
+    //         console.log("image has loaded");
+    //     };
+
+    // }, [props.src]);
+    return(
+        <div></div>
+    )
+
+};
+
+
+
 
 const ProjectOverlay = (props) => {
     const [t, i18next] = useTranslation();
+    const [videoHasLoaded, setVideoHasLoaded] = useState(false);
+    const videoContainerRef = useRef();
+    const placeholderVideoRef = useRef();
+
     if (props.open === false) return null;
+
+
+    console.log(videoHasLoaded);
+
+    const handleOnCanPlayThrough = ()=>{
+        setVideoHasLoaded(true);
+        placeholderVideoRef.current.className = "placeholder-for-video-hidden";
+
+        
+    }
+
+    // videoRef.current.
 
     const defaultOptions = {
         loop:true,
@@ -50,8 +89,9 @@ const ProjectOverlay = (props) => {
                                 {/* <Lottie options={defaultOptions} height={400} width={400} /> */}
                             </div>
                             <div className="master-container">
-                                <div className="video-container">
-                                    <video autoPlay muted loop src={LSVideo}>
+                                <div className="video-container" ref={videoContainerRef}>
+                                    <div className='placeholder-for-video' ref={placeholderVideoRef}></div>
+                                    <video autoPlay muted loop src={LSVideo} onCanPlayThrough={handleOnCanPlayThrough}>
 
                                     </video>
 

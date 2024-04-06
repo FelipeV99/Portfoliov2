@@ -58,6 +58,16 @@ video{
     padding-bottom: 64px;
 }
 
+.placeholdedr-for-video{
+    width: 100%;
+    background-color: blue;
+    height: 900px;
+}
+
+.placeholder-for-video-hidden{
+    display: hidden;
+}
+
 
 
 #real-work-container{
