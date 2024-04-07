@@ -11,7 +11,7 @@ import { useLocation } from 'react-router-dom';
 // import { useFontFaceObserver } from 'use-font-face-observer';
 
 
-const Home = () => {
+const Home = (props) => {
 
     gsap.registerPlugin(useGSAP);
 
@@ -43,6 +43,10 @@ const Home = () => {
 
     const { state } = useLocation();
     const { targetId } = state || {};
+
+    
+
+
 
     useEffect(() => {
         const el = document.getElementById(targetId);
@@ -230,7 +234,8 @@ const Home = () => {
             </div> */}
 
 
-            <section id="hero" ref={heroRef} data-scroll-section>
+            <section id="hero" ref={heroRef}>
+
                 <div id="number-container">
                     <p className='p2' ref={numeratorRef}>[ 01 ]</p>
                 </div>

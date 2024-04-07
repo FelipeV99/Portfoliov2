@@ -25,6 +25,7 @@ const ProjectsAlt = () => {
     const { contextSafe } = useGSAP(() => {
     });
 
+
     //this tracks wheter mouse is hovering over a project or not
     // let isInside = false;
     const bgPositions = {
@@ -39,7 +40,6 @@ const ProjectsAlt = () => {
     }
 
     const moveProject = (e) => {
-
         // const previewRect = previewRef.current.getBoundingClientRect();
         // const offsetX = previewRect.width / 2;
         // const offsetY = previewRect.height / 2;
@@ -70,7 +70,8 @@ const ProjectsAlt = () => {
         const offsetY = previewUXRef.current.clientHeight / 2;
 
         previewUXRef.current.style.left = e.pageX - offsetX + "px";
-        previewUXRef.current.style.top = e.pageY - offsetY + "px";
+        previewUXRef.current.style.top = e.pageY - offsetY +"px";
+
     }
 
     const moveUXProjectImg = (project) => {
@@ -156,7 +157,7 @@ const ProjectsAlt = () => {
     });
 
     return (
-        <div id="real-work-container" data-scroll-section>
+        <div id="real-work-container">
             <ProjectOverlay
                 open={isOpen}
                 whichProject={openProject}
@@ -168,11 +169,7 @@ const ProjectsAlt = () => {
             />
 
             <section id="work-container">
-                <div id="top-row"             className="op-class"
-            data-scroll
-            data-scroll-class="fadeIn"
-            data-scroll-repeat="true"
-            data-scroll-speed="2">
+                <div id="top-row">
                     <div id="work-text">
                         <div className='pill'>
                             <p className='p2 letter-s1'>{t("selectedWork")}</p>

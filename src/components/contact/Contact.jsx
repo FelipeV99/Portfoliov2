@@ -7,7 +7,7 @@ const Contact = () => {
 
     return (
         
-            <section id="connect-container" data-scroll-section>
+            <section id="connect-container">
                 <div id="title-cta">
                     <div>
                         <p className='p2'>[ 03 ]</p>
