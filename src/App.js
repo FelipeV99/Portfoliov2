@@ -21,7 +21,7 @@ function App() {
     console.log('Output Sans failed to load.');
   });
 
-  
+
 
 
   return (
@@ -40,6 +40,7 @@ function App() {
       </div >
       :
       <div>
+        spinner spinning
       </div>}
   </div >
       
