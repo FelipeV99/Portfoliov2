@@ -23,7 +23,7 @@ i18next
       loadPath: '/assets/locales/{{lng}}/translation.json',
     },
     react: {
-      useSuspense: true,
+      useSuspense: false,
     }
   });
 
