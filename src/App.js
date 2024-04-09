@@ -1,12 +1,11 @@
 import './App.css';
 import './base.css'
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import CaseStudy from './components/caseStudy/CaseStudy';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
-// import { useFontFaceObserver } from "use-font-face-observer";
 import { FontFaceObserver } from "font-face-observer"
 
 function App() {
@@ -14,28 +13,36 @@ function App() {
 
   const font = new FontFaceObserver('IDGSemi');
 
-font.load().then(function () {
-  console.log('Output Sans has loaded.');
-}).catch(function () {
-  console.log('Output Sans failed to load.');
-});
+  const [fontLoaded, setFontLoaded] = useState(false)
+
+  font.load().then(function () {
+    setFontLoaded(true);
+  }).catch(function () {
+    console.log('Output Sans failed to load.');
+  });
+
+  
 
 
   return (
-
-
-
+      < div >
+      {fontLoaded ?
       <div className="App">
-          <Router>
-            <Navbar />
-            <ScrollToTop />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/case-study" element={<CaseStudy />} />
-            </Routes>
-          </Router>
+        < Router >
+          <Navbar />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/case-study" element={<CaseStudy />} />
+          </Routes>
+        </Router >
 
-      </div>
+      </div >
+      :
+      <div>
+      </div>}
+  </div >
+      
 
   );
 }
