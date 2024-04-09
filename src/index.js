@@ -24,7 +24,6 @@ i18next
     },
     react: {
       useSuspense: true,
-      
     }
   });
 
