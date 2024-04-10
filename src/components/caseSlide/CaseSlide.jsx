@@ -12,22 +12,22 @@ const CaseSlide = () => {
     const bottomRef = useRef();
 
     useEffect(() => {
-        if(caseSlideRef.current != null){
+        if (caseSlideRef.current != null) {
             const tl = gsap.timeline({
-                scrollTrigger:{
+                scrollTrigger: {
                     trigger: "#case-container-olab",
-                    start: "-60px 25%",
-                    end: "-20px 15%",
+                    start: "-120px 25%",
+                    end: "-60px 5%",
                     scrub: true,
-                    // markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 20}
+                    markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
                 }
             });
-    
-            tl.to(".App",{
+
+            tl.to(".App", {
                 backgroundColor: "#FFF2EB",
-                
+
             });
-            
+
 
         }
     }, [caseSlideRef.current]);
@@ -67,7 +67,7 @@ const CaseSlide = () => {
     //                 trigger: ".another-shit",
     //                 // start: "1%",
     //                 // end: "60%",
-    
+
     //             }   
     //         });
 
@@ -92,31 +92,29 @@ const CaseSlide = () => {
 
             <div id="case-inner-container">
 
-           
-
-            <div className='text-case-olab'>
-                <div className='project-type'>
-                    <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
-                    <p id="asterisk-p">ux project</p>
-                </div>
-                <div className="bottom-text" ref={bottomRef}>
-
-
-                    <div className='enumerator-container'>
-                        <div className='line-for-number'>
-
-                        </div>
-                        <p id="num-p">01/02</p>
+                <div className='text-case-olab'>
+                    <div className='project-type'>
+                        <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
+                        <p id="asterisk-p">ux project</p>
                     </div>
-                    <h1 id="temp-title">O-lab</h1>
-                    <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
-                    <button id="new-main-btn">View case study</button>
-                </div>
-            </div >
-            <div id="case-img-container">
-                <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" />
+                    <div className="bottom-text" ref={bottomRef}>
 
-            </div>
+
+                        <div className='enumerator-container'>
+                            <div className='line-for-number'>
+
+                            </div>
+                            <p id="num-p">01/02</p>
+                        </div>
+                        <h1 id="temp-title">O-lab</h1>
+                        <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
+                        <button id="new-main-btn">View case study</button>
+                    </div>
+                </div >
+                <div id="case-img-container">
+                    <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" />
+
+                </div>
             </div>
         </section>
     )

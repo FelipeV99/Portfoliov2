@@ -158,18 +158,6 @@ const Home = (props) => {
 
 
 
-        // gsap.to(".App", {
-        //     backgroundColor: "#000000",
-        //     duration: 1,
-        //     scrollTrigger: {
-        //         trigger: ".shithero",
-        //         start: "1%",
-        //         end: "60%",
-
-        //     },
-
-        // });
-
         // const tl = gsap.timeline();
 
         // if (homeAnimated == null) {
@@ -245,10 +233,10 @@ const Home = (props) => {
                 const tl = gsap.timeline({
                     scrollTrigger:{
                         trigger: "#hero",
-                        start: "30% 100%",
-                        end: "38% 0%",
+                        start: "30% 50%",
+                        end: "38% 25%",
                         scrub: true,
-                        // markers: true
+                        markers: true
                     }
                 });
         
@@ -319,7 +307,7 @@ const Home = (props) => {
 
 
 
-            <section id="hero" className='shithero' ref={heroRef}>
+            <section id="hero" ref={heroRef}>
 
                 <div id="number-container">
                     {/* <p className='p2' ref={numeratorRef}>[ 01 ]</p> */}

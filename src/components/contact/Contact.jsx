@@ -17,10 +17,10 @@ const Contact = () => {
             const tl = gsap.timeline({
                 scrollTrigger:{
                     trigger: "#connect-container",
-                    start: "5% 70%",
-                    end: "15% 60%",
+                    start: "0px 70%",
+                    end: "60px 60%",
                     scrub: true,
-                    // markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 200}
+                    markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 320}
 
                 }
             });
@@ -38,6 +38,9 @@ const Contact = () => {
     return (
         
             <section id="connect-container" ref={connectRef}  onScroll={()=>{console.log("scrolling")}} >
+                <div id="connect-inner-container">
+
+                
                 <div  id="title-cta" >
                     <div>
                         <p className='p2'>[ 03 ]</p>
@@ -93,6 +96,7 @@ const Contact = () => {
                             </div>
                         </a>
                     </div>
+                </div>
                 </div>
             </section>
         

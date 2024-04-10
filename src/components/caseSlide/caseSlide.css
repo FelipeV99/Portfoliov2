@@ -1,33 +1,38 @@
 #case-container-olab{
     display: flex;
-    width: 100vw;
     padding-top: 60px;
     padding-right: 60px;
     padding-left: 60px;
     padding-bottom: 60px;
-    justify-content: center;
-    /* align-items: center; */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
     
 
-    height: 100vh;
-    min-height: 680px;
-    max-height: var(--max-height);
+  height: 100vh;
+  min-height: 680px;
 
 }
 
 #case-img-container{
-    min-width: 556px;
-    max-width: 1200px;
-    height: auto;
     display: flex;
-    align-items: flex-end;
+    align-self: flex-end;
+    width: 100%;
+    max-width: 1400px;
+    min-width: 380px;
+  
 
 }
+
 #case-inner-container{
     max-width: var(--max-width);
     display: flex;
+    justify-content: flex-end;
     gap: 64px;
-    /* align-items: flex-end; */
+    max-height: var(--max-height);
+
     
 }
 
@@ -37,15 +42,15 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 447px;
 }
 
 .text-case-olab{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 447px;
-    height: 100%;
-    
+    width: 447px;
+    min-height: 100%;    
     
 }
 
@@ -61,8 +66,9 @@
 
 .img-case{
     width: 100%;
-    display: flex;
-    align-items: center;
+    height: auto;
+    max-width: 1400px;
+    min-width: 360px;
 }
 
 #temp-title{
