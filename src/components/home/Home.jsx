@@ -248,7 +248,7 @@ const Home = (props) => {
                         start: "30% 100%",
                         end: "38% 0%",
                         scrub: true,
-                        markers: true
+                        // markers: true
                     }
                 });
         
