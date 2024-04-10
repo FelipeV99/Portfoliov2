@@ -9,8 +9,8 @@
     padding-left: 60px;
     padding-right: 60px;
     min-height: 720px;
-    max-width: 1900px;
-    max-height: 1200px;
+    max-width: var(--max-width);
+    max-height: 800px;
     
 
 

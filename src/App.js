@@ -6,26 +6,41 @@ import Navbar from './components/navbar/Navbar';
 import CaseStudy from './components/caseStudy/CaseStudy';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
-import { FontFaceObserver } from "font-face-observer"
+import { FontFaceObserver } from "font-face-observer";
+import Lottie from 'react-lottie';
+import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
 
 function App() {
   const FontFaceObserver = require('fontfaceobserver');
-
   const font = new FontFaceObserver('IDGSemi');
-
   const [fontLoaded, setFontLoaded] = useState(false)
 
   font.load().then(function () {
-    setFontLoaded(true);
+    setTimeout(() => {
+      setFontLoaded(true);
+    }, 1000);
+    
   }).catch(function () {
-    console.log('Output Sans failed to load.');
+    console.log('Font failed to load.');
   });
 
+
+  const ref = useRef(null);
+
+  const options = {
+    smooth: true,
+  } 
+
+  const defaultOptions = {
+    loop:true,
+    autoplay:true,
+    animationData: PreloaderAnimation
+}
 
 
 
   return (
-      < div >
+      <>
       {fontLoaded ?
       <div className="App">
         < Router >
@@ -40,9 +55,15 @@ function App() {
       </div >
       :
       <div>
-        spinner spinning
+        
+        <div className="pr-overlay">
+            <Lottie options={defaultOptions} height={37} width={166} />
+
+
+
+            </div>
       </div>}
-  </div >
+  </>
       
 
   );

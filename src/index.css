@@ -8,11 +8,11 @@
 
 
 :root {
-  --off-black-800: #0C1011;
+  --off-black-800: #272727;
   --off-black-600: #505050;
   --off-black-700: #474747;
 
-  --off-white-100: #F7F5EE;
+  --off-white-100: #FFF2EB;
   --off-white-200: #F6F6F6;
   --off-white-300: #EFEBDD;
 
@@ -22,18 +22,22 @@
 
   --min-width-no-padding: 316px;
   --min-width:360px;
-  --max-width:1900px;
+  --max-width:1400px;
 
   --max-height: 1200px;
 
   --padding-128:128px;
   --padding-60:60px;
   --padding-22:22px;
+
+  overflow-y: auto;
 }
 
 html {
   scroll-snap-type: none;
   scroll-behavior: smooth;
+  overflow-y: auto;
+
 }
 
 @font-face {
@@ -41,6 +45,27 @@ html {
   src: url("./assets/IDGrotesk-Semibold.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
+}
+
+p{
+  font-size: 18px;
+  color: var(--off-white-100);
+  font-weight: 300;
+}
+
+button{
+  border: none;
+  border-bottom: 4px;
+  color: var(--off-black-800);
+  /* background-color: var(--off-white-100); */
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Century Gothic";
+
+  cursor: pointer;
 }
 
 a,
@@ -58,29 +83,28 @@ body {
   font-family: "Century Gothic";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--off-white-100);
 }
 
 .p1 {
   font-size: 22px;
-  color: var(--off-black-800);
+  color: var(--off-white-100);
 }
 
 .p2 {
   font-size: 18px;
-  color: var(--off-black-800);
+  color: var(--off-white-100);
 }
 
 h1 {
-  color: var(--off-black-800);
+  color: var(--off-white-100);
   font-family: "IDGSemi";
-  font-size: 112px;
+  font-size: 92px;
   line-height: 1.26;
   margin: 0;
 }
 
 h2 {
-  color: var(--off-black-800);
+  color: var(--off-white-100);
   font-family: "IDGSemi";
   font-size: 32px;
 }

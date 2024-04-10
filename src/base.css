@@ -1,4 +1,4 @@
-html.has-scroll-smooth {
+/* html.has-scroll-smooth {
     overflow: hidden; }
   
   html.has-scroll-dragging {
@@ -62,4 +62,4 @@ html.has-scroll-smooth {
       cursor: grabbing; }
     [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
       right: auto;
-      bottom: 0; }
+      bottom: 0; } */

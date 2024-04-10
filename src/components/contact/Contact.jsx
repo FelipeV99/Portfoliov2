@@ -1,14 +1,44 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import "./contact.css"
+import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
     const [t, i18next] = useTranslation();
 
+    const connectRef = useRef();
+    
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+    useEffect(() => {
+        if(connectRef.current != null){
+            const tl = gsap.timeline({
+                scrollTrigger:{
+                    trigger: "#connect-container",
+                    start: "5% 70%",
+                    end: "15% 60%",
+                    scrub: true,
+                    markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 200}
+
+                }
+            });
+    
+            tl.to(".App",{
+                backgroundColor: "#272727",
+                
+            });
+            
+
+        }
+    }, [connectRef.current]);
+
+
     return (
         
-            <section id="connect-container">
-                <div id="title-cta">
+            <section id="connect-container" ref={connectRef}  onScroll={()=>{console.log("scrolling")}} >
+                <div  id="title-cta" >
                     <div>
                         <p className='p2'>[ 03 ]</p>
 

@@ -8,12 +8,22 @@ import Contact from '../contact/Contact';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import CaseSlide from '../caseSlide/CaseSlide';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// import Lottie from 'react-lottie';
+// import PreloaderAnimation from "../../assets/PreloaderAnimation"
+
+
+
 // import { useFontFaceObserver } from 'use-font-face-observer';
 
 
 const Home = (props) => {
 
-    gsap.registerPlugin(useGSAP);
+
+
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
 
     // const isFontLoaded = useFontFaceObserver([
     //     { family: 'IDGSemi' }, // Same name you have in your CSS
@@ -30,23 +40,16 @@ const Home = (props) => {
     const numeratorRef = useRef();
     const cvRef = useRef();
     const heroRef = useRef();
+    const pageRef = useRef();
+
+    const heroRightRef = useRef();
 
     const prOverlayRef = useRef();
-    // const [prCounter, setPrCounter] = useState(0);
 
     const [t, i18next] = useTranslation();
 
-    // const { contextSafe } = useGSAP();
-
-    // const homeAnimated = localStorage.getItem("homeAnimated");
-    // const counterStorage = localStorage.getItem("counterStorage");
-
     const { state } = useLocation();
     const { targetId } = state || {};
-
-    
-
-
 
     useEffect(() => {
         const el = document.getElementById(targetId);
@@ -54,6 +57,11 @@ const Home = (props) => {
             el.scrollIntoView();
         }
     }, [targetId]);
+
+    document.body.style.overflow = "auto";
+
+
+
 
     //next following lines are all related to preloader, until the useGsap()
 
@@ -125,6 +133,13 @@ const Home = (props) => {
     //     document.body.style.overflow = "scroll";
     // }
 
+
+    // const defaultOptions = {
+    //     loop:true,
+    //     autoplay:true,
+    //     animationData: PreloaderAnimation
+    // }
+
     useEffect(() => {
         if (i18next.language != null) {
             const language = i18next.language.slice(0, 2);
@@ -141,103 +156,173 @@ const Home = (props) => {
 
 
 
-    useGSAP(() => {
-        const tl = gsap.timeline();
+
+
+        // gsap.to(".App", {
+        //     backgroundColor: "#000000",
+        //     duration: 1,
+        //     scrollTrigger: {
+        //         trigger: ".shithero",
+        //         start: "1%",
+        //         end: "60%",
+
+        //     },
+
+        // });
+
+        // const tl = gsap.timeline();
 
         // if (homeAnimated == null) {
 
-        tl.fromTo(designertext.current,
-            {
-                y: -100,
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            },
-            {
-                y: 0,
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 1,
-                ease: "power2.inOut"
-            },
-            0);
+        // tl.fromTo(designertext.current,
+        //     {
+        //         y: -100,
+        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        //     },
+        //     {
+        //         y: 0,
+        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //         duration: 1,
+        //         ease: "power2.inOut"
+        //     },
+        //     0);
 
-        tl.fromTo(felipetext.current,
-            {
-                y: -100,
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            },
-            {
-                y: 0,
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 1,
-                ease: "power2.inOut"
-            },
-            0);
-        tl.fromTo(ctatext.current,
-            {
-                y: -30,
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            },
-            {
-                y: 0,
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 1,
-                ease: "power2.inOut"
-            },
-            0);
+        // tl.fromTo(felipetext.current,
+        //     {
+        //         y: -100,
+        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        //     },
+        //     {
+        //         y: 0,
+        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //         duration: 1,
+        //         ease: "power2.inOut"
+        //     },
+        //     0);
+        // tl.fromTo(ctatext.current,
+        //     {
+        //         y: -30,
+        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        //     },
+        //     {
+        //         y: 0,
+        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //         duration: 1,
+        //         ease: "power2.inOut"
+        //     },
+        //     0);
 
-        tl.fromTo(buttonscta.current,
-            {
-                y: -30,
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            },
-            {
-                y: 0,
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 1,
-                ease: "power2.inOut",
-                // onComplete: () => { localStorage.setItem("homeAnimated", true); }
-            },
-            0);
-        tl.fromTo(numeratorRef.current,
-            {
-                y:-30,
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            },
-            {
-                y:0,
-                clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                duration: 1,
-                ease: "power2.inOut"
-            },
-            0
+        // tl.fromTo(buttonscta.current,
+        //     {
+        //         y: -30,
+        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        //     },
+        //     {
+        //         y: 0,
+        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //         duration: 1,
+        //         ease: "power2.inOut",
+        //         // onComplete: () => { localStorage.setItem("homeAnimated", true); }
+        //     },
+        //     0);
+        // tl.fromTo(numeratorRef.current,
+        //     {
+        //         y: -30,
+        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        //     },
+        //     {
+        //         y: 0,
+        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+        //         duration: 1,
+        //         ease: "power2.inOut"
+        //     },
+        //     0);
 
-        );
+        console.log(heroRightRef.current);
+
+        useEffect(() => {
+            if(heroRef.current != null){
+                const tl = gsap.timeline({
+                    scrollTrigger:{
+                        trigger: "#hero",
+                        start: "30% 100%",
+                        end: "38% 0%",
+                        scrub: true,
+                        markers: true
+                    }
+                });
+        
+                tl.to(".App",{
+                    backgroundColor: "#272727",
+                    
+                });
+                
+    
+            }
+        }, [heroRef.current]);
+
+
+
+            // tl.to(".App", {
+
+            //     backgroundColor: "#000000",
+
+
+            //     scrollTrigger: {
+            //         trigger: "#hero-left",
+            //         start: "top top",
+            //         end: "bottom bottom",
+            //         scrub: true,
+            //         markers: true
+    
+            //     },
+    
+            // });
+            // tl.to(".App", {
+
+            //     backgroundColor: "#ffffff",
+
+
+            //     scrollTrigger: {
+            //         trigger:".abstract-design",
+            //         start: "top 20%",
+            //         end: "bottom 80%",
+            //         scrub: true,
+            //         markers: true
+    
+            //     },
+    
+            // });
+
         // }
-    });
+
+    // console.log(pageRef.current);
+
+    // window.onscroll(()=>{console.log("crolling.rolling")});
+
+    // const handleScroll = contextSafe(() => {
+    //     console.log("being scrolled rn");
+    //     gsap.to(pageRef.current, {backgroundColor: "#272727", duration:2});
+    //    });
+
+
 
 
     // console.log(prCounter);
     // console.log(counterStorage);
     return (
-        <div id="page-container" >
-            {/* <div id="overlay-mask" className='pr-overlay' ref={prOverlayRef}>
-                <h1 className="pr-counter">{prCounter}</h1>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
-                <div className='pr-bar'></div>
+        <div id="page-container" ref={pageRef} >
+            {/* 
+            <div className="pr-overlay">
+            <Lottie options={defaultOptions} height={37} width={166} />
             </div> */}
 
 
-            <section id="hero" ref={heroRef}>
+
+            <section id="hero" className='shithero' ref={heroRef}>
 
                 <div id="number-container">
-                    <p className='p2' ref={numeratorRef}>[ 01 ]</p>
+                    {/* <p className='p2' ref={numeratorRef}>[ 01 ]</p> */}
                 </div>
                 <div id="hero-helper">
                     <div id="hero-left" >
@@ -257,19 +342,23 @@ const Home = (props) => {
                                 {t("heroCopy")}
                             </p>
                         </div>
-                    </div>
-                    <div id="hero-space"></div>
-                    <div id="hero-right">
                         <div id="button-cta" ref={buttonscta}>
                             <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
                             <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
                         </div>
+                    </div>
+                    <div id="hero-space"></div>
+                    <div id="hero-right" ref={heroRightRef}>
+                        <img className="abstract-design" src={require("../../assets/hero-abstract-design.svg").default} alt="" />
+
+
 
                     </div>
                 </div>
             </section>
             {/* <Projects /> */}
-            <ProjectsAlt />
+            <CaseSlide />
+            {/* <ProjectsAlt /> */}
             <Contact />
             {/* </main>
         </LocomotiveScrollProvider> */}

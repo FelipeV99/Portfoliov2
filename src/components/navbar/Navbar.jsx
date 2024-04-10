@@ -80,7 +80,7 @@ const Navbar = () => {
                 <div id="nav-left" onClick={() => { 
                     navigation("/", { state: { targetId: "hero" } });
                     }}>
-                    <img id="logo-nav" src={require("../../assets/logo.svg").default} alt="" />
+                    <img id="logo-nav" src={require("../../assets/logo-hero.svg").default} alt="" />
 
 
                 </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
                     }}>
                         <p className='small-p'>{t("navHome")}</p>
                         <div className='space-btwn'></div>
-                        <img src={require("../../assets/nav-dot.svg").default} alt="" />
+                        <img className="asterisk" src={require("../../assets/asterisk-white.svg").default} alt="" />
                     </a>
                     <a className='nav-optn' onClick={() => { 
                     navigation("/", { state: { targetId: "work-container" } });
@@ -99,7 +99,7 @@ const Navbar = () => {
                         <p className='small-p'>{t("navWork")}</p>
                         <div className='space-btwn'></div>
 
-                        <img src={require("../../assets/nav-dot.svg").default} alt="" />
+                        <img className="asterisk" src={require("../../assets/asterisk-white.svg").default} alt="" />
                     </a>
                     <a className='nav-optn' onClick={() => { 
                     navigation("/", { state: { targetId: "connect-container" } });
@@ -107,7 +107,7 @@ const Navbar = () => {
                         <p className='small-p'>{t("navContact")}</p>
                         <div className='space-btwn'></div>
 
-                        <img src={require("../../assets/nav-dot.svg").default} alt="" />
+                        <img className="asterisk" src={require("../../assets/asterisk-white.svg").default} alt="" />
                     </a>
 
 
