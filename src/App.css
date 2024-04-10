@@ -42,9 +42,9 @@
   min-width: var(--min-width);
   max-width: var(--max-width);
   /* height: calc(100vh - 68px); */
-  height: 100%;
+  height: calc(100vh - 68px);
   min-height: 680px;
-  /* max-height: var(--max-height); */
+  max-height: var(--max-height);
   scroll-snap-align: start;
 }
 

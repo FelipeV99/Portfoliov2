@@ -90,7 +90,11 @@ const CaseSlide = () => {
     return (
         <section id="case-container-olab" ref={caseSlideRef}>
 
-            <div className='text-case'>
+            <div id="case-inner-container">
+
+           
+
+            <div className='text-case-olab'>
                 <div className='project-type'>
                     <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
                     <p id="asterisk-p">ux project</p>
@@ -112,6 +116,7 @@ const CaseSlide = () => {
             <div id="case-img-container">
                 <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" />
 
+            </div>
             </div>
         </section>
     )
