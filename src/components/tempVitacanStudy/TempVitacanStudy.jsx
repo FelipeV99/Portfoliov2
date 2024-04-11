@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import "./tempVitacanStudy.css";
 import { useTranslation } from 'react-i18next';
 import gsap from "gsap";
@@ -39,6 +39,20 @@ const TempVitacanStudy = () => {
         }
     }, [caseSlideVitacanRef.current]);
 
+    const [caseStudyLink, setCaseStudyLink] = useState("");
+
+    useEffect(() => {
+        if (i18next.language != null) {
+            const language = i18next.language.slice(0, 2);
+
+            if (language == 'en') {
+                setCaseStudyLink("https://www.behance.net/gallery/195967355/Vitacan-Case-Study-English");
+            } else if (language == 'es') {
+                setCaseStudyLink("https://www.behance.net/gallery/143997259/Caso-de-Estudio-Vitacan");
+            }
+        }
+    }, [i18next.language]);
+
     return (
         <section id="case-container-vitacan" ref={caseSlideVitacanRef}>
 
@@ -47,7 +61,7 @@ const TempVitacanStudy = () => {
                 <div className='text-case-olab'>
                     <div className='project-type'>
                         <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
-                        <p id="asterisk-p">conceptual project</p>
+                        <p id="asterisk-p">{t("CP")}</p>
                     </div>
                     <div className="bottom-text" ref={bottomRef}>
 
@@ -59,8 +73,8 @@ const TempVitacanStudy = () => {
                             <p id="num-p-v">02/02</p>
                         </div>
                         <h1 id="temp-title">Vitacan</h1>
-                        <p id="temp-p">Keeping Dogs Healthy with Vitacan. This is the journey of designing an app to track the wellness of your dog with a smart collar.</p>
-                        <button id="new-main-btn-v" onClick={()=>{window.open("https://www.behance.net/gallery/195967355/Vitacan-Case-Study-English")}}>View case study</button>
+                        <p id="temp-p">{t("ThumbCopyVita")}</p>
+                        <button id="new-main-btn-v" onClick={()=>{window.open(caseStudyLink)}}>{t("CaseButton")}</button>
                     </div>
                 </div >
                 <div id="case-img-container">

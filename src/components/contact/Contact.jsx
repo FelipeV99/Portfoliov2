@@ -25,7 +25,7 @@ const Contact = () => {
                         start: "0px 70%",
                         end: "60px 50%",
                         scrub: true,
-                        // markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 320}
+                        markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 320},
     
                     }
                 });

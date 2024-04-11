@@ -85,8 +85,8 @@ const CaseStudy = () => {
 
                     <div className='text-case-olab'>
                         <div className='project-type'>
-                            <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
-                            <p id="asterisk-p">Industry experience</p>
+                            {/* <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
+                            <p id="asterisk-p">Industry experience</p> */}
                         </div>
                         <div className="bottom-text" >
 
@@ -98,7 +98,7 @@ const CaseStudy = () => {
                                 <p id="num-p">01/02</p>
                             </div>
                             <h1 id="temp-title">O-lab</h1>
-                            <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
+                            <p id="temp-p">{t("ThumbCopyOlab")}</p>
                             
                         </div>
                     </div >
@@ -866,10 +866,10 @@ const CaseStudy = () => {
             </div>
 
             <div id="cta-finish-case">
-                <button onClick={() => {
-                    navigation("/", { state: { targetId: "work-container" } });
+                <button className="case-finish-btn" onClick={() => {
+                    navigation("/", { state: { targetId: "case-container-olab" } });
                 }}>Back to list of work</button>
-                <button onClick={() => {
+                <button className="case-finish-btn" onClick={() => {
                     navigation("/", { state: { targetId: "connect-container" } });
                 }}>Contact</button>
             </div>

@@ -62,12 +62,12 @@ const CaseSlide = () => {
                             <p id="num-p">01/02</p>
                         </div>
                         <h1 id="temp-title">O-lab</h1>
-                        <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
+                        <p id="temp-p">{t("ThumbCopyOlab")}</p>
                         <button id="new-main-btn" onClick={() => {
                             
                             navigation("/case-study/olab");
                         }}>
-                            View case study
+                            {t("CaseButton")}
                         </button>
                     </div>
                 </div >

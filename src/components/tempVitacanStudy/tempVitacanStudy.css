@@ -47,3 +47,33 @@
     height: 2px;
     width: 54px;
 }
+
+@media (max-width:1000px) {
+
+
+    #case-container-vitacan {
+
+    
+    
+        height: 100%;
+
+    
+    }
+
+}
+
+@media (max-width:600px) {
+    #case-img-container {
+        width: 92%;
+        /* min-width: 0px; */
+    }
+
+    #case-container-vitacan {
+
+        padding-right: 22px;
+        padding-left: 22px;
+
+    }
+
+    
+}

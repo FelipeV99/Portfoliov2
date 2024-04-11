@@ -68,7 +68,7 @@ const Home = (props) => {
 
     useEffect(() => {
         appTag.current.removeAttribute('style');
-    }, [])
+    }, []);
 
     // const location = useLocation();
 
