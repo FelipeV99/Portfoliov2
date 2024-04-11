@@ -250,7 +250,7 @@ const Home = (props) => {
                         start: "20% 20%",
                         end: "30% 15%",
                         scrub: true,
-                        markers: true
+                        // markers: true
                     }
                 });
                 
