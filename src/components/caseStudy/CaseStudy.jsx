@@ -2,13 +2,20 @@ import React from 'react'
 import './caseStudy.css'
 import { useTranslation } from 'react-i18next'
 import { useRef, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
+import gsap from "gsap";
+import { useGSAP } from '@gsap/react'
+
 
 const CaseStudy = () => {
+
+    gsap.registerPlugin(useGSAP);
+
 
     const [t, i18next] = useTranslation();
 
     const navigation = useNavigate();
+    const location = useLocation();
 
     const metric1Ref = useRef();
     const metric2Ref = useRef();
@@ -29,6 +36,26 @@ const CaseStudy = () => {
             }
         }
     }, [i18next.language]);
+
+    // const { contextSafe } = useGSAP();
+
+    // const fixBackground = contextSafe(() => {
+    //     const tl = gsap.timeline();
+        
+    //     tl.to(".App",{
+    //         backgroundColor: "#272727",
+    //         duration:0
+            
+    //     });
+    // });
+    
+
+    // useEffect(() => {
+    //     console.log("restoring bg");
+
+    //     fixBackground();
+
+    // }, [location.pathname])
     
 
     return (

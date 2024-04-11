@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useRef } from 'react';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
@@ -49,6 +49,11 @@ const Home = (props) => {
 
     const [t, i18next] = useTranslation();
 
+
+
+
+
+
     const { state } = useLocation();
     const { targetId } = state || {};
 
@@ -61,8 +66,14 @@ const Home = (props) => {
 
     document.body.style.overflow = "auto";
 
+    // const location = useLocation();
 
+    // useEffect(()=>{
+    //   console.log(document.getElementsByClassName("App"));
+    // },[location.pathname]);
+    // document.getElementsByClassName("App").style.backgroundColor = "945234"
 
+    // console.log((document.getElementsByClassName("App"))[0].style);
 
     //next following lines are all related to preloader, until the useGsap()
 
@@ -236,12 +247,19 @@ const Home = (props) => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: "#hero",
-                        start: "30% 20%",
-                        end: "38% 15%",
+                        start: "20% 20%",
+                        end: "30% 15%",
                         scrub: true,
                         markers: true
                     }
                 });
+                
+                tl.to(".App",{
+                    backgroundColor: "#272727",
+                    
+                });
+               
+
             });
             runRunRUn();
         }

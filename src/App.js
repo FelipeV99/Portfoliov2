@@ -10,10 +10,14 @@ import { FontFaceObserver } from "font-face-observer";
 import Lottie from 'react-lottie';
 import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
 
+export const AppTagContext = React.createContext();
+
 function App() {
   const FontFaceObserver = require('fontfaceobserver');
   const font = new FontFaceObserver('IDGSemi');
   const [fontLoaded, setFontLoaded] = useState(false)
+
+  const appRef = useRef();
 
   font.load().then(function () {
     setTimeout(() => {
@@ -41,8 +45,11 @@ function App() {
 
   return (
       <>
+
       {fontLoaded ?
-      <div className="App">
+      <AppTagContext.Provider value={appRef}>
+
+      <div className="App" ref={appRef}>
         < Router >
           <Navbar />
           <ScrollToTop />
@@ -53,6 +60,8 @@ function App() {
         </Router >
 
       </div >
+      </AppTagContext.Provider>
+
       :
       <div>
         

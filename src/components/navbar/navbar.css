@@ -15,10 +15,10 @@ nav {
   height: 28px;
   width: auto;
 }
-
-.asterisk{
-  fill:white;
-}
+/* 
+.asterisk path:first-child{
+  fill:aqua;
+} */
 
 #nav-left {
   height: 100%;

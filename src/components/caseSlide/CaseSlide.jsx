@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
+import { AppTagContext } from '../../App';
 import "./caseSlide.css";
 import { useTranslation } from 'react-i18next';
 import gsap from "gsap";
@@ -15,11 +16,23 @@ const CaseSlide = () => {
 
     const navigation = useNavigate();
 
-    
-    const { contextSafe } = useGSAP({container:caseSlideRef.current});
+    const appTag = useContext(AppTagContext);
+
+    const normalizeAppBackground = () => {
+        console.log("normalizing app color");
+        appTag.current.removeAttribute('style');
+        console.log(appTag.current.style.backgroundColor);
+        
+        // appTag.current.style.backgroundColor = "#000000";
+    };
+
+
+
+
+    const { contextSafe } = useGSAP({ container: caseSlideRef.current });
 
     useEffect(() => {
-        if(caseSlideRef.current != null){
+        if (caseSlideRef.current != null) {
 
             const runRunRUn = contextSafe(() => {
                 const tl = gsap.timeline({
@@ -28,16 +41,16 @@ const CaseSlide = () => {
                         start: "-120px 25%",
                         end: "-60px 5%",
                         scrub: true,
-                        markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
+                        // markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
                     }
                 });
-    
+
                 tl.to(".App", {
                     backgroundColor: "#FFF2EB",
-    
+
                 });
-               });
-            runRunRUn();    
+            });
+            runRunRUn();
         }
     }, [caseSlideRef.current]);
 
@@ -64,7 +77,13 @@ const CaseSlide = () => {
                         </div>
                         <h1 id="temp-title">O-lab</h1>
                         <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
-                        <button id="new-main-btn" onClick={() => { navigation("/case-study/olab") }}>View case study</button>
+                        <button id="new-main-btn" onClick={() => {
+                            navigation("/case-study/olab");
+                            normalizeAppBackground();
+                            
+                        }}>
+                            View case study
+                        </button>
                     </div>
                 </div >
                 <div id="case-img-container">

@@ -26,7 +26,7 @@ const TempVitacanStudy = () => {
                         start: "-120px 25%",
                         end: "-60px 5%",
                         scrub: true,
-                        markers: {startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 480}
+                        // markers: {startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 480}
                     }
                 });
     

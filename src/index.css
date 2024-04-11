@@ -133,3 +133,7 @@ figcaption {
 .color-orange-dark{
   color: var(--orange-dark-800);
 }
+
+.whiten {
+  color: var(--off-white-100);
+}
