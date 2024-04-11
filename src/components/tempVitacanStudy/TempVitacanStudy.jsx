@@ -83,9 +83,9 @@ const TempVitacanStudy = () => {
                     </div>
                 </div >
                 <div id="case-img-container">
-                    <ProgressiveImage src={VitacanThumb} placeholderSrc={VitacanPlaceholder} />
+                    <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} />
 
-                    {/* <img className='img-case' src={require("../../assets/vitacanNewHero.png")} alt="" /> */}
+                    {/* <img className='img-case' src={require("../../assets/placeholderVitacan.png")} alt="" /> */}
 
                 </div>
             </div>

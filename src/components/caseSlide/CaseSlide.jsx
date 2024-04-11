@@ -75,7 +75,7 @@ const CaseSlide = () => {
                     </div>
                 </div >
                 <div id="case-img-container">
-                    <ProgressiveImage src={OlabThumb} placeholderSrc={OlabPlaceholder} />
+                    <ProgressiveImage className='img-case' src={OlabThumb} placeholderSrc={OlabPlaceholder} />
                     {/* <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" /> */}
 
                 </div>
