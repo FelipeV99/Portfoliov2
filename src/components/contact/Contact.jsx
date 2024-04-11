@@ -22,10 +22,10 @@ const Contact = () => {
                 const tl = gsap.timeline({
                     scrollTrigger:{
                         trigger: "#connect-container",
-                        start: "0px 70%",
-                        end: "60px 50%",
+                        start: "0% 70%",
+                        end: "10% 50%",
                         scrub: true,
-                        // markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 320},
+                        markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 320},
     
                     }
                 });
