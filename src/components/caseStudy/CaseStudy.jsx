@@ -29,22 +29,39 @@ const CaseStudy = () => {
             }
         }
     }, [i18next.language]);
+    
 
     return (
         <div id="case-study-container">
-            <div id='hero-case'>
-                <div id="hero-text">
-                    <h2>{t('olabCaseTitle')}</h2>
-                    <div className='space-12'></div>
-                    <p>{t('olabSubtitle')}</p>
+            <section id="case-container-olab">
+
+                <div id="case-inner-container">
+
+                    <div className='text-case-olab'>
+                        <div className='project-type'>
+                            <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
+                            <p id="asterisk-p">ux project</p>
+                        </div>
+                        <div className="bottom-text" >
+
+
+                            <div className='enumerator-container'>
+                                <div className='line-for-number'>
+
+                                </div>
+                                <p id="num-p">01/02</p>
+                            </div>
+                            <h1 id="temp-title">O-lab</h1>
+                            <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
+                            
+                        </div>
+                    </div >
+                    <div id="case-img-container">
+                        <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" />
+
+                    </div>
                 </div>
-                <div id="hero-img-container">
-                    <img id="hero-case-img" src={require("../../assets/case-hero.png")} alt="Página de login de la CMS (diseño original previo)" />
-
-                </div>
-
-
-            </div>
+            </section>
             <div className='case-slide'>
                 <div className='text-side'>
                     <h2>{t('oCContext')}</h2>
@@ -803,12 +820,12 @@ const CaseStudy = () => {
             </div>
 
             <div id="cta-finish-case">
-                <button onClick={() => { 
+                <button onClick={() => {
                     navigation("/", { state: { targetId: "work-container" } });
-                    }}>Back to list of work</button>
-                <button onClick={() => { 
+                }}>Back to list of work</button>
+                <button onClick={() => {
                     navigation("/", { state: { targetId: "connect-container" } });
-                    }}>Contact</button>
+                }}>Contact</button>
             </div>
         </div>
     )

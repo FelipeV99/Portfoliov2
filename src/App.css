@@ -161,6 +161,7 @@
   #hero-right{
     align-self:flex-start;
     margin-top: 12px;
+    display: none;
   }
   
 

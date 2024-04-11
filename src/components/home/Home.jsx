@@ -226,26 +226,23 @@ const Home = (props) => {
         //     },
         //     0);
 
-        console.log(heroRightRef.current);
+        const { contextSafe } = useGSAP({container:heroRef.current});
 
         useEffect(() => {
             if(heroRef.current != null){
-                const tl = gsap.timeline({
-                    scrollTrigger:{
-                        trigger: "#hero",
-                        start: "30% 50%",
-                        end: "38% 25%",
-                        scrub: true,
-                        // markers: true
-                    }
-                });
-        
-                tl.to(".App",{
-                    backgroundColor: "#272727",
-                    
-                });
-                
-    
+
+                const runRunRUn = contextSafe(() => {
+                    const tl = gsap.timeline({
+                        scrollTrigger:{
+                            trigger: "#hero",
+                            start: "30% 20%",
+                            end: "38% 15%",
+                            scrub: true,
+                            markers: true
+                        }
+                    });
+                   });
+                runRunRUn();    
             }
         }, [heroRef.current]);
 

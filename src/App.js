@@ -18,7 +18,7 @@ function App() {
   font.load().then(function () {
     setTimeout(() => {
       setFontLoaded(true);
-    }, 1000);
+    }, 2000);
     
   }).catch(function () {
     console.log('Font failed to load.');

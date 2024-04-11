@@ -3,6 +3,8 @@ import "./caseSlide.css";
 import { useTranslation } from 'react-i18next';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
+import { useNavigate } from 'react-router-dom'
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const CaseSlide = () => {
@@ -11,26 +13,55 @@ const CaseSlide = () => {
     const caseSlideRef = useRef();
     const bottomRef = useRef();
 
+    const navigation = useNavigate();
+
+    
+    const { contextSafe } = useGSAP({container:caseSlideRef.current});
+
     useEffect(() => {
-        if (caseSlideRef.current != null) {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#case-container-olab",
-                    start: "-120px 25%",
-                    end: "-60px 5%",
-                    scrub: true,
-                    // markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
-                }
-            });
+        if(caseSlideRef.current != null){
 
-            tl.to(".App", {
-                backgroundColor: "#FFF2EB",
-
-            });
-
-
+            const runRunRUn = contextSafe(() => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#case-container-olab",
+                        start: "-120px 25%",
+                        end: "-60px 5%",
+                        scrub: true,
+                        // markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
+                    }
+                });
+    
+                tl.to(".App", {
+                    backgroundColor: "#FFF2EB",
+    
+                });
+               });
+            runRunRUn();    
         }
     }, [caseSlideRef.current]);
+
+    // useEffect(() => {
+    //     if (caseSlideRef.current != null) {
+    //         const tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: "#case-container-olab",
+    //                 start: "-120px 25%",
+    //                 end: "-60px 5%",
+    //                 scrub: true,
+    //                 // markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
+    //             }
+    //         });
+
+    //         tl.to(".App", {
+    //             backgroundColor: "#FFF2EB",
+
+    //         });
+            
+
+
+    //     }
+    // }, [caseSlideRef.current]);
 
     // gsap.to(".App", {
     //     backgroundColor: "#000000",
@@ -108,7 +139,7 @@ const CaseSlide = () => {
                         </div>
                         <h1 id="temp-title">O-lab</h1>
                         <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
-                        <button id="new-main-btn">View case study</button>
+                        <button id="new-main-btn" onClick={() => { navigation("/case-study") }}>View case study</button>
                     </div>
                 </div >
                 <div id="case-img-container">

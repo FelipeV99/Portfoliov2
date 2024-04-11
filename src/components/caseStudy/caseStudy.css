@@ -103,6 +103,7 @@ li {
     min-width: var(--min-width);
     align-items: center;
     padding-top: 68px;
+    background-color: #FFF2EB;
 }
 
 .case-img {

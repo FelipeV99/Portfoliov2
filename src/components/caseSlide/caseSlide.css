@@ -1,4 +1,4 @@
-#case-container-olab{
+#case-container-olab {
     display: flex;
     padding-top: 60px;
     padding-right: 60px;
@@ -7,76 +7,76 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  min-width: var(--min-width);
-  max-width: var(--max-width);
-    
+    min-width: var(--min-width);
+    max-width: var(--max-width);
 
-  height: 100vh;
-  min-height: 680px;
+
+    height: 100vh;
+    min-height: 680px;
 
 }
 
-#case-img-container{
+#case-img-container {
     display: flex;
     align-self: flex-end;
     width: 100%;
     max-width: 1400px;
-    min-width: 380px;
-  
+    /* min-width: 380px; */
+
 
 }
 
-#case-inner-container{
+#case-inner-container {
     max-width: var(--max-width);
     display: flex;
     justify-content: flex-end;
     gap: 64px;
     max-height: var(--max-height);
 
-    
+
 }
 
 
 
-.bottom-text{
+.bottom-text {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 447px;
 }
 
-.text-case-olab{
+.text-case-olab {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 447px;
-    min-height: 100%;    
-    
+    min-height: 100%;
+
 }
 
 
-.project-type{
+.project-type {
     display: flex;
     gap: 8px;
 }
 
-#asterisk-p{
+#asterisk-p {
     color: #471D02;
 }
 
-.img-case{
+.img-case {
     width: 100%;
     height: auto;
     max-width: 1400px;
-    min-width: 360px;
+    /* min-width: 360px; */
 }
 
-#temp-title{
+#temp-title {
     font-size: 62px;
     color: #471D02;
 }
 
-#new-main-btn{
+#new-main-btn {
 
     background-color: #FF6300;
     display: flex;
@@ -93,23 +93,80 @@
 
 }
 
-#temp-p{
+#temp-p {
     color: #787574;
 }
 
-#num-p{
+#num-p {
     font-weight: 600;
     color: #FF6300;
 }
 
-.line-for-number{
-    background-color: #FF6300 ;
+.line-for-number {
+    background-color: #FF6300;
     height: 2px;
     width: 54px;
 }
 
-.enumerator-container{
+.enumerator-container {
     display: flex;
     align-items: flex-end;
     gap: 8px;
+}
+
+@media (max-width:1000px) {
+
+
+    #case-inner-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .project-type {
+        display: none;
+
+    }
+
+    #case-img-container {
+        align-self: center;
+        width: 90%;
+    }
+
+    .text-case-olab {
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    .bottom-text {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:600px) {
+    #case-img-container {
+        width: 92%;
+        /* min-width: 0px; */
+    }
+
+    #case-container-olab {
+
+        padding-right: 22px;
+        padding-left: 22px;
+
+    }
+
+    
+#case-inner-container {
+
+    gap: 32px;
+
+
+
+}
+
+
+
 }
