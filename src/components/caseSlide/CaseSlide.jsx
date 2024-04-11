@@ -15,7 +15,7 @@ const CaseSlide = () => {
 
     const navigation = useNavigate();
 
-    const { contextSafe } = useGSAP({ container: caseSlideRef.current });
+    const { contextSafe } = useGSAP({ scope: caseSlideRef.current });
 
     useEffect(() => {
         if (caseSlideRef.current != null) {
@@ -27,7 +27,7 @@ const CaseSlide = () => {
                         start: "-120px 25%",
                         end: "-60px 5%",
                         scrub: true,
-                        markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
+                        // markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
                     }
                 });
 

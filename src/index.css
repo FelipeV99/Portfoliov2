@@ -32,14 +32,12 @@
   --padding-60:60px;
   --padding-22:22px;
 
-  overflow-y: auto;
 }
 
 html {
   scroll-snap-type: none;
   scroll-behavior: smooth;
-  overflow-y: auto;
-
+  background-color: var(--off-black-800);
 }
 
 @font-face {
@@ -85,6 +83,8 @@ body {
   font-family: "Century Gothic";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .p1 {

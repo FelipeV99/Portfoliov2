@@ -63,12 +63,10 @@ const Home = (props) => {
         }
     }, [targetId]);
 
-    // document.body.style.overflow = "auto";
 
     const appTag = useContext(AppTagContext);
 
-    useEffect(()=>{
-        console.log("removed style from home");
+    useEffect(() => {
         appTag.current.removeAttribute('style');
     }, [])
 
@@ -83,7 +81,7 @@ const Home = (props) => {
 
     //next following lines are all related to preloader, until the useGsap()
 
-    // document.body.style.overflow = "hidden";
+    // document.body.style.overflowY = "hidden";
 
     //I could add a counter to the local storage and set it to 100 once the state gets to 100
     // useEffect(() => {
@@ -174,15 +172,28 @@ const Home = (props) => {
 
 
 
-    const { contextSafe } = useGSAP({ container: heroRef.current });
+    const { contextSafe } = useGSAP({ scope: heroRef.current });
 
     useEffect(() => {
         console.log("run mask");
         const maskHeroElements = contextSafe(() => {
             const tl = gsap.timeline();
+
+            tl.fromTo(prOverlayRef.current,
+                {
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+
+                },
+                {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                    duration: 0.8,
+                    onComplete: () => { document.body.style.overflowY = "scroll" }
+                },
+                0
+            );
             tl.fromTo(designertext.current,
                 {
-                    y: -100,
+                    y: -120,
                     clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
                 },
                 {
@@ -195,7 +206,7 @@ const Home = (props) => {
 
             tl.fromTo(felipetext.current,
                 {
-                    y: -100,
+                    y: -120,
                     clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
                 },
                 {
@@ -207,7 +218,7 @@ const Home = (props) => {
                 0);
             tl.fromTo(ctatext.current,
                 {
-                    y: -30,
+                    y: -60,
                     clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
                 },
                 {
@@ -220,7 +231,20 @@ const Home = (props) => {
 
             tl.fromTo(buttonscta.current,
                 {
-                    y: -30,
+                    y: -60,
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                },
+                {
+                    y: 0,
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    ease: "power2.inOut",
+                    // onComplete: () => { localStorage.setItem("homeAnimated", true); }
+                },
+                0);
+            tl.fromTo(".abstract-design",
+                {
+                    y: -90,
                     clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
                 },
                 {
@@ -233,11 +257,11 @@ const Home = (props) => {
                 0);
         });
         maskHeroElements();
-    }, []);
+    }, [pageRef.current]);
 
 
 
-useEffect(() => {
+    useEffect(() => {
         console.log("activating hero gsap to 272727");
         const runRunRUn = contextSafe(() => {
             const tl = gsap.timeline({
@@ -246,7 +270,7 @@ useEffect(() => {
                     start: "20% 20%",
                     end: "30% 15%",
                     scrub: true,
-                    markers: true
+                    // markers: true
                 }
             });
 
@@ -258,65 +282,59 @@ useEffect(() => {
 
         });
         runRunRUn();
-    
-}, []);
+
+    }, []);
 
 
-return (
-    <div id="page-container" ref={pageRef} >
-        {/* 
-            <div className="pr-overlay">
-            <Lottie options={defaultOptions} height={37} width={166} />
-            </div> */}
+    return (
+        <div id="page-container" ref={pageRef} >
 
+            <div className="pr-overlay" ref={prOverlayRef}>
 
-
-        <section id="hero" ref={heroRef}>
-
-            <div id="number-container">
-                {/* <p className='p2' ref={numeratorRef}>[ 01 ]</p> */}
             </div>
-            <div id="hero-helper">
-                <div id="hero-left" >
-                    <div id="felipe-title">
-                        <div ref={felipetext}>
-                            <h1 id="felipe-h1" >Felipe Andrade</h1>
+
+            <section id="hero" ref={heroRef}>
+
+                <div id="number-container">
+                    {/* <p className='p2' ref={numeratorRef}>[ 01 ]</p> */}
+                </div>
+                <div id="hero-helper">
+                    <div id="hero-left" >
+                        <div id="felipe-title">
+                            <div ref={felipetext}>
+                                <h1 id="felipe-h1" >Felipe Andrade</h1>
+                            </div>
+                        </div>
+                        <div id="designer-title">
+                            <div ref={designertext}>
+                                <h1 id="ux-h1">{t('designerTitle')}</h1>
+                            </div>
+                        </div>
+                        <div className='space-12'></div>
+                        <div className='cta-copy-container' ref={ctatext}>
+                            <p id="cta-copy" className='p1'>
+                                {t("heroCopy")}
+                            </p>
+                        </div>
+                        <div id="button-cta" ref={buttonscta}>
+                            <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
+                            <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
                         </div>
                     </div>
-                    <div id="designer-title">
-                        <div ref={designertext}>
-                            <h1 id="ux-h1">{t('designerTitle')}</h1>
-                        </div>
-                    </div>
-                    <div className='space-12'></div>
-                    <div className='cta-copy-container' ref={ctatext}>
-                        <p id="cta-copy" className='p1'>
-                            {t("heroCopy")}
-                        </p>
-                    </div>
-                    <div id="button-cta" ref={buttonscta}>
-                        <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
-                        <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
+                    <div id="hero-space"></div>
+                    <div id="hero-right" ref={heroRightRef}>
+                        <img className="abstract-design" src={require("../../assets/hero-abstract-design.svg").default} alt="" />
+
+
+
                     </div>
                 </div>
-                <div id="hero-space"></div>
-                <div id="hero-right" ref={heroRightRef}>
-                    <img className="abstract-design" src={require("../../assets/hero-abstract-design.svg").default} alt="" />
-
-
-
-                </div>
-            </div>
-        </section>
-        {/* <Projects /> */}
-        <CaseSlide />
-        <TempVitacanStudy />
-        {/* <ProjectsAlt /> */}
-        <Contact />
-        {/* </main>
-        </LocomotiveScrollProvider> */}
-    </div>
-)
+            </section>
+            <CaseSlide />
+            <TempVitacanStudy />
+            <Contact />
+        </div>
+    )
 }
 
 export default Home

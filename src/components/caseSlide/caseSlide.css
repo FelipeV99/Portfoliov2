@@ -143,6 +143,15 @@
         width: 100%;
     }
 
+    #case-container-olab {
+
+    
+    
+        height: 100%;
+
+    
+    }
+
 }
 
 @media (max-width:600px) {

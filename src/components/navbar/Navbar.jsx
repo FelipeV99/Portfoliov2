@@ -50,7 +50,7 @@ const Navbar = () => {
     }, [location.pathname])
 
 
-    const { contextSafe } = useGSAP({container: navRef.current});
+    const { contextSafe } = useGSAP({scope: navRef.current});
 
     useEffect(() => {
         if(navRef.current != null){
