@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import './navbar.css'
-import { useNavigate, useLocation } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
-import { useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import './navbar.css';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
-import { CustomEase } from "gsap/CustomEase";
-import { ReactComponent as LogoHero } from '../../assets/logo-hero.svg';
-
-
 
 const Navbar = () => {
     const navigation = useNavigate();

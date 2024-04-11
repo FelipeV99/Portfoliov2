@@ -54,6 +54,7 @@ const Home = (props) => {
 
 
     const { state } = useLocation();
+    console.log(state);
     const { targetId } = state || {};
 
     useEffect(() => {
@@ -68,7 +69,9 @@ const Home = (props) => {
 
     useEffect(() => {
         appTag.current.removeAttribute('style');
-    }, []);
+    }, [state]);
+
+
 
     // const location = useLocation();
 
@@ -175,7 +178,6 @@ const Home = (props) => {
     const { contextSafe } = useGSAP({ scope: heroRef.current });
 
     useEffect(() => {
-        console.log("run mask");
         const maskHeroElements = contextSafe(() => {
             const tl = gsap.timeline();
 
@@ -262,7 +264,6 @@ const Home = (props) => {
 
 
     useEffect(() => {
-        console.log("activating hero gsap to 272727");
         const runRunRUn = contextSafe(() => {
             const tl = gsap.timeline({
                 scrollTrigger: {

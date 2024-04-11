@@ -54,8 +54,6 @@ const CaseStudy = () => {
     const appTag = useContext(AppTagContext);
 
     useEffect(()=>{
-        console.log("removed style from case");
-        console.log(appTag.current)
         appTag.current.removeAttribute('style');
     }, [])
     // const normalizeAppBackground = () => {
