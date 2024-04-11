@@ -6,6 +6,9 @@ import { useGSAP } from '@gsap/react';
 import { useNavigate } from 'react-router-dom'
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import OlabThumb from "../../assets/olabNewHero.png";
+import OlabPlaceholder from "../../assets/placeholderOlab.png";
+import ProgressiveImage from '../progressiveImage/ProgressiveImg';
 
 const CaseSlide = () => {
     const [t, i18next] = useTranslation();
@@ -72,7 +75,8 @@ const CaseSlide = () => {
                     </div>
                 </div >
                 <div id="case-img-container">
-                    <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" />
+                    <ProgressiveImage src={OlabThumb} placeholderSrc={OlabPlaceholder} />
+                    {/* <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" /> */}
 
                 </div>
             </div>

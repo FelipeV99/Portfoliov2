@@ -6,6 +6,11 @@ import { useGSAP } from '@gsap/react';
 import { useNavigate } from 'react-router-dom'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import VitacanThumb from "../../assets/vitacanNewHero.png";
+import VitacanPlaceholder from "../../assets/placeholderVitacan.png";
+import ProgressiveImage from '../progressiveImage/ProgressiveImg';
+
+
 const TempVitacanStudy = () => {
     const [t, i18next] = useTranslation();
     gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -78,7 +83,9 @@ const TempVitacanStudy = () => {
                     </div>
                 </div >
                 <div id="case-img-container">
-                    <img className='img-case' src={require("../../assets/vitacanNewHero.png")} alt="" />
+                    <ProgressiveImage src={VitacanThumb} placeholderSrc={VitacanPlaceholder} />
+
+                    {/* <img className='img-case' src={require("../../assets/vitacanNewHero.png")} alt="" /> */}
 
                 </div>
             </div>

@@ -68,6 +68,7 @@ const Home = (props) => {
     const appTag = useContext(AppTagContext);
 
     useEffect(() => {
+        console.log("change things up");
         appTag.current.removeAttribute('style');
     }, [state]);
 
