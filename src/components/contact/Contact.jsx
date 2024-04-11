@@ -65,7 +65,7 @@ const Contact = () => {
                 <div id="top-socials">
                     <div id="socials-text">
                         <div className='pill'>
-                            <p className='p2 letter-s1'>{t("socials")}</p>
+                            {/* <p className='p2 letter-s1'>{t("socials")}</p> */}
                         </div>
                         <div className='social-row'>
                             <p className='bolden p2'>mail</p>
