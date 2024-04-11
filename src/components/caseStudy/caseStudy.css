@@ -5,6 +5,24 @@ li {
     font-size: 18px;
 }
 
+#case-hero {
+    display: flex;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+
+
+    height: 100vh;
+    min-height: 680px;
+
+}
+
 .case-slide {
     display: flex;
     padding-left: 60px;

@@ -25,9 +25,6 @@ const Navbar = () => {
 
     const [t, i18next] = useTranslation();
 
-
-    const navAnimated = localStorage.getItem("navAnimated");
-
     useEffect(() => {
 
         if (location.pathname === "/case-study/olab") {
@@ -53,35 +50,33 @@ const Navbar = () => {
     }, [location.pathname])
 
 
+    const { contextSafe } = useGSAP({container: navRef.current});
 
+    useEffect(() => {
+        if(navRef.current != null){
 
-
-
-    useGSAP(() => {
-        gsap.registerPlugin(CustomEase);
-        // gsap code here...
-        const tl = gsap.timeline();
-        if (navAnimated == null) {
-
-            localStorage.setItem("navAnimated", true);
-
-            tl.fromTo(navRef.current, {
-
-                // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                y: -60,
-                // repeat:5,
-
-            },
-                {
-                    y: 0,
-                    duration: 1,
-                    ease: "power2.inOut",
-
+            const runRunRUn = contextSafe(() => {
+                const tl = gsap.timeline();
+    
+                tl.fromTo(navRef.current, {
+                    // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    y: -60,
+                    // repeat:5,
                 },
-                0);
-
+                    {
+                        y: 0,
+                        duration: 1,
+                        ease: "power2.inOut",
+    
+                    },
+                    0);
+               });
+            runRunRUn();    
         }
-    });
+    }, [navRef.current]);
+
+
+
 
     // useGSAP(() => {
     //     gsap.registerPlugin(CustomEase);

@@ -54,6 +54,8 @@ const CaseStudy = () => {
     const appTag = useContext(AppTagContext);
 
     useEffect(()=>{
+        console.log("removed style from case");
+        console.log(appTag.current)
         appTag.current.removeAttribute('style');
     }, [])
     // const normalizeAppBackground = () => {
@@ -77,7 +79,7 @@ const CaseStudy = () => {
 
     return (
         <div id="case-study-container">
-            <section id="case-container-olab">
+            <section id="case-hero">
 
                 <div id="case-inner-container">
 
