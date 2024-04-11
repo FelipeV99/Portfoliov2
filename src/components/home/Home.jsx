@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import CaseSlide from '../caseSlide/CaseSlide';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TempVitacanStudy from '../tempVitacanStudy/TempVitacanStudy';
 
 // import Lottie from 'react-lottie';
 // import PreloaderAnimation from "../../assets/PreloaderAnimation"
@@ -158,128 +159,128 @@ const Home = (props) => {
 
 
 
-        // const tl = gsap.timeline();
+    // const tl = gsap.timeline();
 
-        // if (homeAnimated == null) {
+    // if (homeAnimated == null) {
 
-        // tl.fromTo(designertext.current,
-        //     {
-        //         y: -100,
-        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        //     },
-        //     {
-        //         y: 0,
-        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //         duration: 1,
-        //         ease: "power2.inOut"
-        //     },
-        //     0);
+    // tl.fromTo(designertext.current,
+    //     {
+    //         y: -100,
+    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //     },
+    //     {
+    //         y: 0,
+    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+    //         duration: 1,
+    //         ease: "power2.inOut"
+    //     },
+    //     0);
 
-        // tl.fromTo(felipetext.current,
-        //     {
-        //         y: -100,
-        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        //     },
-        //     {
-        //         y: 0,
-        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //         duration: 1,
-        //         ease: "power2.inOut"
-        //     },
-        //     0);
-        // tl.fromTo(ctatext.current,
-        //     {
-        //         y: -30,
-        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        //     },
-        //     {
-        //         y: 0,
-        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //         duration: 1,
-        //         ease: "power2.inOut"
-        //     },
-        //     0);
+    // tl.fromTo(felipetext.current,
+    //     {
+    //         y: -100,
+    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //     },
+    //     {
+    //         y: 0,
+    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+    //         duration: 1,
+    //         ease: "power2.inOut"
+    //     },
+    //     0);
+    // tl.fromTo(ctatext.current,
+    //     {
+    //         y: -30,
+    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //     },
+    //     {
+    //         y: 0,
+    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+    //         duration: 1,
+    //         ease: "power2.inOut"
+    //     },
+    //     0);
 
-        // tl.fromTo(buttonscta.current,
-        //     {
-        //         y: -30,
-        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        //     },
-        //     {
-        //         y: 0,
-        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //         duration: 1,
-        //         ease: "power2.inOut",
-        //         // onComplete: () => { localStorage.setItem("homeAnimated", true); }
-        //     },
-        //     0);
-        // tl.fromTo(numeratorRef.current,
-        //     {
-        //         y: -30,
-        //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        //     },
-        //     {
-        //         y: 0,
-        //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-        //         duration: 1,
-        //         ease: "power2.inOut"
-        //     },
-        //     0);
+    // tl.fromTo(buttonscta.current,
+    //     {
+    //         y: -30,
+    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //     },
+    //     {
+    //         y: 0,
+    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+    //         duration: 1,
+    //         ease: "power2.inOut",
+    //         // onComplete: () => { localStorage.setItem("homeAnimated", true); }
+    //     },
+    //     0);
+    // tl.fromTo(numeratorRef.current,
+    //     {
+    //         y: -30,
+    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    //     },
+    //     {
+    //         y: 0,
+    //         clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+    //         duration: 1,
+    //         ease: "power2.inOut"
+    //     },
+    //     0);
 
-        const { contextSafe } = useGSAP({container:heroRef.current});
+    const { contextSafe } = useGSAP({ container: heroRef.current });
 
-        useEffect(() => {
-            if(heroRef.current != null){
+    useEffect(() => {
+        if (heroRef.current != null) {
 
-                const runRunRUn = contextSafe(() => {
-                    const tl = gsap.timeline({
-                        scrollTrigger:{
-                            trigger: "#hero",
-                            start: "30% 20%",
-                            end: "38% 15%",
-                            scrub: true,
-                            markers: true
-                        }
-                    });
-                   });
-                runRunRUn();    
-            }
-        }, [heroRef.current]);
-
-
-
-            // tl.to(".App", {
-
-            //     backgroundColor: "#000000",
+            const runRunRUn = contextSafe(() => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#hero",
+                        start: "30% 20%",
+                        end: "38% 15%",
+                        scrub: true,
+                        markers: true
+                    }
+                });
+            });
+            runRunRUn();
+        }
+    }, [heroRef.current]);
 
 
-            //     scrollTrigger: {
-            //         trigger: "#hero-left",
-            //         start: "top top",
-            //         end: "bottom bottom",
-            //         scrub: true,
-            //         markers: true
-    
-            //     },
-    
-            // });
-            // tl.to(".App", {
 
-            //     backgroundColor: "#ffffff",
+    // tl.to(".App", {
+
+    //     backgroundColor: "#000000",
 
 
-            //     scrollTrigger: {
-            //         trigger:".abstract-design",
-            //         start: "top 20%",
-            //         end: "bottom 80%",
-            //         scrub: true,
-            //         markers: true
-    
-            //     },
-    
-            // });
+    //     scrollTrigger: {
+    //         trigger: "#hero-left",
+    //         start: "top top",
+    //         end: "bottom bottom",
+    //         scrub: true,
+    //         markers: true
 
-        // }
+    //     },
+
+    // });
+    // tl.to(".App", {
+
+    //     backgroundColor: "#ffffff",
+
+
+    //     scrollTrigger: {
+    //         trigger:".abstract-design",
+    //         start: "top 20%",
+    //         end: "bottom 80%",
+    //         scrub: true,
+    //         markers: true
+
+    //     },
+
+    // });
+
+    // }
 
     // console.log(pageRef.current);
 
@@ -343,6 +344,7 @@ const Home = (props) => {
             </section>
             {/* <Projects /> */}
             <CaseSlide />
+            <TempVitacanStudy />
             {/* <ProjectsAlt /> */}
             <Contact />
             {/* </main>

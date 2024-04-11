@@ -16,9 +16,11 @@
   --off-white-200: #F6F6F6;
   --off-white-300: #EFEBDD;
 
-
+  --orange-dark-800: #471D02;
   --orange-800: #FF5C00;
   --orange-700: #FA7428;
+  --orange-300: #FFD3B7;
+
 
   --min-width-no-padding: 316px;
   --min-width:360px;
@@ -49,7 +51,7 @@ html {
 
 p{
   font-size: 18px;
-  color: var(--off-white-100);
+  color: var(--off-black-600);
   font-weight: 300;
 }
 
@@ -126,4 +128,8 @@ figcaption {
 
 .space-32 {
   height: 32px;
+}
+
+.color-orange-dark{
+  color: var(--orange-dark-800);
 }

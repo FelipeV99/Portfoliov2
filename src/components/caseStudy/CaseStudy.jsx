@@ -40,7 +40,7 @@ const CaseStudy = () => {
                     <div className='text-case-olab'>
                         <div className='project-type'>
                             <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
-                            <p id="asterisk-p">ux project</p>
+                            <p id="asterisk-p">Industry experience</p>
                         </div>
                         <div className="bottom-text" >
 
@@ -64,13 +64,13 @@ const CaseStudy = () => {
             </section>
             <div className='case-slide'>
                 <div className='text-side'>
-                    <h2>{t('oCContext')}</h2>
+                    <h2 className='color-orange-dark'>{t('oCContext')}</h2>
                     <div className="space-12"></div>
-                    <p className='p2 bolden'>{t('oCRole')}</p>
+                    <p className='p2 bolden color-orange-dark'>{t('oCRole')}</p>
                     <div className="space-6"></div>
                     <p>{t("ocContextp")}</p>
                     <div className="space-12"></div>
-                    <p className='p2 bolden'>{t('oCAbout')}</p>
+                    <p className='p2 bolden color-orange-dark'>{t('oCAbout')}</p>
                     <div className='space-6'></div>
                     <p>{t('oCAboutp')}</p>
                 </div>
@@ -84,7 +84,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide' id="context-pr">
                 <div id="left-side-obj" className='text-side'>
-                    <h2>{t("oCBusiness")}</h2>
+                    <h2 className='color-orange-dark'>{t("oCBusiness")}</h2>
                     <div className='space-6'></div>
                     <ul id="bullet-objectives">
                         <li>
@@ -109,7 +109,7 @@ const CaseStudy = () => {
                 </div>
 
                 <div id="right-side-obj" className='text-side'>
-                    <h2>{t("OCProblems")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCProblems")}</h2>
                     <div className='space-6'></div>
                     <p>{t("OCProblemsp")}</p>
                 </div>
@@ -119,7 +119,7 @@ const CaseStudy = () => {
                 <div id="inner-container">
 
 
-                    <h2>{t("OCProcess")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCProcess")}</h2>
                     <div className='space-12'></div>
                     <div id="card-container">
 
@@ -210,7 +210,7 @@ const CaseStudy = () => {
 
             <div className='case-slide'>
                 <div className='text-side'>
-                    <h2>{t("OCResearch")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCResearch")}</h2>
                     <div className='space-12'></div>
                     <p className='bolden p2'>{t("OCRGoals")}</p>
                     <div className='space-6'></div>
@@ -269,7 +269,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide'>
                 <div className='text-side'>
-                    <h2>{t("OCRU")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCRU")}</h2>
                     <div className='space-6'></div>
                     <p>{t("OCRUp")}</p>
                     <div className='space-12'></div>
@@ -309,7 +309,7 @@ const CaseStudy = () => {
 
             <div id="opinions-big-container">
                 <div id="opinions-inner-container">
-                    <h2>{t("OCRO")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCRO")}</h2>
                     <div id="opinions-container">
 
                         <div className='opinion-card'>
@@ -355,7 +355,7 @@ const CaseStudy = () => {
 
             <div className='case-slide'>
                 <div className='text-side'>
-                    <h2>{t("OCRBS")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCRBS")}</h2>
                     <div className='space-6'></div>
                     <p>{t("OCRBSp")}</p>
                     <div className='space-12'></div>
@@ -407,7 +407,7 @@ const CaseStudy = () => {
 
                 </div>
                 <div className='text-side'>
-                    <h2>{t("OCRBS")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCRBS")}</h2>
                     <div className='space-12'></div>
                     <p className='bolden p2'>{t("OCBRStake")}</p>
                     <div className='space-6'></div>
@@ -470,7 +470,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide'>
                 <div className='text-side'>
-                    <h2>{t("OCBRCA")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCBRCA")}</h2>
                     <div className='space-6'></div>
                     <p>{t("OCBRCAp")}</p>
                     <div className='space-12'></div>
@@ -535,9 +535,9 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide reverse-flex-col'>
                 <div className='text-side'>
-                    <h2>{t("OCC1")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCC1")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCC1p")}</p>
+                    <p className='color-orange-dark'>{t("OCC1p")}</p>
 
                 </div>
                 <div className='img-side'>
@@ -552,7 +552,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide reverse-flex-col'>
                 <div className='text-side'>
-                    <h2>{t("OCC2")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCC2")}</h2>
                     <div className='space-6'></div>
                     <p>{t("OCC2p")}</p>
                 </div>
@@ -567,7 +567,7 @@ const CaseStudy = () => {
 
             <div id='case-slide-flows'>
                 <div className='text-side'>
-                    <h2>{t("OCC3")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCC3")}</h2>
                     <div className='space-6'></div>
                     <p>{t("OCC3p")}</p>
 
@@ -584,7 +584,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide reverse-flex-col'>
                 <div className='text-side'>
-                    <h2>{t("OCC4")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCC4")}</h2>
                     <div className='space-6'></div>
                     <p>{t("OCC4p")}</p>
 
@@ -597,7 +597,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide reverse-flex-col'>
                 <div className='text-side'>
-                    <h2>{t("OCC5")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCC5")}</h2>
                     <div className='space-6'></div>
                     <p>{t("OCC5p")}</p>
                 </div>
@@ -622,7 +622,7 @@ const CaseStudy = () => {
                 </div>
             </div>
             <div className='solution-container'>
-                <h2>{t("OCC1")}</h2>
+                <h2 className='color-orange-dark'>{t("OCC1")}</h2>
                 <div className='space-24'></div>
                 <div className='solution-slide'>
                     <div>
@@ -641,7 +641,7 @@ const CaseStudy = () => {
                 </div>
             </div>
             <div className='solution-container'>
-                <h2>{t("OCC2")}</h2>
+                <h2 className='color-orange-dark'>{t("OCC2")}</h2>
                 <div className='space-24'></div>
                 <div className='solution-slide'>
                     <div>
@@ -660,7 +660,7 @@ const CaseStudy = () => {
                 </div>
             </div>
             <div className='solution-container'>
-                <h2>{t("OCC3")}</h2>
+                <h2 className='color-orange-dark'>{t("OCC3")}</h2>
                 <div className='space-24'></div>
                 <div id='solution-slide-vertical'>
                     <div>
@@ -679,7 +679,7 @@ const CaseStudy = () => {
                 </div>
             </div>
             <div className='solution-container'>
-                <h2>{t("OCC4")}</h2>
+                <h2 className='color-orange-dark'>{t("OCC4")}</h2>
                 <div className='space-24'></div>
                 <div className='solution-slide'>
                     <div>
@@ -698,7 +698,7 @@ const CaseStudy = () => {
                 </div>
             </div>
             <div className='solution-container'>
-                <h2>{t("OCC5")}</h2>
+                <h2 className='color-orange-dark'>{t("OCC5")}</h2>
                 <div className='space-24'></div>
                 <div className='solution-slide'>
                     <div>
@@ -733,7 +733,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide reverse-flex-col'>
                 <div className='text-side'>
-                    <h2>{t("OCV1")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCV1")}</h2>
                     <div className='space-8'></div>
 
                     <p>{t("OCV1p")}</p>
@@ -745,7 +745,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide reverse-flex-col'>
                 <div className='text-side'>
-                    <h2>{t("OCV2")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCV2")}</h2>
                     <div className='space-8'></div>
 
                     <p>{t("OCV2p")}</p>
@@ -758,7 +758,7 @@ const CaseStudy = () => {
             </div>
             <div className='case-slide reverse-flex-col'>
                 <div className='text-side'>
-                    <h2>{t("OCV3")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCV3")}</h2>
                     <div className='space-8'></div>
 
                     <p>{t("OCV3p")}</p>
@@ -776,7 +776,7 @@ const CaseStudy = () => {
 
                 </div>
                 <div className='text-side'>
-                    <h2>{t("OCV4")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCV4")}</h2>
                     <div className='space-8'></div>
 
                     <ul>
@@ -805,7 +805,7 @@ const CaseStudy = () => {
 
             <div className='case-slide'>
                 <div className='text-side'>
-                    <h2>{t("OCVC")}</h2>
+                    <h2 className='color-orange-dark'>{t("OCVC")}</h2>
                     <div className='space-8'></div>
                     <p>{t("OCVCp1")}</p>
                     <div className='space-12'></div>

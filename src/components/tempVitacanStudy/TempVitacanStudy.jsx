@@ -1,74 +1,70 @@
 import React, { useRef, useEffect } from 'react';
-import "./caseSlide.css";
+import "./tempVitacanStudy.css";
 import { useTranslation } from 'react-i18next';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import { useNavigate } from 'react-router-dom'
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const CaseSlide = () => {
+const TempVitacanStudy = () => {
     const [t, i18next] = useTranslation();
     gsap.registerPlugin(useGSAP, ScrollTrigger);
-    const caseSlideRef = useRef();
+    const caseSlideVitacanRef = useRef();
     const bottomRef = useRef();
 
     const navigation = useNavigate();
 
-    
-    const { contextSafe } = useGSAP({container:caseSlideRef.current});
+    const { contextSafe } = useGSAP({container:caseSlideVitacanRef.current});
 
     useEffect(() => {
-        if(caseSlideRef.current != null){
+        if(caseSlideVitacanRef.current != null){
 
             const runRunRUn = contextSafe(() => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: "#case-container-olab",
+                        trigger: "#case-container-vitacan",
                         start: "-120px 25%",
                         end: "-60px 5%",
                         scrub: true,
-                        markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120}
+                        markers: {startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 480}
                     }
                 });
     
                 tl.to(".App", {
-                    backgroundColor: "#FFF2EB",
+                    backgroundColor: "#ECF5F4",
     
                 });
                });
             runRunRUn();    
         }
-    }, [caseSlideRef.current]);
-
-
+    }, [caseSlideVitacanRef.current]);
 
     return (
-        <section id="case-container-olab" ref={caseSlideRef}>
+        <section id="case-container-vitacan" ref={caseSlideVitacanRef}>
 
             <div id="case-inner-container">
 
                 <div className='text-case-olab'>
                     <div className='project-type'>
                         <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
-                        <p id="asterisk-p">Industry experience</p>
+                        <p id="asterisk-p">conceptual project</p>
                     </div>
                     <div className="bottom-text" ref={bottomRef}>
 
 
                         <div className='enumerator-container'>
-                            <div className='line-for-number'>
+                            <div className='line-for-number-v'>
 
                             </div>
-                            <p id="num-p">01/02</p>
+                            <p id="num-p-v">02/02</p>
                         </div>
-                        <h1 id="temp-title">O-lab</h1>
-                        <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
-                        <button id="new-main-btn" onClick={() => { navigation("/case-study/olab") }}>View case study</button>
+                        <h1 id="temp-title">Vitacan</h1>
+                        <p id="temp-p">Keeping Dogs Healthy with Vitacan. This is the journey of designing an app to track the wellness of your dog with a smart collar.</p>
+                        <button id="new-main-btn-v" onClick={()=>{window.open("https://www.behance.net/gallery/195967355/Vitacan-Case-Study-English")}}>View case study</button>
                     </div>
                 </div >
                 <div id="case-img-container">
-                    <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" />
+                    <img className='img-case' src={require("../../assets/vitacanNewHero.png")} alt="" />
 
                 </div>
             </div>
@@ -76,4 +72,4 @@ const CaseSlide = () => {
     )
 }
 
-export default CaseSlide
+export default TempVitacanStudy

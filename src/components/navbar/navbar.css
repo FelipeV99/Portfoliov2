@@ -43,7 +43,6 @@ nav {
 }
 
 .nav-optn {
-  border-left: 1px var(--off-black-800) solid;
   height: 100%;
   display: flex;
   justify-content: center;

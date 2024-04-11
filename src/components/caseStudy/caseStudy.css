@@ -102,7 +102,6 @@ li {
     flex-direction: column;
     min-width: var(--min-width);
     align-items: center;
-    padding-top: 68px;
     background-color: #FFF2EB;
 }
 
@@ -151,23 +150,24 @@ li {
 .process-card {
     display: flex;
     flex-direction: column;
-    background-color: var(--off-white-300);
+    background-color: var(--orange-300);
     max-width: 560px;
     min-width: var(--min-width-no-padding);
     padding: 22px;
     gap: 12px;
+    border-radius: 4px;
 }
 
 .number {
     font-size: 54px;
     font-weight: 700;
-    color: var(--off-black-800);
+    color: var(--orange-dark-800);
     /* color: white; */
 }
 
-/* .h-card{
-    color: white;
-} */
+.h-card{
+    color: var(--orange-dark-800);
+}
 
 /* .p-card{
     color: white;
@@ -251,13 +251,14 @@ li {
 }
 
 .opinion-card {
-    background-color: var(--off-white-300);
+    background-color: var(--orange-300);
     width: 345px;
     height: 181px;
     padding: 22px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 4px;
 }
 
 .solution-slide {

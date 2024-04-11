@@ -1,0 +1,49 @@
+#case-container-vitacan {
+    display: flex;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+
+
+    height: 100vh;
+    min-height: 680px;
+
+}
+
+#new-main-btn-v {
+
+    background-color: #00B7B7;
+    display: flex;
+    align-self: flex-start;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #FFF2EB;
+    border-radius: 1000px;
+    font-weight: 100;
+
+    margin-top: 4px;
+
+}
+
+#temp-p {
+    color: #787574;
+}
+
+#num-p-v {
+    font-weight: 600;
+    color: #00B7B7;
+}
+
+.line-for-number-v {
+    background-color: #00B7B7;
+    height: 2px;
+    width: 54px;
+}
