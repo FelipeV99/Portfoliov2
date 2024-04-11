@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useContext } from 'react';
-import { AppTagContext } from '../../App';
+import React, { useRef, useEffect } from 'react';
 import "./caseSlide.css";
 import { useTranslation } from 'react-i18next';
 import gsap from "gsap";
@@ -15,19 +14,6 @@ const CaseSlide = () => {
     const bottomRef = useRef();
 
     const navigation = useNavigate();
-
-    const appTag = useContext(AppTagContext);
-
-    const normalizeAppBackground = () => {
-        console.log("normalizing app color");
-        appTag.current.removeAttribute('style');
-        console.log(appTag.current.style.backgroundColor);
-        
-        // appTag.current.style.backgroundColor = "#000000";
-    };
-
-
-
 
     const { contextSafe } = useGSAP({ container: caseSlideRef.current });
 
@@ -78,9 +64,8 @@ const CaseSlide = () => {
                         <h1 id="temp-title">O-lab</h1>
                         <p id="temp-p">Advancing the experience of educaional content. O-lab, un Sistema de Administración y Monitoreo, y consumo de Contenido para comunidades vulnerables y empresas.</p>
                         <button id="new-main-btn" onClick={() => {
-                            navigation("/case-study/olab");
-                            normalizeAppBackground();
                             
+                            navigation("/case-study/olab");
                         }}>
                             View case study
                         </button>

@@ -1,7 +1,8 @@
 import React from 'react'
 import './caseStudy.css'
+import { AppTagContext } from '../../App';
 import { useTranslation } from 'react-i18next'
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
@@ -48,6 +49,22 @@ const CaseStudy = () => {
             
     //     });
     // });
+
+    
+    const appTag = useContext(AppTagContext);
+
+    useEffect(()=>{
+        appTag.current.removeAttribute('style');
+    }, [])
+    // const normalizeAppBackground = () => {
+    //     console.log("normalizing app color from case study");
+    //     appTag.current.removeAttribute('style');
+    //     // console.log(appTag.current.style.backgroundColor);
+    //     gsap.set(appTag.current, {clearProps: true});
+        
+    //     // appTag.current.style.backgroundColor = "#000000";
+    // };
+
     
 
     // useEffect(() => {
