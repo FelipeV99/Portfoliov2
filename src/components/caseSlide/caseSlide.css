@@ -1,6 +1,13 @@
-#case-container-olab {
+#outer-container-olab{
+    width: 100%;
+    background-color: #FFF2EB;
     display: flex;
-    padding-top: 60px;
+    justify-content: center;
+    align-items: center;
+}
+#case-container-olab {
+    
+    /* padding-top: 60px;
     padding-right: 60px;
     padding-left: 60px;
     padding-bottom: 60px;
@@ -8,34 +15,59 @@
     align-items: center;
     width: 100%;
     min-width: var(--min-width);
-    max-width: var(--max-width);
-    background-color: #FFF2EB;
+    
 
 
     height: 100vh;
+    min-height: 680px; */
+    display: flex;
+    align-items: center;
+    
+
+    padding-top: 68px;
+    padding-left: var(--padding-60);
+    padding-right: var(--padding-60);
+    padding-bottom: var(--padding-60);
+  
+    width: 100%;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+    /* height: calc(100vh - 68px); */
+    height: calc(100vh - 68px);
     min-height: 680px;
+    /* max-height: var(--max-height); */
+    scroll-snap-align: start;
 
 }
+#case-inner-container {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    height: 100%;
+    max-height: 700px;
+
+
+}
+
+#olab-gap{
+    display: flex;
+    min-width: 64px;
+}
+
 
 #case-img-container {
     display: flex;
     align-self: flex-end;
     width: 100%;
-    max-width: 1400px;
+    max-width: 680px;
     /* min-width: 380px; */
 
 
 }
 
-#case-inner-container {
-    max-width: var(--max-width);
-    display: flex;
-    justify-content: flex-end;
-    gap: 64px;
-    max-height: var(--max-height);
-
-
-}
 
 
 
@@ -51,7 +83,8 @@
     flex-direction: column;
     justify-content: space-between;
     width: 447px;
-    min-height: 100%;
+    min-height: 250px;
+    height: 100%;
 
 }
 
@@ -69,6 +102,9 @@
     width: 100%;
     height: auto;
     max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
     /* min-width: 360px; */
 }
 
@@ -123,6 +159,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        max-height: 900px;
     }
 
     .project-type {
@@ -172,6 +209,7 @@
 #case-inner-container {
 
     gap: 32px;
+    
 
 
 

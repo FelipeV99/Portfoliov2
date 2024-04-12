@@ -46,6 +46,9 @@ const CaseSlide = () => {
 
 
     return (
+        <div id="outer-container-olab">
+
+        
         <section id="case-container-olab" ref={caseSlideRef}>
 
             <div id="case-inner-container">
@@ -74,6 +77,9 @@ const CaseSlide = () => {
                         </button>
                     </div>
                 </div >
+                <div id="olab-gap">
+
+                </div>
                 <div id="case-img-container">
                     <ProgressiveImage className='img-case' src={OlabThumb} placeholderSrc={OlabPlaceholder} />
                     {/* <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" /> */}
@@ -81,6 +87,7 @@ const CaseSlide = () => {
                 </div>
             </div>
         </section>
+        </div>
     )
 }
 

@@ -59,6 +59,8 @@ const TempVitacanStudy = () => {
     }, [i18next.language]);
 
     return (
+        <div id="outer-container-vitacan">
+
         <section id="case-container-vitacan" ref={caseSlideVitacanRef}>
 
             <div id="case-inner-container">
@@ -90,6 +92,7 @@ const TempVitacanStudy = () => {
                 </div>
             </div>
         </section>
+        </div>
     )
 }
 

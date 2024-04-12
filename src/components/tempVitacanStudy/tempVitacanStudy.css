@@ -1,3 +1,10 @@
+#outer-container-vitacan{
+    width: 100%;
+    background-color: #ECF5F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #case-container-vitacan {
     display: flex;
     padding-top: 60px;
@@ -9,7 +16,7 @@
     width: 100%;
     min-width: var(--min-width);
     max-width: var(--max-width);
-    background-color: #ECF5F4;
+    
 
     height: 100vh;
     min-height: 680px;
