@@ -11,9 +11,9 @@
   padding-top: 8px;
   padding-bottom: 8px;
 
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
-  font-family: "Century Gothic";
+  font-family: "CGothic";
 }
 
 .btn-sec{
@@ -21,9 +21,9 @@
   padding-top: 8px;
   padding-bottom: 12px;
 
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
-  font-family: "Century Gothic";
+  font-family: "CGothic";
   /* border-bottom: 4px var(--off-black-800) solid; */
 }
 
