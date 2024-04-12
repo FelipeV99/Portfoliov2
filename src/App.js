@@ -15,18 +15,43 @@ export const AppTagContext = React.createContext();
 function App() {
   const FontFaceObserver = require('fontfaceobserver');
   const font = new FontFaceObserver('IDGSemi');
-  const [fontLoaded, setFontLoaded] = useState(false)
+  const fontGothic = new FontFaceObserver('CGothic');
+  const [fontLoaded, setFontLoaded] = useState(false);
+
+  let idLoaded = false;
+  let gothicLoaded = false;
 
   const appRef = useRef();
 
   font.load().then(function () {
-    setTimeout(() => {
+    idLoaded = true;
+    if(idLoaded == true && gothicLoaded == true && fontLoaded==false){
       setFontLoaded(true);
-    }, 2000);
+      
+    }
     
   }).catch(function () {
-    console.log('Font failed to load.');
+    console.log('ID Grotesk Font failed to load.');
   });
+
+  fontGothic.load().then(function () {
+    gothicLoaded = true;
+    if(idLoaded == true && gothicLoaded == true && fontLoaded==false){
+      setFontLoaded(true);
+      
+    }
+    
+  }).catch(function () {
+    console.log('Century Gothic Font failed to load.');
+  });
+
+  console.log(fontLoaded);
+  // setTimeout(() => {
+  //   setFontLoaded(true);
+  //   idLoaded = true;
+  // }, 2000);
+
+
 
 
   const ref = useRef(null);
