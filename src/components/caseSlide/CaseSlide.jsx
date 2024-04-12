@@ -20,28 +20,28 @@ const CaseSlide = () => {
 
     const { contextSafe } = useGSAP({ scope: caseSlideRef.current });
 
-    useEffect(() => {
-        if (caseSlideRef.current != null) {
+    // useEffect(() => {
+    //     if (caseSlideRef.current != null) {
 
-            const runRunRUn = contextSafe(() => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: "#case-container-olab",
-                        start: "-15% 25%",
-                        end: "-5% 5%",
-                        scrub: true,
-                        markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 60}
-                    }
-                });
+    //         const runRunRUn = contextSafe(() => {
+    //             const tl = gsap.timeline({
+    //                 scrollTrigger: {
+    //                     trigger: "#case-container-olab",
+    //                     start: "-15% 25%",
+    //                     end: "-5% 5%",
+    //                     scrub: true,
+    //                     markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 60}
+    //                 }
+    //             });
 
-                tl.to(".App", {
-                    backgroundColor: "#FFF2EB",
+    //             tl.to(".App", {
+    //                 backgroundColor: "#FFF2EB",
 
-                });
-            });
-            runRunRUn();
-        }
-    }, [caseSlideRef.current]);
+    //             });
+    //         });
+    //         runRunRUn();
+    //     }
+    // }, [caseSlideRef.current]);
 
 
 

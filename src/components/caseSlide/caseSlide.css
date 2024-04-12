@@ -9,6 +9,7 @@
     width: 100%;
     min-width: var(--min-width);
     max-width: var(--max-width);
+    background-color: #FFF2EB;
 
 
     height: 100vh;

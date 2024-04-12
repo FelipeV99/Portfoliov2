@@ -15,29 +15,29 @@ const Contact = () => {
         
     const { contextSafe } = useGSAP({scope:connectRef.current});
 
-    useEffect(() => {
-        if(connectRef.current != null){
+    // useEffect(() => {
+    //     if(connectRef.current != null){
 
-            const runRunRUn = contextSafe(() => {
-                const tl = gsap.timeline({
-                    scrollTrigger:{
-                        trigger: "#connect-container",
-                        start: "0% 70%",
-                        end: "10% 50%",
-                        scrub: true,
-                        markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 120},
+    //         const runRunRUn = contextSafe(() => {
+    //             const tl = gsap.timeline({
+    //                 scrollTrigger:{
+    //                     trigger: "#connect-container",
+    //                     start: "0% 70%",
+    //                     end: "10% 50%",
+    //                     scrub: true,
+    //                     markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 120},
     
-                    }
-                });
+    //                 }
+    //             });
         
-                tl.to(".App",{
-                    backgroundColor: "#272727",
+    //             tl.to(".App",{
+    //                 backgroundColor: "#272727",
                     
-                });
-               });
-            runRunRUn();    
-        }
-    }, [connectRef.current]);
+    //             });
+    //            });
+    //         runRunRUn();    
+    //     }
+    // }, [connectRef.current]);
 
 
     return (

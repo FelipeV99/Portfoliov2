@@ -21,28 +21,28 @@ const TempVitacanStudy = () => {
 
     const { contextSafe } = useGSAP({container:caseSlideVitacanRef.current});
 
-    useEffect(() => {
-        if(caseSlideVitacanRef.current != null){
+    // useEffect(() => {
+    //     if(caseSlideVitacanRef.current != null){
 
-            const runRunRUn = contextSafe(() => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: "#case-container-vitacan",
-                        start: "-15% 25%",
-                        end: "-5% 5%",
-                        scrub: true,
-                        markers: {startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200}
-                    }
-                });
+    //         const runRunRUn = contextSafe(() => {
+    //             const tl = gsap.timeline({
+    //                 scrollTrigger: {
+    //                     trigger: "#case-container-vitacan",
+    //                     start: "-15% 25%",
+    //                     end: "-5% 5%",
+    //                     scrub: true,
+    //                     markers: {startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200}
+    //                 }
+    //             });
     
-                tl.to(".App", {
-                    backgroundColor: "#ECF5F4",
+    //             tl.to(".App", {
+    //                 backgroundColor: "#ECF5F4",
     
-                });
-               });
-            runRunRUn();    
-        }
-    }, [caseSlideVitacanRef.current]);
+    //             });
+    //            });
+    //         runRunRUn();    
+    //     }
+    // }, [caseSlideVitacanRef.current]);
 
     const [caseStudyLink, setCaseStudyLink] = useState("");
 

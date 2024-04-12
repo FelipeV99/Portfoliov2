@@ -9,7 +9,7 @@
     width: 100%;
     min-width: var(--min-width);
     max-width: var(--max-width);
-
+    background-color: #ECF5F4;
 
     height: 100vh;
     min-height: 680px;

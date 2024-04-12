@@ -46,6 +46,7 @@
   min-height: 680px;
   /* max-height: var(--max-height); */
   scroll-snap-align: start;
+  background-color: #272727;
 }
 
 .hero-for-change-bg{

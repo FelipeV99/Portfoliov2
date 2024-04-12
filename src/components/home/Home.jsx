@@ -264,28 +264,28 @@ const Home = (props) => {
 
 
 
-    useEffect(() => {
-        const runRunRUn = contextSafe(() => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#hero",
-                    start: "20% 20%",
-                    end: "30% 15%",
-                    scrub: true,
-                    markers: true
-                }
-            });
+    // useEffect(() => {
+    //     const runRunRUn = contextSafe(() => {
+    //         const tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: "#hero",
+    //                 start: "20% 20%",
+    //                 end: "30% 15%",
+    //                 scrub: true,
+    //                 markers: true
+    //             }
+    //         });
 
-            tl.to(".App", {
-                backgroundColor: "#272727",
+    //         tl.to(".App", {
+    //             backgroundColor: "#272727",
 
-            });
+    //         });
 
 
-        });
-        runRunRUn();
+    //     });
+    //     runRunRUn();
 
-    }, []);
+    // }, []);
 
 
     return (
