@@ -89,13 +89,15 @@ body {
 
 .p1 {
   font-size: 22px;
-  color: var(--off-white-100);
+
 }
 
 .p2 {
   font-size: 18px;
-  color: var(--off-white-100);
+
 }
+
+
 
 h1 {
   color: var(--off-white-100);

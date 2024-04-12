@@ -314,7 +314,7 @@ const Home = (props) => {
                         </div>
                         <div className='space-12'></div>
                         <div className='cta-copy-container' ref={ctatext}>
-                            <p id="cta-copy" className='p1'>
+                            <p id="cta-copy" className='p1 whiten'>
                                 {t("heroCopy")}
                             </p>
                         </div>
