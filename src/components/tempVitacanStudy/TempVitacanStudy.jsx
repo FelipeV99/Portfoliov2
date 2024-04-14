@@ -29,7 +29,7 @@ const TempVitacanStudy = () => {
                 start: "0% 55%",
                 end: "0% 45%",
                 scrub: true,
-                // markers: { startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200 }
+                markers: { startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200 }
             }
         });
 
@@ -37,7 +37,7 @@ const TempVitacanStudy = () => {
             backgroundColor: "#ECF5F4",
             onComplete: () => {
                 // console.log("tween from vitacan");
-                ScrollTrigger.refresh();
+                // ScrollTrigger.refresh();
             }
 
 

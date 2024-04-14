@@ -58,9 +58,14 @@ const Home = (props) => {
 
     useEffect(() => {
         const el = document.getElementById(targetId);
-        if (el) {
-            el.scrollIntoView();
-        }
+        console.log(el);
+        setTimeout(() => {
+            if (el) {
+                el.scrollIntoView();
+            }
+            
+        }, 200);
+
     }, [targetId]);
 
 

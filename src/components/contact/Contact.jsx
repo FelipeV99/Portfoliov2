@@ -22,7 +22,7 @@ const Contact = () => {
                 start: "0% 55%",
                 end: "0% 45%",
                 scrub: true,
-                // markers: { startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 120 },
+                markers: { startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 120 },
             }
         });
 
@@ -30,7 +30,7 @@ const Contact = () => {
             backgroundColor: "#272727",
             onComplete: () => { 
                 // console.log("tween from contact");
-                ScrollTrigger.refresh();
+                // ScrollTrigger.refresh();
              }
         });
     });
@@ -94,7 +94,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div id="back-top">
-                        <a href="#mask-nav">
+                        <a href="https://felipeandradeux.netlify.app/#mask-nav">
                             <div id="back-top-inception">
                                 <p className='p2 whiten'>{t("backTop")}</p>
                                 <img src={require("../../assets/arrow-up.svg").default} alt="" />

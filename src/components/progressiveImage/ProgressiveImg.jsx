@@ -15,7 +15,7 @@ const ProgressiveImage = (props) => {
         };
 
     }, [props.src]);
-    console.log(imgSrc);
+    // console.log(imgSrc);
 
     return(
         <img className="prog-img" src={imgSrc} />
