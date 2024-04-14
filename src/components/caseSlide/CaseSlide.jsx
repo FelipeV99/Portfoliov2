@@ -28,7 +28,7 @@ const CaseSlide = () => {
                 start: "0% 55%",
                 end: "0% 45%",
                 scrub: true,
-                markers: { startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 60 }
+                // markers: { startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 60 }
             }
         });
 
