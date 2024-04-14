@@ -33,7 +33,7 @@
     min-width: var(--min-width);
     max-width: var(--max-width);
     /* height: calc(100vh - 68px); */
-    height: calc(100vh - 68px);
+    height: 100vh;
     min-height: 680px;
     /* max-height: var(--max-height); */
     scroll-snap-align: start;
