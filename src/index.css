@@ -110,7 +110,6 @@ body {
 
 .p2 {
   font-size: 18px;
-
 }
 
 
@@ -158,4 +157,8 @@ figcaption {
 
 .color-light-grey{
   color: var(--off-black-500);
+}
+
+.color-dark-grey{
+  color: var(--off-black-800);
 }

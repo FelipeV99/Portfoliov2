@@ -37,7 +37,7 @@ const Home = (props) => {
     const felipetext = useRef();
     const buttonscta = useRef();
     const ctatext = useRef();
-    const numeratorRef = useRef();
+    // const numeratorRef = useRef();
     const cvRef = useRef();
     const heroRef = useRef();
     const pageRef = useRef();
@@ -54,7 +54,6 @@ const Home = (props) => {
 
 
     const { state } = useLocation();
-    console.log(state);
     const { targetId } = state || {};
 
     useEffect(() => {
@@ -68,7 +67,6 @@ const Home = (props) => {
     const appTag = useContext(AppTagContext);
 
     useEffect(() => {
-        console.log("change things up");
         appTag.current.removeAttribute('style');
     }, [state]);
 

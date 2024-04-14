@@ -5,7 +5,10 @@ import { useTranslation } from 'react-i18next'
 import { useRef, useEffect, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import gsap from "gsap";
-import { useGSAP } from '@gsap/react'
+import { useGSAP } from '@gsap/react';
+import Lottie from 'react-lottie';
+import PreloaderAnimationDark from "../../assets/PreloaderAnimationDark.json";
+
 
 
 const CaseStudy = () => {
@@ -21,6 +24,7 @@ const CaseStudy = () => {
     const metric1Ref = useRef();
     const metric2Ref = useRef();
     const metric3Ref = useRef();
+    const prOverlayOlabRef = useRef();
 
     useEffect(() => {
         if (i18next.language != null) {
@@ -42,30 +46,71 @@ const CaseStudy = () => {
 
     // const fixBackground = contextSafe(() => {
     //     const tl = gsap.timeline();
-        
+
     //     tl.to(".App",{
     //         backgroundColor: "#272727",
     //         duration:0
-            
+
     //     });
     // });
 
-    
+
     const appTag = useContext(AppTagContext);
 
-    useEffect(()=>{
+    useEffect(() => {
         appTag.current.removeAttribute('style');
-    }, [])
+    }, []);
+
+    document.body.style.overflowY = "hidden";
+
+    
+  const defaultOptions = {
+    loop:true,
+    autoplay:true,
+    animationData: PreloaderAnimationDark
+}
+
+
+    const { contextSafe } = useGSAP({ scope: prOverlayOlabRef.current });
+
+    useEffect(() => {
+
+        const maskOlab = contextSafe(() => {
+            const tl = gsap.timeline();
+
+            tl.fromTo(prOverlayOlabRef.current,
+                {
+                    // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    opacity:1
+
+                },
+                {
+                    // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                    opacity: 0,
+                    duration: 0.4,
+                    onComplete: () => { 
+                        document.body.style.overflowY = "scroll";
+                        prOverlayOlabRef.current.style.display = "none";
+                    }
+                },
+                0
+            );
+        });
+        setTimeout(() => {
+            maskOlab();            
+        }, 2500);
+
+    },[]);
     // const normalizeAppBackground = () => {
     //     console.log("normalizing app color from case study");
     //     appTag.current.removeAttribute('style');
     //     // console.log(appTag.current.style.backgroundColor);
     //     gsap.set(appTag.current, {clearProps: true});
-        
+
     //     // appTag.current.style.backgroundColor = "#000000";
     // };
 
-    
+
 
     // useEffect(() => {
     //     console.log("restoring bg");
@@ -73,10 +118,16 @@ const CaseStudy = () => {
     //     fixBackground();
 
     // }, [location.pathname])
-    
+
 
     return (
         <div id="case-study-container">
+            <div className="pr-overlay-olab" ref={prOverlayOlabRef}>
+            <Lottie options={defaultOptions} height={37} width={166} />
+            <p className='p1 bolden color-dark-grey'>loading case study...</p>
+
+
+            </div>
             <section id="case-hero">
 
                 <div id="case-inner-container">
@@ -97,7 +148,7 @@ const CaseStudy = () => {
                             </div>
                             <h1 id="temp-title">O-lab</h1>
                             <p className='color-light-grey'>{t("ThumbCopyOlab")}</p>
-                            
+
                         </div>
                     </div >
                     <div id="case-img-container">

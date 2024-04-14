@@ -56,9 +56,9 @@ function App() {
 
   const ref = useRef(null);
 
-  const options = {
-    smooth: true,
-  } 
+  // const options = {
+  //   smooth: true,
+  // } 
 
   const defaultOptions = {
     loop:true,
