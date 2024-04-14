@@ -1,5 +1,5 @@
 import './App.css';
-import './base.css'
+// import './base.css'
 import React, { useRef, useState } from 'react';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
@@ -25,34 +25,21 @@ function App() {
 
   font.load().then(function () {
     idLoaded = true;
-    if(idLoaded == true && gothicLoaded == true && fontLoaded==false){
+    if (idLoaded == true && gothicLoaded == true && fontLoaded == false) {
       setFontLoaded(true);
-      
     }
-    
   }).catch(function () {
     console.log('ID Grotesk Font failed to load.');
   });
 
   fontGothic.load().then(function () {
     gothicLoaded = true;
-    if(idLoaded == true && gothicLoaded == true && fontLoaded==false){
+    if (idLoaded == true && gothicLoaded == true && fontLoaded == false) {
       setFontLoaded(true);
-      
     }
-    
   }).catch(function () {
     console.log('Century Gothic Font failed to load.');
   });
-
-  // console.log(fontLoaded);
-  // setTimeout(() => {
-  //   setFontLoaded(true);
-  //   idLoaded = true;
-  // }, 2000);
-
-
-
 
   // const ref = useRef(null);
 
@@ -61,46 +48,34 @@ function App() {
   // } 
 
   const defaultOptions = {
-    loop:true,
-    autoplay:true,
+    loop: true,
+    autoplay: true,
     animationData: PreloaderAnimation
-}
-
-
+  }
 
   return (
-      <>
-
+    <>
       {fontLoaded ?
-      <AppTagContext.Provider value={appRef}>
-
-      <div className="App" ref={appRef}>
-        < Router >
-          <Navbar />
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/case-study/olab" element={<CaseStudy />} />
-          </Routes>
-        </Router >
-
-      </div >
-      </AppTagContext.Provider>
-
-      :
-      <div>
-        
-        <div className="pr-overlay">
+        <AppTagContext.Provider value={appRef}>
+          <div className="App" ref={appRef}>
+            <Router>
+              <Navbar />
+              <ScrollToTop />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/case-study/olab" element={<CaseStudy />} />
+              </Routes>
+            </Router >
+          </div >
+        </AppTagContext.Provider>
+        :
+        <div>
+          <div className="pr-overlay">
             <Lottie options={defaultOptions} height={37} width={166} />
-
-
-
-            </div>
-      </div>}
-  </>
-      
-
+          </div>
+        </div>}
+    </>
   );
-}
+};
 
 export default App;

@@ -28,13 +28,18 @@ const Contact = () => {
 
         tl.to(".App", {
             backgroundColor: "#272727",
-            onComplete: () => { 
-                // console.log("tween from contact");
-                ScrollTrigger.refresh();
-             }
+            // onComplete: () => { 
+            //     // console.log("tween from contact");
+            //     // ScrollTrigger.refresh();
+            //  }
         });
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+            
+        }, 2000);
     });
     useEffect(() => {
+
         runRunRUn();
     }, []);
     return (

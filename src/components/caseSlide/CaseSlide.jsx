@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import "./caseSlide.css";
 import { useTranslation } from 'react-i18next';
 import gsap from "gsap";
@@ -15,6 +15,9 @@ const CaseSlide = () => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
     const caseSlideRef = useRef();
     const bottomRef = useRef();
+
+    const [caseImgContainerHeight, setCaseImgContainerHeight] = useState("");
+
 
     const navigation = useNavigate();
 
@@ -34,10 +37,10 @@ const CaseSlide = () => {
 
         tl.to(".App", {
             backgroundColor: "#FFF2EB",
-            onComplete: () => {
-                // console.log("tween from case slide");
-                ScrollTrigger.refresh();
-            }
+            // onComplete: () => {
+            //     // console.log("tween from case slide");
+            //     // ScrollTrigger.refresh();
+            // }
 
 
         });
@@ -45,7 +48,7 @@ const CaseSlide = () => {
     useEffect(() => {
         runRunRUn();
 
-    }, []);
+    }, [caseImgContainerHeight]);
 
     // useEffect(() => {
     //     if (caseSlideRef.current != null) {
@@ -108,7 +111,7 @@ const CaseSlide = () => {
 
                     </div>
                     <div id="case-img-container">
-                        <ProgressiveImage className='img-case' src={OlabThumb} placeholderSrc={OlabPlaceholder} />
+                        <ProgressiveImage className='img-case' src={OlabThumb} placeholderSrc={OlabPlaceholder} actualizeHeight={()=>{setCaseImgContainerHeight(Math.random())}} />
                         {/* <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" /> */}
 
                     </div>

@@ -16,8 +16,13 @@ const TempVitacanStudy = () => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
     const caseSlideVitacanRef = useRef();
     const bottomRef = useRef();
+    const caseImgContainerRef = useRef();
+    const [caseImgContainerHeight, setCaseImgContainerHeight] = useState("");
+
+
 
     // const navigation = useNavigate();
+    // console.log(caseImgContainerHeight);
 
     const { contextSafe } = useGSAP({ scope: caseSlideVitacanRef.current, revertOnUpdate: true });
 
@@ -35,21 +40,30 @@ const TempVitacanStudy = () => {
 
         tl.to(".App", {
             backgroundColor: "#ECF5F4",
-            onComplete: () => {
-                // console.log("tween from vitacan");
-                ScrollTrigger.refresh();
-            }
+            // onComplete: () => {
+            //     console.log("tween from vitacan");
+            //     ScrollTrigger.refresh();
+            // }
 
 
         });
 
     });
 
-    useEffect(() => {
+    useEffect(()=>{
+
         runRunRUn();
+        
+    }, [caseImgContainerHeight])
 
+    // useEffect(() => {
+        
+    //     runRunRUn();
+    // }, []);
 
-    }, []);
+    // useEffect(()=>{
+    //     console.log("prog img dependency changed")
+    // }, [progImgRef]);
 
     const [caseStudyLink, setCaseStudyLink] = useState("");
 
@@ -91,8 +105,8 @@ const TempVitacanStudy = () => {
                             <button id="new-main-btn-v" onClick={() => { window.open(caseStudyLink) }}>{t("CaseButton")}</button>
                         </div>
                     </div >
-                    <div id="case-img-container">
-                        <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} />
+                    <div id="case-img-container" ref={caseImgContainerRef}>
+                        <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} actualizeHeight={()=>{setCaseImgContainerHeight(Math.random())}} />
 
                         {/* <img className='img-case' src={require("../../assets/placeholderVitacan.png")} alt="" /> */}
 
