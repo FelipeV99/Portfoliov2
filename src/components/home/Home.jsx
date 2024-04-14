@@ -64,11 +64,11 @@ const Home = (props) => {
     }, [targetId]);
 
 
-    const appTag = useContext(AppTagContext);
+    // const appTag = useContext(AppTagContext);
 
-    useEffect(() => {
-        appTag.current.removeAttribute('style');
-    }, [state]);
+    // useEffect(() => {
+    //     appTag.current.removeAttribute('style');
+    // }, [state]);
 
 
 

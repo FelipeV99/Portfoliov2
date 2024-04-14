@@ -49,6 +49,14 @@
     color: #00B7B7;
 }
 
+#case-img-container-vitacan{
+    display: flex;
+    align-self: flex-end;
+    width: 100%;
+    max-width: 680px;
+    /* height: 1000px; */
+}
+
 .line-for-number-v {
     background-color: #00B7B7;
     height: 2px;

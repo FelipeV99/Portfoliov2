@@ -5,7 +5,7 @@
     justify-content: space-between;
     height: 100vh;
     width: 100%;
-    padding-top:128px;
+    padding-top:60px;
     padding-left: 60px;
     padding-right: 60px;
     min-height: 720px;
@@ -20,6 +20,7 @@
 #title-cta{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
 }
 
@@ -36,6 +37,13 @@
     align-items: flex-end;
     align-self: flex-end;
 }
+
+.socials-asterisk{
+    display: flex;
+    gap:8px;
+    align-items: center;
+}
+
 .social-row{
     display: flex;
     width: 630px;
