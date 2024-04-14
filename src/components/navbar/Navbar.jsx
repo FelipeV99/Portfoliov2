@@ -124,9 +124,7 @@ const Navbar = () => {
                 </div>
                 <div id="nav-right">
 
-                    <a className='nav-optn' onClick={() => {
-                        navigation("/", { state: { targetId: "mask-nav" } });
-                    }}>
+                    <a className='nav-optn' href='https://felipeandradeux.netlify.app/#mask-nav'>
                         <p className='small-p' style={{ color: navOptColor }}>{t("navHome")}</p>
                         <div className='space-btwn'></div>
                         <svg className='asterisk' width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,9 +133,7 @@ const Navbar = () => {
 
                         {/* <img className="asterisk" src={require("../../assets/asterisk-white.svg").default} alt="" /> */}
                     </a>
-                    <a className='nav-optn' onClick={() => {
-                        navigation("/", { state: { targetId: "case-container-olab" } });
-                    }}>
+                    <a className='nav-optn' href='https://felipeandradeux.netlify.app/#outer-container-olab'>
                         <p className='small-p' style={{ color: navOptColor }}>{t("navWork")}</p>
                         <div className='space-btwn'></div>
                         <svg className='asterisk' width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,9 +141,7 @@ const Navbar = () => {
                         </svg>
 
                     </a>
-                    <a className='nav-optn' onClick={() => {
-                        navigation("/", { state: { targetId: "connect-container" } });
-                    }}>
+                    <a className='nav-optn' href='https://felipeandradeux.netlify.app/#connect-container'>
                         <p className='small-p' style={{ color: navOptColor }}>{t("navContact")}</p>
                         <div className='space-btwn'></div>
                         <svg className='asterisk' width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
