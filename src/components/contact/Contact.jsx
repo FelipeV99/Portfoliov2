@@ -13,33 +13,27 @@ const Contact = () => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
 
         
-    const { contextSafe } = useGSAP({scope:connectRef.current});
+    const { contextSafe } = useGSAP({ scope: connectRef.current });
 
-    // useEffect(() => {
-    //     if(connectRef.current != null){
+    const runRunRUn = contextSafe(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: connectRef.current,
+                start: "5% 55%",
+                end: "5% 45%",
+                scrub: true,
+                // markers: { startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 120 },
+            }
+        });
 
-    //         const runRunRUn = contextSafe(() => {
-    //             const tl = gsap.timeline({
-    //                 scrollTrigger:{
-    //                     trigger: "#connect-container",
-    //                     start: "0% 70%",
-    //                     end: "10% 50%",
-    //                     scrub: true,
-    //                     markers: {startColor: "black", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 120},
-    
-    //                 }
-    //             });
-        
-    //             tl.to(".App",{
-    //                 backgroundColor: "#272727",
-                    
-    //             });
-    //            });
-    //         runRunRUn();    
-    //     }
-    // }, [connectRef.current]);
-
-
+        tl.to(".App", {
+            backgroundColor: "#272727",
+            // onComplete: () => { console.log("tween from contact") }
+        });
+    });
+    useEffect(() => {
+        runRunRUn();
+    }, []);
     return (
         
             <section id="connect-container" ref={connectRef}  onScroll={()=>{console.log("scrolling")}} >

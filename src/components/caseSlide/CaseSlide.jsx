@@ -18,7 +18,31 @@ const CaseSlide = () => {
 
     const navigation = useNavigate();
 
-    const { contextSafe } = useGSAP({ scope: caseSlideRef.current });
+    const { contextSafe } = useGSAP({ scope: caseSlideRef.current, revertOnUpdate: true });
+
+
+    const runRunRUn = contextSafe(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: caseSlideRef.current,
+                start: "0% 55%",
+                end: "0% 45%",
+                scrub: true,
+                // markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 60}
+            }
+        });
+
+        tl.to(".App", {
+            backgroundColor: "#FFF2EB",
+            // onComplete: ()=>{console.log("tween from case slide")}
+
+
+        });
+    });
+    useEffect(()=>{
+        runRunRUn();
+
+    },[]);
 
     // useEffect(() => {
     //     if (caseSlideRef.current != null) {

@@ -17,33 +17,37 @@ const TempVitacanStudy = () => {
     const caseSlideVitacanRef = useRef();
     const bottomRef = useRef();
 
-    const navigation = useNavigate();
+    // const navigation = useNavigate();
 
-    const { contextSafe } = useGSAP({container:caseSlideVitacanRef.current});
+    const { contextSafe } = useGSAP({ scope: caseSlideVitacanRef.current });
 
-    // useEffect(() => {
-    //     if(caseSlideVitacanRef.current != null){
 
-    //         const runRunRUn = contextSafe(() => {
-    //             const tl = gsap.timeline({
-    //                 scrollTrigger: {
-    //                     trigger: "#case-container-vitacan",
-    //                     start: "-15% 25%",
-    //                     end: "-5% 5%",
-    //                     scrub: true,
-    //                     markers: {startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200}
-    //                 }
-    //             });
+    const runRunRUn = contextSafe(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#case-container-vitacan",
+                start: "0% 55%",
+                end: "0% 45%",
+                scrub: true,
+                // markers: { startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200 }
+            }
+        });
+
+        tl.to(".App", {
+            backgroundColor: "#ECF5F4",
+            // onComplete: () => { console.log("tween from vitacan") }
+
+
+        });
+
+    });
+
+    useEffect(() => {
+        runRunRUn();
+
+
+    }, []);
     
-    //             tl.to(".App", {
-    //                 backgroundColor: "#ECF5F4",
-    
-    //             });
-    //            });
-    //         runRunRUn();    
-    //     }
-    // }, [caseSlideVitacanRef.current]);
-
     const [caseStudyLink, setCaseStudyLink] = useState("");
 
     useEffect(() => {
