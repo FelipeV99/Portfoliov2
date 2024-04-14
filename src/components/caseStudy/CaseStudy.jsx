@@ -74,21 +74,23 @@ const CaseStudy = () => {
     const { contextSafe } = useGSAP({ scope: prOverlayOlabRef.current });
 
     useEffect(() => {
-        // document.body.style.overflowY = "hidden";
         document.documentElement.style.overflowY="hidden";
-
+        // const yMovement = prOverlayOlabRef.current.offsetHeight;
+        // console.log(yMovement);
         const maskOlab = contextSafe(() => {
             const tl = gsap.timeline();
 
             tl.fromTo(prOverlayOlabRef.current,
                 {
                     // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    // y:0,
                     opacity:1
 
                 },
                 {
                     // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                    opacity: 0,
+                    // y: -yMovement,
+                    opacity:0,
                     duration: 0.4,
                     onComplete: () => { 
                         document.documentElement.style.overflowY="visible";
@@ -102,7 +104,7 @@ const CaseStudy = () => {
             maskOlab();            
         }, 2500);
 
-    },[]);
+    },[prOverlayOlabRef.current]);
     // const normalizeAppBackground = () => {
     //     console.log("normalizing app color from case study");
     //     appTag.current.removeAttribute('style');
@@ -126,7 +128,7 @@ const CaseStudy = () => {
         <div id="case-study-container">
             <div className="pr-overlay-olab" ref={prOverlayOlabRef}>
             <Lottie options={defaultOptions} height={37} width={166} />
-            <p className='p1 bolden color-dark-grey'>loading case study...</p>
+            <p className='p2 bolden color-dark-grey'>{t("loadingCS")}</p>
 
 
             </div>

@@ -56,7 +56,7 @@ const CaseSlide = () => {
                 <div className='text-case-olab'>
                     <div className='project-type'>
                         <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
-                        <p id="asterisk-p">Industry experience</p>
+                        <p id="asterisk-p">{t("IE")}</p>
                     </div>
                     <div className="bottom-text" ref={bottomRef}>
 
