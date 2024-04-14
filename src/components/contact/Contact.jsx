@@ -30,7 +30,7 @@ const Contact = () => {
             backgroundColor: "#272727",
             onComplete: () => { 
                 // console.log("tween from contact");
-                // ScrollTrigger.refresh();
+                ScrollTrigger.refresh();
              }
         });
     });

@@ -36,7 +36,7 @@ const CaseSlide = () => {
             backgroundColor: "#FFF2EB",
             onComplete: () => {
                 // console.log("tween from case slide");
-                // ScrollTrigger.refresh();
+                ScrollTrigger.refresh();
             }
 
 

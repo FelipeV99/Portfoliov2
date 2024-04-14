@@ -37,7 +37,7 @@ const TempVitacanStudy = () => {
             backgroundColor: "#ECF5F4",
             onComplete: () => {
                 // console.log("tween from vitacan");
-                // ScrollTrigger.refresh();
+                ScrollTrigger.refresh();
             }
 
 

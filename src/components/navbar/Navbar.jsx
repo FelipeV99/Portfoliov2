@@ -106,9 +106,7 @@ const Navbar = () => {
     return (
         <div id="mask-nav">
             <nav ref={navRef}>
-                <div id="nav-left" onClick={() => {
-                    navigation("/", { state: { targetId: "mask-nav" } });
-                }}>
+                <div id="nav-left" href='https://felipeandradeux.netlify.app/#mask-nav'>
                     {/* <LogoHero id="logo-component"/> */}
                     <svg ref={svgLogoRef} width="88" height="37" viewBox="0 0 88 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path className="logo-path" d="M18.45 0C28.6401 9.61969e-07 36.9009 8.26075 36.9009 18.4509C36.9009 28.641 28.6401 36.9018 18.45 36.9018L18.45 0Z" fill={logoColor} />
