@@ -117,4 +117,9 @@ nav {
     width: 100%;
     justify-content: space-between;
   }
+
+  .asterisk{
+    width: 12px;
+    height: auto;
+  }
 }

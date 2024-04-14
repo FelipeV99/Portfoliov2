@@ -96,7 +96,7 @@ const CaseStudy = () => {
                                 <p id="num-p">01/02</p>
                             </div>
                             <h1 id="temp-title">O-lab</h1>
-                            <p id="temp-p">{t("ThumbCopyOlab")}</p>
+                            <p className='color-light-grey'>{t("ThumbCopyOlab")}</p>
                             
                         </div>
                     </div >
@@ -112,11 +112,11 @@ const CaseStudy = () => {
                     <div className="space-12"></div>
                     <p className='p2 bolden color-orange-dark'>{t('oCRole')}</p>
                     <div className="space-6"></div>
-                    <p>{t("ocContextp")}</p>
+                    <p className='color-light-grey'>{t("ocContextp")}</p>
                     <div className="space-12"></div>
                     <p className='p2 bolden color-orange-dark'>{t('oCAbout')}</p>
                     <div className='space-6'></div>
-                    <p>{t('oCAboutp')}</p>
+                    <p className='color-light-grey'>{t('oCAboutp')}</p>
                 </div>
                 <div className='img-side'>
                     <figure>
@@ -134,19 +134,19 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCB1")}</p>
+                                <p className='color-light-grey'>{t("OCB1")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCB2")}</p>
+                                <p className='color-light-grey'>{t("OCB2")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCB3")}</p>
+                                <p className='color-light-grey'>{t("OCB3")}</p>
                             </div>
                         </li>
                     </ul>
@@ -155,7 +155,7 @@ const CaseStudy = () => {
                 <div id="right-side-obj" className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCProblems")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCProblemsp")}</p>
+                    <p className='color-light-grey'>{t("OCProblemsp")}</p>
                 </div>
 
             </div>
@@ -262,19 +262,19 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRG1")}</p>
+                                <p className='color-light-grey'>{t("OCRG1")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRG2")}</p>
+                                <p className='color-light-grey'>{t("OCRG2")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRG3")}</p>
+                                <p className='color-light-grey'>{t("OCRG3")}</p>
                             </div>
                         </li>
                     </ul>
@@ -284,19 +284,19 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRM1")}</p>
+                                <p className='color-light-grey'>{t("OCRM1")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRM2")}</p>
+                                <p className='color-light-grey'>{t("OCRM2")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRM3")}</p>
+                                <p className='color-light-grey'>{t("OCRM3")}</p>
                             </div>
                         </li>
                     </ul>
@@ -315,7 +315,7 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCRU")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCRUp")}</p>
+                    <p className='color-light-grey'>{t("OCRUp")}</p>
                     <div className='space-12'></div>
                     <p className='bolden p2  color-orange-dark'>{t("OCRUT")}</p>
                     <div className='space-6'></div>
@@ -323,25 +323,25 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRUT1")}</p>
+                                <p className='color-light-grey'>{t("OCRUT1")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRUT2")}</p>
+                                <p className='color-light-grey'>{t("OCRUT2")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRUT3")}</p>
+                                <p className='color-light-grey'>{t("OCRUT3")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRUT4")}</p>
+                                <p className='color-light-grey'>{t("OCRUT4")}</p>
                             </div>
                         </li>
                     </ul>
@@ -401,7 +401,7 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCRBS")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCRBSp")}</p>
+                    <p className='color-light-grey'>{t("OCRBSp")}</p>
                     <div className='space-12'></div>
                     <p className='bolden p2 color-orange-dark'>{t("OCRBSO")}</p>
                     <div className='space-6'></div>
@@ -409,31 +409,31 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRBSO1")}</p>
+                                <p className='color-light-grey'>{t("OCRBSO1")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRBSO2")}</p>
+                                <p className='color-light-grey'>{t("OCRBSO2")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRBSO3")}</p>
+                                <p className='color-light-grey'>{t("OCRBSO3")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRBSO4")}</p>
+                                <p className='color-light-grey'>{t("OCRBSO4")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCRBSO5")}</p>
+                                <p className='color-light-grey'>{t("OCRBSO5")}</p>
                             </div>
                         </li>
                     </ul>
@@ -459,31 +459,31 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRStake1")}</p>
+                                <p className='color-light-grey'>{t("OCBRStake1")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRStake2")}</p>
+                                <p className='color-light-grey'>{t("OCBRStake2")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRStake3")}</p>
+                                <p className='color-light-grey'>{t("OCBRStake3")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRStake4")}</p>
+                                <p className='color-light-grey'>{t("OCBRStake4")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRStake5")}</p>
+                                <p className='color-light-grey'>{t("OCBRStake5")}</p>
                             </div>
                         </li>
                     </ul>
@@ -494,19 +494,19 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRSD1")}</p>
+                                <p className='color-light-grey'>{t("OCBRSD1")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRSD2")}</p>
+                                <p className='color-light-grey'>{t("OCBRSD2")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRSD3")}</p>
+                                <p className='color-light-grey'>{t("OCBRSD3")}</p>
                             </div>
                         </li>
                     </ul>
@@ -516,7 +516,7 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCBRCA")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCBRCAp")}</p>
+                    <p className='color-light-grey'>{t("OCBRCAp")}</p>
                     <div className='space-12'></div>
                     <p className='bolden p2 color-orange-dark'>{t("OCBRCAD")}</p>
                     <div className='space-6'></div>
@@ -524,31 +524,31 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRCAD1")}</p>
+                                <p className='color-light-grey'>{t("OCBRCAD1")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRCAD2")}</p>
+                                <p className='color-light-grey'>{t("OCBRCAD2")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRCAD3")}</p>
+                                <p className='color-light-grey'>{t("OCBRCAD3")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRCAD4")}</p>
+                                <p className='color-light-grey'>{t("OCBRCAD4")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCBRCAD5")}</p>
+                                <p className='color-light-grey'>{t("OCBRCAD5")}</p>
                             </div>
                         </li>
                     </ul>
@@ -581,7 +581,7 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCC1")}</h2>
                     <div className='space-6'></div>
-                    <p className='color-orange-dark'>{t("OCC1p")}</p>
+                    <p className='color-light-grey'>{t("OCC1p")}</p>
 
                 </div>
                 <div className='img-side'>
@@ -598,7 +598,7 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCC2")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCC2p")}</p>
+                    <p className='color-light-grey'>{t("OCC2p")}</p>
                 </div>
                 <div className='img-side'>
                     <figure>
@@ -613,7 +613,7 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCC3")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCC3p")}</p>
+                    <p className='color-light-grey'>{t("OCC3p")}</p>
 
                 </div>
                 <div id="flow-img-pr-container">
@@ -630,7 +630,7 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCC4")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCC4p")}</p>
+                    <p className='color-light-grey'>{t("OCC4p")}</p>
 
                 </div>
 
@@ -643,7 +643,7 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCC5")}</h2>
                     <div className='space-6'></div>
-                    <p>{t("OCC5p")}</p>
+                    <p className='color-light-grey'>{t("OCC5p")}</p>
                 </div>
                 <div>
                     <img className="case-img" src={require("../../assets/chat.png")} alt="Página de login de la CMS (diseño original previo)" />
@@ -780,7 +780,7 @@ const CaseStudy = () => {
                     <h2 className='color-orange-dark'>{t("OCV1")}</h2>
                     <div className='space-8'></div>
 
-                    <p>{t("OCV1p")}</p>
+                    <p className='color-light-grey'>{t("OCV1p")}</p>
                 </div>
                 <div className='img-side'>
                     <img className="case-img" src={require("../../assets/courseMetricsEN.png")} ref={metric1Ref} />
@@ -792,7 +792,7 @@ const CaseStudy = () => {
                     <h2 className='color-orange-dark'>{t("OCV2")}</h2>
                     <div className='space-8'></div>
 
-                    <p>{t("OCV2p")}</p>
+                    <p className='color-light-grey'>{t("OCV2p")}</p>
                 </div>
                 <div className='img-side'>
                     <img className="case-img" src={require("../../assets/createUserMetricsES.png")} ref={metric2Ref} />
@@ -805,7 +805,7 @@ const CaseStudy = () => {
                     <h2 className='color-orange-dark'>{t("OCV3")}</h2>
                     <div className='space-8'></div>
 
-                    <p>{t("OCV3p")}</p>
+                    <p className='color-light-grey'>{t("OCV3p")}</p>
 
                 </div>
                 <div className='img-side'>
@@ -827,19 +827,19 @@ const CaseStudy = () => {
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCV41")}</p>
+                                <p className='color-light-grey'>{t("OCV41")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCV42")}</p>
+                                <p className='color-light-grey'>{t("OCV42")}</p>
                             </div>
                         </li>
                         <li>
                             <div className='li-div'>
                                 <img src={require("../../assets/li-dot.svg").default} alt="" />
-                                <p>{t("OCV43")}</p>
+                                <p className='color-light-grey'>{t("OCV43")}</p>
                             </div>
                         </li>
                     </ul>
@@ -851,9 +851,9 @@ const CaseStudy = () => {
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCVC")}</h2>
                     <div className='space-8'></div>
-                    <p>{t("OCVCp1")}</p>
+                    <p className='color-light-grey'>{t("OCVCp1")}</p>
                     <div className='space-12'></div>
-                    <p>{t("OCVCp2")}</p>
+                    <p className='color-light-grey'>{t("OCVCp2")}</p>
                 </div>
 
                 <div>

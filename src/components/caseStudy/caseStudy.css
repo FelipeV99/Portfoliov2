@@ -7,7 +7,7 @@ li {
 
 #case-hero {
     display: flex;
-    padding-top: 60px;
+    padding-top: 32px;
     padding-right: 60px;
     padding-left: 60px;
     padding-bottom: 60px;
@@ -16,9 +16,7 @@ li {
     width: 100%;
     min-width: var(--min-width);
     max-width: var(--max-width);
-
-
-    height: 100vh;
+    height: calc(100vh - 68px);
     min-height: 680px;
 
 }
@@ -30,7 +28,7 @@ li {
     justify-content: space-between;
     padding-top: 128px;
     padding-bottom: 128px;
-    max-width: 1236px;
+    max-width: var(--max-width);
     gap: 96px;
 }
 

@@ -9,8 +9,9 @@
 
 :root {
   --off-black-800: #272727;
-  --off-black-600: #505050;
   --off-black-700: #474747;
+  --off-black-600: #505050;
+  --off-black-500: #747474;
 
   --off-white-100: #FFF2EB;
   --off-white-200: #F6F6F6;
@@ -152,4 +153,8 @@ figcaption {
 
 .whiten {
   color: var(--off-white-100);
+}
+
+.color-light-grey{
+  color: var(--off-black-500);
 }
