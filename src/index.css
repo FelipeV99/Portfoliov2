@@ -40,6 +40,7 @@ html {
   scroll-behavior: smooth;
   background-color: var(--off-black-800);
   overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 
 @font-face {
@@ -99,8 +100,8 @@ body {
   font-family: "CGothic";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
 }
 
 .p1 {

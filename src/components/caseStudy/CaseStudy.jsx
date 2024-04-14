@@ -61,7 +61,7 @@ const CaseStudy = () => {
         appTag.current.removeAttribute('style');
     }, []);
 
-    document.body.style.overflowY = "hidden";
+    
 
     
   const defaultOptions = {
@@ -74,6 +74,8 @@ const CaseStudy = () => {
     const { contextSafe } = useGSAP({ scope: prOverlayOlabRef.current });
 
     useEffect(() => {
+        // document.body.style.overflowY = "hidden";
+        document.documentElement.style.overflowY="hidden";
 
         const maskOlab = contextSafe(() => {
             const tl = gsap.timeline();
@@ -89,7 +91,7 @@ const CaseStudy = () => {
                     opacity: 0,
                     duration: 0.4,
                     onComplete: () => { 
-                        document.body.style.overflowY = "scroll";
+                        document.documentElement.style.overflowY="visible";
                         prOverlayOlabRef.current.style.display = "none";
                     }
                 },

@@ -45,7 +45,7 @@ function App() {
     console.log('Century Gothic Font failed to load.');
   });
 
-  console.log(fontLoaded);
+  // console.log(fontLoaded);
   // setTimeout(() => {
   //   setFontLoaded(true);
   //   idLoaded = true;
@@ -54,7 +54,7 @@ function App() {
 
 
 
-  const ref = useRef(null);
+  // const ref = useRef(null);
 
   // const options = {
   //   smooth: true,

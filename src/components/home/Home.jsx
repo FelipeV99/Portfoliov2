@@ -188,7 +188,7 @@ const Home = (props) => {
                 {
                     clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
                     duration: 0.8,
-                    onComplete: () => { document.body.style.overflowY = "scroll" }
+                    // onComplete: () => { document.body.style.overflowY = "scroll" }
                 },
                 0
             );
