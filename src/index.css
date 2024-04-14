@@ -39,6 +39,7 @@ html {
   scroll-snap-type: none;
   scroll-behavior: smooth;
   background-color: var(--off-black-800);
+  overflow-x: hidden;
 }
 
 @font-face {
