@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import Contact from '../contact/Contact';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import CaseSlide from '../caseSlide/CaseSlide';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TempVitacanStudy from '../tempVitacanStudy/TempVitacanStudy';
@@ -24,15 +25,15 @@ const Home = () => {
 
     const [t, i18next] = useTranslation();
 
-    // const { state } = useLocation();
-    // const { targetId } = state || {};
+    const { state } = useLocation();
+    const { targetId } = state || {};
 
-    // useEffect(() => {
-    //     const el = document.getElementById(targetId);
-    //     if (el) {
-    //         el.scrollIntoView();
-    //     }
-    // }, [targetId]);
+    useEffect(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+            el.scrollIntoView();
+        }
+    }, [targetId]);
 
     useEffect(() => {
         if (i18next.language != null) {
