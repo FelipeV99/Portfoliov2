@@ -134,7 +134,7 @@ const CaseStudy = () => {
             </div>
             <section id="case-hero">
 
-                <div id="case-inner-container">
+                <div id="i-case-inner-container">
 
                     <div className='text-case-olab'>
                         <div className='project-type'>
@@ -307,7 +307,7 @@ const CaseStudy = () => {
                 </div>
             </div>
 
-            <div className='case-slide'>
+            <div className='case-slide reverse-flex-col need-more-padding-top'>
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCResearch")}</h2>
                     <div className='space-12'></div>
@@ -358,7 +358,7 @@ const CaseStudy = () => {
                 </div>
                 <div className='img-side'>
                     <figure>
-                        <img id="graph-img" className="case-img" src={require("../../assets/researchGraph.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="case-img" src={require("../../assets/researchGraph.png")} alt="Página de login de la CMS (diseño original previo)" />
                         {/* <figcaption>{t('OCRCaption')}</figcaption> */}
 
                     </figure>
@@ -567,7 +567,7 @@ const CaseStudy = () => {
                     </ul>
                 </div>
             </div>
-            <div className='case-slide'>
+            <div className='case-slide need-more-padding-bottom'>
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCBRCA")}</h2>
                     <div className='space-6'></div>
@@ -610,7 +610,7 @@ const CaseStudy = () => {
                 </div>
                 <div className='img-side'>
                     <figure>
-                        <img className="case-img" id="comp-img" src={require("../../assets/competition.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="case-img" src={require("../../assets/competition.png")} alt="Página de login de la CMS (diseño original previo)" />
                         <figcaption>{t('OCBRCACaption')}</figcaption>
                     </figure>
 
@@ -632,7 +632,7 @@ const CaseStudy = () => {
                     </div>
                 </div>
             </div>
-            <div className='case-slide reverse-flex-col'>
+            <div className='case-slide reverse-flex-col need-more-padding-top'>
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCC1")}</h2>
                     <div className='space-6'></div>
@@ -694,7 +694,7 @@ const CaseStudy = () => {
 
                 </div>
             </div>
-            <div className='case-slide reverse-flex-col'>
+            <div className='case-slide reverse-flex-col need-more-padding-bottom'>
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCC5")}</h2>
                     <div className='space-6'></div>
@@ -720,20 +720,20 @@ const CaseStudy = () => {
                     </div>
                 </div>
             </div>
-            <div className='solution-container'>
+            <div className='solution-container need-more-padding-top'>
                 <h2 className='color-orange-dark'>{t("OCC1")}</h2>
                 <div className='space-24'></div>
                 <div className='solution-slide'>
-                    <div>
+                    <div className='solution-img-container'>
                         <p className='bolden p2 color-orange-dark'>{t("OCDBefore")}</p>
                         <div className='space-6'></div>
-                        <img className="case-img" src={require("../../assets/jerarquia.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="solution-img" src={require("../../assets/jerarquia.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
-                    <div>
+                    <div className='solution-img-container'>
                         <p className='bolden p2 color-orange-dark'>{t("OCDAfter")}</p>
                         <div className='space-12'></div>
-                        <img className="case-img" src={require("../../assets/jerarquiaNew.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="solution-img" src={require("../../assets/jerarquiaNew.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
 
@@ -746,13 +746,13 @@ const CaseStudy = () => {
                     <div>
                         <p className='bolden p2 color-orange-dark'>{t("OCDBefore")}</p>
                         <div className='space-6'></div>
-                        <img className="case-img" src={require("../../assets/inconsistentDesign.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="solution-img" src={require("../../assets/inconsistentDesign.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
                     <div>
                         <p className='bolden p2 color-orange-dark'>{t("OCDAfter")}</p>
                         <div className='space-12'></div>
-                        <img className="case-img" src={require("../../assets/inconsistentDesignNew.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="solution-img" src={require("../../assets/inconsistentDesignNew.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
 
@@ -762,13 +762,13 @@ const CaseStudy = () => {
                 <h2 className='color-orange-dark'>{t("OCC3")}</h2>
                 <div className='space-24'></div>
                 <div id='solution-slide-vertical'>
-                    <div>
+                    <div className='vertical-img-container'>
                         <p className='bolden p2 color-orange-dark'>{t("OCDBefore")}</p>
                         <div className='space-6'></div>
                         <img className='flow-img' src={require("../../assets/flow.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
-                    <div>
+                    <div className='vertical-img-container'>
                         <p className='bolden p2 color-orange-dark'>{t("OCDAfter")}</p>
                         <div className='space-12'></div>
                         <img className='flow-img' src={require("../../assets/flowNew.png")} alt="Página de login de la CMS (diseño original previo)" />
@@ -784,32 +784,32 @@ const CaseStudy = () => {
                     <div>
                         <p className='bolden p2 color-orange-dark'>{t("OCDBefore")}</p>
                         <div className='space-6'></div>
-                        <img className="case-img" src={require("../../assets/reports.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="solution-img" src={require("../../assets/reports.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
                     <div>
                         <p className='bolden p2 color-orange-dark'>{t("OCDAfter")}</p>
                         <div className='space-12'></div>
-                        <img className="case-img" src={require("../../assets/automaticReports.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="solution-img" src={require("../../assets/automaticReports.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
 
                 </div>
             </div>
-            <div className='solution-container'>
+            <div className='solution-container need-more-padding-bottom'>
                 <h2 className='color-orange-dark'>{t("OCC5")}</h2>
                 <div className='space-24'></div>
                 <div className='solution-slide'>
                     <div>
                         <p className='bolden p2 color-orange-dark'>{t("OCDBefore")}</p>
                         <div className='space-6'></div>
-                        <img className="case-img" src={require("../../assets/chat.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="solution-img" src={require("../../assets/chat.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
                     <div>
                         <p className='bolden p2 color-orange-dark'>{t("OCDAfter")}</p>
                         <div className='space-12'></div>
-                        <img className="case-img" src={require("../../assets/chatNew.png")} alt="Página de login de la CMS (diseño original previo)" />
+                        <img className="solution-img" src={require("../../assets/chatNew.png")} alt="Página de login de la CMS (diseño original previo)" />
 
                     </div>
 
@@ -830,7 +830,7 @@ const CaseStudy = () => {
                     </div>
                 </div>
             </div>
-            <div className='case-slide reverse-flex-col'>
+            <div className='case-slide reverse-flex-col need-more-padding-top'>
                 <div className='text-side'>
                     <h2 className='color-orange-dark'>{t("OCV1")}</h2>
                     <div className='space-8'></div>
