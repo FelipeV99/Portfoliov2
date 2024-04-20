@@ -278,10 +278,7 @@ const CaseStudyNew = () => {
 
 
                         <div className='process-card'>
-                            <div className='icon-div'>
-                                <img id="search-svg" src={require("../../assets/process-understand-icon.svg").default} alt="" />
 
-                            </div>
                             <div className='process-card-text'>
                                 <div className='card-top'>
                                     <h2 className='off-black-800'>1</h2>
@@ -299,13 +296,15 @@ const CaseStudyNew = () => {
 
                             </div>
 
+                            <div className='icon-div'>
+                                <img id="search-svg" src={require("../../assets/process-understand-icon.svg").default} alt="" />
+
+                            </div>
+
                         </div>
 
                         <div className='process-card'>
-                            <div className='icon-div'>
-                                <img id="filter-svg" src={require("../../assets/process-converge-icon.svg").default} alt="" />
 
-                            </div>
                             <div className='process-card-text'>
                                 <div className='card-top'>
                                     <h2 className='off-black-800'>2</h2>
@@ -322,15 +321,15 @@ const CaseStudyNew = () => {
                                 </div>
 
                             </div>
+                            <div className='icon-div'>
+                                <img id="filter-svg" src={require("../../assets/process-converge-icon.svg").default} alt="" />
+
+                            </div>
 
                         </div>
 
                         <div className='process-card'>
 
-                            <div className='icon-div'>
-                                <img id="pencil-svg" src={require("../../assets/process-design-icon.svg").default} alt="" />
-
-                            </div>
                             <div>
                                 <h2 className='off-black-800'>3</h2>
                                 <div className='space-12'></div>
@@ -339,6 +338,11 @@ const CaseStudyNew = () => {
                                 <div className='space-6'></div>
 
                                 <p className='p-card'>{t("OCStep3D")}</p>
+                            </div>
+                            
+                            <div className='icon-div'>
+                                <img id="pencil-svg" src={require("../../assets/process-design-icon.svg").default} alt="" />
+
                             </div>
 
                         </div>

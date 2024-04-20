@@ -199,15 +199,20 @@
 }
 
 .process-card-text {
+    position: relative;
+    z-index: 100;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .icon-div {
     position: absolute;
     right: -4px;
     top: -4px;
+    z-index: 1;
 }
 
 .process-step {
@@ -536,6 +541,11 @@
 
     .step-heading {
         font-size: 32px;
+    }
+    .icon-div {
+        right: 64px;
+        top: -32px;
+        width: 32px;
     }
 
  
