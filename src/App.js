@@ -3,7 +3,7 @@ import './App.css';
 import React, { useRef, useState } from 'react';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
-import CaseStudy from './components/caseStudy/CaseStudy';
+import CaseStudyNew from './components/caseStudyNew/CaseStudyNew';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import { FontFaceObserver } from "font-face-observer";
@@ -63,7 +63,8 @@ function App() {
               <ScrollToTop />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/case-study/olab" element={<CaseStudy />} />
+                <Route path="/case-study/olabNew" element={<CaseStudyNew />} />
+
               </Routes>
             </Router >
           </div >

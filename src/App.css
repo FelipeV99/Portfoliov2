@@ -2,7 +2,7 @@
   height: 100%;
   width: 100%;
   background-color: #272727;
-  min-width: 360px;
+  min-width: 320px;
 
 }
 
@@ -115,7 +115,7 @@
 .cta-copy-container{
   display: flex;
   max-width: 740px;
-  min-width: var(--min-width-no-padding);
+  /* min-width: var(--min-width-no-padding); */
 }
 
 .pr-overlay{
@@ -177,8 +177,8 @@
     font-size: 18px;
   }
   #hero{
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
   
 }
