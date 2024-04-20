@@ -352,7 +352,7 @@ const CaseStudyNew = () => {
                 <div className='bottom-step'>
 
 
-                    <h1 className='off-white-100 step-heading'>{t("OCStep1Title")}</h1>
+                    <h2 className='off-white-100 step-heading'>{t("OCStep1Title")}</h2>
 
                     <div className='right-side-process-step'>
                         <div className='process-avatar'>
@@ -753,7 +753,7 @@ const CaseStudyNew = () => {
                 <div className='bottom-step'>
 
 
-                    <h1 className='off-white-100 step-heading'>{t("OCStep2Title")}</h1>
+                    <h2 className='off-white-100 step-heading'>{t("OCStep2Title")}</h2>
 
                     <div className='right-side-process-step'>
                         <div className='process-avatar'>
@@ -864,7 +864,7 @@ const CaseStudyNew = () => {
                 <div className='bottom-step'>
 
 
-                    <h1 className='off-white-100 step-heading'>{t("OCStep3Title")}</h1>
+                    <h2 className='off-white-100 step-heading'>{t("OCStep3Title")}</h2>
 
                     <div className='right-side-process-step'>
                         <div className='process-avatar'>
@@ -1036,7 +1036,7 @@ const CaseStudyNew = () => {
                 <div className='bottom-step'>
 
 
-                    <h1 className='off-white-100 step-heading'>{t("OCStep4Title")}</h1>
+                    <h2 className='off-white-100 step-heading'>{t("OCStep4Title")}</h2>
 
                     <div className='right-side-process-step'>
                         <div className='process-avatar'>
@@ -1144,7 +1144,7 @@ const CaseStudyNew = () => {
                 <div className='bottom-step'>
 
 
-                    <h1 className='off-white-100 step-heading'>Thanks for reading!</h1>
+                    <h2 className='off-white-100 step-heading'>Thanks for reading!</h2>
 
                     <div id="buttons-final">
                         <button id="main-btn-final" className="case-finish-btn" onClick={() => {

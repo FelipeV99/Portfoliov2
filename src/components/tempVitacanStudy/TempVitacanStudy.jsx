@@ -50,14 +50,14 @@ const TempVitacanStudy = () => {
 
     });
 
-    useEffect(()=>{
+    useEffect(() => {
 
         runRunRUn();
-        
+
     }, [caseImgContainerHeight])
 
     // useEffect(() => {
-        
+
     //     runRunRUn();
     // }, []);
 
@@ -88,8 +88,7 @@ const TempVitacanStudy = () => {
 
                     <div className='text-case-olab'>
                         <div className='project-type'>
-                            <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
-                            <p id="asterisk-p">{t("CP")}</p>
+                            <img src={require("../../assets/star-nav.svg").default} alt="" />                            <p id="asterisk-p">{t("CP")}</p>
                         </div>
                         <div className="bottom-text" ref={bottomRef}>
 
@@ -106,7 +105,7 @@ const TempVitacanStudy = () => {
                         </div>
                     </div >
                     <div id="case-img-container" ref={caseImgContainerRef}>
-                        <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} actualizeHeight={()=>{setCaseImgContainerHeight(Math.random())}} />
+                        <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} actualizeHeight={() => { setCaseImgContainerHeight(Math.random()) }} />
 
                         {/* <img className='img-case' src={require("../../assets/placeholderVitacan.png")} alt="" /> */}
 

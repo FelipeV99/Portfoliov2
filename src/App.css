@@ -1,14 +1,14 @@
 .App{
   height: 100%;
   width: 100%;
-  background-color: #272727;
+  background-color: var(--off-white-100);
   min-width: 320px;
 
 }
 
 .btn-main{
-  border-bottom: 4px var(--off-white-100) solid;
-  color: var(--off-white-100);
+  border-bottom: 4px var(--off-black-800) solid;
+  color: var(--off-black-800);
 
   padding-top: 8px;
   padding-bottom: 8px;
@@ -19,7 +19,7 @@
 }
 
 .btn-sec{
-  color: var(--off-white-100);
+  color: var(--off-white-800);
   padding-top: 8px;
   padding-bottom: 12px;
 

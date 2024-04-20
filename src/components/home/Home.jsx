@@ -142,17 +142,17 @@ const Home = () => {
                     <div id="hero-left" >
                         <div id="felipe-title">
                             <div ref={felipetext}>
-                                <h1 id="felipe-h1">Felipe Andrade</h1>
+                                <h1 className="off-black-800" id="felipe-h1">Felipe Andrade</h1>
                             </div>
                         </div>
                         <div id="designer-title">
                             <div ref={designertext}>
-                                <h1 id="ux-h1">{t('designerTitle')}</h1>
+                                <h1 className="off-black-800" id="ux-h1">{t('designerTitle')}</h1>
                             </div>
                         </div>
                         <div className='space-12'></div>
                         <div className='cta-copy-container' ref={ctatext}>
-                            <p id="cta-copy" className='p1 whiten'>
+                            <p id="cta-copy" className='p1 off-black-800'>
                                 {t("heroCopy")}
                             </p>
                         </div>
