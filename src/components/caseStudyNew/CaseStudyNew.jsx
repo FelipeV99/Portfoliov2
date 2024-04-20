@@ -1160,7 +1160,7 @@ const CaseStudyNew = () => {
 
 
             <div className='case-slide'>
-                <h2 className='off-black-800'>Metrics</h2>
+                <h2 className='off-black-800'>{t("oCVMetrics")}</h2>
                 <div className="space-16"></div>
                 <ul className="bullet-points">
                     <li>
@@ -1203,9 +1203,9 @@ const CaseStudyNew = () => {
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t("OCV4")}</h2>
                 <div className="space-16"></div>
-                <p className='p2 off-black-700 paragraph'>Sobre 10 participantes, se obtuvieron los siguientes resultados, sin embargo se identificó un bias en las comunidades vulnerables por lo que....</p>
+                <p className='p2 off-black-700 paragraph'>{t("OCV4p")}</p>
 
-                <div className='space-16'></div>
+                <div className='space-32'></div>
                 <div className='NPS-SUS-container'>
                     <div className='NPS-SUS'>
                         <img className='NPS-SUS-imgs' src={require("../../assets/NPSGraph.png")} ref={NPSRef}/>
