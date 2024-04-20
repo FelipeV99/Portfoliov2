@@ -21,9 +21,11 @@ const CaseStudyNew = () => {
     const navigation = useNavigate();
     const location = useLocation();
 
-    // const metric1Ref = useRef();
-    // const metric2Ref = useRef();
-    // const metric3Ref = useRef();
+    const totRef = useRef();
+    const srRef = useRef();
+    const NPSRef = useRef();
+    const SUSRef = useRef();
+
     const prOverlayOlabRef = useRef();
 
     // useEffect(() => {
@@ -72,14 +74,35 @@ const CaseStudyNew = () => {
 
     const [caseStudyLink, setCaseStudyLink] = useState("");
 
+
+
+
     useEffect(() => {
         if (i18next.language != null) {
             const language = i18next.language.slice(0, 2);
 
             if (language == 'en') {
                 setCaseStudyLink("https://www.behance.net/gallery/195967355/Vitacan-Case-Study-English");
+                totRef.current.src = require("../../assets/timeOnTask.png");
+                srRef.current.src = require("../../assets/successRate.png");
+                NPSRef.current.src = require("../../assets/NPSGraph.png");
+                SUSRef.current.src = require("../../assets/SUSGraph.png");
+
+
+               
             } else if (language == 'es') {
                 setCaseStudyLink("https://www.behance.net/gallery/143997259/Caso-de-Estudio-Vitacan");
+                totRef.current.src = require("../../assets/duracionCompletarTarea.png");
+                srRef.current.src = require("../../assets/tasaDeExito.png");
+                NPSRef.current.src = require("../../assets/NPSGraphES.png");
+                SUSRef.current.src = require("../../assets/SUSGraphES.png");
+
+
+
+
+                
+
+
             }
         }
     }, [i18next.language]);
@@ -342,37 +365,37 @@ const CaseStudyNew = () => {
             <div className='process-step'>
                 <div className='process-step-inner-container'>
 
-                
-                <div className='top-step'>
-                    <h2 className='off-white-100'>01.</h2>
-                    <h3 className='off-white-100 all-caps'>{t("OCStep1")}</h3>
-                    <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
-                </div>
 
-                <div className='bottom-step'>
+                    <div className='top-step'>
+                        <h2 className='off-white-100'>01.</h2>
+                        <h3 className='off-white-100 all-caps'>{t("OCStep1")}</h3>
+                        <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
+                    </div>
+
+                    <div className='bottom-step'>
 
 
-                    <h2 className='off-white-100 step-heading'>{t("OCStep1Title")}</h2>
+                        <h2 className='off-white-100 step-heading'>{t("OCStep1Title")}</h2>
 
-                    <div className='right-side-process-step'>
-                        <div className='process-avatar'>
+                        <div className='right-side-process-step'>
+                            <div className='process-avatar'>
 
                                 <img className='avatar-img' src={require("../../assets/UnderstandAvatar.png")} alt="" />
 
-                        </div>
-                        <div className='summary-container'>
-                            <div className='summary-title-line'>
-                                <div className='line-for-summary'>
-                                </div>
-                                <p className='p2 bolden off-white-100'>{t("Summary")}</p>
                             </div>
-                            <div className='space-8'></div>
-                            <p className='step-text off-white-100 bolden'>{t("OCStep1Sum")}</p>
+                            <div className='summary-container'>
+                                <div className='summary-title-line'>
+                                    <div className='line-for-summary'>
+                                    </div>
+                                    <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+                                </div>
+                                <div className='space-8'></div>
+                                <p className='step-text off-white-100 bolden'>{t("OCStep1Sum")}</p>
+                            </div>
                         </div>
+
+
                     </div>
-
-
-                </div>
                 </div>
             </div>
 
@@ -594,7 +617,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>{t("OCBRStake4")}</p>
+                        <p className='p2 bolden off-black-800'>{t("OCBRStake3")}</p>
 
                     </div>
                     <div className='methodology-card'>
@@ -606,7 +629,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>{t("OCBRStake5")}</p>
+                        <p className='p2 bolden off-black-800'>{t("OCBRStake4")}</p>
 
                     </div>
                     <div className='methodology-card'>
@@ -618,7 +641,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>Marketing</p>
+                        <p className='p2 bolden off-black-800'>{t("OCBRStake5")}</p>
 
                     </div>
 
@@ -692,8 +715,8 @@ const CaseStudyNew = () => {
                 <div className="space-16"></div>
                 <p className='off-black-700 paragraph'>{t('OCBRCAp')}</p>
                 <div className='space-16'></div>
-                <p className='p2 bolden off-black-800'>Some of Olab's direct and indirect competitors</p>
-                <div className='space-16'></div>
+                {/* <p className='p2 bolden off-black-800'>Some of Olab's direct and indirect competitors</p> */}
+                {/* <div className='space-16'></div> */}
                 <div className='img-side'>
                     <figure>
                         <img className="case-img" src={require("../../assets/competition.png")} alt="Página de login de la CMS (diseño original previo)" />
@@ -743,41 +766,49 @@ const CaseStudyNew = () => {
             <div className='process-step'>
                 <div className='process-step-inner-container'>
 
-                
-                <div className='top-step'>
-                    <h2 className='off-white-100'>02.</h2>
-                    <h3 className='off-white-100 all-caps'>{t("OCStep2")}</h3>
-                    <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
-                </div>
 
-                <div className='bottom-step'>
+                    <div className='top-step'>
+                        <h2 className='off-white-100'>02.</h2>
+                        <h3 className='off-white-100 all-caps'>{t("OCStep2")}</h3>
+                        <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
+                    </div>
+
+                    <div className='bottom-step'>
 
 
-                    <h2 className='off-white-100 step-heading'>{t("OCStep2Title")}</h2>
+                        <h2 className='off-white-100 step-heading'>{t("OCStep2Title")}</h2>
 
-                    <div className='right-side-process-step'>
-                        <div className='process-avatar'>
+                        <div className='right-side-process-step'>
+                            <div className='process-avatar'>
 
                                 <img className='avatar-img' src={require("../../assets/ConvergeAvatar.png")} alt="" />
 
-                        </div>
-                        <div className='summary-container'>
-                            <div className='summary-title-line'>
-                                <div className='line-for-summary'>
-                                </div>
-                                <p className='p2 bolden off-white-100'>{t("Summary")}</p>
                             </div>
-                            <div className='space-8'></div>
-                            <p className='step-text off-white-100 bolden'>{t("OCStep2Sum")}</p>
+                            <div className='summary-container'>
+                                <div className='summary-title-line'>
+                                    <div className='line-for-summary'>
+                                    </div>
+                                    <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+                                </div>
+                                <div className='space-8'></div>
+                                <p className='step-text off-white-100 bolden'>{t("OCStep2Sum")}</p>
+                            </div>
                         </div>
+
+
                     </div>
-
-
-                </div>
                 </div>
             </div>
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 1</p>
+                </div>
+                <div className='space-8'></div>
+
                 <h2 className='off-black-800'>{t('OCC1')}</h2>
                 <div className="space-16"></div>
                 <p className='off-black-700 paragraph'>{t('OCC1p')}</p>
@@ -793,6 +824,14 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 2</p>
+                </div>
+                <div className='space-8'></div>
+
                 <h2 className='off-black-800'>{t('OCC2')}</h2>
                 <div className="space-16"></div>
                 <p className='off-black-700 paragraph'>{t('OCC2p')}</p>
@@ -808,6 +847,14 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 3</p>
+                </div>
+                <div className='space-8'></div>
+
                 <h2 className='off-black-800'>{t('OCC3')}</h2>
                 <div className="space-16"></div>
                 <p className='off-black-700 paragraph'>{t('OCC3p')}</p>
@@ -823,6 +870,14 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 4</p>
+                </div>
+                <div className='space-8'></div>
+
                 <h2 className='off-black-800'>{t('OCC4')}</h2>
                 <div className="space-16"></div>
                 <p className='off-black-700 paragraph'>{t('OCC4p')}</p>
@@ -837,6 +892,13 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 5</p>
+                </div>
+                <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC5')}</h2>
                 <div className="space-16"></div>
                 <p className='off-black-700 paragraph'>{t('OCC5p')}</p>
@@ -854,45 +916,52 @@ const CaseStudyNew = () => {
             <div className='process-step'>
                 <div className='process-step-inner-container'>
 
-                
-                <div className='top-step'>
-                    <h2 className='off-white-100'>03.</h2>
-                    <h3 className='off-white-100 all-caps'>{t("OCStep3")}</h3>
-                    <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
-                </div>
 
-                <div className='bottom-step'>
+                    <div className='top-step'>
+                        <h2 className='off-white-100'>03.</h2>
+                        <h3 className='off-white-100 all-caps'>{t("OCStep3")}</h3>
+                        <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
+                    </div>
+
+                    <div className='bottom-step'>
 
 
-                    <h2 className='off-white-100 step-heading'>{t("OCStep3Title")}</h2>
+                        <h2 className='off-white-100 step-heading'>{t("OCStep3Title")}</h2>
 
-                    <div className='right-side-process-step'>
-                        <div className='process-avatar'>
+                        <div className='right-side-process-step'>
+                            <div className='process-avatar'>
 
                                 <img className='avatar-img' src={require("../../assets/DesignAvatar.png")} alt="" />
 
-                        </div>
-                        <div className='summary-container'>
-                            <div className='summary-title-line'>
-                                <div className='line-for-summary'>
-                                </div>
-                                <p className='p2 bolden off-white-100'>{t("Summary")}</p>
                             </div>
-                            <div className='space-8'></div>
-                            <p className='step-text off-white-100 bolden'>{t("OCStep3Sum")}</p>
+                            <div className='summary-container'>
+                                <div className='summary-title-line'>
+                                    <div className='line-for-summary'>
+                                    </div>
+                                    <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+                                </div>
+                                <div className='space-8'></div>
+                                <p className='step-text off-white-100 bolden'>{t("OCStep3Sum")}</p>
+                            </div>
                         </div>
+
+
                     </div>
-
-
-                </div>
                 </div>
             </div>
 
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 1</p>
+                </div>
+                <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC1')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC1S')}</p>
+                <p className='off-black-700 paragraph'>{t('OCD1')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -917,9 +986,16 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 2</p>
+                </div>
+                <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC2')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC2S')}</p>
+                <p className='off-black-700 paragraph'>{t('OCD2')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -944,9 +1020,16 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 3</p>
+                </div>
+                <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC3')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC3S')}</p>
+                <p className='off-black-700 paragraph'>{t('OCD3')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -970,9 +1053,16 @@ const CaseStudyNew = () => {
                 </figure>
             </div>
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 4</p>
+                </div>
+                <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC4')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC4S')}</p>
+                <p className='off-black-700 paragraph'>{t('OCD4')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -997,9 +1087,16 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='case-slide'>
+                <div className='subheader-container'>
+                    <div className='subheader-line'>
+
+                    </div>
+                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 5</p>
+                </div>
+                <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC5')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC5S')}</p>
+                <p className='off-black-700 paragraph'>{t('OCD5')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -1026,41 +1123,41 @@ const CaseStudyNew = () => {
             <div className='process-step'>
                 <div className='process-step-inner-container'>
 
-                
-                <div className='top-step'>
-                    <h2 className='off-white-100'>04.</h2>
-                    <h3 className='off-white-100 all-caps'>{t("OCStep4")}</h3>
-                    <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
-                </div>
 
-                <div className='bottom-step'>
+                    <div className='top-step'>
+                        <h2 className='off-white-100'>04.</h2>
+                        <h3 className='off-white-100 all-caps'>{t("OCStep4")}</h3>
+                        <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
+                    </div>
+
+                    <div className='bottom-step'>
 
 
-                    <h2 className='off-white-100 step-heading'>{t("OCStep4Title")}</h2>
+                        <h2 className='off-white-100 step-heading'>{t("OCStep4Title")}</h2>
 
-                    <div className='right-side-process-step'>
-                        <div className='process-avatar'>
+                        <div className='right-side-process-step'>
+                            <div className='process-avatar'>
 
                                 <img className='avatar-img' src={require("../../assets/ValidateAvatar.png")} alt="" />
 
-                        </div>
-                        <div className='summary-container'>
-                            <div className='summary-title-line'>
-                                <div className='line-for-summary'>
-                                </div>
-                                <p className='p2 bolden off-white-100'>{t("Summary")}</p>
                             </div>
-                            <div className='space-8'></div>
-                            <p className='step-text off-white-100 bolden'>{t("OCStep4Sum")}</p>
+                            <div className='summary-container'>
+                                <div className='summary-title-line'>
+                                    <div className='line-for-summary'>
+                                    </div>
+                                    <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+                                </div>
+                                <div className='space-8'></div>
+                                <p className='step-text off-white-100 bolden'>{t("OCStep4Sum")}</p>
+                            </div>
                         </div>
+
+
                     </div>
-
-
-                </div>
                 </div>
             </div>
 
-            
+
 
             <div className='case-slide'>
                 <h2 className='off-black-800'>Metrics</h2>
@@ -1091,12 +1188,12 @@ const CaseStudyNew = () => {
                 <div className='space-32'></div>
                 <div className='metrics-container'>
                     <div className='tot-container'>
-                        <img id="tot-img" src={require("../../assets/duracionCompletarTarea.png")} />
+                        <img id="tot-img" src={require("../../assets/timeOnTask.png")} ref={totRef}  />
 
 
                     </div>
                     <div className='sr-container'>
-                        <img id="sr-img" src={require("../../assets/tasaDeExito.png")} />
+                        <img id="sr-img" src={require("../../assets/successRate.png")} ref={srRef} />
                     </div>
 
                 </div>
@@ -1111,11 +1208,11 @@ const CaseStudyNew = () => {
                 <div className='space-16'></div>
                 <div className='NPS-SUS-container'>
                     <div className='NPS-SUS'>
-                        <img src={require("../../assets/NPSGraph.svg").default} />
+                        <img className='NPS-SUS-imgs' src={require("../../assets/NPSGraph.png")} ref={NPSRef}/>
                         <h3 className='off-black-800'>NPM</h3>
                     </div>
                     <div className='NPS-SUS'>
-                        <img src={require("../../assets/SUSGraph.svg").default} />
+                        <img className='NPS-SUS-imgs' src={require("../../assets/SUSGraph.png")} ref={SUSRef}/>
                         <h3 className='off-black-800'>SUS</h3>
 
                     </div>
@@ -1136,30 +1233,44 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='process-step'>
-                <div className='top-step'>
-                    <h2 className='off-white-100'>00.</h2>
-                    <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
-                </div>
-
-                <div className='bottom-step'>
+                <div className='process-step-inner-container'>
 
 
-                    <h2 className='off-white-100 step-heading'>Thanks for reading!</h2>
+                    <div className='top-step'>
+                        <h2 className='off-white-100'>00.</h2>
+                        {/* <h3 className='off-white-100 all-caps'>{t("OCStep2")}</h3> */}
+                        <img className="svg-step" src={require("../../assets/star-pointy.svg").default} alt="" />
+                    </div>
 
-                    <div id="buttons-final">
-                        <button id="main-btn-final" className="case-finish-btn" onClick={() => {
-                            navigation("/", { state: { targetId: "connect-container" } });
-                        }}>Contact</button>
+                    <div className='bottom-step'>
 
-                        <button className="case-finish-btn" onClick={() => { window.open(caseStudyLink) }}>Go to next case study</button>
 
-                        <button className="case-finish-btn" onClick={() => {
-                            navigation("/", { state: { targetId: "mask-nav" } });
-                        }}>Back to home</button>
+                        <h2 className='off-white-100 step-heading'>{t("TyR")}</h2>
+
+                        <div className='right-side-process-step'>
+                            <div className='process-avatar'>
+
+                                {/* <img className='avatar-img' src={require("../../assets/ThanksAvatar.png")} alt="" /> */}
+
+                            </div>
+                            <div id="buttons-final">
+                                <button id="main-btn-final" className="case-finish-btn" onClick={() => {
+                                    navigation("/", { state: { targetId: "connect-container" } });
+                                }}>Contact</button>
+
+                                <button className="case-finish-btn" onClick={() => { window.open(caseStudyLink) }}>Go to next case study</button>
+
+                                <button className="case-finish-btn" onClick={() => {
+                                    navigation("/", { state: { targetId: "mask-nav" } });
+                                }}>Back to home</button>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
-
             </div>
+
         </div>
     )
 }

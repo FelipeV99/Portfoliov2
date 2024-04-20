@@ -85,9 +85,9 @@
     "OCBRStake": "Principales Stakeholders",
     "OCBRStake1": "Clientes",
     "OCBRStake2": "Donantes",
-    "OCBRStake3": "Directores",
-    "OCBRStake4": "Desarrolladores",
-    "OCBRStake5": "Marketing y ventas",
+    "OCBRStake3": "Desarrolladores",
+    "OCBRStake4": "Directores",    
+    "OCBRStake5": "Marketing",
     "OCBRSD": "Descubrimientos",
     "OCBRSD1": "El objetivo principal es conseguir nuevos clientes en el sector de empresas, sin embargo no se puede descuidar las comunidades vulnerables, ya que este es la principal motivación de los donantes",
     "OCBRSD2": "Los directores tienen varias ideas para mejorar el producto, pero muchas de ellas carecen de investigación de usuario. Por lo tanto, será necesario validar estas ideas, manteniéndose abierto a las posibilidades propuestas.",
@@ -114,6 +114,11 @@
     "OCC4p": "Los reportes los tiene que generar manualmente el administrador, seleccionando que datos quiere mostrar en su reporte, sin embargo esta no es la mejor opción para cubrir la necesidad de usuario de la mayoría.",
     "OCC5": "Chat y Comunidad",
     "OCC5p": "El chat no cubre necesidades de usuario notables tales como la creación de grupos, envío de archivos y necesita una actualización a su aspecto visual.",
+    "OCD1": "Principios de diseño fueron introducidos, tales como espaciado, contraste y jerarquía. De esta manera se consigue hacer las páginas legibles, fáciles de navegar e identificar cual es el propósito de cada pantalla junto a sus opciones.",
+    "OCD2": "Esta es una parte del nuevo sistema de diseño que creamos junto a los diseñadores UI, este sistema de diseño fue implementado por los desarrolladores para asegurar que las interfaces de usuario en las distintas plataformas se mantuviera consistente y el usuario percibiera una marca robusta y confiable.",
+    "OCD3": "Una reevaluación del flujo de crear un curso fue realizada, a través de pruebas, colaboración e ideación conseguí reducir el flujo, simplificándolo para que los usuarios pudieran completar sus tareas y objetivos en una manera más rápida y fácil, lo cual era muy importante para el producto ya que la creación de cursos era una de las principales funcionalidades y tareas que los usuarios usaban frecuentemente.",
+    "OCD4": "Introducimos la opción de crear reportes con un click, de manera que los usuarios ya no tendrían que pasar por el largo proceso de creación de reportes. También se introduce un rediseño del dashboard que está en línea con el sistema de diseño nuevo.",
+    "OCD5": "El chat fue mejorado incluyendo nuevas funcionalidades como creación de grupos, envío de archivos, fotos y videos, haciéndo de esta funcionalidad más atractiva para que los usuarios se involucraran en comunidad.",
     "OCDBefore": "Antes",
     "OCDAfter": "Después",
     "OCV1": "Crear Curso",
@@ -134,7 +139,12 @@
     "ThumbCopyOlab": "Avanzando la experiencia de contenido educativo en O-lab, un sistema de administración y monitoreo, y consumo de contenido para comunidades vulnerables y empresas.",
     "CaseButton": "Ver caso de estudio",
     "ThumbCopyVita": "Manteniendo a las mascotas sanas con Vitacan, esta es la historia de como llegamos a diseñar una app para monitorear el bienestar de tu mascota con collares inteligentes.",
-    "loadingCS": "cargando caso de estudio..."
+    "loadingCS": "cargando caso de estudio...",
+    "TyR": "Gracias por leer!",
+    "AreaImpr": "Área de mejora"
+
+
+
 
 
 
