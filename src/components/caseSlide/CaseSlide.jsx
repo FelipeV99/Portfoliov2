@@ -101,7 +101,7 @@ const CaseSlide = () => {
                             <p id="temp-p">{t("ThumbCopyOlab")}</p>
                             <button id="new-main-btn" onClick={() => {
 
-                                navigation("/case-study/olab");
+                                navigation("/case-study/olabNew");
                             }}>
                                 {t("CaseButton")}
                             </button>
