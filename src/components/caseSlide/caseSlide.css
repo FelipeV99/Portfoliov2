@@ -167,6 +167,10 @@
 
     } */
 
+    #imaginarystuff{
+        height:1px;
+    }
+
     #case-img-container {
         align-self: center;
         width: 90%;
