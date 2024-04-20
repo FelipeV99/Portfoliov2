@@ -162,10 +162,10 @@
         max-height: 900px;
     }
 
-    .project-type {
+    /* .project-type {
         display: none;
 
-    }
+    } */
 
     #case-img-container {
         align-self: center;
