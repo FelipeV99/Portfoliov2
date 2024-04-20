@@ -150,7 +150,7 @@ const CaseStudyNew = () => {
 
                 <div id="i-case-inner-container">
 
-                    <div className='text-case-olab'>
+                    <div className='text-case-olab-hero'>
                         <div className='project-type'>
                             {/* <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
                             <p id="asterisk-p">Industry experience</p> */}
@@ -169,8 +169,8 @@ const CaseStudyNew = () => {
 
                         </div>
                     </div >
-                    <div id="case-img-container">
-                        <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" />
+                    <div id="case-img-container-olab">
+                        <img className='img-case-hero' src={require("../../assets/olabNewHero.png")} alt="" />
 
                     </div>
                 </div>
@@ -340,6 +340,9 @@ const CaseStudyNew = () => {
                 </div>
             </div>
             <div className='process-step'>
+                <div className='process-step-inner-container'>
+
+                
                 <div className='top-step'>
                     <h2 className='off-white-100'>01.</h2>
                     <h3 className='off-white-100 all-caps'>{t("OCStep1")}</h3>
@@ -350,17 +353,26 @@ const CaseStudyNew = () => {
 
 
                     <h1 className='off-white-100 step-heading'>{t("OCStep1Title")}</h1>
-                    <div className='summary-container'>
-                        <div className='summary-title-line'>
-                            <div className='line-for-summary'>
-                            </div>
-                            <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+
+                    <div className='right-side-process-step'>
+                        <div className='process-avatar'>
+
+                                <img className='avatar-img' src={require("../../assets/UnderstandAvatar.png")} alt="" />
+
                         </div>
-                        <div className='space-8'></div>
-                        <p className='step-text off-white-100 bolden'>{t("OCStep1Sum")}</p>
+                        <div className='summary-container'>
+                            <div className='summary-title-line'>
+                                <div className='line-for-summary'>
+                                </div>
+                                <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+                            </div>
+                            <div className='space-8'></div>
+                            <p className='step-text off-white-100 bolden'>{t("OCStep1Sum")}</p>
+                        </div>
                     </div>
 
 
+                </div>
                 </div>
             </div>
 
@@ -492,7 +504,7 @@ const CaseStudyNew = () => {
                     </li>
                 </ul>
             </div>
-            
+
             <div className='grid-container'>
                 <div id="opinions-inner-container">
                     <h2 className='off-black-800'>{t("OCRO")}</h2>
@@ -681,7 +693,7 @@ const CaseStudyNew = () => {
                 <p className='off-black-700 paragraph'>{t('OCBRCAp')}</p>
                 <div className='space-16'></div>
                 <p className='p2 bolden off-black-800'>Some of Olab's direct and indirect competitors</p>
-                <div className='space-8'></div>
+                <div className='space-16'></div>
                 <div className='img-side'>
                     <figure>
                         <img className="case-img" src={require("../../assets/competition.png")} alt="Página de login de la CMS (diseño original previo)" />
@@ -725,11 +737,13 @@ const CaseStudyNew = () => {
                         </div>
                     </li>
                 </ul>
-                
+
 
             </div>
-
             <div className='process-step'>
+                <div className='process-step-inner-container'>
+
+                
                 <div className='top-step'>
                     <h2 className='off-white-100'>02.</h2>
                     <h3 className='off-white-100 all-caps'>{t("OCStep2")}</h3>
@@ -740,17 +754,26 @@ const CaseStudyNew = () => {
 
 
                     <h1 className='off-white-100 step-heading'>{t("OCStep2Title")}</h1>
-                    <div className='summary-container'>
-                        <div className='summary-title-line'>
-                            <div className='line-for-summary'>
-                            </div>
-                            <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+
+                    <div className='right-side-process-step'>
+                        <div className='process-avatar'>
+
+                                <img className='avatar-img' src={require("../../assets/ConvergeAvatar.png")} alt="" />
+
                         </div>
-                        <div className='space-8'></div>
-                        <p className='step-text off-white-100 bolden'>{t("OCStep2Sum")}</p>
+                        <div className='summary-container'>
+                            <div className='summary-title-line'>
+                                <div className='line-for-summary'>
+                                </div>
+                                <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+                            </div>
+                            <div className='space-8'></div>
+                            <p className='step-text off-white-100 bolden'>{t("OCStep2Sum")}</p>
+                        </div>
                     </div>
 
 
+                </div>
                 </div>
             </div>
 
@@ -829,6 +852,9 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='process-step'>
+                <div className='process-step-inner-container'>
+
+                
                 <div className='top-step'>
                     <h2 className='off-white-100'>03.</h2>
                     <h3 className='off-white-100 all-caps'>{t("OCStep3")}</h3>
@@ -838,20 +864,30 @@ const CaseStudyNew = () => {
                 <div className='bottom-step'>
 
 
-                    <h1 className='off-white-100 step-heading'>Exploration and iteration Spiral</h1>
-                    <div className='summary-container'>
-                        <div className='summary-title-line'>
-                            <div className='line-for-summary'>
-                            </div>
-                            <p className='p2 bolden off-white-100'>Summary</p>
+                    <h1 className='off-white-100 step-heading'>{t("OCStep3Title")}</h1>
+
+                    <div className='right-side-process-step'>
+                        <div className='process-avatar'>
+
+                                <img className='avatar-img' src={require("../../assets/DesignAvatar.png")} alt="" />
+
                         </div>
-                        <div className='space-8'></div>
-                        <p className='step-text off-white-100 bolden'>After iterations, I’d deliver to the developers the final responsive designs that have gone through validation from stakeholders, along with user flows, information architechture and documentation</p>
+                        <div className='summary-container'>
+                            <div className='summary-title-line'>
+                                <div className='line-for-summary'>
+                                </div>
+                                <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+                            </div>
+                            <div className='space-8'></div>
+                            <p className='step-text off-white-100 bolden'>{t("OCStep3Sum")}</p>
+                        </div>
                     </div>
 
 
                 </div>
+                </div>
             </div>
+
 
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t('OCC1')}</h2>
@@ -988,6 +1024,9 @@ const CaseStudyNew = () => {
             </div>
 
             <div className='process-step'>
+                <div className='process-step-inner-container'>
+
+                
                 <div className='top-step'>
                     <h2 className='off-white-100'>04.</h2>
                     <h3 className='off-white-100 all-caps'>{t("OCStep4")}</h3>
@@ -997,20 +1036,31 @@ const CaseStudyNew = () => {
                 <div className='bottom-step'>
 
 
-                    <h1 className='off-white-100 step-heading'>Time to test the solutions</h1>
-                    <div className='summary-container'>
-                        <div className='summary-title-line'>
-                            <div className='line-for-summary'>
-                            </div>
-                            <p className='p2 bolden off-white-100'>Summary</p>
+                    <h1 className='off-white-100 step-heading'>{t("OCStep4Title")}</h1>
+
+                    <div className='right-side-process-step'>
+                        <div className='process-avatar'>
+
+                                <img className='avatar-img' src={require("../../assets/ValidateAvatar.png")} alt="" />
+
                         </div>
-                        <div className='space-8'></div>
-                        <p className='step-text off-white-100 bolden'>This is wrong: !iver to the developers the final responsive designs that have gone through validation from stakeholders, along with user flows, information architechture and documentation</p>
+                        <div className='summary-container'>
+                            <div className='summary-title-line'>
+                                <div className='line-for-summary'>
+                                </div>
+                                <p className='p2 bolden off-white-100'>{t("Summary")}</p>
+                            </div>
+                            <div className='space-8'></div>
+                            <p className='step-text off-white-100 bolden'>{t("OCStep4Sum")}</p>
+                        </div>
                     </div>
 
 
                 </div>
+                </div>
             </div>
+
+            
 
             <div className='case-slide'>
                 <h2 className='off-black-800'>Metrics</h2>
