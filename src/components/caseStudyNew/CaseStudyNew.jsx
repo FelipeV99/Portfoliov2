@@ -557,7 +557,7 @@ const CaseStudyNew = () => {
                 <div className="space-16"></div>
                 <p className='p2 off-black-700 paragraph'>{t('OCRBSp')}</p>
                 <div className='space-32'></div>
-                <p className='p2 bolden off-black-800'>Main Stakeholders</p>
+                <p className='p2 bolden off-black-800'>{t("OCBRStake")}</p>
 
                 <div className='space-16'></div>
                 <div className='stakeholders-outer-container'>
@@ -570,7 +570,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>Clients</p>
+                        <p className='p2 bolden off-black-800'>{t("OCBRStake1")}</p>
 
                     </div>
                     <div className='methodology-card'>
@@ -582,7 +582,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>Donors</p>
+                        <p className='p2 bolden off-black-800'>{t("OCBRStake2")}</p>
 
                     </div>
                     <div className='methodology-card'>
@@ -594,7 +594,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>Developers</p>
+                        <p className='p2 bolden off-black-800'>{t("OCBRStake4")}</p>
 
                     </div>
                     <div className='methodology-card'>
@@ -606,7 +606,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>Directors</p>
+                        <p className='p2 bolden off-black-800'>{t("OCBRStake5")}</p>
 
                     </div>
                     <div className='methodology-card'>
