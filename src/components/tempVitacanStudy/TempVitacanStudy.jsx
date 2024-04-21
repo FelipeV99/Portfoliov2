@@ -109,7 +109,11 @@ const TempVitacanStudy = () => {
                             </div>
                             <h1 id="temp-title">Vitacan</h1>
                             <p id="temp-p">{t("ThumbCopyVita")}</p>
-                            <button id="new-main-btn-v" onClick={() => { window.open(caseStudyLink) }}>{t("CaseButton")}</button>
+                            <button id="new-main-btn-v" onClick={() => { window.open(caseStudyLink) }}>
+                                {t("CaseButton")}
+                                   
+                                <img src={require("../../assets/external-arrow-white.svg").default} alt="" />
+                            </button>
                         </div>
                     </div >
                     <div id="case-img-container" ref={caseImgContainerRef}>

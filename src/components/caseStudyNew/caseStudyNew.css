@@ -419,6 +419,7 @@
     color: var(--off-white-100);
     padding-top: 8px;
     padding-bottom: 8px;
+    gap: 8px;
 
     border: 0;
 }

@@ -61,6 +61,8 @@ const UISection = () => {
                 <div className='space-16'></div>
                 <button id="new-main-btn-ui" onClick={() => { window.open("https://www.behance.net/felipeandrade27") }}>
                 {t("UIDesignCTA")}
+                <img src={require("../../assets/external-arrow-white.svg").default} alt="" />
+
                 </button>
             </div>
         </div>

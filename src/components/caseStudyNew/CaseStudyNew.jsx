@@ -202,19 +202,19 @@ const CaseStudyNew = () => {
             <div className='sp-outer-container'>
                 <div className='sp-inner-container'>
 
-                
-                <h3 className='off-black-800'>{t('Preview')}</h3>
 
-                <div className='space-4'></div>
-                <p className='off-black-600 p2'>{t('Previewp')}</p>
-                <div className='space-16'></div>
-                <div className="sp-container">
-                    <video id="sp-video" autoPlay muted loop src={SneakPeakDesktopVid}>
+                    <h3 className='off-black-800'>{t('Preview')}</h3>
 
-                    </video>
+                    <div className='space-4'></div>
+                    <p className='off-black-600 p2'>{t('Previewp')}</p>
+                    <div className='space-16'></div>
+                    <div className="sp-container">
+                        <video id="sp-video" autoPlay muted loop src={SneakPeakDesktopVid}>
+
+                        </video>
 
 
-                </div>
+                    </div>
                 </div>
             </div>
             <div className='case-slide'>
@@ -1279,13 +1279,16 @@ const CaseStudyNew = () => {
                             <div id="buttons-final">
                                 <button id="main-btn-final" className="case-finish-btn" onClick={() => {
                                     navigation("/", { state: { targetId: "connect-container" } });
-                                }}>Contact</button>
+                                }}>{t("FinalContact")}</button>
 
-                                <button className="case-finish-btn" onClick={() => { window.open(caseStudyLink) }}>Go to next case study</button>
+                                <button className="case-finish-btn" onClick={() => { window.open(caseStudyLink) }}>
+                                {t("FinalNextCase")}
+                                    <img src={require("../../assets/external-arrow-white.svg").default} alt="" />
+                                </button>
 
                                 <button className="case-finish-btn" onClick={() => {
                                     navigation("/", { state: { targetId: "mask-nav" } });
-                                }}>Back to home</button>
+                                }}>{t("FinalBackHome")}</button>
                             </div>
                         </div>
 
