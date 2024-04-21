@@ -907,9 +907,12 @@ const CaseStudyNew = () => {
                 <div className='space-16'></div>
 
                 <figure>
+
                     <div className='img-case-container'>
                         <img className="case-img" src={require("../../assets/reportsFirst.png")} alt="Página de login de la CMS (diseño original previo)" />
                     </div>
+                    <figcaption>{t('OCC4Caption')}</figcaption>
+
 
                 </figure>
             </div>
