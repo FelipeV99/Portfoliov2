@@ -28,6 +28,8 @@ const TempVitacanStudy = () => {
 
 
     const runRunRUn = contextSafe(() => {
+
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: caseSlideVitacanRef.current,
@@ -54,7 +56,13 @@ const TempVitacanStudy = () => {
 
         runRunRUn();
 
-    }, [caseImgContainerHeight])
+    }, [caseImgContainerHeight]);
+
+    useEffect(() => {
+
+        runRunRUn();
+
+    }, []);
 
     // useEffect(() => {
 

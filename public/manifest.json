@@ -3,7 +3,7 @@
   "name": "Felipe Andrade Portfolio",
   "icons": [
     {
-      "src": "faviconFA.ico",
+      "src": "triangularFavicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

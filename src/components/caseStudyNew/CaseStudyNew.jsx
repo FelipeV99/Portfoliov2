@@ -199,8 +199,15 @@ const CaseStudyNew = () => {
                     </div>
                 </div>
             </section>
-            {/* <div className='sp-outer-container'>
-                <h2 className='off-black-800'>Sneak Peak</h2>
+            <div className='sp-outer-container'>
+                <div className='sp-inner-container'>
+
+                
+                <h3 className='off-black-800'>{t('Preview')}</h3>
+
+                <div className='space-4'></div>
+                <p className='off-black-600 p2'>{t('Previewp')}</p>
+                <div className='space-16'></div>
                 <div className="sp-container">
                     <video id="sp-video" autoPlay muted loop src={SneakPeakDesktopVid}>
 
@@ -208,18 +215,18 @@ const CaseStudyNew = () => {
 
 
                 </div>
-
-            </div> */}
+                </div>
+            </div>
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t('oCContext')}</h2>
                 <div className="space-16"></div>
                 <p className='p2 bolden off-black-800'>{t('oCRole')}</p>
                 <div className="space-8"></div>
-                <p className='off-black-700 paragraph'>{t("ocContextp")}</p>
+                <p className='off-black-600 paragraph'>{t("ocContextp")}</p>
                 <div className="space-32"></div>
                 <p className='p2 bolden off-black-800'>{t('oCAbout')}</p>
                 <div className='space-8'></div>
-                <p className='off-black-700 paragraph'>{t('oCAboutp')}</p>
+                <p className='off-black-600 paragraph'>{t('oCAboutp')}</p>
                 <div className="space-32"></div>
                 <p className='p2 bolden off-black-800'>{t('ocTeam')}</p>
                 <div className='space-16'></div>
@@ -247,7 +254,7 @@ const CaseStudyNew = () => {
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t('OCProblems')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCProblemsp')}</p>
+                <p className='off-black-600 paragraph'>{t('OCProblemsp')}</p>
             </div>
 
             <div className='case-slide'>
@@ -257,19 +264,19 @@ const CaseStudyNew = () => {
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCB1")}</p>
+                            <p className='off-black-600'>{t("OCB1")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCB2")}</p>
+                            <p className='off-black-600'>{t("OCB2")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCB3")}</p>
+                            <p className='off-black-600'>{t("OCB3")}</p>
                         </div>
                     </li>
                 </ul>
@@ -424,19 +431,19 @@ const CaseStudyNew = () => {
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRG1")}</p>
+                            <p className='off-black-600'>{t("OCRG1")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRG2")}</p>
+                            <p className='off-black-600'>{t("OCRG2")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRG3")}</p>
+                            <p className='off-black-600'>{t("OCRG3")}</p>
                         </div>
                     </li>
                 </ul>
@@ -488,19 +495,19 @@ const CaseStudyNew = () => {
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRM1")}</p>
+                            <p className='off-black-600'>{t("OCRM1")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRM2")}</p>
+                            <p className='off-black-600'>{t("OCRM2")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRM3")}</p>
+                            <p className='off-black-600'>{t("OCRM3")}</p>
                         </div>
                     </li>
                 </ul>
@@ -511,7 +518,7 @@ const CaseStudyNew = () => {
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t('OCRU')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCRUp')}</p>
+                <p className='off-black-600 paragraph'>{t('OCRUp')}</p>
                 <div className='space-32'></div>
                 <p className='p2 bolden off-black-800'>{t('OCRUT')}</p>
                 <div className='space-8'></div>
@@ -520,25 +527,25 @@ const CaseStudyNew = () => {
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRUT1")}</p>
+                            <p className='off-black-600'>{t("OCRUT1")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRUT2")}</p>
+                            <p className='off-black-600'>{t("OCRUT2")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRUT3")}</p>
+                            <p className='off-black-600'>{t("OCRUT3")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRUT4")}</p>
+                            <p className='off-black-600'>{t("OCRUT4")}</p>
                         </div>
                     </li>
                 </ul>
@@ -594,7 +601,7 @@ const CaseStudyNew = () => {
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t('OCRBS')}</h2>
                 <div className="space-16"></div>
-                <p className='p2 off-black-700 paragraph'>{t('OCRBSp')}</p>
+                <p className='p2 off-black-600 paragraph'>{t('OCRBSp')}</p>
                 <div className='space-32'></div>
                 <p className='p2 bolden off-black-800'>{t("OCBRStake")}</p>
 
@@ -671,31 +678,31 @@ const CaseStudyNew = () => {
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRBSO1")}</p>
+                            <p className='off-black-600'>{t("OCRBSO1")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRBSO2")}</p>
+                            <p className='off-black-600'>{t("OCRBSO2")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRBSO3")}</p>
+                            <p className='off-black-600'>{t("OCRBSO3")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRBSO4")}</p>
+                            <p className='off-black-600'>{t("OCRBSO4")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCRBSO5")}</p>
+                            <p className='off-black-600'>{t("OCRBSO5")}</p>
                         </div>
                     </li>
                 </ul>
@@ -708,19 +715,19 @@ const CaseStudyNew = () => {
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCBRSD1")}</p>
+                            <p className='off-black-600 paragraph'>{t("OCBRSD1")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCBRSD2")}</p>
+                            <p className='off-black-600 paragraph'>{t("OCBRSD2")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCBRSD3")}</p>
+                            <p className='off-black-600 paragraph'>{t("OCBRSD3")}</p>
                         </div>
                     </li>
                 </ul>
@@ -728,9 +735,9 @@ const CaseStudyNew = () => {
             </div>
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t('OCBRCA')}</h2>
-                <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCBRCAp')}</p>
-                <div className='space-16'></div>
+                <div className="space-8"></div>
+                <p className='off-black-600 paragraph'>{t('OCBRCAp')}</p>
+                <div className='space-32'></div>
                 {/* <p className='p2 bolden off-black-800'>Some of Olab's direct and indirect competitors</p> */}
                 {/* <div className='space-16'></div> */}
                 <div className='img-side'>
@@ -748,31 +755,31 @@ const CaseStudyNew = () => {
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCBRCAD1")}</p>
+                            <p className='off-black-600'>{t("OCBRCAD1")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCBRCAD2")}</p>
+                            <p className='off-black-600'>{t("OCBRCAD2")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCBRCAD3")}</p>
+                            <p className='off-black-600'>{t("OCBRCAD3")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCBRCAD4")}</p>
+                            <p className='off-black-600'>{t("OCBRCAD4")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-700'>{t("OCBRCAD5")}</p>
+                            <p className='off-black-600'>{t("OCBRCAD5")}</p>
                         </div>
                     </li>
                 </ul>
@@ -827,7 +834,7 @@ const CaseStudyNew = () => {
 
                 <h2 className='off-black-800'>{t('OCC1')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC1p')}</p>
+                <p className='off-black-600 paragraph'>{t('OCC1p')}</p>
                 <div className='space-16'></div>
 
                 <figure>
@@ -850,7 +857,7 @@ const CaseStudyNew = () => {
 
                 <h2 className='off-black-800'>{t('OCC2')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC2p')}</p>
+                <p className='off-black-600 paragraph'>{t('OCC2p')}</p>
                 <div className='space-16'></div>
 
                 <figure>
@@ -873,7 +880,7 @@ const CaseStudyNew = () => {
 
                 <h2 className='off-black-800'>{t('OCC3')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC3p')}</p>
+                <p className='off-black-600 paragraph'>{t('OCC3p')}</p>
                 <div className='space-16'></div>
 
                 <figure>
@@ -896,7 +903,7 @@ const CaseStudyNew = () => {
 
                 <h2 className='off-black-800'>{t('OCC4')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC4p')}</p>
+                <p className='off-black-600 paragraph'>{t('OCC4p')}</p>
                 <div className='space-16'></div>
 
                 <figure>
@@ -917,7 +924,7 @@ const CaseStudyNew = () => {
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC5')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCC5p')}</p>
+                <p className='off-black-600 paragraph'>{t('OCC5p')}</p>
                 <div className='space-16'></div>
 
                 <figure>
@@ -977,7 +984,7 @@ const CaseStudyNew = () => {
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC1')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCD1')}</p>
+                <p className='off-black-600 paragraph'>{t('OCD1')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -1011,7 +1018,7 @@ const CaseStudyNew = () => {
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC2')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCD2')}</p>
+                <p className='off-black-600 paragraph'>{t('OCD2')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -1045,7 +1052,7 @@ const CaseStudyNew = () => {
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC3')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCD3')}</p>
+                <p className='off-black-600 paragraph'>{t('OCD3')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -1078,7 +1085,7 @@ const CaseStudyNew = () => {
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC4')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCD4')}</p>
+                <p className='off-black-600 paragraph'>{t('OCD4')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -1112,7 +1119,7 @@ const CaseStudyNew = () => {
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC5')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCD5')}</p>
+                <p className='off-black-600 paragraph'>{t('OCD5')}</p>
                 <div className='space-16'></div>
 
                 <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
@@ -1182,19 +1189,19 @@ const CaseStudyNew = () => {
                     <li>
                         <div className='li-div'>
                             <p className='p2 bolden off-black-800'>1</p>
-                            <p className='off-black-700'>{t("OCV1")}</p>
+                            <p className='off-black-600'>{t("OCV1")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <p className='p2 bolden off-black-800'>2</p>
-                            <p className='off-black-700'>{t("OCV2")}</p>
+                            <p className='off-black-600'>{t("OCV2")}</p>
                         </div>
                     </li>
                     <li>
                         <div className='li-div'>
                             <p className='p2 bolden off-black-800'>3</p>
-                            <p className='off-black-700'>{t("OCV3")}</p>
+                            <p className='off-black-600'>{t("OCV3")}</p>
                         </div>
                     </li>
 
@@ -1219,7 +1226,7 @@ const CaseStudyNew = () => {
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t("OCV4")}</h2>
                 <div className="space-16"></div>
-                <p className='p2 off-black-700 paragraph'>{t("OCV4p")}</p>
+                <p className='p2 off-black-600 paragraph'>{t("OCV4p")}</p>
 
                 <div className='space-32'></div>
                 <div className='NPS-SUS-container'>
@@ -1243,9 +1250,9 @@ const CaseStudyNew = () => {
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t('OCVC')}</h2>
                 <div className="space-16"></div>
-                <p className='off-black-700 paragraph'>{t('OCVCp1')}</p>
+                <p className='off-black-600 paragraph'>{t('OCVCp1')}</p>
                 <div className='space-16'></div>
-                <p className='off-black-700 paragraph' >{t("OCVCp2")}</p>
+                <p className='off-black-600 paragraph' >{t("OCVCp2")}</p>
             </div>
 
             <div className='process-step'>
