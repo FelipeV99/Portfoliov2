@@ -1,0 +1,35 @@
+.ui-section-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: var(--max-width);
+    padding-top: 96px;
+    padding-bottom: 96px;
+    
+}
+
+.ui-inner-container{
+    width: 447px;
+}
+
+#new-main-btn-ui {
+    background-color: var(--off-black-800);
+    display: flex;
+    align-self: flex-start;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: var(--off-white-100);
+    border-radius: 1000px;
+    font-weight: 100;
+    margin-top: 4px;
+  }
+
+.horizontal-line{
+    height: 2px;
+    width: 54px;
+    background-color: var(--off-black-800);
+}

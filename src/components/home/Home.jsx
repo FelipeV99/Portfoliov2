@@ -5,6 +5,7 @@ import Contact from '../contact/Contact';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import CaseSlide from '../caseSlide/CaseSlide';
+import UISection from '../uiSection/UISection';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TempVitacanStudy from '../tempVitacanStudy/TempVitacanStudy';
 
@@ -169,6 +170,7 @@ const Home = () => {
             </section>
             <CaseSlide />
             <TempVitacanStudy />
+            <UISection />
             <Contact />
         </div>
     )

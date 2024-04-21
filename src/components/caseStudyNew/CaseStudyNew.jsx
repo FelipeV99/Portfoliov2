@@ -7,6 +7,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import Lottie from 'react-lottie';
+import SneakPeakDesktopVid from "../../assets/SneakPeakGood.mp4"
 import PreloaderAnimationDark from "../../assets/PreloaderAnimationDark.json";
 
 
@@ -89,7 +90,7 @@ const CaseStudyNew = () => {
                 SUSRef.current.src = require("../../assets/SUSGraph.png");
 
 
-               
+
             } else if (language == 'es') {
                 setCaseStudyLink("https://www.behance.net/gallery/143997259/Caso-de-Estudio-Vitacan");
                 totRef.current.src = require("../../assets/duracionCompletarTarea.png");
@@ -100,7 +101,7 @@ const CaseStudyNew = () => {
 
 
 
-                
+
 
 
             }
@@ -198,6 +199,17 @@ const CaseStudyNew = () => {
                     </div>
                 </div>
             </section>
+            {/* <div className='sp-outer-container'>
+                <h2 className='off-black-800'>Sneak Peak</h2>
+                <div className="sp-container">
+                    <video id="sp-video" autoPlay muted loop src={SneakPeakDesktopVid}>
+
+                    </video>
+
+
+                </div>
+
+            </div> */}
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t('oCContext')}</h2>
                 <div className="space-16"></div>
@@ -339,7 +351,7 @@ const CaseStudyNew = () => {
 
                                 <p className='p-card'>{t("OCStep3D")}</p>
                             </div>
-                            
+
                             <div className='icon-div'>
                                 <img id="pencil-svg" src={require("../../assets/process-design-icon.svg").default} alt="" />
 
@@ -1192,7 +1204,7 @@ const CaseStudyNew = () => {
                 <div className='space-32'></div>
                 <div className='metrics-container'>
                     <div className='tot-container'>
-                        <img id="tot-img" src={require("../../assets/timeOnTask.png")} ref={totRef}  />
+                        <img id="tot-img" src={require("../../assets/timeOnTask.png")} ref={totRef} />
 
 
                     </div>
@@ -1212,11 +1224,11 @@ const CaseStudyNew = () => {
                 <div className='space-32'></div>
                 <div className='NPS-SUS-container'>
                     <div className='NPS-SUS'>
-                        <img className='NPS-SUS-imgs' src={require("../../assets/NPSGraph.png")} ref={NPSRef}/>
+                        <img className='NPS-SUS-imgs' src={require("../../assets/NPSGraph.png")} ref={NPSRef} />
                         <h3 className='off-black-800'>NPM</h3>
                     </div>
                     <div className='NPS-SUS'>
-                        <img className='NPS-SUS-imgs' src={require("../../assets/SUSGraph.png")} ref={SUSRef}/>
+                        <img className='NPS-SUS-imgs' src={require("../../assets/SUSGraph.png")} ref={SUSRef} />
                         <h3 className='off-black-800'>SUS</h3>
 
                     </div>

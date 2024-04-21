@@ -75,6 +75,34 @@
     background-color: var(--off-black-700);
 }
 
+.sp-outer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+}
+
+.sp-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width:100%;
+    height: 100%;
+    max-width: 1400px;
+}
+
+#sp-video{
+    position: absolute;
+    top: -5%;
+    left: 0px;
+    clip-path: polygon(8% 8%, 95% 8%, 95% 95%, 8% 95%);
+    width: 100%;
+    /* align-self: center; */
+}
 
 .case-slide {
     padding-top: 96px;
