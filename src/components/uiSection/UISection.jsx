@@ -55,7 +55,7 @@ const UISection = () => {
                     </div>
                     <p className='p2 off-black-800 bolden'>Bonus</p>
                 </div>
-                <h2 className='off-black-800'>{t("UIDesign")}</h2>
+                <h2 className='off-black-800 permissive-h2'>{t("UIDesign")}</h2>
                 <div className='space-8'></div>
                 <p>{t("UIDesignp")}</p>
                 <div className='space-16'></div>

@@ -2,16 +2,17 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 60px;
-    padding-right: 60px;
     max-width: var(--max-width);
-    padding-top: 96px;
-    padding-bottom: 96px;
+
     
 }
 
 .ui-inner-container{
     width: 447px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 #new-main-btn-ui {
@@ -33,4 +34,26 @@
     height: 2px;
     width: 54px;
     background-color: var(--off-black-800);
+}
+
+.permissive-h2{
+    font-size: 64px;
+}
+
+@media (max-width:600px) {
+    .ui-inner-container{
+        width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+
+    }
+
+    .permissive-h2{
+        font-size: 64px;
+    }
+
+ 
 }

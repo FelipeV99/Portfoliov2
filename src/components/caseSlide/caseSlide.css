@@ -109,7 +109,7 @@
 }
 
 #temp-title {
-    font-size: 62px;
+    font-size: 64px;
     color: #471D02;
 }
 
@@ -207,6 +207,10 @@
         padding-right: 22px;
         padding-left: 22px;
 
+    }
+
+    .project-type{
+        display: none;
     }
 
     

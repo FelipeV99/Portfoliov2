@@ -151,7 +151,7 @@ const Home = () => {
                                 <h1 className="off-black-800" id="ux-h1">{t('designerTitle')}</h1>
                             </div>
                         </div>
-                        <div className='space-12'></div>
+                        <div className='space-16'></div>
                         <div className='cta-copy-container' ref={ctatext}>
                             <p id="cta-copy" className='p1 off-black-800'>
                                 {t("heroCopy")}
