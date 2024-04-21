@@ -41,11 +41,11 @@ const Home = () => {
             const language = i18next.language.slice(0, 2);
 
             if (language == 'en') {
-                cvRef.current.href = require("../../assets/Felipe Andrade CV.pdf");
+                cvRef.current.href = require("../../assets/CV Felipe Andrade 2024.pdf");
 
 
             } else if (language == 'es') {
-                cvRef.current.href = require("../../assets/Felipe Andrade HV.pdf");
+                cvRef.current.href = require("../../assets/HV Felipe Andrade 2024.pdf");
             }
         }
     }, [i18next.language]);
