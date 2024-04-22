@@ -47,7 +47,7 @@ const UISection = () => {
 
 
     return (
-        <div className="ui-section-container" ref={uiSectionRef}>
+        <div className="ui-section-container" ref={uiSectionRef} data-scroll-section>
             <div className='ui-inner-container'>
                 <div className='enumerator-container'>
                     <div className='horizontal-line'>

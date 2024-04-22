@@ -135,7 +135,7 @@ const Home = () => {
     return (
         <div id="page-container" ref={pageRef} >
             <div className="pr-overlay" ref={prOverlayRef}></div>
-            <section id="hero" ref={heroRef}>
+            <section id="hero" ref={heroRef} data-scroll-section>
                 <div id="number-container">
                     {/* <p className='p2' ref={numeratorRef}>[ 01 ]</p> */}
                 </div>

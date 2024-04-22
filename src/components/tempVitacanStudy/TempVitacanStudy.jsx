@@ -88,7 +88,7 @@ const TempVitacanStudy = () => {
     }, [i18next.language]);
 
     return (
-        <div id="outer-container-vitacan" ref={caseSlideVitacanRef}>
+        <div id="outer-container-vitacan" ref={caseSlideVitacanRef} data-scroll-section>
 
             <section id="case-container-vitacan" >
 

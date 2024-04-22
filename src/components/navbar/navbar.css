@@ -6,7 +6,6 @@ nav {
   justify-content: space-between;
   width: 100%;
   min-width: 320px;
-  background-color: var(--off-white-100);
   z-index: 12;
   /* transform: translateY(-68px); */
 }

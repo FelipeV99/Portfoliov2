@@ -44,7 +44,7 @@ const Contact = () => {
     }, []);
     return (
 
-        <section id="connect-container" ref={connectRef}>
+        <section id="connect-container" ref={connectRef} data-scroll-section>
             <div id="connect-inner-container">
 
 

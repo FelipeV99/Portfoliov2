@@ -31,7 +31,7 @@ const CaseSlide = () => {
                 start: "0% 55%",
                 end: "0% 45%",
                 scrub: true,
-                // markers: { startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120 }
+                markers: { startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120 }
             }
         });
 
@@ -76,7 +76,7 @@ const CaseSlide = () => {
 
 
     return (
-        <div id="outer-container-olab" ref={caseSlideRef}>
+        <div id="outer-container-olab" ref={caseSlideRef} data-scroll-section>
 
 
             <section id="case-container-olab" >

@@ -1,11 +1,12 @@
 import './App.css';
-// import './base.css'
+import './base.css'
 import React, { useRef, useState } from 'react';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import CaseStudyNew from './components/caseStudyNew/CaseStudyNew';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { FontFaceObserver } from "font-face-observer";
 import Lottie from 'react-lottie';
 import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
@@ -20,8 +21,6 @@ function App() {
 
   let idLoaded = false;
   let gothicLoaded = false;
-
-  const appRef = useRef();
 
   font.load().then(function () {
     idLoaded = true;
@@ -41,11 +40,11 @@ function App() {
     console.log('Century Gothic Font failed to load.');
   });
 
-  // const ref = useRef(null);
+  const ref = useRef(null);
 
-  // const options = {
-  //   smooth: true,
-  // } 
+  const options = {
+    smooth: true,
+  }
 
   const defaultOptions = {
     loop: true,
@@ -55,9 +54,13 @@ function App() {
 
   return (
     <>
+
+
       {fontLoaded ?
-        <AppTagContext.Provider value={appRef}>
-          <div className="App" ref={appRef}>
+            <LocomotiveScrollProvider options={options} containerRef={ref}>
+
+        <AppTagContext.Provider>
+          <div data-scroll-container className="App" ref={ref}>
             <Router>
               <Navbar />
               <ScrollToTop />
@@ -69,12 +72,15 @@ function App() {
             </Router >
           </div >
         </AppTagContext.Provider>
+        </LocomotiveScrollProvider>
+
         :
         <div>
           <div className="pr-overlay">
             <Lottie options={defaultOptions} height={37} width={166} />
           </div>
         </div>}
+
     </>
   );
 };
