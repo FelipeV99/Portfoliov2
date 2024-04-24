@@ -16,11 +16,10 @@ const CaseStudyNew = () => {
 
     gsap.registerPlugin(useGSAP);
 
-
     const [t, i18next] = useTranslation();
+    const [caseStudyLink, setCaseStudyLink] = useState("");
 
     const navigation = useNavigate();
-    const location = useLocation();
 
     const totRef = useRef();
     const srRef = useRef();
@@ -29,38 +28,7 @@ const CaseStudyNew = () => {
     const flowProblemRef = useRef();
     const flowBeforeRef = useRef();
     const flowAfterRef = useRef();
-
-
     const prOverlayOlabRef = useRef();
-
-    // useEffect(() => {
-    //     if (i18next.language != null) {
-    //         const language = i18next.language.slice(0, 2);
-
-    //         if (language == 'en') {
-    //             metric1Ref.current.src = require("../../assets/courseMetricsEN.png");
-    //             metric2Ref.current.src = require("../../assets/createUserMetricsEN.png");
-    //             metric3Ref.current.src = require("../../assets/reportsMetricsEN.png");
-    //         } else if (language == 'es') {
-    //             metric1Ref.current.src = require("../../assets/courseMetricsES.png");
-    //             metric2Ref.current.src = require("../../assets/createUserMetricsES.png");
-    //             metric3Ref.current.src = require("../../assets/reportsMetricsES.png");
-    //         }
-    //     }
-    // }, [i18next.language]);
-
-    // const { contextSafe } = useGSAP();
-
-    // const fixBackground = contextSafe(() => {
-    //     const tl = gsap.timeline();
-
-    //     tl.to(".App",{
-    //         backgroundColor: "#272727",
-    //         duration:0
-
-    //     });
-    // });
-
 
     const appTag = useContext(AppTagContext);
 
@@ -68,24 +36,15 @@ const CaseStudyNew = () => {
         appTag.current.removeAttribute('style');
     }, []);
 
-
-
-
     const defaultOptions = {
         loop: true,
         autoplay: true,
         animationData: PreloaderAnimationDark
     }
 
-    const [caseStudyLink, setCaseStudyLink] = useState("");
-
-
-
-
     useEffect(() => {
         if (i18next.language != null) {
             const language = i18next.language.slice(0, 2);
-
             if (language == 'en') {
                 setCaseStudyLink("https://www.behance.net/gallery/195967355/Vitacan-Case-Study-English");
                 totRef.current.src = require("../../assets/timeOnTask.png");
@@ -95,7 +54,6 @@ const CaseStudyNew = () => {
                 flowProblemRef.current.src = require("../../assets/UserFlowProblemEN.png");
                 flowBeforeRef.current.src = require("../../assets/UserFlowProblemEN.png");
                 flowAfterRef.current.src = require("../../assets/UserFlowProblemAfterEN.png");
-
             } else if (language == 'es') {
                 setCaseStudyLink("https://www.behance.net/gallery/143997259/Caso-de-Estudio-Vitacan");
                 totRef.current.src = require("../../assets/duracionCompletarTarea.png");
@@ -109,13 +67,11 @@ const CaseStudyNew = () => {
         }
     }, [i18next.language]);
 
-
     const { contextSafe } = useGSAP({ scope: prOverlayOlabRef.current });
 
     useEffect(() => {
         document.documentElement.style.overflowY = "hidden";
-        // const yMovement = prOverlayOlabRef.current.offsetHeight;
-        // console.log(yMovement);
+
         const maskOlab = contextSafe(() => {
             const tl = gsap.timeline();
 
@@ -144,32 +100,12 @@ const CaseStudyNew = () => {
         }, 2500);
 
     }, [prOverlayOlabRef.current]);
-    // const normalizeAppBackground = () => {
-    //     console.log("normalizing app color from case study");
-    //     appTag.current.removeAttribute('style');
-    //     // console.log(appTag.current.style.backgroundColor);
-    //     gsap.set(appTag.current, {clearProps: true});
-
-    //     // appTag.current.style.backgroundColor = "#000000";
-    // };
-
-
-
-    // useEffect(() => {
-    //     console.log("restoring bg");
-
-    //     fixBackground();
-
-    // }, [location.pathname])
-
 
     return (
         <div id="case-study-container">
             <div className="pr-overlay-olab" ref={prOverlayOlabRef}>
                 <Lottie options={defaultOptions} height={37} width={166} />
                 <p className='p2 bolden color-dark-grey'>{t("loadingCS")}</p>
-
-
             </div>
             <section id="case-hero">
 
