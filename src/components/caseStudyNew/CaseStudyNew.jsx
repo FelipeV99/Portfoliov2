@@ -26,6 +26,10 @@ const CaseStudyNew = () => {
     const srRef = useRef();
     const NPSRef = useRef();
     const SUSRef = useRef();
+    const flowProblemRef = useRef();
+    const flowBeforeRef = useRef();
+    const flowAfterRef = useRef();
+
 
     const prOverlayOlabRef = useRef();
 
@@ -88,6 +92,10 @@ const CaseStudyNew = () => {
                 srRef.current.src = require("../../assets/successRate.png");
                 NPSRef.current.src = require("../../assets/NPSGraph.png");
                 SUSRef.current.src = require("../../assets/SUSGraph.png");
+                flowProblemRef.current.src = require("../../assets/UserFlowProblemEN.png");
+                flowBeforeRef.current.src = require("../../assets/UserFlowProblemEN.png");
+                flowAfterRef.current.src = require("../../assets/UserFlowProblemAfterEN.png");
+
 
 
 
@@ -97,6 +105,11 @@ const CaseStudyNew = () => {
                 srRef.current.src = require("../../assets/tasaDeExito.png");
                 NPSRef.current.src = require("../../assets/NPSGraphES.png");
                 SUSRef.current.src = require("../../assets/SUSGraphES.png");
+                flowProblemRef.current.src = require("../../assets/UserFlowProblemES.png");
+                flowBeforeRef.current.src = require("../../assets/UserFlowProblemES.png");
+                flowAfterRef.current.src = require("../../assets/UserFlowProblemAfterES.png");
+
+
 
 
 
@@ -828,7 +841,7 @@ const CaseStudyNew = () => {
                     <div className='subheader-line'>
 
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 1</p>
+                    <p className='p2 bolden off-black-800'>{t("AreaImpr")} 1</p>
                 </div>
                 <div className='space-8'></div>
 
@@ -851,7 +864,7 @@ const CaseStudyNew = () => {
                     <div className='subheader-line'>
 
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 2</p>
+                    <p className='p2 bolden off-black-800'>{t("AreaImpr")} 2</p>
                 </div>
                 <div className='space-8'></div>
 
@@ -869,23 +882,27 @@ const CaseStudyNew = () => {
                 </figure>
             </div>
 
-            <div className='case-slide'>
-                <div className='subheader-container'>
-                    <div className='subheader-line'>
+            <div className='case-slide-extended'>
+                <div className='text-extended-container'>
 
+
+                    <div className='subheader-container'>
+                        <div className='subheader-line'>
+
+                        </div>
+                        <p className='p2 bolden off-black-800'>{t("AreaImpr")} 3</p>
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 3</p>
+                    <div className='space-8'></div>
+
+                    <h2 className='off-black-800'>{t('OCC3')}</h2>
+                    <div className="space-16"></div>
+                    <p className='off-black-600 paragraph'>{t('OCC3p')}</p>
+                    <div className='space-16'></div>
                 </div>
-                <div className='space-8'></div>
-
-                <h2 className='off-black-800'>{t('OCC3')}</h2>
-                <div className="space-16"></div>
-                <p className='off-black-600 paragraph'>{t('OCC3p')}</p>
-                <div className='space-16'></div>
-
                 <figure>
-                    <div className='img-case-container'>
-                        <img className="case-img" src={require("../../assets/flowProblem.png")} alt="Página de login de la CMS (diseño original previo)" />
+                    <div className='svg-container'>
+                        <img className='svg-img' ref={flowProblemRef} alt="" />
+
                     </div>
                     <figcaption>{t('OCC3Caption')}</figcaption>
 
@@ -897,7 +914,7 @@ const CaseStudyNew = () => {
                     <div className='subheader-line'>
 
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 4</p>
+                    <p className='p2 bolden off-black-800'>{t("AreaImpr")} 4</p>
                 </div>
                 <div className='space-8'></div>
 
@@ -922,7 +939,7 @@ const CaseStudyNew = () => {
                     <div className='subheader-line'>
 
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 5</p>
+                    <p className='p2 bolden off-black-800'>{t("AreaImpr")} 5</p>
                 </div>
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC5')}</h2>
@@ -982,7 +999,7 @@ const CaseStudyNew = () => {
                     <div className='subheader-line'>
 
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 1</p>
+                    <p className='p2 bolden off-black-800'>{t("AreaImpr")} 1</p>
                 </div>
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC1')}</h2>
@@ -1016,7 +1033,7 @@ const CaseStudyNew = () => {
                     <div className='subheader-line'>
 
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 2</p>
+                    <p className='p2 bolden off-black-800'>{t("AreaImpr")} 2</p>
                 </div>
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC2')}</h2>
@@ -1045,36 +1062,49 @@ const CaseStudyNew = () => {
                 </figure>
             </div>
 
-            <div className='case-slide'>
-                <div className='subheader-container'>
-                    <div className='subheader-line'>
+            <div className='case-slide-extended'>
+                <div className='text-extended-container'>
 
+
+
+                    <div className='subheader-container'>
+                        <div className='subheader-line'>
+
+                        </div>
+                        <p className='p2 bolden off-black-800'>{t("AreaImpr")} 3</p>
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 3</p>
-                </div>
-                <div className='space-8'></div>
-                <h2 className='off-black-800'>{t('OCC3')}</h2>
-                <div className="space-16"></div>
-                <p className='off-black-600 paragraph'>{t('OCD3')}</p>
-                <div className='space-16'></div>
+                    <div className='space-8'></div>
+                    <h2 className='off-black-800'>{t('OCC3')}</h2>
+                    <div className="space-16"></div>
+                    <p className='off-black-600 paragraph'>{t('OCD3')}</p>
+                    <div className='space-16'></div>
 
-                <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
-                <div className='space-8'></div>
+                    <p className='p2 bolden off-black-800'>{t("OCDAfter")}</p>
+                    <div className='space-8'></div>
+                </div>
 
                 <figure>
-                    <div className='img-case-container'>
-                        <img className="case-img" src={require("../../assets/flowNew.png")} alt="Página de login de la CMS (diseño original previo)" />
+                    <div className='svg-container'>
+                        <img className='svg-img' ref={flowAfterRef} alt="" />
                     </div>
 
                 </figure>
-                <div className='space-32'></div>
+                <div className='text-extended-container'>
+                    <div className='subheader-container'>
 
-                <p className='p2 bolden off-black-800'>{t("OCDBefore")}</p>
-                <div className='space-8'></div>
+
+
+                        <div className='space-32'></div>
+
+
+                        <p className='p2 bolden off-black-800'>{t("OCDBefore")}</p>
+                        <div className='space-8'></div>
+                    </div>
+                </div>
 
                 <figure>
-                    <div className='img-case-container'>
-                        <img className="case-img" src={require("../../assets/flow.png")} alt="Página de login de la CMS (diseño original previo)" />
+                    <div className='svg-container'>
+                        <img className='svg-img' ref={flowBeforeRef} alt="" />
                     </div>
                 </figure>
             </div>
@@ -1083,7 +1113,7 @@ const CaseStudyNew = () => {
                     <div className='subheader-line'>
 
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 4</p>
+                    <p className='p2 bolden off-black-800'>{t("AreaImpr")} 4</p>
                 </div>
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC4')}</h2>
@@ -1117,7 +1147,7 @@ const CaseStudyNew = () => {
                     <div className='subheader-line'>
 
                     </div>
-                    <p className='p2 bolden off-black-700'>{t("AreaImpr")} 5</p>
+                    <p className='p2 bolden off-black-800'>{t("AreaImpr")} 5</p>
                 </div>
                 <div className='space-8'></div>
                 <h2 className='off-black-800'>{t('OCC5')}</h2>
@@ -1235,7 +1265,7 @@ const CaseStudyNew = () => {
                 <div className='NPS-SUS-container'>
                     <div className='NPS-SUS'>
                         <img className='NPS-SUS-imgs' src={require("../../assets/NPSGraph.png")} ref={NPSRef} />
-                        <h3 className='off-black-800'>NPM</h3>
+                        <h3 className='off-black-800'>NPS</h3>
                     </div>
                     <div className='NPS-SUS'>
                         <img className='NPS-SUS-imgs' src={require("../../assets/SUSGraph.png")} ref={SUSRef} />
@@ -1285,7 +1315,7 @@ const CaseStudyNew = () => {
                                 }}>{t("FinalContact")}</button>
 
                                 <button className="case-finish-btn" onClick={() => { window.open(caseStudyLink) }}>
-                                {t("FinalNextCase")}
+                                    {t("FinalNextCase")}
                                     <img src={require("../../assets/external-arrow-white.svg").default} alt="" />
                                 </button>
 

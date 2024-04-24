@@ -53,11 +53,11 @@ const UISection = () => {
                     <div className='horizontal-line'>
 
                     </div>
-                    <p className='p2 off-black-800 bolden'>Bonus</p>
+                    <p className='p2 off-black-800 bolden'>{t("UISubheader")}</p>
                 </div>
                 <h2 className='off-black-800 permissive-h2'>{t("UIDesign")}</h2>
                 <div className='space-8'></div>
-                <p>{t("UIDesignp")}</p>
+                <p className='ui-text'>{t("UIDesignp")}</p>
                 <div className='space-16'></div>
                 <button id="new-main-btn-ui" onClick={() => { window.open("https://www.behance.net/felipeandrade27") }}>
                 {t("UIDesignCTA")}

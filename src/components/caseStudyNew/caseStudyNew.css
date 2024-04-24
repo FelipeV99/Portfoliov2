@@ -120,6 +120,24 @@
     padding-right: 64px;
 }
 
+.case-slide-extended {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+.text-extended-container{
+    width: 100%;
+    max-width: 742px;
+    align-self: center;
+}
+
 .bullet-points {
     display: flex;
     flex-direction: column;
@@ -141,6 +159,17 @@
     height: 100%;
     background-color: var(--off-white-200);
 
+}
+
+.svg-container {
+    display: flex;
+    max-width: 1200px;
+    height: 100%;
+}
+
+.svg-img{
+    width: 100%;
+    align-self: center;
 }
 
 .case-img {

@@ -3,16 +3,15 @@
     flex-direction: column;
     width: 100%;
     max-width: var(--max-width);
-
-    
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 96px;
+    padding-bottom: 96px;    
 }
 
 .ui-inner-container{
     width: 447px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 96px;
-    padding-bottom: 96px;
+
 }
 
 #new-main-btn-ui {
@@ -40,16 +39,29 @@
     font-size: 64px;
 }
 
-@media (max-width:600px) {
+.ui-text{
+    width: 100%;
+}
+
+@media (max-width:1000px) {
     .ui-inner-container{
         width: 100%;
+
+
+    }
+
+ 
+}
+
+@media (max-width:600px) {
+
+    .ui-section-container{
         padding-left: 18px;
         padding-right: 18px;
         padding-top: 32px;
         padding-bottom: 32px;
-
-
     }
+    
 
     .permissive-h2{
         font-size: 64px;
