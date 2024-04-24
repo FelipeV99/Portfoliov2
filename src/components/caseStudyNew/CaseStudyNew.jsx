@@ -96,9 +96,6 @@ const CaseStudyNew = () => {
                 flowBeforeRef.current.src = require("../../assets/UserFlowProblemEN.png");
                 flowAfterRef.current.src = require("../../assets/UserFlowProblemAfterEN.png");
 
-
-
-
             } else if (language == 'es') {
                 setCaseStudyLink("https://www.behance.net/gallery/143997259/Caso-de-Estudio-Vitacan");
                 totRef.current.src = require("../../assets/duracionCompletarTarea.png");
@@ -108,15 +105,6 @@ const CaseStudyNew = () => {
                 flowProblemRef.current.src = require("../../assets/UserFlowProblemES.png");
                 flowBeforeRef.current.src = require("../../assets/UserFlowProblemES.png");
                 flowAfterRef.current.src = require("../../assets/UserFlowProblemAfterES.png");
-
-
-
-
-
-
-
-
-
             }
         }
     }, [i18next.language]);

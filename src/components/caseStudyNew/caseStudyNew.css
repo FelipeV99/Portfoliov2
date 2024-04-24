@@ -132,6 +132,7 @@
     padding-left: 64px;
     padding-right: 64px;
 }
+
 .text-extended-container{
     width: 100%;
     max-width: 742px;
@@ -498,6 +499,11 @@
         padding-bottom: 64px;
     }
 
+    .case-slide-extended {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
     #i-case-inner-container {
         align-items: center;
         flex-direction: column-reverse;
@@ -572,6 +578,14 @@
     }
 
     .case-slide {
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        min-width: 320px;
+    }
+
+    .case-slide-extended {
         padding-left: 18px;
         padding-right: 18px;
         padding-top: 32px;
