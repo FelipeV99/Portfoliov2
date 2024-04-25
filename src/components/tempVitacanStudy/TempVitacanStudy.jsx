@@ -17,6 +17,7 @@ const TempVitacanStudy = () => {
     const caseSlideVitacanRef = useRef();
     const bottomRef = useRef();
     const caseImgContainerRef = useRef();
+    const imgCaseColorRef = useRef();
     const [caseImgContainerHeight, setCaseImgContainerHeight] = useState("");
 
 
@@ -33,11 +34,19 @@ const TempVitacanStudy = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: caseSlideVitacanRef.current,
-                start: "0% 55%",
-                end: "0% 45%",
+                start: "50% 65%",
+                end: "60% 35%",
                 scrub: true,
-                // markers: { startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200 }
+                markers: { startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200 }
             }
+        });
+
+        // tl.to(caseImgContainerRef.current, {
+        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)"
+
+        // });
+        tl.to(imgCaseColorRef.current,{
+            y: -20,
         });
 
         tl.to(".App", {
@@ -116,10 +125,10 @@ const TempVitacanStudy = () => {
                             </button>
                         </div>
                     </div >
-                    <div id="case-img-container" ref={caseImgContainerRef}>
-                        <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} actualizeHeight={() => { setCaseImgContainerHeight(Math.random()) }} />
+                    <div id="case-img-container-vitacan" ref={caseImgContainerRef}>
+                        {/* <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} actualizeHeight={() => { setCaseImgContainerHeight(Math.random()) }} /> */}
 
-                        {/* <img className='img-case' src={require("../../assets/placeholderVitacan.png")} alt="" /> */}
+                        <img className='img-case-vitacan' src={require("../../assets/vitacanColored.png")} alt="" ref={imgCaseColorRef} />
 
                     </div>
                 </div>
