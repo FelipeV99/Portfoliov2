@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 #case-container-vitacan {
     display: flex;
@@ -47,8 +49,9 @@
 
 #num-p-v {
     font-weight: 600;
-    color: #00B7B7;
+    color: var(--off-black-800);
 }
+
 
 #case-img-container-vitacan{
     display: flex;
@@ -59,7 +62,7 @@
 }
 
 .line-for-number-v {
-    background-color: #00B7B7;
+    background-color: var(--off-black-800);
     height: 2px;
     width: 54px;
 }

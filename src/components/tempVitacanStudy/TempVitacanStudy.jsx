@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react';
 import { useNavigate } from 'react-router-dom'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import VitacanThumb from "../../assets/vitacanNewHero.png";
+import VitacanThumb from "../../assets/vitacanMockup.png";
 import VitacanPlaceholder from "../../assets/placeholderVitacan.png";
 import ProgressiveImage from '../progressiveImage/ProgressiveImg';
 
@@ -17,61 +17,6 @@ const TempVitacanStudy = () => {
     const caseSlideVitacanRef = useRef();
     const bottomRef = useRef();
     const caseImgContainerRef = useRef();
-    const [caseImgContainerHeight, setCaseImgContainerHeight] = useState("");
-
-
-
-    // const navigation = useNavigate();
-    // console.log(caseImgContainerHeight);
-
-    const { contextSafe } = useGSAP({ scope: caseSlideVitacanRef.current, revertOnUpdate: true });
-
-
-    const runRunRUn = contextSafe(() => {
-
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: caseSlideVitacanRef.current,
-                start: "0% 55%",
-                end: "0% 45%",
-                scrub: true,
-                // markers: { startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200 }
-            }
-        });
-
-        tl.to(".App", {
-            backgroundColor: "#ECF5F4",
-            // onComplete: () => {
-            //     console.log("tween from vitacan");
-            //     ScrollTrigger.refresh();
-            // }
-
-
-        });
-
-    });
-
-    useEffect(() => {
-
-        runRunRUn();
-
-    }, [caseImgContainerHeight]);
-
-    useEffect(() => {
-
-        runRunRUn();
-
-    }, []);
-
-    // useEffect(() => {
-
-    //     runRunRUn();
-    // }, []);
-
-    // useEffect(()=>{
-    //     console.log("prog img dependency changed")
-    // }, [progImgRef]);
 
     const [caseStudyLink, setCaseStudyLink] = useState("");
 
@@ -87,37 +32,36 @@ const TempVitacanStudy = () => {
         }
     }, [i18next.language]);
 
+
     return (
-        <div id="outer-container-vitacan" ref={caseSlideVitacanRef}>
+        <div id="outer-container-vitacan" ref={caseSlideVitacanRef} data-scroll-section>
 
             <section id="case-container-vitacan" >
 
                 <div id="case-inner-container">
-
-                    <div className='text-case-olab'>
-                        <div className='project-type'>
-                            <img src={require("../../assets/star-nav.svg").default} alt="" />                            <p id="asterisk-p">{t("CP")}</p>
-                        </div>
-                        <div className="bottom-text" ref={bottomRef}>
-
-
-                            <div className='enumerator-container'>
+                <div className='enumerator-container'>
                                 <div className='line-for-number-v'>
 
                                 </div>
                                 <p id="num-p-v">02/02</p>
                             </div>
-                            <h1 id="temp-title">Vitacan</h1>
-                            <p id="temp-p">{t("ThumbCopyVita")}</p>
-                            <button id="new-main-btn-v" onClick={() => { window.open(caseStudyLink) }}>
+
+                    <div className='text-case-olab'>
+                        <div className="bottom-text" ref={bottomRef}>
+
+
+                            
+                            <h1 className="off-black-800">Vitacan</h1>
+                            <p id="temp-p">UX case study, conceptual project</p>
+                            <a className="btn-main btn-a-fix" onClick={() => { window.open(caseStudyLink) }}>
                                 {t("CaseButton")}
                                    
-                                <img src={require("../../assets/external-arrow-white.svg").default} alt="" />
-                            </button>
+                                {/* <img src={require("../../assets/external-arrow-white.svg").default} alt="" /> */}
+                            </a>
                         </div>
                     </div >
                     <div id="case-img-container" ref={caseImgContainerRef}>
-                        <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} actualizeHeight={() => { setCaseImgContainerHeight(Math.random()) }} />
+                        <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} />
 
                         {/* <img className='img-case' src={require("../../assets/placeholderVitacan.png")} alt="" /> */}
 

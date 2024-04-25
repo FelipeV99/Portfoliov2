@@ -1,5 +1,5 @@
 import './App.css';
-// import './base.css'
+import './base.css'
 import React, { useRef, useState } from 'react';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import { FontFaceObserver } from "font-face-observer";
 import Lottie from 'react-lottie';
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
 
 export const AppTagContext = React.createContext();
@@ -41,11 +42,11 @@ function App() {
     console.log('Century Gothic Font failed to load.');
   });
 
-  // const ref = useRef(null);
+  const ref = useRef(null);
 
-  // const options = {
-  //   smooth: true,
-  // } 
+  const options = {
+    smooth: true,
+  }
 
   const defaultOptions = {
     loop: true,
@@ -56,19 +57,21 @@ function App() {
   return (
     <>
       {fontLoaded ?
-        <AppTagContext.Provider value={appRef}>
-          <div className="App" ref={appRef}>
-            <Router>
-              <Navbar />
-              <ScrollToTop />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/case-study/olabNew" element={<CaseStudyNew />} />
+        <LocomotiveScrollProvider options={options} containerRef={ref}>
+          <AppTagContext.Provider value={appRef}>
+            <div className="App" data-scroll-container ref={ref}>
+              <Router>
+                <Navbar />
+                <ScrollToTop />
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/case-study/olabNew" element={<CaseStudyNew />} />
 
-              </Routes>
-            </Router >
-          </div >
-        </AppTagContext.Provider>
+                </Routes>
+              </Router >
+            </div >
+          </AppTagContext.Provider>
+        </LocomotiveScrollProvider>
         :
         <div>
           <div className="pr-overlay">
