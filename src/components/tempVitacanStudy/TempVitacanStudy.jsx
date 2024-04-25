@@ -61,9 +61,9 @@ const TempVitacanStudy = () => {
                         </div>
                     </div >
                     <div id="case-img-container" ref={caseImgContainerRef}>
-                        <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} />
+                        {/* <ProgressiveImage className='img-case' src={VitacanThumb} placeholderSrc={VitacanPlaceholder} /> */}
 
-                        {/* <img className='img-case' src={require("../../assets/placeholderVitacan.png")} alt="" /> */}
+                        <img data-scroll data-scroll-class="parallax-img" className='img-case' src={require("../../assets/vitacanMockup.png")} alt="" />
 
                     </div>
                 </div>

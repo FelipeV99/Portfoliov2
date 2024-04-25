@@ -29,18 +29,21 @@ const CaseSlide = () => {
 
             <section id="case-container-olab" >
 
-                <div className='op-class' data-scroll
+                <div  id="case-inner-container">
+                    <div className='enumerator-container op-class' data-scroll
                     data-scroll-class="fadeIn"
                     data-scroll-repeat="true"
-                    data-scroll-speed="2" id="case-inner-container">
-                    <div className='enumerator-container'>
+                    data-scroll-speed="2">
                         <div className='line-for-number'>
 
                         </div>
                         <p id="num-p">01/02</p>
                     </div>
 
-                    <div className='text-case-olab'>
+                    <div className='text-case-olab op-class' data-scroll
+                    data-scroll-class="fadeIn"
+                    data-scroll-repeat="true"
+                    data-scroll-speed="2">
 
                         <div className="bottom-text" ref={bottomRef}>
 
@@ -56,13 +59,11 @@ const CaseSlide = () => {
                             </a>
                         </div>
                     </div >
-                    <div id="olab-gap">
-
-                    </div>
                     <div id="case-img-container">
-                        <ProgressiveImage className='img-case' src={OlabThumb} placeholderSrc={OlabPlaceholder} actualizeHeight={() => { setCaseImgContainerHeight(Math.random()) }}  />
+                        {/* <ProgressiveImage className='img-case' src={OlabThumb} placeholderSrc={OlabPlaceholder} actualizeHeight={() => { setCaseImgContainerHeight(Math.random()) }}  /> */}
                         {/* <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" /> */}
-
+                        <img data-scroll data-scroll-class="parallax-img" data-scroll-repeat="true"
+                    data-scroll-speed="2" className='img-case' src={require("../../assets/olabMockup.png")} alt="" />
                     </div>
                 </div>
             </section>

@@ -73,18 +73,12 @@
 
 
 
-
-#olab-gap{
-    display: flex;
-    min-width: 64px;
-}
-
-
 #case-img-container {
     display: flex;
     align-self: center;
     width: 100%;
     max-width: 742px;
+    clip-path: polygon(0% 2%, 100% 2%, 100% 98%, 0% 98%);
     /* clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); */
     /* min-width: 380px; */
 
@@ -126,15 +120,25 @@
     color: #471D02;
 }
 
+
 .img-case {
+    /* transform: translateY(-100px); */
     width: 100%;
     height: auto;
     max-width: 1400px;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
+    opacity:0.5;
     /* min-width: 360px; */
 }
+
+.parallax-img{
+    transform: translateY(-10px);
+    opacity: 1;
+    transition: opacity 1s ;
+}
+
 
 #temp-title {
     font-size: 64px;
