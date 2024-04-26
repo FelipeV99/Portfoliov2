@@ -8,6 +8,7 @@ import CaseSlide from '../caseSlide/CaseSlide';
 import UISection from '../uiSection/UISection';
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TempVitacanStudy from '../tempVitacanStudy/TempVitacanStudy';
+import { useLenis } from '@studio-freight/react-lenis';
 
 
 const Home = () => {
@@ -29,10 +30,14 @@ const Home = () => {
     const { state } = useLocation();
     const { targetId } = state || {};
 
+    const lenis = useLenis(({ scroll }) => {  
+
+    });
+
     useEffect(() => {
         const el = document.getElementById(targetId);
         if (el) {
-            el.scrollIntoView();
+            lenis.scrollTo(el)
         }
     }, [targetId]);
 
@@ -159,7 +164,7 @@ const Home = () => {
                         </div>
                         <div id="button-cta" ref={buttonscta}>
                             <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
-                            <a className='btn-sec' href='#connect-container'>{t("connect")}</a>
+                            <a className='btn-sec' onClick={()=>{lenis.scrollTo("#connect-container")}}>{t("connect")}</a>
                         </div>
                     </div>
                     <div id="hero-space"></div>

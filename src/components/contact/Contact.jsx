@@ -3,12 +3,19 @@ import "./contact.css"
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
+import { useLenis } from '@studio-freight/react-lenis';
+
 
 const Contact = () => {
     const [t, i18next] = useTranslation();
 
     const connectRef = useRef();
+    
+    const lenis = useLenis(({ scroll }) => {  
+
+    });
+
 
     // gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -97,7 +104,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div id="back-top">
-                        <a href="#mask-nav">
+                        <a onClick={()=>{ lenis.scrollTo("#mask-nav")}}>
                             <div id="back-top-inception">
                                 <p className='p2 off-black-800'>{t("backTop")}</p>
                                 <img src={require("../../assets/arrow-up.svg").default} alt="" />

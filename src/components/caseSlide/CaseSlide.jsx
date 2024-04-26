@@ -164,6 +164,7 @@ const CaseSlide = () => {
         imgReveal()
     }, []);
 
+
     return (
         <div id="outer-container-olab" ref={caseSlideRef}>
 
