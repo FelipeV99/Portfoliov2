@@ -48,15 +48,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 32px;
+
     
     height: 100%;
     max-height: 700px;
 
 }
 
-.btn-a-fix{
+/* .btn-a-fix{
     width: 146px;
-}
+} */
 
 
 
@@ -174,10 +176,9 @@
         height:1px;
     }
 
-    /* #case-img-container {
-        align-self: center;
-        width: 90%;
-    } */
+    #case-img-container {
+        max-width: none;
+    }
 
     .text-case-olab {
         max-width: 1000px;
@@ -188,13 +189,11 @@
         width: 100%;
     }
 
-    #case-container-olab {
+    #case-container-olab {    
+        height: 100%;  
+        padding-right: 18px;
+        padding-left: 18px;  
 
-    
-    
-        height: 100%;
-
-    
     }
 
 }
@@ -205,12 +204,12 @@
         /* min-width: 0px; */
     }
 
-    #case-container-olab {
+    /* #case-container-olab {
 
-        padding-right: 22px;
-        padding-left: 22px;
+        padding-right: 18px;
+        padding-left: 18px;
 
-    }
+    } */
 
     .project-type{
         display: none;
@@ -219,7 +218,7 @@
     
 #case-inner-container {
 
-    gap: 32px;
+    gap: 16px;
     
 
 
