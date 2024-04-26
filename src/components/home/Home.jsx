@@ -30,15 +30,23 @@ const Home = () => {
     const { state } = useLocation();
     const { targetId } = state || {};
 
-    const lenis = useLenis(({ scroll }) => {  
+    const lenis = useLenis(({ scroll }) => {
 
     });
 
     useEffect(() => {
         const el = document.getElementById(targetId);
         if (el) {
-            lenis.scrollTo(el)
+            if (lenis) {
+
+                lenis.scrollTo(el);
+
+            } else {
+                el.scrollIntoView();
+            }
         }
+
+
     }, [targetId]);
 
     useEffect(() => {
@@ -164,7 +172,7 @@ const Home = () => {
                         </div>
                         <div id="button-cta" ref={buttonscta}>
                             <a className='btn-main' target="_blank" ref={cvRef}>{t("cvDownload")}</a>
-                            <a className='btn-sec' onClick={()=>{lenis.scrollTo("#connect-container")}}>{t("connect")}</a>
+                            <a className='btn-sec' onClick={() => { lenis.scrollTo("#connect-container") }}>{t("connect")}</a>
                         </div>
                     </div>
                     <div id="hero-space"></div>
