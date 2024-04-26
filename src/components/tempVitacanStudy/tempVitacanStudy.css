@@ -91,11 +91,6 @@
 }
 
 @media (max-width:600px) {
-    #case-img-container {
-        width: 92%;
-        /* min-width: 0px; */
-    }
-
     #case-container-vitacan {
 
         padding-right: 22px;

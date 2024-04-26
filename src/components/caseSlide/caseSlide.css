@@ -88,7 +88,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 447px;
-    min-height: 250px;
+    /* min-height: 250px; */
     height: 100%;
 
 }
@@ -179,10 +179,10 @@
         width: 90%;
     } */
 
-    /* .text-case-olab {
+    .text-case-olab {
         max-width: 1000px;
         width: 100%;
-    } */
+    }
 
     .bottom-text {
         width: 100%;
@@ -201,7 +201,7 @@
 
 @media (max-width:600px) {
     #case-img-container {
-        width: 92%;
+        width: 100%;
         /* min-width: 0px; */
     }
 
