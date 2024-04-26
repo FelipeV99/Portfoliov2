@@ -17,6 +17,7 @@ const CaseSlide = () => {
     const bottomRef = useRef();
     const imgCaseColorRef = useRef();
     const imgContainerRef = useRef();
+    const enumeratorRef = useRef();
 
     const [caseImgContainerHeight, setCaseImgContainerHeight] = useState("");
 
@@ -33,7 +34,7 @@ const CaseSlide = () => {
                 trigger: caseSlideRef.current,
                 start: "0% 50%",
                 // scrub: true,
-                markers: { startColor: "purple", fontSize: "24px", fontWeight: "bold", indent: 100 }
+                // markers: { startColor: "purple", fontSize: "24px", fontWeight: "bold", indent: 100 }
             }
         });
 
@@ -46,7 +47,7 @@ const CaseSlide = () => {
         },{
             clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
             duration: 1,
-            ease: "power2.inOut"
+            ease: "power1.inOut"
 
         }, 0);
 
@@ -55,8 +56,36 @@ const CaseSlide = () => {
         },{
             scale:1.1,
             duration: 1.4,
-            ease: "power3.inOut"
+            ease: "power2.inOut"
 
+        }, 0);
+
+        
+        tl.fromTo(bottomRef.current,{
+            opacity:0,
+
+        },{
+            opacity:1.4,
+            duration:1,
+            ease: "power1.inOut"
+        }, 0);
+
+        tl.fromTo(bottomRef.current,{
+
+            y:-220
+        },{
+
+            y:0,
+            duration:1,
+            ease: "power2.inOut"
+        }, 0);
+
+        tl.fromTo(enumeratorRef.current,{
+            opacity:0,
+        },{
+            opacity:1,
+            duration:1,
+            ease: "power1.inOut"
         }, 0);
 
         const tl2 = gsap.timeline({
@@ -65,7 +94,7 @@ const CaseSlide = () => {
                 start: "20% 70%",
                 end: "80% 50%",
                 scrub: true,
-                markers: { startColor: "red", endColor: "orange", fontSize: "24px", fontWeight: "bold", indent: 180 }
+                // markers: { startColor: "red", endColor: "orange", fontSize: "24px", fontWeight: "bold", indent: 180 }
             }
         });
 
@@ -74,10 +103,11 @@ const CaseSlide = () => {
 
         // });
         tl2.fromTo(imgCaseColorRef.current,{
-            y:20
+            y:40
         },{
-            y:-20
+            y:-40
         }, 0);
+
         setTimeout(() => {
             ScrollTrigger.refresh();
         }, 1000);
@@ -151,7 +181,7 @@ const CaseSlide = () => {
             <section id="case-container-olab" >
 
                 <div  id="case-inner-container">
-                    <div className='enumerator-container'>
+                    <div className='enumerator-container' ref={enumeratorRef}>
                         <div className='line-for-number'>
 
                         </div>

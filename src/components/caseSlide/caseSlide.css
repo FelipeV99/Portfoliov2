@@ -65,7 +65,7 @@
     align-self: center;
     width: 100%;
     max-width: 680px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 5%, 100% 5%, 100% 95%, 0% 95%);
 
     /* min-width: 380px; */
 
@@ -151,8 +151,10 @@
 }
 
 .enumerator-container {
+    align-self: flex-start;
     display: flex;
     align-items: flex-end;
+
     gap: 8px;
 }
 
