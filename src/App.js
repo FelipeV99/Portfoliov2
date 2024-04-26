@@ -70,6 +70,7 @@ function App() {
       
         <AppTagContext.Provider value={appRef} >
           <div className="App" ref={appRef}>
+            {/* <div id='vertical-line'></div> */}
             <Router>
               <Navbar />
               <ScrollToTop />
