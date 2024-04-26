@@ -9,6 +9,7 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import { FontFaceObserver } from "font-face-observer";
 import Lottie from 'react-lottie';
 import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 
 export const AppTagContext = React.createContext();
@@ -41,7 +42,11 @@ function App() {
   }).catch(function () {
     console.log('Century Gothic Font failed to load.');
   });
+  
 
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
 
 
   // const ref = useRef(null);
@@ -60,7 +65,7 @@ function App() {
   return (
     <>
       {fontLoaded ?
-
+      <ReactLenis root>
 
       
         <AppTagContext.Provider value={appRef} >
@@ -76,6 +81,7 @@ function App() {
             </Router >
           </div >
         </AppTagContext.Provider>
+        </ReactLenis>
         :
         <div>
           <div className="pr-overlay">

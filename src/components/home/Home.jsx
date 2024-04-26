@@ -6,13 +6,13 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import CaseSlide from '../caseSlide/CaseSlide';
 import UISection from '../uiSection/UISection';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TempVitacanStudy from '../tempVitacanStudy/TempVitacanStudy';
 
 
 const Home = () => {
 
-    gsap.registerPlugin(useGSAP, ScrollTrigger);
+    gsap.registerPlugin(useGSAP);
 
     const designertext = useRef();
     const felipetext = useRef();

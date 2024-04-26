@@ -12,7 +12,7 @@ import ProgressiveImage from '../progressiveImage/ProgressiveImg';
 
 const CaseSlide = () => {
     const [t, i18next] = useTranslation();
-    gsap.registerPlugin(useGSAP, ScrollTrigger);
+    gsap.registerPlugin(useGSAP);
     const caseSlideRef = useRef();
     const bottomRef = useRef();
 
@@ -21,34 +21,34 @@ const CaseSlide = () => {
 
     const navigation = useNavigate();
 
-    const { contextSafe } = useGSAP({ scope: caseSlideRef.current, revertOnUpdate: true });
+    // const { contextSafe } = useGSAP({ scope: caseSlideRef.current, revertOnUpdate: true });
 
 
-    const runRunRUn = contextSafe(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: caseSlideRef.current,
-                start: "0% 55%",
-                end: "0% 45%",
-                scrub: true,
-                // markers: { startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120 }
-            }
-        });
+    // const runRunRUn = contextSafe(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: caseSlideRef.current,
+    //             start: "0% 55%",
+    //             end: "0% 45%",
+    //             scrub: true,
+    //             // markers: { startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120 }
+    //         }
+    //     });
 
-        tl.to(".App", {
-            backgroundColor: "#FFF2EB",
-            // onComplete: () => {
-            //     // console.log("tween from case slide");
-            //     // ScrollTrigger.refresh();
-            // }
+    //     tl.to(".App", {
+    //         backgroundColor: "#FFF2EB",
+    //         // onComplete: () => {
+    //         //     // console.log("tween from case slide");
+    //         //     // ScrollTrigger.refresh();
+    //         // }
 
 
-        });
-    });
-    useEffect(() => {
-        runRunRUn();
+    //     });
+    // });
+    // useEffect(() => {
+    //     runRunRUn();
 
-    }, [caseImgContainerHeight]);
+    // }, [caseImgContainerHeight]);
 
     // useEffect(() => {
     //     if (caseSlideRef.current != null) {

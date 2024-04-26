@@ -10,38 +10,38 @@ const Contact = () => {
 
     const connectRef = useRef();
 
-    gsap.registerPlugin(useGSAP, ScrollTrigger);
+    // gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 
-    const { contextSafe } = useGSAP({ scope: connectRef.current, revertOnUpdate: true });
+    // const { contextSafe } = useGSAP({ scope: connectRef.current, revertOnUpdate: true });
 
-    const runRunRUn = contextSafe(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: connectRef.current,
-                start: "0% 55%",
-                end: "0% 45%",
-                scrub: true,
-                // markers: { startColor: "red", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120 },
-            }
-        });
+    // const runRunRUn = contextSafe(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: connectRef.current,
+    //             start: "0% 55%",
+    //             end: "0% 45%",
+    //             scrub: true,
+    //             // markers: { startColor: "red", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120 },
+    //         }
+    //     });
 
-        tl.to(".App", {
-            backgroundColor: "#F7F5EE",
-            // onComplete: () => { 
-            //     // console.log("tween from contact");
-            //     // ScrollTrigger.refresh();
-            //  }
-        });
-        setTimeout(() => {
-            ScrollTrigger.refresh();
+    //     tl.to(".App", {
+    //         backgroundColor: "#F7F5EE",
+    //         // onComplete: () => { 
+    //         //     // console.log("tween from contact");
+    //         //     // ScrollTrigger.refresh();
+    //         //  }
+    //     });
+    //     setTimeout(() => {
+    //         ScrollTrigger.refresh();
             
-        }, 2000);
-    });
-    useEffect(() => {
+    //     }, 2000);
+    // });
+    // useEffect(() => {
 
-        runRunRUn();
-    }, []);
+    //     runRunRUn();
+    // }, []);
     return (
 
         <section id="connect-container" ref={connectRef}>
