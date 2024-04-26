@@ -39,6 +39,11 @@
     align-self: flex-end;
 }
 
+.top-social-row{
+    display: flex;
+    gap: 8px;
+}
+
 .socials-asterisk{
     display: flex;
     gap:8px;
@@ -49,6 +54,11 @@
     display: flex;
     width: 630px;
     justify-content: space-between;
+}
+
+.social-icon-mobile{
+    display: none;
+    cursor: pointer;
 }
 
 #socials-text{
@@ -124,11 +134,16 @@
 
     .social-row{
         flex-direction: column;
+        gap: 4px;
         /* min-width: 428px; */
     }
 
     .social-icon{
         display: none;
+    }
+
+    .social-icon-mobile{
+        display: flex;
     }
 
     #title-cta{

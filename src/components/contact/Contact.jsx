@@ -11,8 +11,8 @@ const Contact = () => {
     const [t, i18next] = useTranslation();
 
     const connectRef = useRef();
-    
-    const lenis = useLenis(({ scroll }) => {  
+
+    const lenis = useLenis(({ scroll }) => {
 
     });
 
@@ -42,7 +42,7 @@ const Contact = () => {
     //     });
     //     setTimeout(() => {
     //         ScrollTrigger.refresh();
-            
+
     //     }, 2000);
     // });
     // useEffect(() => {
@@ -57,7 +57,7 @@ const Contact = () => {
 
                 <div id="title-cta" >
                     <div className='socials-asterisk'>
-                    <img src={require("../../assets/star-nav.svg").default} alt="" />
+                        <img src={require("../../assets/star-nav.svg").default} alt="" />
                         <p className='p2 off-black-800'>{t("socials")}</p>
 
                     </div>
@@ -78,7 +78,14 @@ const Contact = () => {
                             <p className='p2 letter-s1'>{t("socials")}</p>
                         </div> */}
                         <div className='social-row'>
-                            <p className='bolden p2 off-black-800'>mail</p>
+                            <div className='top-social-row'>
+                                <p className='bolden p2 off-black-800'>mail</p>
+                                <a href="mailto:afelipea99@gmail.com">
+                                    <img className="social-icon-mobile" src={require("../../assets/external-arrow.svg").default} alt="" />
+                                </a>
+
+                            </div>
+
                             <div className='link-icon'>
                                 <p className='p2 off-black-800'>afelipea99@gmail.com</p>
                                 <a href="mailto:afelipea99@gmail.com">
@@ -87,14 +94,22 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className='social-row' >
-                            <p className='bolden p2 off-black-800'>behance</p>
+                            <div className='top-social-row'>
+                                <p className='bolden p2 off-black-800'>behance</p>
+                                <img className="social-icon-mobile" src={require("../../assets/external-arrow.svg").default} onClick={() => { window.open("https://www.behance.net/felipeandrade27") }} alt="" />
+
+                            </div>
                             <div className='link-icon'>
                                 <p className='p2 off-black-800'>www.behance.net/felipeandrade27</p>
                                 <img className="social-icon" src={require("../../assets/external-arrow.svg").default} onClick={() => { window.open("https://www.behance.net/felipeandrade27") }} alt="" />
                             </div>
                         </div>
                         <div className='social-row'>
-                            <p className='bolden p2 off-black-800'>linkedin</p>
+                            <div className='top-social-row'>
+                                <p className='bolden p2 off-black-800'>linkedin</p>
+                                <img className="social-icon-mobile" src={require("../../assets/external-arrow.svg").default} alt="" onClick={() => { window.open("https://www.linkedin.com/in/felipe-a-411294138/") }} />
+
+                            </div>
                             <div className='link-icon'>
                                 <p className='p2 off-black-800'>www.linkedin.com/in/felipe-a-411294138/</p>
                                 <img className="social-icon" src={require("../../assets/external-arrow.svg").default} alt="" onClick={() => { window.open("https://www.linkedin.com/in/felipe-a-411294138/") }} />
@@ -104,7 +119,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div id="back-top">
-                        <a onClick={()=>{ lenis.scrollTo("#mask-nav")}}>
+                        <a onClick={() => { lenis.scrollTo("#mask-nav") }}>
                             <div id="back-top-inception">
                                 <p className='p2 off-black-800'>{t("backTop")}</p>
                                 <img src={require("../../assets/arrow-up.svg").default} alt="" />

@@ -72,7 +72,7 @@ const TempVitacanStudy = () => {
         tl.fromTo(imgCaseColorRef.current,{
             scale:1.8
         },{
-            scale:1.1,
+            scale:1,
             duration: 1.4,
             ease: "power2.inOut"
 
