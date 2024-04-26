@@ -27,36 +27,6 @@ const TempVitacanStudy = () => {
 
     const { contextSafe } = useGSAP({ scope: caseSlideVitacanRef.current, revertOnUpdate: true });
 
-
-    const runRunRUn = contextSafe(() => {
-
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: caseSlideVitacanRef.current,
-                start: "0% 65%",
-                end: "100% 35%",
-                scrub: true,
-                markers: { startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200 }
-            }
-        });
-
-        // tl.to(caseImgContainerRef.current, {
-        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)"
-
-        // });
-        tl.to(".App", {
-            backgroundColor: "#ECF5F4",
-            // onComplete: () => {
-            //     console.log("tween from vitacan");
-            //     ScrollTrigger.refresh();
-            // }
-
-
-        });
-
-    });
-
     const imgReveal = contextSafe(() => {
 
 
@@ -100,17 +70,9 @@ const TempVitacanStudy = () => {
 
 
     useEffect(() => {
-
-        runRunRUn();
         imgReveal();
 
     }, [caseImgContainerHeight]);
-
-    useEffect(() => {
-
-        runRunRUn();
-
-    }, []);
 
     // useEffect(() => {
 
