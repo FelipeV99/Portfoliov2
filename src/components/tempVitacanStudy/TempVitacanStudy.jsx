@@ -23,10 +23,24 @@ const TempVitacanStudy = () => {
     const caseSubtextRef = useRef();
     const caseTitleRef = useRef();
 
+    const [caseStudyLink, setCaseStudyLink] = useState("");
     const [caseImgContainerHeight, setCaseImgContainerHeight] = useState("");
 
 
     const navigation = useNavigate();
+
+        useEffect(() => {
+        if (i18next.language != null) {
+            const language = i18next.language.slice(0, 2);
+
+            if (language == 'en') {
+                setCaseStudyLink("https://www.behance.net/gallery/195967355/Vitacan-Case-Study-English");
+            } else if (language == 'es') {
+                setCaseStudyLink("https://www.behance.net/gallery/143997259/Caso-de-Estudio-Vitacan");
+            }
+        }
+    }, [i18next.language]);
+
 
     const { contextSafe } = useGSAP({ scope: caseSlideRef.current, revertOnUpdate: true });
 
@@ -189,10 +203,7 @@ const TempVitacanStudy = () => {
                             <p id="temp-p" ref={caseSubtextRef}>UX Case study, conceptual project</p>
                             <a className="btn-main btn-a-fix" 
                                 ref={caseButtonRef}
-                                onClick={() => {
-
-                                navigation("/case-study/olabNew");
-                            }}>
+                                onClick={() => {window.open(caseStudyLink)}}>
                                 {t("CaseButton")}
                             </a>
                         </div>

@@ -162,31 +162,27 @@
 
 
     #case-inner-container {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         max-height: 900px;
     }
 
     .project-type {
         display: none;
-
     }
 
     #imaginarystuff{
         height:1px;
     }
 
-    #case-img-container {
+    /* #case-img-container {
         align-self: center;
         width: 90%;
-    }
+    } */
 
-    .text-case-olab {
+    /* .text-case-olab {
         max-width: 1000px;
         width: 100%;
-    }
+    } */
 
     .bottom-text {
         width: 100%;
