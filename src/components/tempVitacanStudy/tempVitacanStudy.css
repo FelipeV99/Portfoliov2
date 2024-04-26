@@ -52,11 +52,8 @@
 
 
 .img-case-vitacan {
-    position: absolute;
-    left: 0;
-    top: 0;
     
-    height: 100%;
+    width: 100%;
     max-width: 1400px;
     display: flex;
     flex-direction: column;
@@ -65,13 +62,11 @@
 }
 
 #case-img-container-vitacan{
-    position: relative;
     display: flex;
     align-self: flex-end;
     width: 100%;
     max-width: 680px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 95%);
-    height: 392px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     /* height: 1000px; */
 }
 

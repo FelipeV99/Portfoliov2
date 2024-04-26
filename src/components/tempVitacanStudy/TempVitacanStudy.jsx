@@ -34,8 +34,8 @@ const TempVitacanStudy = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: caseSlideVitacanRef.current,
-                start: "50% 65%",
-                end: "60% 35%",
+                start: "0% 65%",
+                end: "100% 35%",
                 scrub: true,
                 markers: { startColor: "green", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 200 }
             }
@@ -45,10 +45,6 @@ const TempVitacanStudy = () => {
         //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)"
 
         // });
-        tl.to(imgCaseColorRef.current,{
-            y: -20,
-        });
-
         tl.to(".App", {
             backgroundColor: "#ECF5F4",
             // onComplete: () => {
@@ -61,9 +57,52 @@ const TempVitacanStudy = () => {
 
     });
 
+    const imgReveal = contextSafe(() => {
+
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: imgCaseColorRef.current,
+                start: "0% 70%",
+                end: "50% 50%",
+                // scrub: true,
+                markers: { startColor: "black", endColor: "white", fontSize: "18px", fontWeight: "bold", indent: 100 }
+            }
+        });
+
+        // tl.to(caseImgContainerRef.current, {
+        //     clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)"
+
+        // });
+        tl.fromTo(imgCaseColorRef.current,{
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        },{
+            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+            duration: 1,
+            ease: "power2.inOut"
+
+        }, 0);
+
+        tl.fromTo(imgCaseColorRef.current,{
+            scale:1.5
+        },{
+            scale:1,
+            duration: 1.4,
+            ease: "power3.inOut"
+
+        }, 0);
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 1000);
+
+    });
+
+
+
     useEffect(() => {
 
         runRunRUn();
+        imgReveal();
 
     }, [caseImgContainerHeight]);
 

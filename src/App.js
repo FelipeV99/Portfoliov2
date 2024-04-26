@@ -10,6 +10,7 @@ import { FontFaceObserver } from "font-face-observer";
 import Lottie from 'react-lottie';
 import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
 
+
 export const AppTagContext = React.createContext();
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
     console.log('Century Gothic Font failed to load.');
   });
 
+
+
   // const ref = useRef(null);
 
   // const options = {
@@ -53,10 +56,14 @@ function App() {
     animationData: PreloaderAnimation
   }
 
+
   return (
     <>
       {fontLoaded ?
-        <AppTagContext.Provider value={appRef}>
+
+
+      
+        <AppTagContext.Provider value={appRef} >
           <div className="App" ref={appRef}>
             <Router>
               <Navbar />
