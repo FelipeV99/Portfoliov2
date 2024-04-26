@@ -131,7 +131,7 @@ const CaseStudyNew = () => {
                         </div>
                     </div >
                     <div id="case-img-container-olab">
-                        <img className='img-case-hero' src={require("../../assets/olabNewHero.png")} alt="" />
+                        <img className='img-case-hero' src={require("../../assets/olabMockupCompressed.webp")} alt="" />
 
                     </div>
                 </div>

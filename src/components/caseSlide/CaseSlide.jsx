@@ -124,14 +124,24 @@ const CaseSlide = () => {
             ease: "power2.inOut"
         }, 0);
 
+        tl.fromTo(enumeratorRef.current,{
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+
+
+        },{
+            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+            duration:1,
+            ease: "power1.inOut"
+        }, 0);
+
 
 
         tl.fromTo(enumeratorRef.current,{
-            opacity:0,
+            y:-60
         },{
-            opacity:1,
-            duration:1,
-            ease: "power1.inOut"
+            y:60,
+            duration:1.4,
+            ease: "power2.inOut"
         }, 0);
 
         const tl2 = gsap.timeline({
@@ -200,7 +210,7 @@ const CaseSlide = () => {
                     <div id="case-img-container" ref={imgContainerRef}>
                         {/* <ProgressiveImage className='img-case' src={OlabThumb} placeholderSrc={OlabPlaceholder} actualizeHeight={() => { setCaseImgContainerHeight(Math.random()) }}  /> */}
                         {/* <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" /> */}
-                        <img className='img-case' src={require("../../assets/olabMockup.png")} ref={imgCaseColorRef} alt="" />
+                        <img className='img-case' src={require("../../assets/olabMockupCompressed.webp")} ref={imgCaseColorRef} alt="" />
                     </div>
                 </div>
             </section>
