@@ -8,16 +8,40 @@ import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import Lottie from 'react-lottie';
 import SneakPeakDesktopVid from "../../assets/SneakPeakGood.mp4"
-import PreloaderAnimationDark from "../../assets/PreloaderAnimationDark.json";
+import PreloaderAnimationDark from "../../assets/PreloaderAnimation.json";
+import { useLenis } from '@studio-freight/react-lenis';
+
+import olabImgCase from "../../assets/olabMockupCompressed.webp";
+
+// const SortofProgressiveImg = (props) => {
+
+//     const [imgSrc, setImgSrc] = useState(props.src);
+
+//     const img = new Image();
+//     img.src = props.src;
+
+
+//     return (
+//         <img className='img-case-hero' src={imgSrc} onLoad={props.setStateImg} />
+//     )
+
+// }
 
 
 
 const CaseStudyNew = () => {
+    const [imgHasLoaded, setImgHasLoaded] = useState(false);
+
 
     gsap.registerPlugin(useGSAP);
 
     const [t, i18next] = useTranslation();
     const [caseStudyLink, setCaseStudyLink] = useState("");
+
+    const lenis = useLenis(({ scroll }) => {
+
+    });
+
 
     const navigation = useNavigate();
 
@@ -28,7 +52,14 @@ const CaseStudyNew = () => {
     const flowProblemRef = useRef();
     const flowBeforeRef = useRef();
     const flowAfterRef = useRef();
+
+    const caseStudyContainerRef = useRef();
     const prOverlayOlabRef = useRef();
+    const olabHeroImgRef = useRef();
+    const enumeratorRef = useRef();
+    const textHeroRef = useRef();
+    const titleHeroRef = useRef();
+
 
     const appTag = useContext(AppTagContext);
 
@@ -67,45 +98,126 @@ const CaseStudyNew = () => {
         }
     }, [i18next.language]);
 
-    const { contextSafe } = useGSAP({ scope: prOverlayOlabRef.current });
+    const { contextSafe } = useGSAP({ scope: caseStudyContainerRef.current });
 
     useEffect(() => {
-        document.documentElement.style.overflowY = "hidden";
+        if(imgHasLoaded===true){
+        const revealHero = contextSafe(()=>{
+            const tl = gsap.timeline();
+            tl.to(olabHeroImgRef.current,
+                {
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    
+                    ease: "power1.inOut"
+                },
+                0
+            );  
+            tl.to(olabHeroImgRef.current,
+                {
+                    scale: 1,
+                    duration: 1.4,
+                    ease: "power2.inOut"
+                },
+                0
+            );    
+            
+            tl.to(enumeratorRef.current,
+                {
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    
+                    ease: "power1.inOut"
+                },
+                0
+            );  
+            tl.to(textHeroRef.current,
+                {
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    
+                    ease: "power1.inOut"
+                },
+                0
+            );  
+            tl.to(titleHeroRef.current,
+                {
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+                    duration: 1,
+                    
+                    ease: "power2.inOut"
+                },
+                0
+            );  
+            tl.to(titleHeroRef.current,
+                {
+                    y: 60,
+                    duration: 1.4,
+                    
+                    ease: "power2.inOut"
+                },
+                0
+            );  
+            tl.to(textHeroRef.current,
+                {
+                    y: 60,
+                    duration: 1.4,
+                    
+                    ease: "power2.inOut"
+                },
+                0
+            );  
+            tl.to(enumeratorRef.current,
+                {
+                    y: 60,
+                    duration: 1.4,
+                    
+                    ease: "power2.inOut"
+                },
+                0
+            );  
+            // tl.tp(caseButtonRef.current,{
+
+            //     y:-60
+            // },{
+    
+            //     y:0,
+            //     duration:1.4,
+            //     ease: "power2.inOut"
+            // }, 0);
+
+        });
 
         const maskOlab = contextSafe(() => {
             const tl = gsap.timeline();
-
             tl.fromTo(prOverlayOlabRef.current,
                 {
-                    // clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
-                    // y:0,
-                    opacity: 1
-
+                    clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
                 },
                 {
-                    // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                    // y: -yMovement,
-                    opacity: 0,
-                    duration: 0.4,
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                    duration: 0.6,
+                    ease: "power1.inOut",
                     onComplete: () => {
-                        document.documentElement.style.overflowY = "visible";
+                        // document.documentElement.style.overflowY = "visible";
                         prOverlayOlabRef.current.style.display = "none";
+                        revealHero();
                     }
                 },
                 0
-            );
-        });
-        setTimeout(() => {
-            maskOlab();
-        }, 2500);
+            );            
 
-    }, [prOverlayOlabRef.current]);
+        });
+        
+        maskOlab();            
+        }
+    }, [imgHasLoaded]);
+
 
     return (
-        <div id="case-study-container">
+        <div id="case-study-container" ref={caseStudyContainerRef}>
             <div className="pr-overlay-olab" ref={prOverlayOlabRef}>
                 <Lottie options={defaultOptions} height={37} width={166} />
-                <p className='p2 bolden color-dark-grey'>{t("loadingCS")}</p>
             </div>
             <section id="case-hero">
 
@@ -116,22 +228,30 @@ const CaseStudyNew = () => {
                             {/* <img id="asterisk" src={require("../../assets/asterisk.svg").default} alt="" />
                             <p id="asterisk-p">Industry experience</p> */}
                         </div>
-                        <div className="bottom-text" >
+                        <div className="case-bottom-text" >
 
 
-                            <div className='enumerator-container'>
+                            <div className='case-enumerator-container' ref={enumeratorRef}>
                                 <div id='line-title'>
 
                                 </div>
                                 <p className='p2 bolden off-black-800'>01/02</p>
                             </div>
-                            <h2 className='off-black-800'>O-lab</h2>
-                            <p className='color-light-grey'>{t("ThumbCopyOlab")}</p>
+                            <h2 className='off-black-800 case-title' ref={titleHeroRef}>O-lab</h2>
+                            <p className='color-light-grey case-text-hero' ref={textHeroRef}>{t("ThumbCopyOlab")}</p>
 
                         </div>
                     </div >
                     <div id="case-img-container-olab">
-                        <img className='img-case-hero' src={require("../../assets/olabMockupCompressed.webp")} alt="" />
+                        <img className='img-case-hero' 
+                        src={require("../../assets/olabMockupCompressed.webp")} 
+                        alt="Mockup of a laptop" 
+                        ref={olabHeroImgRef}                        
+                        onLoad={()=>{
+                            setImgHasLoaded(true);
+                            }} />
+
+
 
                     </div>
                 </div>

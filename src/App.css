@@ -127,7 +127,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#272727;
+  background-color:var(--off-black-800);
   left: 0;
   top:0;
 }

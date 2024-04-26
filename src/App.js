@@ -24,6 +24,7 @@ function App() {
   let gothicLoaded = false;
 
   const appRef = useRef();
+  
 
   font.load().then(function () {
     idLoaded = true;
