@@ -18,6 +18,9 @@ const CaseSlide = () => {
     const imgCaseColorRef = useRef();
     const imgContainerRef = useRef();
     const enumeratorRef = useRef();
+    const caseButtonRef = useRef();
+    const caseSubtextRef = useRef();
+    const caseTitleRef = useRef();
 
     const [caseImgContainerHeight, setCaseImgContainerHeight] = useState("");
 
@@ -61,24 +64,67 @@ const CaseSlide = () => {
         }, 0);
 
         
-        tl.fromTo(bottomRef.current,{
-            opacity:0,
+        tl.fromTo(caseTitleRef.current,{
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+
 
         },{
-            opacity:1.4,
+            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
             duration:1,
             ease: "power1.inOut"
         }, 0);
 
-        tl.fromTo(bottomRef.current,{
+        tl.fromTo(caseTitleRef.current,{
 
-            y:-220
+            y:-60
         },{
 
             y:0,
-            duration:1,
+            duration:1.4,
             ease: "power2.inOut"
         }, 0);
+
+        tl.fromTo(caseSubtextRef.current,{
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+
+
+        },{
+            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+            duration:1,
+            ease: "power1.inOut"
+        }, 0);
+
+        tl.fromTo(caseSubtextRef.current,{
+
+            y:-60
+        },{
+
+            y:0,
+            duration:1.4,
+            ease: "power2.inOut"
+        }, 0);
+
+        tl.fromTo(caseButtonRef.current,{
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+
+
+        },{
+            clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",
+            duration:1,
+            ease: "power1.inOut"
+        }, 0);
+
+        tl.fromTo(caseButtonRef.current,{
+
+            y:-60
+        },{
+
+            y:0,
+            duration:1.4,
+            ease: "power2.inOut"
+        }, 0);
+
+
 
         tl.fromTo(enumeratorRef.current,{
             opacity:0,
@@ -118,62 +164,6 @@ const CaseSlide = () => {
         imgReveal()
     }, []);
 
-
-
-    // const { contextSafe } = useGSAP({ scope: caseSlideRef.current, revertOnUpdate: true });
-
-
-    // const runRunRUn = contextSafe(() => {
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: caseSlideRef.current,
-    //             start: "0% 55%",
-    //             end: "0% 45%",
-    //             scrub: true,
-    //             // markers: { startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 120 }
-    //         }
-    //     });
-
-    //     tl.to(".App", {
-    //         backgroundColor: "#FFF2EB",
-    //         // onComplete: () => {
-    //         //     // console.log("tween from case slide");
-    //         //     // ScrollTrigger.refresh();
-    //         // }
-
-
-    //     });
-    // });
-    // useEffect(() => {
-    //     runRunRUn();
-
-    // }, [caseImgContainerHeight]);
-
-    // useEffect(() => {
-    //     if (caseSlideRef.current != null) {
-
-    //         const runRunRUn = contextSafe(() => {
-    //             const tl = gsap.timeline({
-    //                 scrollTrigger: {
-    //                     trigger: "#case-container-olab",
-    //                     start: "-15% 25%",
-    //                     end: "-5% 5%",
-    //                     scrub: true,
-    //                     markers: {startColor: "yellow", endColor: "purple", fontSize: "18px", fontWeight: "bold", indent: 60}
-    //                 }
-    //             });
-
-    //             tl.to(".App", {
-    //                 backgroundColor: "#FFF2EB",
-
-    //             });
-    //         });
-    //         runRunRUn();
-    //     }
-    // }, [caseSlideRef.current]);
-
-
-
     return (
         <div id="outer-container-olab" ref={caseSlideRef}>
 
@@ -194,9 +184,11 @@ const CaseSlide = () => {
 
 
 
-                            <h1 className="off-black-800">O-lab</h1>
-                            <p id="temp-p">UX Case study, industry experience</p>
-                            <a className="btn-main btn-a-fix" onClick={() => {
+                            <h1 className="off-black-800" ref={caseTitleRef}>O-lab</h1>
+                            <p id="temp-p" ref={caseSubtextRef}>UX Case study, industry experience</p>
+                            <a className="btn-main btn-a-fix" 
+                                ref={caseButtonRef}
+                                onClick={() => {
 
                                 navigation("/case-study/olabNew");
                             }}>
@@ -212,48 +204,6 @@ const CaseSlide = () => {
                 </div>
             </section>
         </div>
-        // <div id="outer-container-olab" ref={caseSlideRef}>
-
-
-        //     <section id="case-container-olab" >
-
-        //         <div id="case-inner-container">
-
-        //             <div className='text-case-olab'>
-        //                 <div className='project-type'>
-        //                     <img src={require("../../assets/star-nav.svg").default} alt="" />
-        //                     <p id="asterisk-p">{t("IE")}</p>
-        //                 </div>
-        //                 <div className="bottom-text" ref={bottomRef}>
-
-
-        //                     <div className='enumerator-container'>
-        //                         <div className='line-for-number'>
-
-        //                         </div>
-        //                         <p id="num-p">01/02</p>
-        //                     </div>
-        //                     <h1 id="temp-title">O-lab</h1>
-        //                     <p id="temp-p">{t("ThumbCopyOlab")}</p>
-        //                     <button id="new-main-btn" onClick={() => {
-
-        //                         navigation("/case-study/olabNew");
-        //                     }}>
-        //                         {t("CaseButton")}
-        //                     </button>
-        //                 </div>
-        //             </div >
-        //             <div id="olab-gap">
-
-        //             </div>
-        //             <div id="case-img-container">
-        //                 <ProgressiveImage className='img-case' src={OlabThumb} placeholderSrc={OlabPlaceholder} actualizeHeight={()=>{setCaseImgContainerHeight(Math.random())}} />
-        //                 {/* <img className='img-case' src={require("../../assets/olabNewHero.png")} alt="" /> */}
-
-        //             </div>
-        //         </div>
-        //     </section>
-        // </div>
     )
 }
 
