@@ -14,6 +14,7 @@ import PreloaderAnimationDark from "../../assets/PreloaderAnimationDark.json";
 
 const CaseStudyNew = () => {
 
+
     gsap.registerPlugin(useGSAP);
 
     const [t, i18next] = useTranslation();
