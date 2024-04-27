@@ -51,6 +51,16 @@
     justify-content: space-between;
 }
 
+.top-social-row{
+    display: flex;
+    gap: 8px;
+}
+
+.social-icon-mobile{
+    display: none;
+    cursor: pointer;
+}
+
 #socials-text{
     display: flex;
     flex-direction: column;
@@ -124,7 +134,12 @@
 
     .social-row{
         flex-direction: column;
+        gap: 4px;
         /* min-width: 428px; */
+    }
+
+    .social-icon-mobile{
+        display: flex;
     }
 
     .social-icon{
