@@ -63,7 +63,6 @@ function App() {
     <>
       {fontLoaded ?
         <AppTagContext.Provider value={appRef}>
-          <Hotjar />
           <div className="App" ref={appRef}>
             <Router>
               <Navbar />
