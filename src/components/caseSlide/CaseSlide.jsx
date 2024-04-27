@@ -139,7 +139,7 @@ const CaseSlide = () => {
         tl.fromTo(enumeratorRef.current,{
             y:-60
         },{
-            y:60,
+            y:0,
             duration:1.4,
             ease: "power2.inOut"
         }, 0);

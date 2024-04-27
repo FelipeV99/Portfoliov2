@@ -29,7 +29,7 @@
     padding-top: 68px;
     padding-left: var(--padding-60);
     padding-right: var(--padding-60);
-    padding-bottom: var(--padding-60);
+    padding-bottom: 68px;
   
     width: 100%;
     min-width: var(--min-width);
@@ -139,6 +139,7 @@
 
 #temp-p {
     color: #787574;
+    text-align: center;
 }
 
 #num-p {
@@ -189,10 +190,13 @@
         width: 100%;
     }
 
-    #case-container-olab {    
+    #case-container-olab {  
+        min-height: 680px;  
         height: 100%;  
         padding-right: 18px;
         padding-left: 18px;  
+        padding-top: 32px;
+        padding-bottom: 32px;
 
     }
 
