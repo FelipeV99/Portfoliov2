@@ -1,6 +1,6 @@
 import './App.css';
 // import './base.css'
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import CaseStudyNew from './components/caseStudyNew/CaseStudyNew';
@@ -9,6 +9,7 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import { FontFaceObserver } from "font-face-observer";
 import Lottie from 'react-lottie';
 import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
+import { hotjar } from 'react-hotjar';
 
 export const AppTagContext = React.createContext();
 
@@ -20,6 +21,15 @@ function App() {
 
   let idLoaded = false;
   let gothicLoaded = false;
+
+  // const optionsHotjar = {
+  //   id: "4961378"
+  // }
+
+  useEffect(() => {
+    hotjar.initialize("4961378", 6);
+    }, []);
+
 
   const appRef = useRef();
 
