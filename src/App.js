@@ -9,7 +9,7 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import { FontFaceObserver } from "font-face-observer";
 import Lottie from 'react-lottie';
 import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
-import { hotjar } from 'react-hotjar';
+import Hotjar from './components/hotjar/Hotjar';
 
 export const AppTagContext = React.createContext();
 
@@ -23,10 +23,6 @@ function App() {
   let gothicLoaded = false;
 
 
-
-  useEffect(() => {
-    hotjar.initialize(4961378, 6);
-    }, []);
 
 
   const appRef = useRef();
@@ -65,6 +61,7 @@ function App() {
     <>
       {fontLoaded ?
         <AppTagContext.Provider value={appRef}>
+          <Hotjar />
           <div className="App" ref={appRef}>
             <Router>
               <Navbar />
