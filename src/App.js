@@ -9,11 +9,13 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import { FontFaceObserver } from "font-face-observer";
 import Lottie from 'react-lottie';
 import PreloaderAnimation from "../src/assets/PreloaderAnimation.json";
-import Hotjar from './components/hotjar/Hotjar';
+import { hotjar } from 'react-hotjar';
 
 export const AppTagContext = React.createContext();
 
 function App() {
+  hotjar.initialize(4961378, 6);
+
   const FontFaceObserver = require('fontfaceobserver');
   const font = new FontFaceObserver('IDGSemi');
   const fontGothic = new FontFaceObserver('CGothic');
