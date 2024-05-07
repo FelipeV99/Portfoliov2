@@ -336,7 +336,7 @@ const CaseStudyNew = () => {
                     <div className='bottom-step'>
 
 
-                        <h1 className='off-white-100 step-heading'>{t("OCStep1Title")}</h1>
+                        <h2 className='off-white-100 step-heading'>{t("OCStep1Title")}</h2>
 
                         <div className='right-side-process-step'>
                             <div className='process-avatar'>
@@ -344,7 +344,7 @@ const CaseStudyNew = () => {
                                 <img className='avatar-img' src={require("../../assets/UnderstandAvatar.png")} alt="" />
 
                             </div>
-                            {/* <div className='summary-container'>
+                            <div className='summary-container'>
                                 <div className='summary-title-line'>
                                     <div className='line-for-summary'>
                                     </div>
@@ -352,7 +352,7 @@ const CaseStudyNew = () => {
                                 </div>
                                 <div className='space-8'></div>
                                 <p className='step-text off-white-100 bolden'>{t("OCStep1Sum")}</p>
-                            </div> */}
+                            </div>
                         </div>
 
 
