@@ -309,13 +309,13 @@
     align-items: flex-end;
     justify-content: space-between;
     padding-top: 32px;
-    gap: 32px;
+    gap: 64px;
 }
 
 .right-side-process-step {
     height: 100%;
-    width: 60%;
-    max-width: 708px;
+    width: calc(60% - 64px);
+    max-width: 560px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
