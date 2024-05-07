@@ -1,6 +1,5 @@
 import './App.css';
-// import './base.css'
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import CaseStudyNew from './components/caseStudyNew/CaseStudyNew';
@@ -25,9 +24,6 @@ function App() {
   let idLoaded = false;
   let gothicLoaded = false;
 
-
-
-
   const appRef = useRef();
 
   font.load().then(function () {
@@ -48,12 +44,6 @@ function App() {
     console.log('Century Gothic Font failed to load.');
   });
 
-  // const ref = useRef(null);
-
-  // const options = {
-  //   smooth: true,
-  // } 
-
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -63,7 +53,6 @@ function App() {
   return (
     <>
       {fontLoaded ?
-
         <AppTagContext.Provider value={appRef}>
           <Hotjar />
           <div className="App" ref={appRef}>
