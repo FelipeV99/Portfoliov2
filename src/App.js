@@ -73,7 +73,7 @@ function App() {
               <Routes>
 
                 <Route path="/" element={<Home />} />
-                <Route path="/case-study/olabNew" element={<CaseStudyNew />} />
+                <Route path="/case-study/olab" element={<CaseStudyNew />} />
 
               </Routes>
             </Router >

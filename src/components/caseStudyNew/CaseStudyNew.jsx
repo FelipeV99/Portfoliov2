@@ -399,7 +399,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>Surveys</p>
+                        <p className='p2 bolden off-black-800'>{t('OCRM1I')}</p>
 
                     </div>
                     <div className='methodology-card'>
@@ -411,7 +411,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>Usability Testing</p>
+                        <p className='p2 bolden off-black-800'>{t('OCRM2I')}</p>
 
                     </div>
                     <div className='methodology-card'>
@@ -423,7 +423,7 @@ const CaseStudyNew = () => {
 
                         </div>
                         <div className='space-8'></div>
-                        <p className='p2 bolden off-black-800'>Interviews</p>
+                        <p className='p2 bolden off-black-800'>{t('OCRM3I')}</p>
 
                     </div>
 
