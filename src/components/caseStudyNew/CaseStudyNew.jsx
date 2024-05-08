@@ -708,18 +708,6 @@ const CaseStudyNew = () => {
                             <p className='off-black-600'>{t("OCBRCAD3")}</p>
                         </div>
                     </li>
-                    <li>
-                        <div className='li-div'>
-                            <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-600'>{t("OCBRCAD4")}</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className='li-div'>
-                            <img src={require("../../assets/star-bullet.svg").default} alt="" />
-                            <p className='off-black-600'>{t("OCBRCAD5")}</p>
-                        </div>
-                    </li>
                 </ul>
 
 
@@ -1143,6 +1131,10 @@ const CaseStudyNew = () => {
             <div className='case-slide'>
                 <h2 className='off-black-800'>{t("oCVMetrics")}</h2>
                 <div className="space-16"></div>
+                <p className='off-black-800 bolden'>{t("OCVT")}</p>
+                <div className="space-8"></div>
+
+
                 <ul className="bullet-points">
                     <li>
                         <div className='li-div'>
