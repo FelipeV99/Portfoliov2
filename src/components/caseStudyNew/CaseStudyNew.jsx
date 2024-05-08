@@ -19,6 +19,7 @@ const CaseStudyNew = () => {
 
     const [t, i18next] = useTranslation();
     const [caseStudyLink, setCaseStudyLink] = useState("");
+    const [backToTopBtn, setBackToTopBtn] = useState(false);
 
     const navigation = useNavigate();
 
@@ -36,6 +37,19 @@ const CaseStudyNew = () => {
     useEffect(() => {
         appTag.current.removeAttribute('style');
     }, []);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > window.innerHeight) {
+                setBackToTopBtn(true);
+                console.log("appear button");
+            } else {
+                setBackToTopBtn(false)
+                console.log("disappear button");
+
+            }
+        });
+    }, [])
 
     const defaultOptions = {
         loop: true,
@@ -108,7 +122,20 @@ const CaseStudyNew = () => {
                 <Lottie options={defaultOptions} height={37} width={166} />
                 <p className='p2 bolden color-dark-grey'>{t("loadingCS")}</p>
             </div>
+            {backToTopBtn ?
+                    <div className='back-top-sticky' onClick={()=>{window.scrollTo({top: 0, behavior: "smooth"})}}>
+                    <img src={require("../../assets/back-top-btn.svg").default} alt="" />
+
+                    </div>
+
+                    :
+
+                    <div>
+                    </div>
+                }
             <section id="case-hero">
+
+
 
                 <div id="i-case-inner-container">
 
@@ -162,29 +189,34 @@ const CaseStudyNew = () => {
                 <div className="space-8"></div>
                 <p className='off-black-600 paragraph'>{t("ocContextp")}</p>
                 <div className="space-32"></div>
-                <p className='p2 bolden off-black-800'>{t('oCAbout')}</p>
-                <div className='space-8'></div>
-                <p className='off-black-600 paragraph'>{t('oCAboutp')}</p>
-                <div className="space-32"></div>
                 <p className='p2 bolden off-black-800'>{t('ocTeam')}</p>
                 <div className='space-16'></div>
                 <div id="team-container">
                     <div className='subTeam'>
                         <h2 className='off-black-800'>2</h2>
-                        <p className='p2 off-black-800'>{t("oCUI")}</p>
+                        <p className='p2 off-black-600 t-center'>{t("oCUI")}</p>
 
                     </div>
                     <div className='subTeam'>
                         <h2 className='off-black-800'>6</h2>
-                        <p className='p2 off-black-800'>{t("oCDev")}</p>
+                        <p className='p2 off-black-600'>{t("oCDev")}</p>
 
                     </div>
                     <div className='subTeam'>
                         <h2 className='off-black-800'>1</h2>
-                        <p className='p2 off-black-800'>{t("oCUX")}</p>
+                        <p className='p2 off-black-600'>{t("oCUX")}</p>
+                        {/* <div className='space-4'></div>
+                        <p className='p2 off-black-600'>({t("oCRole")})</p> */}
+
 
                     </div>
                 </div>
+                <div className="space-32"></div>
+
+                <p className='p2 bolden off-black-800'>{t('oCAbout')}</p>
+                <div className='space-8'></div>
+                <p className='off-black-600 paragraph'>{t('oCAboutp')}</p>
+
 
 
             </div>

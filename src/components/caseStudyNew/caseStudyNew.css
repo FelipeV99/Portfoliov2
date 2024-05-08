@@ -5,6 +5,13 @@
     align-items: center;
 }
 
+.back-top-sticky{
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
 
 #case-hero {
     display: flex;
@@ -190,7 +197,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 180px;
+
 }
+
+/* .t-center{
+    text-wrap: stable;
+    text-align: center;
+    
+} */
 
 .grid-container {
     width: 100%;
