@@ -96,7 +96,7 @@ const TempVitacanStudy = () => {
 
                     <div className='text-case-olab'>
                         <div className='project-type'>
-                            <img src={require("../../assets/star-nav.svg").default} alt="" />                            <p id="asterisk-p">{t("CP")}</p>
+                            <img src={require("../../assets/star-nav.svg").default} alt="" />                            <p id="asterisk-p-vitacan">{t("CP")}</p>
                         </div>
                         <div className="bottom-text" ref={bottomRef}>
 
@@ -107,7 +107,7 @@ const TempVitacanStudy = () => {
                                 </div>
                                 <p id="num-p-v">02/02</p>
                             </div>
-                            <h1 id="temp-title">Vitacan</h1>
+                            <h2 id="temp-title-vitacan">Vitacan</h2>
                             <p id="temp-p">{t("ThumbCopyVita")}</p>
                             <button id="new-main-btn-v" onClick={() => { window.open(caseStudyLink) }}>
                                 {t("CaseButton")}
