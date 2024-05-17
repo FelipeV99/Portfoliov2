@@ -29,6 +29,22 @@ const CaseSlide = () => {
 
     const { contextSafe } = useGSAP({ scope: caseSlideRef.current, revertOnUpdate: true });
 
+
+    useEffect(()=>{
+        if(imgCaseColorRef.current){
+            console.log(imgCaseColorRef.current)
+            console.log("Image has loaded");
+
+            imgCaseColorRef.current.onload = () => {
+                console.log("Image has really loaded");
+
+            };
+        }else{
+            console.log("Image has not loaded");
+
+        }
+    }, []);
+
     const imgReveal = contextSafe(() => {
 
 

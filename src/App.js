@@ -1,6 +1,6 @@
 import './App.css';
 // import './base.css'
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import CaseStudyNew from './components/caseStudyNew/CaseStudyNew';
@@ -49,6 +49,17 @@ function App() {
     // called every scroll
   })
 
+  useEffect(()=>{
+    if(lenis){
+      console.log("lenis has loaded");
+      setFontLoaded(true);
+
+
+    }else{
+      console.log("lenis has not loaded");
+      setFontLoaded(false);
+    }
+  }, [lenis]);
 
   // const ref = useRef(null);
 

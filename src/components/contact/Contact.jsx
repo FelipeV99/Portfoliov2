@@ -119,7 +119,8 @@ const Contact = () => {
                         </div>
                     </div>
                     <div id="back-top">
-                        <a onClick={() => { lenis.scrollTo("#mask-nav") }}>
+                        {/* <a onClick={() => { lenis.scrollTo("#mask-nav") }}> */}
+                        <a href='#mask-nav'>
                             <div id="back-top-inception">
                                 <p className='p2 off-black-800'>{t("backTop")}</p>
                                 <img src={require("../../assets/arrow-up.svg").default} alt="" />
