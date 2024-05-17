@@ -153,7 +153,7 @@ const Home = () => {
                         </div>
                         <div className='space-16'></div>
                         <div className='cta-copy-container' ref={ctatext}>
-                            <p id="cta-copy" className='p1 off-black-800'>
+                            <p id="cta-copy" className='p1 off-black-700'>
                                 {t("heroCopy")}
                             </p>
                         </div>

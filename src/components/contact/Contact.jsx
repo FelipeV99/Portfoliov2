@@ -59,7 +59,7 @@ const Contact = () => {
                     <div id="text-container">
                         <h1 className='off-black-800'>{t("connect")}</h1>
                         <div>
-                            <p className='p1 off-black-800' id="connect-copy">{t("connectCopy")}</p>
+                            <p className='p1 off-black-700' id="connect-copy">{t("connectCopy")}</p>
                         </div>
 
                     </div>

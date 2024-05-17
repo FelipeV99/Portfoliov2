@@ -108,7 +108,7 @@ const TempVitacanStudy = () => {
                                 <p id="num-p-v">02/02</p>
                             </div>
                             <h2 id="temp-title-vitacan">Vitacan</h2>
-                            <p id="temp-p">{t("ThumbCopyVita")}</p>
+                            <p id="p2 off-black-700">{t("ThumbCopyVita")}</p>
                             <button id="new-main-btn-v" onClick={() => { window.open(caseStudyLink) }}>
                                 {t("CaseButton")}
                                    
